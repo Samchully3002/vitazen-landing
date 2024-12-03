@@ -1,0 +1,33 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+  
+    h1 {
+      color: #343a40;
+    }
+  }
+  
+  .card {
+    transition: transform 0.3s, box-shadow 0.3s;
+  
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  
+    img {
+      height: 200px;
+      object-fit: cover;
+    }
+  }
+  
+  .pagination {
+    .page-link {
+      color: #343a40;
+  
+      &:hover {
+        color: #007bff;
+      }
+    }
+  }
+  

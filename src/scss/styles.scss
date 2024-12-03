@@ -1,0 +1,21 @@
+// 
+// Styles
+// 
+
+@import "./variables";
+
+// Import Bootstrap
+@import "bootstrap/scss/bootstrap.scss";
+
+// Global CSS
+@import "./global";
+
+// Components
+@import "./components/icons";
+
+// Sections
+@import "./sections/home";
+@import "./sections/list-product";
+@import "./sections/v-sight";
+@import "./sections/contact-us";
+@import "./sections/footer";
