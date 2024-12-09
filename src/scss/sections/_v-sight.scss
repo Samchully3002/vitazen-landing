@@ -4,21 +4,28 @@ body {
   
     h1 {
       color: #343a40;
+      font-weight: 400;
+      font-size: 56px;
     }
   }
   
-  .card {
-    transition: transform 0.3s, box-shadow 0.3s;
-  
-    &:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-  
+  .Vcontent {
     img {
-      height: 200px;
-      object-fit: cover;
+      border-radius: 8px;
+      width: 100%;
+      margin-bottom: 2rem;
     }
+    h4 {
+      font-size: 1.6rem;
+      white-space: nowrap;
+      overflow: hidden !important;
+      text-overflow: ellipsis;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+
   }
   
   .pagination {

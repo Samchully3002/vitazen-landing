@@ -1,0 +1,27 @@
+// Top bar for promotional message
+.topWrapp.text-center
+    a(href='#' style="color: #fff;") Glutathione + Vitamin C 1-month limited edition package, 53% discount!
+
+// Main navigation bar
+nav.navbar.navbar-expand-lg.navbar-light.bg-white.border-bottom.sticky-top
+    .container
+        // Logo
+        a.navbar-brand(href="#") 
+            img(src="././assets/img/vita_icon.png" alt="Vitazen Logo" height="30")
+        // Hamburger menu for smaller screens
+        button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#navbarNav", aria-controls="navbarNav", aria-expanded="false", aria-label="Toggle navigation")
+            span.navbar-toggler-icon
+    
+        // Navigation menu
+        .collapse.navbar-collapse#navbarNav
+            ul.navbar-nav.mx-auto
+                li.nav-item
+                    a.nav-link.active(href="index.html") Home
+                li.nav-item
+                    a.nav-link(href="products.html") Products
+                li.nav-item
+                    a.nav-link(href="v-sight.html") V-Sight
+                li.nav-item
+                    a.nav-link(href="#") About Us
+        // Contact button to the right
+        a.btn.btn-primary.ms-3.text-white(href="contact-us.html") Contact Us

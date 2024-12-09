@@ -1,52 +1,86 @@
-.products-section {
-    background-color: #f9f9f9;
-    padding: 50px 0;
+
+.products {
+  background-color: #f9f9f9;
+  padding: 3rem 0;
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 500;
+    color: #333;
+  }
   
-    h1 {
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: #333;
+  .product_container {
+    margin: 2rem 10rem 2rem 10rem;
+    place-content: space-between;
+  }
+  
+  .btn {
+    background-color: #F6F2FF;
+    border-radius: 7px;
+    color:#A083DE;
+    height: fit-content;
+    font-size: 1.5rem;
+    padding: 10px 1rem 10px 1rem;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+  }
+
+  .card {
+    border-radius: 10px;
+    overflow: hidden;
+
+    &-img-top {
+      height: fit-content;
+      object-fit: cover;
+      border-bottom: 1px solid #ddd;
     }
-  
-    .product-card {
-      border: none;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
-      &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+
+    &-body {
+      padding: 1.5rem;
+
+      .card-title {
+        margin-left: 1rem;
+        font-size: x-large;
+        text-align: left;
+        font-weight: 500;
+        color: #001f3f;
       }
-  
-      img {
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-      }
-  
-      .card-body {
-        padding: 15px;
-  
-        .card-title {
-          font-size: 1rem;
+
+      .card-price {
+        margin-left: 1rem;
+        text-align: left;
+        font-size: large;
+        margin-top: 0.5rem;
+
+        .price-new {
           font-weight: bold;
-          margin: 10px 0;
-          color: #333;
         }
-  
-        .card-price {
-          font-size: 1rem;
-  
-          span.text-primary {
-            font-weight: bold;
-            color: #6c63ff;
-          }
-  
-          span.text-muted {
-            margin-left: 10px;
-          }
+
+        .price-old {
+          text-decoration: line-through;
+          margin-left: 0.5rem;
         }
       }
+    }
+
+    &:hover {
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
   }
+
+  .btn-outline-primary {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
   

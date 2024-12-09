@@ -1,0 +1,58 @@
+//Header
+.topWrapp {
+    padding: 7px 0;
+    background-color: #392B56;
+}
+.container {
+    max-width: unset;
+    padding:1rem 8rem 1rem 8rem;
+}
+li {
+    font-size: 1rem;
+}
+
+//Footer
+.footer {
+    .benefit {
+        place-content: center;
+        align-items: center;
+        justify-content: center;
+        background-color: #a083de !important; // Adjust purple shade
+        padding: 3rem 8rem 3rem 8rem;
+        color: white !important;
+    }
+    .col {
+        display: block;
+        width: 50px;
+    }
+    h6 {
+      font-weight: bold;
+    }
+    .col-sm-1 {
+        width: fit-content;
+    }
+    .info {
+        padding: 2rem 8rem 4rem 8rem;
+        place-content: space-between;
+    }
+    .subemail {
+        margin-top: 4.5rem;
+    }
+    .address {
+        margin-top: 2rem;
+    }
+    
+    .btn {
+        --bs-btn-padding-x: 1.5rem;
+        // margin-left: 10px !important;
+    }
+    .social-icons {
+        margin: 10px 0;
+    }
+    .ftr_bottom {
+        padding: 1rem 8rem 0 8rem;
+        font-size: 1.1rem;
+        background-color: black !important;
+        color: white;
+    }
+  }

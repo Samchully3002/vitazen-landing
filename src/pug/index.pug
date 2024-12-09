@@ -1,120 +1,44 @@
 doctype html
 html(lang='en')
 
-    head
-
-        meta(charset='utf-8')
-        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        meta(name='description', content='')
-        meta(name='author', content='')
-
-        title Vitazen – Minuman Kecantikan untuk Kulit Cerah dan Sehat
-
-        // Favicon
-        link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
-
-        // Bootstrap icons
-        link(href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css', rel='stylesheet', type='text/css')
-
-        // Google fonts
-        link(href='https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic', rel='stylesheet', type='text/css')
-
-        // Core theme CSS (includes Bootstrap)
-        link(href='css/styles.css', rel='stylesheet')
-
+    include includes/head.pug
     body
-        // Top bar for promotional message
-        .bg-dark.text-white.py-1
-            .container.text-center
-                span Glutathione + Vitamin C 1-month limited edition package, 53% discount!
-
-        // Main navigation bar
-        nav.navbar.navbar-expand-lg.navbar-light.bg-white.border-bottom.sticky-top
-            .container
-                // Logo
-                a.navbar-brand(href="#") 
-                    img(src="path-to-logo.png" alt="Vitazen Logo" height="30")
-
-                // Hamburger menu for smaller screens
-                button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#navbarNav", aria-controls="navbarNav", aria-expanded="false", aria-label="Toggle navigation")
-                    span.navbar-toggler-icon
-            
-                // Navigation menu
-                .collapse.navbar-collapse#navbarNav
-                    ul.navbar-nav.mx-auto
-                        li.nav-item
-                            a.nav-link.active(href="#") Home
-                        li.nav-item
-                            a.nav-link(href="products.html") Products
-                        li.nav-item
-                            a.nav-link(href="v-sight.html") V-Sight
-                        li.nav-item
-                            a.nav-link(href="#") About Us
-                // Contact button to the right
-                a.btn.btn-primary.ms-3.text-white(href="contact-us.html") Contact Us
-
+        include includes/header.pug
         // Section hero banner 
         section.hero
-            .container
-                .carousel.slide#heroCarousel(data-bs-ride="carousel")
-                    .carousel-indicators
-                        button(type="button", data-bs-target="#heroCarousel", data-bs-slide-to="0", class="active", aria-current="true", aria-label="Slide 1")
-                        button(type="button", data-bs-target="#heroCarousel", data-bs-slide-to="1", aria-label="Slide 2")
-                        button(type="button", data-bs-target="#heroCarousel", data-bs-slide-to="2", aria-label="Slide 3")
-                    .carousel-inner
-                        .carousel-item.active
-                            .row.align-items-center
-                                .col-md-6.hero-text
-                                    h1 
-                                        | Power Up Your Body,
-                                        br
-                                        | Light Up Your Skin.
-                                    p Strength, Radiance, and Balance in Every Sip.
-                                    a.btn.btn-primary(href="#") Buy Now
-                                        i.bi.bi-arrow-right
-                                .col-md-6.hero-image
-                                    img(src="./assets/img/hero-product-1.png", alt="Snovv Products")
-                        .carousel-item
-                            .row.align-items-center
-                                .col-md-6.hero-text
-                                    h1 
-                                        | Boost Your Energy,
-                                        br
-                                        | Glow From Within.
-                                    p Unlock a healthier, glowing you with every sip.
-                                    a.btn.btn-primary(href="#") Learn More
-                                        i.bi.bi-arrow-right
-                                .col-md-6.hero-image
-                                    img(src="path-to-image-2.jpg", alt="Snovv Energy Drink")
-                        .carousel-item
-                            .row.align-items-center
-                                .col-md-6.hero-text
-                                    h1 
-                                        | Refresh Your Mind,
-                                        br
-                                        | Nourish Your Skin.
-                                    p Discover wellness and beauty in one drink.
-                                    a.btn.btn-primary(href="#") Explore Now
-                                        i.bi.bi-arrow-right
-                                .col-md-6.hero-image
-                                    img(src="path-to-image-3.jpg", alt="Snovv Wellness Drink")
+            .carousel.slide#heroCarousel(data-bs-ride="carousel")
+                .carousel-indicators
+                    button(type="button", data-bs-target="#heroCarousel", data-bs-slide-to="0", class="active", aria-current="true", aria-label="Slide 1")
+                    button(type="button", data-bs-target="#heroCarousel", data-bs-slide-to="1", aria-label="Slide 2")
+                    button(type="button", data-bs-target="#heroCarousel", data-bs-slide-to="2", aria-label="Slide 3")
+                .carousel-inner
+                    .carousel-item.active
+                        .row.align-items-center
+                            img(src="./assets/img/img_hero1.png", alt="Snovv Banner")
+                    .carousel-item
+                        .row.align-items-center
+                            img(src="./assets/img/img_hero1.png", alt="Snovv Banner")
+                    .carousel-item
+                        .row.align-items-center
+                            img(src="./assets/img/img_hero1.png", alt="Snovv Banner")
 
-                .carousel-control-prev(href="#heroCarousel", role="button", data-bs-slide="prev")
-                    span.carousel-control-prev-icon(aria-hidden="true")
-                    span.visually-hidden Previous
-                .carousel-control-next(href="#heroCarousel", role="button", data-bs-slide="next")
-                    span.carousel-control-next-icon(aria-hidden="true")
-                    span.visually-hidden Next
+        section.vidYoutube
+            .container.text-center
+                //- iframe.vid(src="https://www.youtube.com/embed/eVlV9dN4nn4")
+                iframe.vid(src="https://www.youtube.com/embed/eVlV9dN4nn4" title="SNOVV - Lebih Dari Sekedar Minuman" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen)
+
 
         // Section Top Product
         section.products.py-5
-            .container
-                h2.text-center.mb-4 Products
+            .product_container
+                .wrapper
+                    h1 Products
+                    a.btn view more
                 .row
                     //- Product 1
                     .col-md-4.mb-4
                         .card.border-0.shadow
-                            img.card-img-top(src="./assets/img/snovv-gluta.png", alt="Snovv Glutathione")
+                            img.card-img-top(src="./assets/img/product1.png", alt="Snovv Glutathione")
                             .card-body.text-center
                                 h5.card-title Snovv Glutathione
                                 p.card-price
@@ -122,7 +46,7 @@ html(lang='en')
                                     span.price-old.text-muted Rp350.000
                     .col-md-4.mb-4
                         .card.border-0.shadow
-                            img.card-img-top(src="./assets/img/snovv-mag.png", alt="Snovv Glutathione")
+                            img.card-img-top(src="./assets/img/product2.png", alt="Snovv Magnesium")
                             .card-body.text-center
                                 h5.card-title Snovv Magnesium
                                 p.card-price
@@ -130,84 +54,146 @@ html(lang='en')
                                     span.price-old.text-muted Rp300.000
                     .col-md-4.mb-4
                         .card.border-0.shadow
-                            img.card-img-top(src="./assets/img/snovv-lipo.png", alt="Snovv Glutathione")
+                            img.card-img-top(src="./assets/img/product3.png", alt="Snovv VitC")
                             .card-body.text-center
                                 h5.card-title Snovv Liposome Vitamin C
                                 p.card-price
                                     span.price-new Rp150.000
                                     span.price-old.text-muted Rp300.000
-                .text-center.mt-4
-                    a.btn.btn-outline-primary(href="#") View more
 
         // Section Banner Promo
         section.promo-section.py-5
             .container
-                .row.align-items-center
-                    .col-lg-6.col-md-6.text-center.text-md-start
-                        h2 Glutathione + Vitamin C
-                        h3.text-primary Limited Edition Package 53% Off!
-                        a.btn.btn-primary(href="#") View Details
-                    .col-lg-6.col-md-6.text-center
-                        img.img-fluid(src="./assets/img/promo-1.png" alt="Promotion Banner")
-        
-        // Section banner purple
-        section.purple-section
-            .container
-                .row.text-center
-                    .col-md-3
-                        i.icon-quality 
-                        h6 High Quality
-                        p Top International Products
-                    .col-md-3
-                        i.icon-shipping 
-                        h6 Free Shipping
-                        p Order over Rp200.00
-                    .col-md-3
-                        i.icon-partnership 
-                        h6 Partnership
-                        p Online Registration Form
-                    .col-md-3
-                        i.icon-support 
-                        h6 24 / 7 Support
-                        p Dedicated support
+                .carousel.slide(data-bs-ride="carousel")
+                    ol.carousel-indicators
+                        li(data-target="#promoCarausel" data-slide-to="0" class="active")
+                        li(data-target="#promoCarausel" data-slide-to="1")
+                        li(data-target="#promoCarausel" data-slide-to="2")
+                    .carousel-inner
+                        .carousel-item.active
+                            .row.align-items-center
+                                img(src="./assets/img/img_promo1.png", alt="Snovv Promo")
+                        .carousel-item
+                            .row.align-items-center
+                                img(src="./assets/img/img_promo1.png", alt="Snovv Promo")
+                        .carousel-item
+                            .row.align-items-center
+                                img(src="./assets/img/img_promo1.png", alt="Snovv Promo")
 
+        // Section Top Product
+        section.reviewWebsite
+            h1.text-center What They Say
+            .row
+                .carousel.slide#reviewWeb(data-bs-ride="carousel")
+                    .carousel-indicators
+                        button(type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1")
+                        button(type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2")
+                        button(type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3")
+            
+                .carousel-inner
+                    .carousel-item-active
+                        .row
+                            .col-md-4.mb-6
+                                .card.border-0.shadow
+                                    img.card-img-top(src="./assets/img/revWeb1.png", alt="Snovv Glutathione")
+                                    .card-body.text-center
+                                        h5.card-title Snovv Glutathione
+                                        p.card-price
+                                        span.price-new Rp250.000
+                                        span.price-old.text-muted Rp350.000
+                            .col-md-4.mb-6
+                                .card.border-0.shadow
+                                    img.card-img-top(src="./assets/img/revWeb2.png", alt="Snovv Glutathione")
+                                    .card-body.text-center
+                                        h5.card-title Snovv Glutathione
+                                        p.card-price
+                                        span.price-new Rp250.000
+                                        span.price-old.text-muted Rp350.000
+                            .col-md-4.mb-6
+                                .card.border-0.shadow
+                                    img.card-img-top(src="./assets/img/revWeb3.png", alt="Snovv Glutathione")
+                                    .card-body.text-center
+                                        h5.card-title Snovv Glutathione
+                                        p.card-price
+                                        span.price-new Rp250.000
+                                        span.price-old.text-muted Rp350.000
+                            .col-md-4.mb-6
+                                .card.border-0.shadow
+                                    img.card-img-top(src="./assets/img/revWeb3.png", alt="Snovv Glutathione")
+                                    .card-body.text-center
+                                        h5.card-title Snovv Glutathione
+                                        p.card-price
+                                        span.price-new Rp250.000
+                                        span.price-old.text-muted Rp350.000
+                            .col-md-4.mb-4
+                                .card.border-0.shadow
+                                    img.card-img-top(src="./assets/img/revWeb4.png", alt="Snovv Glutathione")
+                                    .card-body.text-center
+                                        h5.card-title Snovv Glutathione
+                                        p.card-price
+                                        span.price-new Rp250.000
+                                        span.price-old.text-muted Rp350.000
+                    .carousel-item
+                        .row
+                            .col-md-4.mb-4
+                                .card.border-0.shadow
+                                    img.card-img-top(src="./assets/img/product1.png", alt="Snovv Glutathione")
+                                .card-body.text-center
+                                    h5.card-title Snovv Glutathione
+                                    p.card-price
+                                    span.price-new Rp250.000
+                                    span.price-old.text-muted Rp350.000
+                            .col-md-4.mb-4
+                                .card.border-0.shadow
+                                    img.card-img-top(src="./assets/img/product1.png", alt="Snovv Glutathione")
+                                .card-body.text-center
+                                    h5.card-title Snovv Glutathione
+                                    p.card-price
+                                    span.price-new Rp250.000
+                                    span.price-old.text-muted Rp350.000
+                            .col-md-4.mb-4
+                                .card.border-0.shadow
+                                    img.card-img-top(src="./assets/img/product1.png", alt="Snovv Glutathione")
+                                .card-body.text-center
+                                    h5.card-title Snovv Glutathione
+                                    p.card-price
+                                    span.price-new Rp250.000
+                                    span.price-old.text-muted Rp350.000
+
+        section.avaibleStore
+            .container
+                h6.text-center Our products are available at
+                .row.gx-5.justify-content-center.p-3
+                    .col-md-2
+                        img(src="./assets/img/partner1.png")
+                    .col-md-2
+                        img(src="./assets/img/partner2.png")
+                    .col-md-2
+                        img(src="./assets/img/partner3.png")
+                    .col-md-2
+                        img(src="./assets/img/partner4.png")
+
+        // Section Top Product
+        section.vSight.py-5
+            .vsight_container
+                .wrapper
+                    h1 V-Sight
+                    a.btn view more
+                .row.gx-5
+                    //- Product 1
+                    .col-md-4.mb-4.Vcontent
+                        img(src="./assets/img/article1.png")
+                        h4.card-title 7 Recommended Korean Supplements 
+                        p 1 November 2024
+                    .col-md-4.mb-4.Vcontent
+                        img(src="./assets/img/article2.png")
+                        h4.card-title Keep healhty inside, fresh outside
+                        p 1 November 2024
+                    .col-md-4.mb-4.Vcontent
+                        img(src="./assets/img/article3.png")
+                        h4.card-title 7 Keys to keep your face brighter through the day
+                        p 3 Oktober 2024
 
         // Footer
-        .footer
-            .container
-                .row
-                    .col-md-6
-                        h2 VITAZEN
-                        p Sign up for email updates on products, launches, and events.
-                        form.d-flex(action="#", method="POST")
-                            input.form-control(type="email", placeholder="Email")
-                            button.btn.btn-primary(type="submit") Submit
-                    .col-md-6.text-md-end
-                        h5 Contact Us
-                        p AIA CENTRAL 21st FL. 
-                        p Jl. Jenderal Sudirman No.Kav. 48A, 
-                        p Karet Semanggi, Kecamatan Setiabudi, 
-                        p Kota Jakarta Selatan, DKI Jakarta 12930
-                        a(href="mailto:admin@vitazen.com") admin@vitazen.com
-                        .social-icons
-                        a(href="#", target="_blank").me-2
-                            i.bi.bi-tiktok
-                        a(href="#", target="_blank").me-2
-                            i.bi.bi-youtube
-                        a(href="#", target="_blank")
-                            i.bi.bi-instagram
-                .row.mt-3
-                    .col-md-6
-                        p &copy; Vitazen. 2024 All rights reserved.
-                    .col-md-6.text-md-end
-                        a(href="#") Privacy Policy
-                        ||
-                        a(href="#") Terms & Conditions
-
-
-        script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js')
-
-        // Core theme JS
-        script(src='js/scripts.js')
-        script(src='https://cdn.startbootstrap.com/sb-forms-latest.js')
+        include includes/footer.pug
         

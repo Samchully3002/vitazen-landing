@@ -1,8 +1,7 @@
 .hero {
-    background-color: #E7E4DD; // Light background color
-    padding: 4rem 0;
-  
+  margin-bottom: 4rem;
     .carousel-item {
+      width: 100%;
       .row {
         align-items: center;
       }
@@ -15,7 +14,7 @@
           font-size: 2.5rem;
           font-weight: bold;
           color: #001f3f; // Dark blue for main text
-          line-height: 1.2;
+          line-height: 1.2;f
   
           br {
             display: block;
@@ -52,7 +51,6 @@
       .hero-image {
         text-align: center;
         img {
-          max-width: 60%;
           height: auto;
           object-fit: cover;
         }
@@ -65,17 +63,46 @@
       border-radius: 50%;
     }
   }
+
+  .vidYoutube {
+    margin: 6rem 0 2rem 0;
+    align-items: center;
+    justify-content: center;
+    place-content: center;
+
+    .vid {
+      width:1280px;
+      height:720px;
+      border-radius: 7px;
+
+    }
+  }
   
 
 .products {
-    background-color: #f9f9f9;
     padding: 3rem 0;
+    
+    .product_container {
+      margin: 2rem 10rem 2rem 10rem;
+      place-content: space-between;
+    }
+    .wrapper {
+      display: flex;
+      place-content: space-between;
+    }
+    .btn {
+      background-color: #F6F2FF;
+      border-radius: 7px;
+      color:#A083DE;
+      height: fit-content;
+      font-size: 1.5rem;
+      padding: 10px 1rem 10px 1rem;
+    }
   
-    h2 {
-      font-size: 2rem;
-      font-weight: bold;
-      color: #001f3f;
-      margin-bottom: 2rem;
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 500;
+      margin-bottom: 3rem;
     }
   
     .card {
@@ -83,7 +110,7 @@
       overflow: hidden;
   
       &-img-top {
-        height: 300px;
+        height: fit-content;
         object-fit: cover;
         border-bottom: 1px solid #ddd;
       }
@@ -92,24 +119,26 @@
         padding: 1.5rem;
   
         .card-title {
-          font-size: 1.2rem;
-          font-weight: bold;
+          margin-left: 1rem;
+          font-size: x-large;
+          text-align: left;
+          font-weight: 500;
           color: #001f3f;
         }
   
         .card-price {
+          margin-left: 1rem;
+          text-align: left;
+          font-size: large;
           margin-top: 0.5rem;
   
           .price-new {
-            font-size: 1.2rem;
             font-weight: bold;
-            color: #6a4df2; // Highlighted price
           }
   
           .price-old {
             text-decoration: line-through;
             margin-left: 0.5rem;
-            font-size: 1rem;
           }
         }
       }
@@ -131,15 +160,17 @@
     }
   }
   
-
 .promo-section {
-    background: linear-gradient(135deg, #f7f3fc, #e8e2f7);
-    padding: 50px 0;
-
    .container {
     max-width: 1140px; // Menyesuaikan lebar container standar Bootstrap
     padding-left: 15px;
     padding-right: 15px;
+    }
+    .carousel-indicators li {
+      cursor: pointer;
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
     }
     
     h2 {
@@ -164,10 +195,149 @@
       color:white;
         
     }
+  }
+
+  .reviewWebsite {
+    margin: 2rem 10rem 2rem 10rem;
   
-    img {
-      max-width: 40%;
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 500;
+      margin-bottom: 3rem;
+    }
+  
+    .card {
       border-radius: 10px;
+      overflow: hidden;
+  
+      &-img-top {
+        height: fit-content;
+        object-fit: cover;
+        border-bottom: 1px solid #ddd;
+      }
+  
+      &-body {
+        padding: 1.5rem;
+  
+        .card-title {
+          margin-left: 1rem;
+          font-size: x-large;
+          text-align: left;
+          font-weight: 500;
+          color: #001f3f;
+        }
+  
+        .card-price {
+          margin-left: 1rem;
+          text-align: left;
+          font-size: large;
+          margin-top: 0.5rem;
+  
+          .price-new {
+            font-weight: bold;
+          }
+  
+          .price-old {
+            text-decoration: line-through;
+            margin-left: 0.5rem;
+          }
+        }
+      }
+  
+      &:hover {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+    }
+  
+    .btn-outline-primary {
+      font-size: 1rem;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+  
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    h1 {
+      font-size: 3rem;
     }
   }
+.avaibleStore {
+  margin: 2rem 10rem 2rem 10rem;
+
+  .container {
+    border-radius: 8px;
+    background-color: #8e37e5;
+    padding: 3rem;
+  }
+  h6 {
+    font-family: Manrope;
+    color: #9FA6AF;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 2rem;
+  }
+
+  .col-md-2 {
+    width: auto;
+    gap: 20rem;
+  }
+}
+
+.vSight {
+  padding: 3rem 0;
+    
+    .vsight_container {
+      margin: 2rem 10rem 2rem 10rem;
+      place-content: space-between;
+    }
+    .wrapper {
+      display: flex;
+      place-content: space-between;
+    }
+    .btn {
+      background-color: #F6F2FF;
+      border-radius: 7px;
+      color:#A083DE;
+      height: fit-content;
+      font-size: 1.5rem;
+      padding: 10px 1rem 10px 1rem;
+    }
   
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 500;
+      margin-bottom: 3rem;
+    }
+    .Vcontent {
+      img {
+        border-radius: 8px;
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+      h4 {
+        font-size: 1.6rem;
+        white-space: nowrap;
+        overflow: hidden !important;
+        text-overflow: ellipsis;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 1.1rem;
+      }
+
+    }
+  
+    .btn-outline-primary {
+      font-size: 1rem;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+  
+      &:hover {
+        color: #fff;
+      }
+    }
+}
