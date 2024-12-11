@@ -1,0 +1,308 @@
+doctype html
+html(lang='en')
+
+    include includes/head.pug
+    body
+        include includes/header.pug
+
+        // Section contact-us form
+        section.productDetail-section
+            .container
+                .row
+                    .col-md-6.end_gap
+                        .carousel.slide#productCarausel(data-bs-ride="carousel" data-interval="false")
+                            .carousel-inner
+                                .carousel-item.active
+                                    .row.align-items-center
+                                        img(src="./assets/img/product1.png")
+                                .carousel-item
+                                    .row.align-items-center
+                                        img(src="./assets/img/product2.png")
+                                .carousel-item
+                                    .row.align-items-center
+                                        img(src="./assets/img/product1.png")
+                                button.carousel-control-prev(type="button" data-bs-target="#productCarausel" data-bs-slide="next")
+                                    span.carousel-control-prev-icon(aria-hidden="true")
+                                    span.visually-hidden Preview
+                                button.carousel-control-next(type="button" data-bs-target="#productCarausel" data-bs-slide="next")
+                                    span.carousel-control-next-icon(aria-hidden="true")
+                                    span.visually-hidden Next
+
+                        .multiple-card-slider
+                            .carousel#carouselExampleControls(data-bs-ride="false")
+                                .carousel-inner
+                                    .carousel-item.active
+                                        .card
+                                            img(src="./assets/img/dtProduct1.png")
+                                    .carousel-item
+                                        .card
+                                            img(src="./assets/img/dtProduct2.png")
+                                    .carousel-item
+                                        .card
+                                            img(src="./assets/img/dtProduct2.png")
+                                    .carousel-item
+                                        .card
+                                            img(src="./assets/img/dtProduct3.png")
+                                    .carousel-item
+                                        .card
+                                            img(src="./assets/img/dtProduct2.png")
+                                    .carousel-item
+                                        .card
+                                            img(src="./assets/img/dtProduct1.png")
+                                    .carousel-item
+                                        .card
+                                            img(src="./assets/img/dtProduct2.png")
+                                button.carousel-control-prev(type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next")
+                                    span.carousel-control-prev-icon(aria-hidden="true")
+                                    span.visually-hidden Preview
+                                button.carousel-control-next(type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next")
+                                    span.carousel-control-next-icon(aria-hidden="true")
+                                    span.visually-hidden Next
+                    .col-md-6.start_gap
+                        h1 Snovv Ghlutation
+                        span.fa.fa-star
+                        span.fa.fa-star
+                        span.fa.fa-star
+                        span.fa.fa-star
+                        span.fa.fa-star
+                        span(style="margin:0.5rem") (4 Reviews)
+                        p Shop via
+                        .grid.gap-0.column-gap-3
+                            button.btn.btn-outline-secondary(type="button")
+                                img(src="./assets/img/icon/ic_shopee.png")
+                                label Shopee
+                            button.btn.btn-outline-secondary(type="button")
+                                img(src="./assets/img/icon/ic_tokped.png")
+                                label Tokopedia
+                        br
+                        .hr.border.border-secondary.border-1.opacity-75
+                        br
+                        h2 Product DetailS
+                        br
+                        .row
+                            span Brand : About H
+                            span Manufacture : Biofarm
+                        br
+                        ul
+                            li Dermatologist Formulated Formula. 
+                            li Inner Beauty Network System, GV5 formulation
+                            li Premium Glutathione from UK 250mg
+                            li Contains special ingredients for inner beauty selected based on H.
+                        br
+                        .hr.border.border-secondary.border-1.opacity-75
+                        br
+                        section.bsb-accordion-6.py-3.py-md-5.py-xl-8
+                            .row
+                                .col-12
+                                    .accordion#accordionExample
+                                        .accordion-item
+                                            h2.accordion-header
+                                                button.accordion-button(type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne")
+                                                    span Accordion Item #1
+                                            .accordion-collapse.collapse-show#collapseOne(data-bs-parent="#accordionExample")
+                                                .accordion-body
+                                                    p this accordion for how to use product
+                                        .accordion-item
+                                            h2.accordion-header
+                                                button.accordion-button(type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo")
+                                                    span Accordion Item #2
+                                            .accordion-collapse.collapse-show#collapseTwo(data-bs-parent="#accordionExample")
+                                                .accordion-body
+                                                    p this accordion for ingredients product
+        section.detailTab
+            .container
+                .row.justify-content-center.mt-2
+                    .col-md-12
+                        .card
+                            .card-header.text-center
+                                ul.nav.nav-tabs.card-header-tabs#myTab(role="tablist")
+                                    li.nav-item.active
+                                        a.nav-link.active#tab1-tab(data-bs-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true") Detail Information
+                                    li.nav-item
+                                        a.nav-link#tab2-tab(data-bs-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="true") Reviews (4)
+                                    li.nav-item
+                                        a.nav-link#tab3-tab(data-bs-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="true") FAQ
+                                    li.nav-item
+                                        a.nav-link#tab4-tab(data-bs-toggle="tab" href="#tab4" role="tab" aria-controls="tab4" aria-selected="true") Shipping
+                            .card-body
+                                .tab-content#myTabContent
+                                    .tab-pane.fade.show.active#tab1(role="tabpanel" aria-labelledby="tab1-tab")
+                                        img.img-fluid(src="./assets/img/dtinfoProduct.png")
+                                    .tab-pane.fade.show.active#tab2(role="tabpane2" aria-labelledby="tab2-tab")
+                                        .row
+                                            .col-md-4
+                                                .row
+                                                    .col-sm-2.text-end
+                                                        h2 5.0
+                                                    .col-sm-4.text-center
+                                                        span.fa.fa-star.checked
+                                                        span.fa.fa-star.checked
+                                                        span.fa.fa-star.checked
+                                                        span.fa.fa-star.checked
+                                                        span.fa.fa-star.checked
+                                                br
+                                                .row
+                                                    .col-sm-1.text-end
+                                                        p 5
+                                                    .col-sm-1.text-end
+                                                        span.fa.fa-star.checked
+                                                    .col-sm-6.text-start
+                                                        .progress
+                                                            .progress-bar(role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100")
+                                                    .col-sm-2
+                                                        p 5
+                                                .row
+                                                    .col-sm-1.text-end
+                                                        p 4
+                                                    .col-sm-1.text-end
+                                                        span.fa.fa-star.checked
+                                                    .col-sm-6.text-start
+                                                        .progress
+                                                            .progress-bar(role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100")
+                                                    .col-sm-2
+                                                        p 2
+                                                .row
+                                                    .col-sm-1.text-end
+                                                        p 3
+                                                    .col-sm-1.text-end
+                                                        span.fa.fa-star.checked
+                                                    .col-sm-6.text-start
+                                                        .progress
+                                                            .progress-bar(role="progressbar" style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100")
+                                                    .col-sm-2
+                                                        p 1
+                                                .row
+                                                    .col-sm-1.text-end
+                                                        p 2
+                                                    .col-sm-1.text-end
+                                                        span.fa.fa-star.checked
+                                                    .col-sm-6.text-start
+                                                        .progress
+                                                            .progress-bar(role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100")
+                                                    .col-sm-2
+                                                        p 0
+                                                .row
+                                                    .col-sm-1.text-end
+                                                        p 1
+                                                    .col-sm-1.text-end
+                                                        span.fa.fa-star.checked
+                                                    .col-sm-6.text-start
+                                                        .progress
+                                                            .progress-bar(role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100")
+                                                    .col-sm-2
+                                                        p 0
+                                            
+                                            .col-md-4.justifiy-content-center
+                                                vr(style="padding: 1rem 0; margin: 0 1rem;")
+                                                img(src="./assets/img/media_review.png")
+                                            .col-md-4
+                                                vr(style="padding: 1rem 0; margin: 0 1rem;")
+                                                 a.btn.btn-primary.ms-3.text-white(href="contact-us.html") Write a review
+                                        br
+                                        .row
+                                            .col-md-6
+                                                h6 Showing 1 - 4 of 4 reviews
+                                            .col-md-6.text-end
+                                                .dropdown
+                                                    button.btn.btn-outline-secondary.dropdown-toggle(type="button" data-toggle="dropdown") Sort by Latest
+                                                        span.caret
+                                                    ul.dropdown-menu
+                                                        li
+                                                            a(href="#") Latest
+                                                        li
+                                                            a(href="#") Date
+                                                        li
+                                                            a(href="#") Review
+                                        br
+                                        .hr.border.border-secondary.border-1.opacity-75
+                                        br
+                                        .row
+                                            .col-md-1
+                                                img(src="./assets/img/userWeb1.png")
+                                            .col-md-6
+                                                .row
+                                                    .col-sm-4.text-center
+                                                        span.fa.fa-star.checked
+                                                        span.fa.fa-star.checked
+                                                        span.fa.fa-star.checked
+                                                        span.fa.fa-star.checked
+                                                        span.fa.fa-star.checked
+                                                .row
+                                                    .col-sm-2
+                                                        h6 Erika Syifa
+                                                    .col-sm-3
+                                                        p  - 07 November 2024
+                                                    .col-sm-1
+                                                        img(src="./assets/img/icon/ic_shopee.png")
+                                                p On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.
+                                            .col-md-4
+                                                img(src="./assets/img/media_review.png")
+                                            br
+                                            .hr.border.border-secondary.border-1.opacity-75
+                                            br
+                                            .row
+                                            .col-md-1
+                                                img(src="./assets/img/userWeb1.png")
+                                            .col-md-6
+                                                .row
+                                                    .col-sm-4.text-center
+                                                        span.fa.fa-star.checked
+                                                        span.fa.fa-star.checked
+                                                        span.fa.fa-star.checked
+                                                        span.fa.fa-star.checked
+                                                        span.fa.fa-star.checked
+                                                .row
+                                                    .col-sm-2
+                                                        h6 Erika Syifa
+                                                    .col-sm-3
+                                                        p  - 07 November 2024
+                                                    .col-sm-1
+                                                        img(src="./assets/img/icon/ic_shopee.png")
+                                                p On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.
+                                            .col-md-4
+                                                img(src="./assets/img/media_review.png")
+                                            br
+                                            .hr.border.border-secondary.border-1.opacity-75
+                                            br
+                                                
+
+
+                                            
+
+                              
+        // Footer
+        include includes/footer.pug
+        include includes/customJS.pug
+        script.
+            $('.multiple-card-slider .carousel').each(function(){
+                var currentCarouselId = '#' + $(this).attr('id');
+                const multipleItemCarousel = document.querySelector(currentCarouselId);
+
+                if(window.matchMedia("(min-width:576px)").matches){
+                    const carousel = new bootstrap.Carousel(multipleItemCarousel, {
+                        interval: false,
+                        wrap: false
+                    })
+                    var carouselWidth = $(currentCarouselId + ' .carousel-inner')[0].scrollWidth;
+                    var cardWidth = $(currentCarouselId + ' .carousel-item').width();
+                    var scrollPosition = 0;    
+                    $(currentCarouselId + ' .carousel-control-next').on('click', function(){
+                        if(scrollPosition < (carouselWidth - (cardWidth * 4))){
+                            console.log('next');
+                            scrollPosition = scrollPosition + cardWidth;
+                            $(currentCarouselId + ' .carousel-inner').animate({scrollLeft: scrollPosition},600);
+                        }
+                    });
+                    $(currentCarouselId + ' .carousel-control-prev').on('click', function(){
+                        if(scrollPosition > 0){
+                            console.log('prev');
+                            scrollPosition = scrollPosition - cardWidth;
+                            $(currentCarouselId + ' .carousel-inner').animate({scrollLeft: scrollPosition},600);
+                        }
+                    });
+                }else{
+                    $(multipleItemCarousel).addClass('slide');
+                }
+            });
+
+        
