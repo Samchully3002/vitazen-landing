@@ -1,27 +1,30 @@
 // Top bar for promotional message
-.topWrapp.text-center
-    a(href='#' style="color: #fff;") Glutathione + Vitamin C 1-month limited edition package, 53% discount!
+div(style="width: 100%; height: 100%; padding-left: 50px; padding-right: 50px; padding-top: 10px; padding-bottom: 10px; background: #392B56; border-bottom: 1px rgba(19.59, 65.26, 79.69, 0.20) solid; justify-content: center; align-items: center; gap: 806px; display: inline-flex")
+    a(href="#" style="text-align: center")
+        span(style="color: white; font-size: 16px; font-family: Poppins; font-weight: 700; word-wrap: break-word") Glutathione + Vitamin C
+        span(style="color: white; font-size: 16px; font-family: Poppins; font-weight: 500; word-wrap: break-word") 1-month limited edition package, 40% discount!
 
 // Main navigation bar
-nav.navbar.navbar-expand-lg.navbar-light.bg-white.border-bottom.sticky-top
-    .container
-        // Logo
-        a.navbar-brand(href="#") 
-            img(src="././assets/img/vita_icon.png" alt="Vitazen Logo" height="30")
-        // Hamburger menu for smaller screens
-        button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#navbarNav", aria-controls="navbarNav", aria-expanded="false", aria-label="Toggle navigation")
-            span.navbar-toggler-icon
-    
-        // Navigation menu
-        .collapse.navbar-collapse#navbarNav
-            ul.navbar-nav.mx-auto
-                li.nav-item
-                    a.nav-link.active(href="index.html") Home
-                li.nav-item
-                    a.nav-link(href="products.html") Products
-                li.nav-item
-                    a.nav-link(href="v-sight.html") V-Sight
-                li.nav-item
-                    a.nav-link(href="#") About Us
-        // Contact button to the right
-        a.btn.btn-primary.ms-3.text-white(href="contact-us.html") Contact Us
+nav.navbar.navbar-expand-lg.navbar-light.bg-white.border-bottom.sticky-top(style="width: 100%; height: 100%; padding-left: 50px; padding-right: 50px; padding-top: 20px; padding-bottom: 20px; background: white; border-bottom: 1px #E1E3EA solid; justify-content: space-between; align-items: center; display: inline-flex")
+    // Logo
+    a.navbar-brand(href="#") 
+        img.imgLogo(src="././assets/img/vita_icon.png" alt="Vitazen Logo" height="30")
+
+    // Hamburger menu for smaller screens
+    button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#navbarNav", aria-controls="navbarNav", aria-expanded="false", aria-label="Toggle navigation")
+        span.navbar-toggler-icon
+
+    // Navigation menu
+    .collapse.navbar-collapse#navbarNavdiv
+        ul.navbar-nav.mx-auto(style="justify-content: center; align-items: center; gap: 31px; display: flex")
+            li.nav-item
+                a.nav-link.active(style="text-align: center; color: #0F1C38; font-size: 16px; font-family: Poppins; font-weight: 600; word-wrap: break-word" href="index.html") Home
+            li.nav-item
+                a.nav-link(style="text-align: center; color: #0F1C38; font-size: 16px; font-family: Poppins; font-weight: 600; word-wrap: break-word" href="products.html") Products
+            li.nav-item
+                a.nav-link(style="text-align: center; color: #0F1C38; font-size: 16px; font-family: Poppins; font-weight: 600; word-wrap: break-word" href="v-sight.html") V-Sight
+            li.nav-item
+                a.nav-link(style="text-align: center; color: #0F1C38; font-size: 16px; font-family: Poppins; font-weight: 600; word-wrap: break-word" href="#") About Us
+    // Contact button to the right
+    a.btn.btn-primary.ms-3.text-white(style="padding-left: 20px; padding-right: 20px; padding-top: 10px; padding-bottom: 10px; background: #A083DE; border-radius: 5px; justify-content: center; align-items: center; gap: 10px; display: flex; text-align: center; color: white; font-size: 16px; font-family: Poppins; font-weight: 500; word-wrap: break-word" href="contact-us.html") Contact Us
+        

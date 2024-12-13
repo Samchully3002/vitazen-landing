@@ -65,7 +65,6 @@
   }
 
   .vidYoutube {
-    margin: 6rem 0 2rem 0;
     align-items: center;
     justify-content: center;
     place-content: center;
@@ -80,12 +79,6 @@
   
 
 .products {
-    padding: 3rem 0;
-    
-    .product_container {
-      margin: 2rem 10rem 2rem 10rem;
-      place-content: space-between;
-    }
     .wrapper {
       display: flex;
       place-content: space-between;
@@ -162,16 +155,32 @@
   
 .promo-section {
    .container {
-    max-width: 1140px; // Menyesuaikan lebar container standar Bootstrap
-    padding-left: 15px;
-    padding-right: 15px;
+      max-width: 1140px; // Menyesuaikan lebar container standar Bootstrap
+      padding-left: 15px;
+      padding-right: 15px;
     }
-    .carousel-indicators li {
-      cursor: pointer;
-      width: 10px;
-      height: 10px;
-      border-radius: 100%;
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      filter: invert(100%);
     }
+    .custom-indicators {
+      position: absolute;
+      bottom: -60px;
+    }
+    .custom-indicators .active {
+      background-color: black; /* Black for the active dot */
+      width: 30px; /* Elongate the active indicator */
+      border-radius: 14px; /* Round shape */
+    }
+
+    .custom-indicators button {
+        background-color: gray; /* Gray for inactive dots */
+        width: 10px; /* Default size */
+        height: 10px;
+        border-radius: 50%;
+    }
+
+
     
     h2 {
       font-size: 2.5rem;
@@ -207,27 +216,25 @@
   }
 
   .multiple-card-slider .carousel-inner {
-    display: flex;
     margin-top: 1rem;
     padding: 1em;
   }
-  .multiple-card-slider .carousel-inner .carousel-item.active,
+  .multiple-card-slider .carousel-inner .carousel-item.active
   .multiple-card-slider .carousel-inner .carousel-item {
       margin: 0 5px;
-      display: flex;
-      flex: none;
   }
   .multiple-card-slider .card {
-      border-radius: 7px;
-      border: none;
+    width: 320px;
+    border-radius: 7px;
+    border: none;
   }
   .carousel-control-prev,
   .carousel-control-next,
   .multiple-card-slider .carousel-control-prev,
   .multiple-card-slider .carousel-control-next {
-      background-color: #e1e1e1;
-      width: 3em;
-      height: 3em;
+      background-color: #c1bebe;
+      width: 4em;
+      height: 4em;
       border-radius: 50%;
       top: 50%;
       transform: translateY(-50%);
@@ -254,9 +261,9 @@
   .carausel-inner {
     padding: 0 1rem 0 1rem;
   }
-  .carousel-control-prev {
-    right: 55rem;
- }
+//   .carousel-control-prev {
+//     right: 55rem;
+//  }
   .card {
     border-radius: 7px;
     overflow: hidden;
@@ -306,42 +313,7 @@
   }
 }
 
-
-.slider {
-  width: 100%;
-  margin: 50px auto;
-}
-
-.slick-slide {
-margin: 0px 20px;
-}
-
-.slick-slide img {
-width: 100%;
-}
-
-.slick-prev:before,
-.slick-next:before {
-color: black;
-}
-
-
-.slick-slide {
-transition: all ease-in-out .3s;
-opacity: .2;
-}
-
-.slick-active {
-opacity: .5;
-}
-
-.slick-current {
-opacity: 1;
-}
-
-
 .reviewIGVid {
-  margin: 2rem 10rem 5rem 10rem;
 
   h1 {
     font-size: 3.5rem;
@@ -350,11 +322,6 @@ opacity: 1;
   }
   .carousel {
     position: relative;
- }           
- .carousel-control-prev , .carousel-control-next {
-    position: absolute;
-    top: 50%;
-    transform: TranslateY(-50%);
  }
   .carausel-inner {
     padding: 0 1rem 0 1rem;
@@ -411,8 +378,44 @@ opacity: 1;
   }
 }
 
-.reviewShop {
+.reviewShop1 {
   margin: 2rem 10rem 5rem 10rem;
+
+  .multiple-card-slider .carousel-inner {
+    margin-top: 1rem;
+    padding: 1em;
+  }
+  .multiple-card-slider .carousel-inner .carousel-item.active
+  .multiple-card-slider .carousel-inner .carousel-item {
+      margin: 0 5px;
+  }
+  .multiple-card-slider .card {
+    width: 320px;
+    border-radius: 7px;
+    border: none;
+  }
+  .carousel-control-prev,
+  .carousel-control-next,
+  .multiple-card-slider .carousel-control-prev,
+  .multiple-card-slider .carousel-control-next {
+      background-color: #c1bebe;
+      width: 4em;
+      height: 4em;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+  @media (min-width: 768px) {
+      .multiple-card-slider .carousel-item {
+      margin-right: 0;
+      flex: 0 0 calc(100% / 3);
+      display: block;
+      backface-visibility: visible;
+      }
+      .multiple-card-slider .carousel-inner {
+      display: flex;
+      }
+  }
 
   .carousel {
     position: relative;
@@ -461,7 +464,7 @@ opacity: 1;
 
   .container {
     border-radius: 8px;
-    background-color: #8e37e5;
+    background-color: #FBF7FF;
     padding: 3rem;
   }
   h6 {

@@ -7,6 +7,29 @@
     max-width: unset;
     padding:1rem 8rem 1rem 8rem;
 }
+.imgLogo {
+    width: 12.1875rem;
+    height: 1.4375rem;
+}
+.wrapperNav {
+    width: 100%;
+    height: 100%; 
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px #E1E3EA solid;
+    justify-content: space-between;
+    align-items: center;
+    display: inline-flex;
+}
+.box {
+    width: 195px;
+    height: 23px;
+    background-color: #0F1C38;
+    border: 0.50px #0F1C38 solid;
+}
+
 li {
     font-size: 1rem;
 }
