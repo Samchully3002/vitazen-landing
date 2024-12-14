@@ -11,23 +11,21 @@ html(lang='en')
                 .row
                     .col-md-6.end_gap
                         h1 Contact Us
-                        p We're here for you. Send us a message using the form below and we'll get back to you promptly!
-                        hr(style="padding: 0 2rem;")
+                        span We're here for you. Send us a message using the form below and we'll get back to you promptly!
+                        div(style="width: 100%; padding-top: 30px; padding-bottom: 30px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex")
+                            div(style="width: 100%; border: 1px rgba(2, 14, 53, 0.20) solid;")
                         .contact-info
-                            .info-item
-                                i.bi.bi-envelope
-                                div
-                                    h6 Email
+                            .email-item
+                                img(src="./assets/img/icon/ic_email.png")
+                                .textEmail
+                                    span Email
                                     p info@vitazen.com
-                            .info-item
-                                i.bi.bi-geo-alt
-                                div
-                                    h6 Address
-                                    p AIA CENTRAL 21st FL. Jl. Jenderal Sudirman No.Kav. 48A, 
-                                        br
-                                        Karet Semanggi, Kecamatan Setiabudi, Kota Jakarta Selatan,
-                                        br
-                                        Daerah Khusus Ibukota Jakarta 12930
+                            .adress-item
+                                img(src="./assets/img/icon/ic_map.png")
+                                .textAdress
+                                    span Address
+                                    p AIA CENTRAL 21st FL. Jl. Jenderal Sudirman No.Kav. 48A, <br/>Karet Semanggi, Kecamatan Setiabudi, Kota Jakarta Selatan, <br/>Daerah Khusus Ibukota Jakarta 12930
+                                    
                     .col-md-6.start_gap
                         form
                             .form-group
@@ -36,8 +34,7 @@ html(lang='en')
                                 input.form-control.form-control-lg(type="email" placeholder="Email")
                             .form-group
                                 textarea.form-control.form-control-lg(placeholder="Message" rows="4")
-                            .d-grid.gap-2
-                                button.btn.btn-primary.btn-lg.text-white(type="button") Send Message
+                            button.btnSend(type="submit") Send Message
 
         // Footer
         include includes/footer.pug

@@ -1,23 +1,30 @@
 .contactus-section {
+  padding: 96px 100px;
   .container {
     max-width: unset;
-    padding: 5rem 15rem 5rem 15rem;
   }
   .end_gap {
-    padding-right: 4rem;
+    padding-right: 50px;
   }
   .start_gap {
-    padding-left: 4rem;
+    padding-left:50px;
   }
     h1 {
+      // Contact Us
+      color: #020E35;
       font-size: 56px;
+      font-family: Poppins;
       font-weight: 500;
-      color: #1a1a1a;
+      word-wrap: break-word
     }
   
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
+    span {
+      // We’re here for you. Send us a message using the form below and we'll get back to you promptly!
+      color: #020E35;
+      font-size: 16px;
+      font-family: Poppins;
+      font-weight: 500;
+      word-wrap: break-word
     }
   
     hr {
@@ -27,47 +34,148 @@
     }
   
     .contact-info {
-      .info-item {
-        display: flex;
-        align-items: center;
-        margin: 2rem 0 0 0;
-  
-        i {
-          font-size: 24px;
-          color: #6c63ff; // Adjust color as needed
-          margin-right: 10px;
+      width: 100%; 
+      height: fit-content; 
+      flex-direction: column; 
+      justify-content: flex-start; 
+      align-items: flex-start; 
+      gap: 30px; 
+      display: inline-flex;
+
+      .email-item {
+          width: 100%; 
+          height: 100%; 
+          justify-content: flex-start; 
+          align-items: center; 
+          gap: 20px; 
+          display: inline-flex;
+        img {
+          width: 48px; height: 48px;
+          }
+        .textEmail {
+          flex-direction: column; 
+          justify-content: flex-start; 
+          align-items: flex-start; 
+          display: inline-flex
         }
   
-        h6 {
-          font-weight: bold;
-          margin: 0 0 5px 10px;
-          color: #1a1a1a;
+        span {
+          width: 96px; 
+          color: #181C32; 
+          font-size: 16px; 
+          font-family: Plus Jakarta Sans; 
+          font-weight: 700; 
+          line-height: 24px; 
+          word-wrap: break-word
         }
   
         p {
-          margin: 0 10px;
-          font-size: 1rem;
-          color: #5a5a5a;
+          width: 278px; 
+          color: #181C32; 
+          font-size: 16px; 
+          font-family: Plus Jakarta Sans; 
+          font-weight: 400; 
+          line-height: 24px; 
+          word-wrap: break-word
+        }
+      }
+      .adress-item {
+        align-self: stretch; 
+        justify-content: flex-start; 
+        align-items: flex-start; 
+        gap: 20px; 
+        display: inline-flex;
+
+        img {
+          width: 48px; height: 48px;
+        }
+        .textAdress {
+          flex: 1 1 0; 
+          flex-direction: column; 
+          justify-content: flex-start; 
+          align-items: flex-start; 
+          display: inline-flex;
+
+          span {
+            width: 96px; 
+            color: #181C32; 
+            font-size: 16px; 
+            font-family: Plus Jakarta Sans; 
+            font-weight: 700; 
+            line-height: 24px; 
+            word-wrap: break-word;
+          }
+          p {
+            align-self: stretch; 
+            color: #181C32; 
+            font-size: 16px; 
+            font-family: Plus Jakarta Sans; 
+            font-weight: 400; 
+            line-height: 24px; 
+            word-wrap: break-word
+          }
         }
       }
     }
   
     form {
+      width: 100%; 
+      height: 100%; 
+      flex-direction: column; 
+      justify-content: flex-start; 
+      align-items: center; 
+      gap: 30px; 
+      display: inline-flex;
       .form-group {
-        margin-bottom: 1.5rem;
+        align-self: stretch; 
+        gap: 30px; 
+        display: inline-flex;
   
-        input,
-        textarea {
-          border: 1px solid #eaeaea;
-          border-radius: 5px;
-          padding: 10px;
-          font-size: 14px;
+        input,textarea {
+          align-self: stretch; 
+          height: 70px; 
+          padding-left: 15px; 
+          padding-right: 15px; 
+          padding-top: 10px; 
+          padding-bottom: 10px; 
+          background: #F8F8F8; 
+          border: none;
+          border-radius: 6px; 
+          justify-content: flex-start; 
+          align-items: center;
+          gap: 10px; 
+          display: inline-flex;
         }
   
         input::placeholder,
-        textarea::placeholder {
-          color: #aaa;
+        textarea::placeholder {          
+          font-size: 16px; 
+          font-family: Montserrat; 
+          font-weight: 500; 
+          line-height: 14px; 
+          word-wrap: break-word;
         }
+      }
+      .btnSend {
+        width: 100%;
+        height: 60px; 
+        padding-left: 15px; 
+        padding-right: 15px; 
+        padding-top: 10px; 
+        padding-bottom: 10px; 
+        background: #A083DE; 
+        border-radius: 5px; 
+        border: 1px solid; 
+        justify-content: center; 
+        align-items: center; 
+        gap: 10px; 
+        display: inline-flex;
+        color: white; 
+        font-size: 16px; 
+        font-family: Poppins; 
+        font-weight: 500; 
+        line-height: 14px; 
+        word-wrap: break-word;
       }
     }
   }

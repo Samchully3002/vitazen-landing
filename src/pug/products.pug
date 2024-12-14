@@ -6,35 +6,76 @@ html(lang='en')
         include includes/header.pug
 
         // Section Top Product
-        section.products.py-5
+        section.products
             h1.text-center Products
-            .product_container
-                .row
-                    //- Product 1
-                    .col-md-4.mb-4
-                        .card.border-0.shadow
-                            img.card-img-top(src="./assets/img/product1.png", alt="Snovv Glutathione")
-                            .card-body.text-center
-                                h5.card-title Snovv Glutathione
-                                p.card-price
-                                    span.price-new Rp250.000
-                                    span.price-old.text-muted Rp350.000
-                    .col-md-4.mb-4
-                        .card.border-0.shadow
-                            img.card-img-top(src="./assets/img/product2.png", alt="Snovv Magnesium")
-                            .card-body.text-center
-                                h5.card-title Snovv Magnesium
-                                p.card-price
-                                    span.price-new Rp150.000
-                                    span.price-old.text-muted Rp300.000
-                    .col-md-4.mb-4
-                        .card.border-0.shadow
-                            img.card-img-top(src="./assets/img/product3.png", alt="Snovv VitC")
-                            .card-body.text-center
-                                h5.card-title Snovv Liposome Vitamin C
-                                p.card-price
-                                    span.price-new Rp150.000
-                                    span.price-old.text-muted Rp300.000
+            .row
+                ul.product-container
+                    li.product
+                        a.linkToDetail(href="#")
+                            .imgWrapper
+                                img.imgProduct(src="./assets/img/product3.png")
+                            .infoProduct
+                                span.productName Snovv Liposome Vitamin C
+                                .priceWrapper
+                                    span.discountPrice Rp93.000
+                                    span.normalPrice Rp 150.000
+                                    .rateWrapper
+                                        span.numberRate 43%
+                    li.product
+                        a.linkToDetail(href="#")
+                            .imgWrapper
+                                img.imgProduct(src="./assets/img/product3.png")
+                            .infoProduct
+                                span.productName Snovv Liposome Vitamin C
+                                .priceWrapper
+                                    span.discountPrice Rp93.000
+                                    span.normalPrice Rp 150.000
+                                    .rateWrapper
+                                        span.numberRate 43%
+                    li.product
+                        a.linkToDetail(href="#")
+                            .imgWrapper
+                                img.imgProduct(src="./assets/img/product3.png")
+                            .infoProduct
+                                span.productName Snovv Liposome Vitamin C
+                                .priceWrapper
+                                    span.discountPrice Rp93.000
+                                    span.normalPrice Rp 150.000
+                                    .rateWrapper
+                                        span.numberRate 43%
+                    li.product
+                        a.linkToDetail(href="#")
+                            .imgWrapper
+                                img.imgProduct(src="./assets/img/product3.png")
+                            .infoProduct
+                                span.productName Snovv Liposome Vitamin C
+                                .priceWrapper
+                                    span.discountPrice Rp93.000
+                                    span.normalPrice Rp 150.000
+                                    .rateWrapper
+                                        span.numberRate 43%
+                    li.product
+                        a.linkToDetail(href="#")
+                            .imgWrapper
+                                img.imgProduct(src="./assets/img/product3.png")
+                            .infoProduct
+                                span.productName Snovv Liposome Vitamin C
+                                .priceWrapper
+                                    span.discountPrice Rp93.000
+                                    span.normalPrice Rp 150.000
+                                    .rateWrapper
+                                        span.numberRate 43%
+                    li.product
+                        a(href="productDetail.html" style="flex-direction: column; justify-content: center; align-items: center; gap: 20px; display: inline-flex")
+                            div(style="width: 392px; height: 400px; border-radius: 10px; overflow: hidden; flex-direction: column; justify-content: center; align-items: center; display: flex")
+                                img(style="width: 392px; height: 400px" src="./assets/img/product1.png")
+                            div(style="align-self: stretch; height: 61px; padding-left: 5px; padding-right: 5px; flex-direction: column; justify-content: center; align-items: flex-start; display: flex")
+                                span(style="color: black; font-size: 20px; font-family: Poppins; font-weight: 400; line-height: 32px; word-wrap: break-word") Snovv Glutathione
+                                div(style="align-self: stretch; justify-content: flex-start; align-items: center; gap: 10px; display: inline-flex")
+                                    span(style="color: #020E35; font-size: 18px; font-family: Plus Jakarta Sans; font-weight: 700; line-height: 28.80px; word-wrap: break-word") Rp150.000
+                                    span(style="text-align: center; color: rgba(2, 14, 53, 0.50); font-size: 14px; font-family: Plus Jakarta Sans; font-weight: 500; text-decoration: line-through; text-transform: capitalize; line-height: 16.80px; word-wrap: break-word") Rp 250.000
+                                    div(style="padding-left: 8px; padding-right: 8px; padding-top: 5px; padding-bottom: 5px; background: #FFC9C9; border-radius: 50px; justify-content: center; align-items: center; gap: 2px; display: flex")
+                                        span(style="color: #CF0003; font-size: 14px; font-family: Inter; font-weight: 700; line-height: 16.80px; word-wrap: break-word") 43%
 
         // Footer
         include includes/footer.pug

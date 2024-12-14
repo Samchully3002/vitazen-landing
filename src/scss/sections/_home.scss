@@ -207,32 +207,19 @@
   }
 
 .reviewWebsite {
-  margin: 2rem 10rem 5rem 10rem;
-
-  h1 {
-    font-size: 3.5rem;
-    font-weight: 500;
-    margin-bottom: 3rem;
-  }
 
   .multiple-card-slider .carousel-inner {
-    margin-top: 1rem;
-    padding: 1em;
+    width: 100%; 
+    height: 100%; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    gap: 24px; 
+    display: inline-flex;
   }
-  .multiple-card-slider .carousel-inner .carousel-item.active
-  .multiple-card-slider .carousel-inner .carousel-item {
-      margin: 0 5px;
-  }
-  .multiple-card-slider .card {
-    width: 320px;
-    border-radius: 7px;
-    border: none;
-  }
-  .carousel-control-prev,
-  .carousel-control-next,
+
   .multiple-card-slider .carousel-control-prev,
   .multiple-card-slider .carousel-control-next {
-      background-color: #c1bebe;
+      filter: invert(100%);
       width: 4em;
       height: 4em;
       border-radius: 50%;
@@ -242,7 +229,6 @@
   @media (min-width: 768px) {
       .multiple-card-slider .carousel-item {
       margin-right: 0;
-      flex: 0 0 calc(100% / 3);
       display: block;
       backface-visibility: visible;
       }
@@ -260,56 +246,6 @@
  }
   .carausel-inner {
     padding: 0 1rem 0 1rem;
-  }
-//   .carousel-control-prev {
-//     right: 55rem;
-//  }
-  .card {
-    border-radius: 7px;
-    overflow: hidden;
-    &-img-top {
-      height: 30%;
-      width: auto;
-      object-fit: cover;
-      border-bottom: 1px solid #ddd;
-    }
-    &-body {
-      padding: 1.5rem;
-      .card-title {
-        margin-left: 1rem;
-        font-size: x-large;
-        text-align: left;
-        font-weight: 500;
-      }
-      .starWrapper {
-        display: flex;
-        margin-bottom: 1rem;
-      }
-      .checked {
-        color:orange;
-      }      
-      .personWrapper {
-        display: flex;
-        place-content: start;
-        span {
-          font-weight: 600;
-        }
-        p {
-          text-overflow: ellipsis;
-          height: 2rem;
-        }
-      }
-      .personWeb {
-        width: fit-content;
-        display: block;
-        border-radius: 100px;
-        margin-right: 1rem;
-      }
-
-    }
-  }
-  &:hover {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -460,79 +396,128 @@
 }
 
 .avaibleStore {
-  margin: 2rem 10rem 2rem 10rem;
+  width: 100%;
+  margin: 88px 0 84px 0;
+  display: inline-flex;
+  justify-content: center; 
+  align-items: center; 
 
   .container {
-    border-radius: 8px;
-    background-color: #FBF7FF;
-    padding: 3rem;
+    width: 1240px;
+    padding-top: 50px; 
+    padding-bottom: 50px; 
+    background: #FBF7FF; 
+    border-radius: 20px; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center; 
+    gap: 50px; 
+    display: inline-flex;
   }
-  h6 {
-    font-family: Manrope;
-    color: #9FA6AF;
-    font-size: 2rem;
-    font-weight: 600;
-    padding: 2rem;
+  span {
+    width: 870px; 
+    height: 28px; 
+    text-align: center; 
+    color: #9FA6AF; 
+    font-size: 16px; 
+    font-family: Manrope; 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    line-height: 59px; 
+    letter-spacing: 1.60px; 
+    word-wrap: break-word;
   }
-
-  .col-md-2 {
-    width: auto;
-    gap: 20rem;
+  .colImg {
+    justify-content: flex-start; 
+    align-items: center; 
+    gap: 80px; 
+    display: inline-flex;
   }
 }
 
 .vSight {
-  padding: 3rem 0;
-    
-    .vsight_container {
-      margin: 2rem 10rem 2rem 10rem;
-      place-content: space-between;
-    }
-    .wrapper {
-      display: flex;
-      place-content: space-between;
-    }
-    .btn {
-      background-color: #F6F2FF;
-      border-radius: 7px;
-      color:#A083DE;
-      height: fit-content;
-      font-size: 1.5rem;
-      padding: 10px 1rem 10px 1rem;
-    }
-  
-    h1 {
-      font-size: 3.5rem;
-      font-weight: 500;
-      margin-bottom: 3rem;
-    }
-    .Vcontent {
-      img {
-        border-radius: 8px;
-        width: 100%;
-        margin-bottom: 2rem;
-      }
-      h4 {
-        font-size: 1.6rem;
-        white-space: nowrap;
-        overflow: hidden !important;
-        text-overflow: ellipsis;
-        margin-bottom: 10px;
-      }
-      p {
-        font-size: 1.1rem;
-      }
+  align-items: center; 
+  justify-content: center; 
 
-    }
+  .title {
+    width: 100%; 
+    text-align: center; 
+    color: #020E35; 
+    font-size: 56px; 
+    font-family: Poppins; 
+    font-weight: 500; 
+    word-wrap: break-word;
+  }
+  .row {
+    margin-top: 48px;
+  }
   
-    .btn-outline-primary {
-      font-size: 1rem;
-      padding: 0.8rem 1.5rem;
-      border-radius: 5px;
-      transition: all 0.3s ease;
+  .vsight-container {
+    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 48px;
+  }
   
-      &:hover {
-        color: #fff;
-      }
+  @media (min-width: 768px) {
+    .vsight-container{
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
+  }
+  
+  @media (min-width: 1024px) {
+    .vsight-container{
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+  
+  .vsight{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .linkToDetail {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    gap: 20px; 
+    display: inline-flex
+  }
+  .Vimg {
+    width: 413.33px;
+    height: 300px; 
+    position: relative; 
+    border-radius: 20px
+  }
+  .Vwrapper {
+    align-self: stretch; 
+    height: 50px;
+    padding-left: 5px; 
+    padding-right: 5px; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: flex-start; 
+    display: flex
+  }
+  .vTitle {
+    align-self: stretch; 
+    color: #020E35;
+    font-size: 20px; 
+    font-family: Poppins; 
+    font-weight: 600; 
+    line-height: 24px; 
+    word-wrap: break-word
+  }
+
+  .vDate {
+    color: #020E35; 
+    font-size: 16px; 
+    font-family: Plus Jakarta Sans; 
+    font-weight: 500; 
+    line-height: 25.60px; 
+    word-wrap: break-word
+  }
 }

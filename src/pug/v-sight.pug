@@ -4,35 +4,67 @@ html(lang='en')
     include includes/head.pug
     body
         include includes/header.pug
-        // Section blogs post
-        section.posts-section
-            .container.my-5
-                h1.text-center.mb-4 V-Sight
-                br
-                .row.gx-5
-                    //- Product 1
-                    .col-md-4.mb-4.Vcontent
-                        img(src="./assets/img/article1.png")
-                        h4.card-title 7 Recommended Korean Supplements 
-                        p 1 November 2024
-                    .col-md-4.mb-4.Vcontent
-                        img(src="./assets/img/article2.png")
-                        h4.card-title Keep healhty inside, fresh outside
-                        p 1 November 2024
-                    .col-md-4.mb-4.Vcontent
-                        img(src="./assets/img/article3.png")
-                        h4.card-title 7 Keys to keep your face brighter through the day
-                        p 3 Oktober 2024
+
+        // Section Top Product
+        section.vSight
+            .text-center
+                span.title V-Sight
+            .row
+                ul.vsight-container
+                    li.vsight
+                        a.linkToDetail(href="#")
+                            img.Vimg(src="./assets/img/article1.png")
+                            .Vwrapper
+                                span.vTitle 7 Recommended Korean Supplements Supplements Supplements
+                                span.vDate 1 November 2024
+                    li.vsight
+                        a.linkToDetail(href="#")
+                            img.Vimg(src="./assets/img/article2.png")
+                            .Vwrapper
+                                span.vTitle 7 Recommended Korean Suppleme
+                                span.vDate 1 November 2024
+                    li.vsight
+                        a.linkToDetail(href="#")
+                            img.Vimg(src="./assets/img/article3.png")
+                            .Vwrapper
+                                span.vTitle 7 Recommended Korean Supple
+                                span.vDate 1 November 2024
+                    li.vsight
+                        a.linkToDetail(href="#")
+                            img.Vimg(src="./assets/img/article1.png")
+                            .Vwrapper
+                                span.vTitle 7 Recommended Korean Supplements
+                                span.vDate 1 November 2024
+                    li.vsight
+                        a.linkToDetail(href="#")
+                            img.Vimg(src="./assets/img/article2.png")
+                            .Vwrapper
+                                span.vTitle 7 Recommended Korean Supplements
+                                span.vDate 1 November 2024
+                    li.vsight
+                        a.linkToDetail(href="#")
+                            img.Vimg(src="./assets/img/article3.png")
+                            .Vwrapper
+                                span.vTitle 7 Recommended Korean Supplements
+                                span.vDate 1 November 2024
+                    li.vsight
+                        a.linkToDetail(href="#")
+                            img.Vimg(src="./assets/img/article2.png")
+                            .Vwrapper
+                                span.vTitle 7 Recommended Korean Supplements
+                                span.vDate 1 November 2024
                 nav
                     ul.pagination.justify-content-center
                         li.page-item
-                            a.page-link(href="#") Previous
+                            a.page-link(href="#") 
+                                i.fa.fa-chevron-left.colored
                         li.page-item.active
                             a.page-link(href="#") 1
                         li.page-item
                             a.page-link(href="#") 2
                         li.page-item
-                            a.page-link(href="#") Next
+                            a.page-link(href="#")
+                                i.fa.fa-chevron-right.colored2
 
         
     // Footer
