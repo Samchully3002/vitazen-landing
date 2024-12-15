@@ -38,7 +38,7 @@ html(lang='en')
                         div(style="padding-left: 20px; padding-right: 20px; padding-top: 10px; padding-bottom: 10px; background: #F6F2FF; border-radius: 5px; justify-content: center; align-items: center; gap: 10px; display: flex")
                             a(href="products.html" style="text-decoration: none; color: #A083DE; font-size: 16px; font-family: Poppins; font-weight: 500; word-wrap: break-word") View more
                     div(style="justify-content: flex-start; align-items: flex-start; gap: 30px; display: inline-flex")
-                        a(href="productDetail.html" style="flex-direction: column; justify-content: center; align-items: center; gap: 20px; display: inline-flex")
+                        a(href="productDetail.html" style="flex-direction: column; justify-content: center; align-items: center; gap: 20px; display: inline-flex; text-decoration: none;")
                             div(style="width: 392px; height: 400px; border-radius: 10px; overflow: hidden; flex-direction: column; justify-content: center; align-items: center; display: flex")
                                 img(style="width: 392px; height: 400px" src="./assets/img/product1.png")
                             div(style="align-self: stretch; height: 61px; padding-left: 5px; padding-right: 5px; flex-direction: column; justify-content: center; align-items: flex-start; display: flex")
@@ -49,7 +49,7 @@ html(lang='en')
                                     div(style="padding-left: 8px; padding-right: 8px; padding-top: 5px; padding-bottom: 5px; background: #FFC9C9; border-radius: 50px; justify-content: center; align-items: center; gap: 2px; display: flex")
                                         span(style="color: #CF0003; font-size: 14px; font-family: Inter; font-weight: 700; line-height: 16.80px; word-wrap: break-word") 43%
 
-                        a(href="#" style="flex-direction: column; justify-content: center; align-items: center; gap: 20px; display: inline-flex")
+                        a(href="#" style="flex-direction: column; justify-content: center; align-items: center; gap: 20px; display: inline-flex; text-decoration: none;")
                             div(style="width: 392px; height: 400px; border-radius: 10px; overflow: hidden; flex-direction: column; justify-content: center; align-items: center; display: flex")
                                 img(style="width: 392px; height: 400px" src="./assets/img/product2.png")
                             div(style="align-self: stretch; height: 61px; padding-left: 5px; padding-right: 5px; flex-direction: column; justify-content: center; align-items: flex-start; display: flex")
@@ -60,7 +60,7 @@ html(lang='en')
                                     div(style="padding-left: 8px; padding-right: 8px; padding-top: 5px; padding-bottom: 5px; background: #FFC9C9; border-radius: 50px; justify-content: center; align-items: center; gap: 2px; display: flex")
                                         span(style="color: #CF0003; font-size: 14px; font-family: Inter; font-weight: 700; line-height: 16.80px; word-wrap: break-word") 43%
 
-                        a(href="#" style="flex-direction: column; justify-content: center; align-items: center; gap: 20px; display: inline-flex")
+                        a(href="#" style="flex-direction: column; justify-content: center; align-items: center; gap: 20px; display: inline-flex; text-decoration: none;")
                             div(style="width: 392px; height: 400px; border-radius: 10px; overflow: hidden; flex-direction: column; justify-content: center; align-items: center; display: flex")
                                 img(style="width: 392px; height: 400px" src="./assets/img/product3.png")
                             div(style="align-self: stretch; height: 61px; padding-left: 5px; padding-right: 5px; flex-direction: column; justify-content: center; align-items: flex-start; display: flex")
@@ -104,7 +104,7 @@ html(lang='en')
                     .carousel#carouselExampleControls(data-bs-ride="false")
                         .container
                             .carousel-inner
-                                .carousel-item.active
+                                .carousel-item
                                     div(style="width: 302px; flex: 1 1 0; padding-bottom: 20px; background: white; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15); border-radius: 10px; border: 1px rgba(0, 0, 0, 0) solid; flex-direction: column; justify-content: center; align-items: center; gap: 20px; display: inline-flex")
                                         div(style="width: 302px; border-top-left-radius: 10px; border-top-right-radius: 10px; overflow: hidden; flex-direction: column; justify-content: center; align-items: center; display: flex")
                                             img(style="width: 302px; height: 320px" src="./assets/img/revWeb2.png")
@@ -220,108 +220,88 @@ html(lang='en')
         section.reviewIGVid
             .multiple-card-slider
                 .carousel#igCarausel(data-bs-ride="false")
-                    .container
-                        .carousel-inner
-                            .carousel-item.active
-                                .row
-                                    .col
-                                        div(style="width:fit-content; padding-left: 2px; box-shadow: 4px 4px 4px; border-radius: 20px; overflow: hidden; filter: blur(3px);")
-                                            img(src="./assets/img/igVid2.png" height="400px")
-                                    .col
-                                        div(style="width:fit-content; padding-left: 2px; box-shadow: 4px 4px 4px; border-radius: 20px; overflow: hidden; filter: blur(3px);")
-                                            img(src="./assets/img/igVid2.png" height="400px")
-                                    .col
-                                        div(style="width:fit-content; padding-left: 2px; box-shadow: 4px 4px 4px; border-radius: 20px; overflow: hidden; filter: blur(3px);")
-                                            img(src="./assets/img/igVid2.png" height="400px")
-                                    .col
-                                        div(style="width:fit-content; padding-left: 2px; box-shadow: 4px 4px 4px; border-radius: 20px; overflow: hidden;")
-                                            img(src="./assets/img/igVid.png" height="400px")
-                                    .col
-                                        div(style="width:fit-content; padding-left: 2px; box-shadow: 4px 4px 4px; border-radius: 20px; overflow: hidden; filter: blur(3px);")
-                                            img(src="./assets/img/igVid2.png" height="400px")
-                                    .col
-                                        div(style="width:fit-content; padding-left: 2px; box-shadow: 4px 4px 4px; border-radius: 20px; overflow: hidden; filter: blur(3px);")
-                                            img(src="./assets/img/igVid2.png" height="400px")
-                            .carousel-item
-                                .row
-                                    .col
-                                        div(style="width:fit-content; padding-left: 2px; box-shadow: 4px 4px 4px; border-radius: 20px; overflow: hidden; filter: blur(3px);")
-                                            img(src="./assets/img/igVid2.png" height="400px")
-                                    .col
-                                        div(style="width:fit-content; padding-left: 2px; box-shadow: 4px 4px 4px; border-radius: 20px; overflow: hidden; filter: blur(3px);")
-                                            img(src="./assets/img/igVid2.png" height="400px")
-                                    .col
-                                        div(style="width:fit-content; padding-left: 2px; box-shadow: 4px 4px 4px; border-radius: 20px; overflow: hidden; filter: blur(3px);")
-                                            img(src="./assets/img/igVid2.png" height="400px")
-                                    .col
-                                        div(style="width:fit-content; padding-left: 2px; box-shadow: 4px 4px 4px; border-radius: 20px; overflow: hidden;")
-                                            img(src="./assets/img/igVid.png" height="400px")
-                                    .col
-                                        div(style="width:fit-content; padding-left: 2px; box-shadow: 4px 4px 4px; border-radius: 20px; overflow: hidden; filter: blur(3px);")
-                                            img(src="./assets/img/igVid2.png" height="400px")
-                                    .col
-                                        div(style="width:fit-content; padding-left: 2px; box-shadow: 4px 4px 4px; border-radius: 20px; overflow: hidden; filter: blur(3px);")
-                                            img(src="./assets/img/igVid2.png" height="400px")
-                        button.carousel-control-prev(type="button" data-bs-target="#igCarausel" data-bs-slide="prev")
-                            span.carousel-control-prev-icon(aria-hidden="true")
-                            span.visually-hidden Preview
-                        button.carousel-control-next(type="button" data-bs-target="#igCarausel" data-bs-slide="next")
-                            span.carousel-control-next-icon(aria-hidden="true")
-                            span.visually-hidden Next
+                    .carousel-inner
+                        .carousel-item
+                            img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                            img.IGimg(src="./assets/img/igVid.png")
+                        .carousel-item
+                            img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                            img.IGimg(src="./assets/img/igVid.png")
+                        .carousel-item
+                            img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                            img.IGimg(src="./assets/img/igVid.png")
+                        .carousel-item
+                            img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                            img.IGimg(src="./assets/img/igVid.png")
+                        .carousel-item
+                            img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                            img.IGimg(src="./assets/img/igVid.png")
+                        .carousel-item
+                            img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                            img.IGimg(src="./assets/img/igVid.png")
+                        .carousel-item
+                            img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                            img.IGimg(src="./assets/img/igVid.png")
+                        .carousel-item
+                            img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                            img.IGimg(src="./assets/img/igVid.png")
+                        .carousel-item
+                            img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                            img.IGimg(src="./assets/img/igVid.png")
+                        .carousel-item
+                            img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                            img.IGimg(src="./assets/img/igVid.png")
+                    button.carousel-control-prev(type="button" data-bs-target="#igCarausel" data-bs-slide="prev")
+                        span.carousel-control-prev-icon
+                        span.visually-hidden Preview
+                    button.carousel-control-next(type="button" data-bs-target="#igCarausel" data-bs-slide="next")
+                        span.carousel-control-next-icon(aria-hidden="true")
+                        span.visually-hidden Next
 
             
         // Section Shop Review
         section.reviewShop
-            .carousel.carousel-dark.slide.slide#reviewWeb(data-bs-ride="carousel")
-                .carousel-indicators
-                    button(type="button" data-bs-target="#reviewWeb" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1")
-                    button(type="button" data-bs-target="#reviewWeb" data-bs-slide-to="1" aria-label="Slide 2")
-                    button(type="button" data-bs-target="#reviewWeb" data-bs-slide-to="2" aria-label="Slide 3")
-                .carousel-inner(style="padding: 0 4rem;")
-                    .carousel-item-active
-                        .container.d-flex.mt-4.p-4
-                            .col-md-6
-                                .card.mb-3
-                                    .row.g-0
-                                        .col-md-4
-                                            img.imgProduct(src="./assets/img/revWeb1.png" height="220px")
-                                        .col-md-8
-                                            .card-body
-                                                span.fa.fa-star.checked
-                                                span.fa.fa-star.checked
-                                                span.fa.fa-star.checked
-                                                span.fa.fa-star.checked
-                                                span.fa.fa-star.checked
-                                                p I like that the dosage is printed neatly on the front. I had a blood test for vitamin D and it came out to be insufficient, so I am taking this product that also contains other ingredients.
-                                                .personWrapper
-                                                    img.icShop(src="./assets/img/icon/ic_shopee.png" height="45px")
-                                                    .col
-                                                        span Chika Amalia
-                                                        p 01 November 2024
-                            .col-md-6
-                                .card.mb-3
-                                    .row.g-0
-                                        .col-md-4
-                                            img(src="./assets/img/revWeb2.png" height="220px")
-                                        .col-md-8
-                                            .card-body
-                                                span.fa.fa-star.checked
-                                                span.fa.fa-star.checked
-                                                span.fa.fa-star.checked
-                                                span.fa.fa-star.checked
-                                                span.fa.fa-star.checked
-                                                p I like that the dosage is printed neatly on the front. I had a blood test for vitamin D and it came out to be insufficient, so I am taking this product that also contains other ingredients.
-                                                .personWrapper
-                                                    img.icShop(src="./assets/img/icon/ic_shopee.png" height="45px")
-                                                    .col
-                                                        span Chika Amalia
-                                                        p 01 November 2024
-                button.carousel-control-prev(type="button" data-bs-target="#reviewWeb" data-bs-slide="prev")
-                    span.carousel-control-prev-icon(aria-hidden="true")
-                    span.visually-hidden Previous
-                button.carousel-control-next(type="button" data-bs-target="#reviewWeb" data-bs-slide="next")
-                    span.carousel-control-next-icon(aria-hidden="true")
-                    span.visually-hidden Next
+            .multiple-card-slider
+                .carousel#shopCarausel(data-bs-ride="false")
+                    .carousel-inner
+                        .carousel-item
+                            .detailWrapper
+                                .ratingWrapper
+                                    span.fa.fa-star
+                                    span.fa.fa-star
+                                    span.fa.fa-star
+                                    span.fa.fa-star
+                                    span.fa.fa-star
+                                p.reviewWrapper “On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.”
+                                .shopInfo
+                                    img(src="./assets/img/icon/ic_shopee.png")
+                                    .userInfo 
+                                        span.nameWrapper UserShopee
+                                        span.dateWrapper 07 Februari 2024
+                                        
+                        .carousel-item
+                            .box
+                                .detailWrapper
+                                    .ratingWrapper 
+                                        span.fa.fa-star
+                                        span.fa.fa-star
+                                        span.fa.fa-star
+                                        span.fa.fa-star
+                                        span.fa.fa-star
+                                    p.reviewWrapper “On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.”
+                                    .shopInfo
+                                        img(src="./assets/img/icon/ic_shopee.png")
+                                        .userInfo 
+                                            span.nameWrapper UserShopee
+                                            span.dateWrapper 07 Februari 2024
+                                .imgWrapper 
+                                    img(src="./assets/img/revWeb2.png")
+                    button.carousel-control-prev(type="button" data-bs-target="#shopCarausel" data-bs-slide="next")
+                        span.carousel-control-prev-icon(aria-hidden="true")
+                        span.visually-hidden Preview
+                    button.carousel-control-next(type="button" data-bs-target="#shopCarausel" data-bs-slide="next")
+                        span.carousel-control-next-icon(aria-hidden="true")
+                        span.visually-hidden Next
 
         section.avaibleStore
             .container

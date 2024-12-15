@@ -7,293 +7,280 @@ html(lang='en')
 
         // Section contact-us form
         section.productDetail-section
-            .container
-                .row
-                    .col-md-6.end_gap
+            .container 
+                .wrapper 
+                    .leftBox
                         .carousel.slide#productCarausel(data-bs-ride="carousel" data-interval="false")
                             .carousel-inner
                                 .carousel-item.active
-                                    .row.align-items-center
-                                        img(src="./assets/img/product1.png")
+                                    img(src="./assets/img/product1.png")
                                 .carousel-item
-                                    .row.align-items-center
-                                        img(src="./assets/img/product2.png")
+                                    img(src="./assets/img/product1.png")
                                 .carousel-item
-                                    .row.align-items-center
-                                        img(src="./assets/img/product1.png")
-                                button.carousel-control-prev(type="button" data-bs-target="#productCarausel" data-bs-slide="next")
-                                    span.carousel-control-prev-icon(aria-hidden="true")
-                                    span.visually-hidden Preview
-                                button.carousel-control-next(type="button" data-bs-target="#productCarausel" data-bs-slide="next")
-                                    span.carousel-control-next-icon(aria-hidden="true")
-                                    span.visually-hidden Next
+                                    img(src="./assets/img/product1.png")
+                            button.carousel-control-prev(type="button" data-bs-target="#productCarausel" data-bs-slide="next")
+                                span.carousel-control-prev-icon(aria-hidden="true")
+                                span.visually-hidden Preview
+                            button.carousel-control-next(type="button" data-bs-target="#productCarausel" data-bs-slide="next")
+                                span.carousel-control-next-icon(aria-hidden="true")
+                                span.visually-hidden Next
 
                         .multiple-card-slider
                             .carousel#carouselExampleControls(data-bs-ride="false")
                                 .carousel-inner
-                                    .carousel-item.active
-                                        .card
-                                            img(src="./assets/img/dtProduct1.png")
                                     .carousel-item
-                                        .card
-                                            img(src="./assets/img/dtProduct2.png")
+                                        img(src="./assets/img/dtProduct1.png")
                                     .carousel-item
-                                        .card
-                                            img(src="./assets/img/dtProduct2.png")
+                                        img(src="./assets/img/dtProduct1.png")
                                     .carousel-item
-                                        .card
-                                            img(src="./assets/img/dtProduct3.png")
+                                        img(src="./assets/img/dtProduct1.png")
                                     .carousel-item
-                                        .card
-                                            img(src="./assets/img/dtProduct2.png")
-                                    .carousel-item
-                                        .card
-                                            img(src="./assets/img/dtProduct1.png")
-                                    .carousel-item
-                                        .card
-                                            img(src="./assets/img/dtProduct2.png")
+                                        img(src="./assets/img/dtProduct1.png")
                                 button.carousel-control-prev(type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next")
                                     span.carousel-control-prev-icon(aria-hidden="true")
                                     span.visually-hidden Preview
                                 button.carousel-control-next(type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next")
                                     span.carousel-control-next-icon(aria-hidden="true")
                                     span.visually-hidden Next
-                    .col-md-6.start_gap
-                        h1 Snovv Ghlutation
-                        span.fa.fa-star
-                        span.fa.fa-star
-                        span.fa.fa-star
-                        span.fa.fa-star
-                        span.fa.fa-star
-                        span(style="margin:0.5rem") (4 Reviews)
-                        p Shop via
-                        .grid.gap-0.column-gap-3
-                            button.btn.btn-outline-secondary(type="button")
-                                img(src="./assets/img/icon/ic_shopee.png")
-                                label Shopee
-                            button.btn.btn-outline-secondary(type="button")
-                                img(src="./assets/img/icon/ic_tokped.png")
-                                label Tokopedia
-                        br
-                        .hr.border.border-secondary.border-1.opacity-75
-                        br
-                        h2 Product DetailS
-                        br
-                        .row
-                            span Brand : About H
-                            span Manufacture : Biofarm
-                        br
-                        ul
-                            li Dermatologist Formulated Formula. 
-                            li Inner Beauty Network System, GV5 formulation
-                            li Premium Glutathione from UK 250mg
-                            li Contains special ingredients for inner beauty selected based on H.
-                        br
-                        .hr.border.border-secondary.border-1.opacity-75
-                        br
-                        section.bsb-accordion-6.py-3.py-md-5.py-xl-8
-                            .row
-                                .col-12
-                                    .accordion#accordionExample
-                                        .accordion-item
-                                            h2.accordion-header
-                                                button.accordion-button(type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne")
-                                                    span Accordion Item #1
-                                            .accordion-collapse.collapse-show#collapseOne(data-bs-parent="#accordionExample")
-                                                .accordion-body
-                                                    p this accordion for how to use product
-                                        .accordion-item
-                                            h2.accordion-header
-                                                button.accordion-button(type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo")
-                                                    span Accordion Item #2
-                                            .accordion-collapse.collapse-show#collapseTwo(data-bs-parent="#accordionExample")
-                                                .accordion-body
-                                                    p this accordion for ingredients product
+                            
+                    .rightBox 
+                        .productInfo
+                            span.productName Snovv Glutathione
+                            .ratingWrapper
+                                .starWrapper 
+                                    span.fa.fa-star
+                                    span.fa.fa-star
+                                    span.fa.fa-star
+                                    span.fa.fa-star
+                                    span.fa.fa-star
+                                span.totalSpan (4 Reviews)
+                            .productPrice
+                                span.discountPrice Rp150.000
+                                span.normalPrice Rp. 250.000
+                                .discountRate 
+                                    span 43%
+                                    
+                        div(style="align-self: stretch; height: 1px; background: #C4C4C4")
+                        .shopLink 
+                            span shop via
+                            .btnWrapper
+                                a.btnShop(href="#")
+                                    img(src="./assets/img/icon/ic_shopee.png")
+                                    span Shopee
+                                a.btnShop(href="#")
+                                    img(src="./assets/img/icon/ic_tokped.png")
+                                    span Tokopedia
+                        .productDetail
+                            .DescWrapper
+                                span.title Product Details
+                                .infoWrapper
+                                    span.boldText Brand :
+                                    span.valueText About H
+                                    br
+                                    span.boldText Manufacture :
+                                    span.valueText Biofarm
+                                ul.descText 
+                                    li Dermatologist Formulated Formula.
+                                    li Inner Beauty Network System, GV5 formulation
+                                    li Premium Glutathione from UK 250mg
+                                    li Contains special ingredients for inner beauty selected based on H.
+                            div(style="align-self: stretch; height: 1px; background: #C4C4C4")
+                            .row(style="width: 100%;")
+                                .accordion.accordion-flush#productInfoAccordion 
+                                    .accordion-item
+                                        .accordion-header
+                                            button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#data1" aria-expanded="false" aria-controls="data1") How to use
+                                        .accordion-collapse.collapse#data1(data-bs-parent="#productInfoAccordion")
+                                            .accordion-body 
+                                                p this for How to use content
+                                    .accordion-item
+                                        .accordion-header
+                                            button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#data2" aria-expanded="false" aria-controls="data2") Ingredients
+                                        .accordion-collapse.collapse#data2(data-bs-parent="#productInfoAccordion")
+                                            .accordion-body this for Ingredient content
+
         section.detailTab
             .container
                 .row.justify-content-center.mt-2
                     .col-md-12
-                        .card
-                            .card-header.text-center
-                                ul.nav.nav-tabs.nav-justified.card-header-tabs#myTab(role="tablist")
-                                    li.nav-item.active
-                                        a.nav-link.active#tab1-tab(data-bs-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true") Detail Information
-                                    li.nav-item
-                                        a.nav-link#tab2-tab(data-bs-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="true") Reviews (4)
-                                    li.nav-item
-                                        a.nav-link#tab3-tab(data-bs-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="true") FAQ
-                                    li.nav-item
-                                        a.nav-link#tab4-tab(data-bs-toggle="tab" href="#tab4" role="tab" aria-controls="tab4" aria-selected="true") Shipping
-                            .card-body
-                                .tab-content#myTabContent
-                                    .tab-pane.fade.show.active#tab1(role="tabpanel" aria-labelledby="tab1-tab")
-                                        img.img-fluid(src="./assets/img/dtinfoProduct.jpg")
-                                    .tab-pane.fade.show.active#tab2(role="tabpane2" aria-labelledby="tab2-tab")
+                        .card.border-0.text-center
+                            ul.nav.nav-tabs.nav-justified.card-header-tabs#myTab(role="tablist" style="padding-bottom: 30px;")
+                                li.nav-item.active
+                                    a.nav-link.active#tab1-tab(data-bs-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true") Detail Information
+                                li.nav-item
+                                    a.nav-link#tab2-tab(data-bs-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="true") Reviews (4)
+                                li.nav-item
+                                    a.nav-link#tab3-tab(data-bs-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="true") FAQ
+                                li.nav-item
+                                    a.nav-link#tab4-tab(data-bs-toggle="tab" href="#tab4" role="tab" aria-controls="tab4" aria-selected="true") Shipping
+                        .card-body
+                            .tab-content#myTabContent
+                                .tab-pane.fade.show.active#tab1(role="tabpanel" aria-labelledby="tab1-tab")
+                                    img(src="./assets/img/dtinfoProduct.jpg" width="100%")
+                                .tab-pane.fade#tab2(role="tabpane2" aria-labelledby="tab2-tab")
+                                    .reviewBox
+                                        .reviewWrapper
+                                            .boxReview
+                                                .ratingBox
+                                                    .starBox
+                                                        label 5.0
+                                                        .starWrapper
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                    .totalRating
+                                                        .rateWrapper
+                                                            label 5
+                                                            span.fa.fa-star.checked
+                                                            .progress(role="progressbar" aria-label="Example with label" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 265px; height: 8px;")
+                                                                .progress-bar(style="width: 100%")
+                                                            span.spanStar 10
+                                                        .rateWrapper
+                                                            label 4
+                                                            span.fa.fa-star.checked
+                                                            .progress(role="progressbar" aria-label="Example with label" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 265px; height: 8px;")
+                                                                .progress-bar(style="width: 35%")
+                                                            span.spanStar 5
+                                                        .rateWrapper
+                                                            label 3
+                                                            span.fa.fa-star.checked
+                                                            .progress(role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 265px; height: 8px;")
+                                                                .progress-bar(style="width: 10%")
+                                                            span.spanStar 2
+                                                        .rateWrapper
+                                                            label 2
+                                                            span.fa.fa-star.checked
+                                                            .progress(role="progressbar" aria-label="Example with label" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 265px; height: 8px;")
+                                                                .progress-bar(style="width: 0%")
+                                                            span.spanStar 0
+                                                        .rateWrapper
+                                                            label 1
+                                                            span.fa.fa-star.checked
+                                                            .progress(role="progressbar" aria-label="Example with label" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 265px; height: 8px;")
+                                                                .progress-bar(style="width: 0%")
+                                                            span.spanStar 0
+                                                
+                                                div(style="align-items: center; height: 200px; width:1px; background: #E6E6E6")
+
+                                                .imgMedia 
+                                                    img(src="./assets/img/media_review.png")
+                                            a.btnInput(href="#") Write a review
+                                        .filterWrapper
+                                            h6 Showing 1 - 4 of 4 reviews
+                                            .dropdown
+                                                a.btnFilter.dropdown-toggle#filterDropdown(href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false") Sort by Latest
+                                                ul.dropdown-menu(aria-labelledby="filterDropdown")
+                                                    li
+                                                        a.dropdown-item(href="#") Date
+                                                    li
+                                                        a.dropdown-item(href="#") Rating
+                                                    li
+                                                        a.dropdown-item(href="#") Media
+                                        div(style="width: 1236px; height: 1px; background: #E6E6E6")
+                                        .contentWrapper 
+                                            .contentBox
+                                                img.imgUser(src="./assets/img/userWeb1.png")
+                                                .rowContent
+                                                    .detailContent
+                                                        .ratingWrapper
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                        .userWrapper
+                                                            label Galang Aben 
+                                                            span 07 Desember 2024
+                                                            img(src="./assets/img/icon/ic_shopee.png" style="width: 24px; height: 24px;")
+                                                    p.reviewValue On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.
+                                                img.mediaBox(src="./assets/img/media_review.png")
+
+                                            .contentBox
+                                                img.imgUser(src="./assets/img/userWeb1.png")
+                                                .rowContent
+                                                    .detailContent
+                                                        .ratingWrapper
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                        .userWrapper
+                                                            label Galang Aben 
+                                                            span 07 Desember 2024
+                                                            img(src="./assets/img/icon/ic_shopee.png" style="width: 24px; height: 24px;")
+                                                    p.reviewValue On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.
+                                                img.mediaBox(src="./assets/img/media_review.png")
+
+                                            .contentBox
+                                                img.imgUser(src="./assets/img/userWeb1.png")
+                                                .rowContent
+                                                    .detailContent
+                                                        .ratingWrapper
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                        .userWrapper
+                                                            label Galang Aben 
+                                                            span 07 Desember 2024
+                                                            img(src="./assets/img/icon/ic_shopee.png" style="width: 24px; height: 24px;")
+                                                    p.reviewValue On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.
+                                                img.mediaBox(src="./assets/img/media_review.png")
+
+                                            .contentBox
+                                                img.imgUser(src="./assets/img/userWeb1.png")
+                                                .rowContent
+                                                    .detailContent
+                                                        .ratingWrapper
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                        .userWrapper
+                                                            label Galang Aben 
+                                                            span 07 Desember 2024
+                                                            img(src="./assets/img/icon/ic_shopee.png" style="width: 24px; height: 24px;")
+                                                    p.reviewValue On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.
+                                                img.mediaBox(src="./assets/img/media_review.png")
+                                .tab-pane.fade#tab3(role="tabpane3" aria-labelledby="tab3-tab")
+                                .tab-pane.fade#tab4(role="tabpanel" aria-labelledby="tab4-tab")
+                                    .container
                                         .row
-                                            .col-md-4
-                                                .row
-                                                    .col-sm-2.text-end
-                                                        h2 5.0
-                                                    .col-sm-4.text-center
-                                                        span.fa.fa-star.checked
-                                                        span.fa.fa-star.checked
-                                                        span.fa.fa-star.checked
-                                                        span.fa.fa-star.checked
-                                                        span.fa.fa-star.checked
+                                            .col-md-2.text-center.py-3(style="background-color:#F2F2F2")
                                                 br
-                                                .row
-                                                    .col-sm-1.text-end
-                                                        p 5
-                                                    .col-sm-1.text-end
-                                                        span.fa.fa-star.checked
-                                                    .col-sm-6.text-start
-                                                        .progress
-                                                            .progress-bar(role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100")
-                                                    .col-sm-2
-                                                        p 5
-                                                .row
-                                                    .col-sm-1.text-end
-                                                        p 4
-                                                    .col-sm-1.text-end
-                                                        span.fa.fa-star.checked
-                                                    .col-sm-6.text-start
-                                                        .progress
-                                                            .progress-bar(role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100")
-                                                    .col-sm-2
-                                                        p 2
-                                                .row
-                                                    .col-sm-1.text-end
-                                                        p 3
-                                                    .col-sm-1.text-end
-                                                        span.fa.fa-star.checked
-                                                    .col-sm-6.text-start
-                                                        .progress
-                                                            .progress-bar(role="progressbar" style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100")
-                                                    .col-sm-2
-                                                        p 1
-                                                .row
-                                                    .col-sm-1.text-end
-                                                        p 2
-                                                    .col-sm-1.text-end
-                                                        span.fa.fa-star.checked
-                                                    .col-sm-6.text-start
-                                                        .progress
-                                                            .progress-bar(role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100")
-                                                    .col-sm-2
-                                                        p 0
-                                                .row
-                                                    .col-sm-1.text-end
-                                                        p 1
-                                                    .col-sm-1.text-end
-                                                        span.fa.fa-star.checked
-                                                    .col-sm-6.text-start
-                                                        .progress
-                                                            .progress-bar(role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100")
-                                                    .col-sm-2
-                                                        p 0
-                                            
-                                            .col-md-4.justifiy-content-center
-                                                vr(style="padding: 1rem 0; margin: 0 1rem;")
-                                                img(src="./assets/img/media_review.png")
-                                            .col-md-4
-                                                vr(style="padding: 1rem 0; margin: 0 1rem;")
-                                                 a.btn.btn-primary.ms-3.text-white(href="contact-us.html") Write a review
-                                        br
+                                                br
+                                                br
+                                                br
+                                                br
+                                                br
+                                                h6.card-title.my-aut Exchange & Return
+                                            .col-md-10.align-start
+                                                ul.p-4
+                                                    li If the product value is damaged by removing the product tag or opening the product, exchange or return is not possible even within 7 days of receiving the product.
+                                                    li For low-priced products and some special price products, the customer must pay the shipping fee for exchanges or returns due to change of mind (excluding product defects and delivery errors).
+                                                    Prices for some products may change due to manufacturer circumstances such as the release of a new model or fluctuations in parts prices.
+                                                    li  For shoes, if they were worn outdoors or have signs of use, exchanges and returns are not possible even within the exchange/return period.
+                                                    li In the case of custom-made products (heel height, width of the foot, size change) among handmade products, exchanges and returns are not possible even within the exchange/return period after production is completed and received.
+                                                    li  Please understand that in the case of imported or luxury products, exchanges and returns are not possible if the product or its box is damaged or lost, resulting in loss of product value.
+                                                    li For some special price products, exchanges or returns due to simple change of mind on the part of the customer may not be possible after purchase, except in cases of product defects or incorrect delivery. Please be sure to refer to the product details for each product.
+                                        .hr.border.border-secondary.border-1.opacity-50
                                         .row
-                                            .col-md-6
-                                                h6 Showing 1 - 4 of 4 reviews
-                                            .col-md-6.text-end
-                                                .dropdown
-                                                    button.btn.btn-outline-secondary.dropdown-toggle(type="button" data-toggle="dropdown") Sort by Latest
-                                                        span.caret
-                                                    ul.dropdown-menu
-                                                        li
-                                                            a(href="#") Latest
-                                                        li
-                                                            a(href="#") Date
-                                                        li
-                                                            a(href="#") Review
-                                        br
-                                        .hr.border.border-secondary.border-1.opacity-75
-                                        br
-                                        .row
-                                            .col-md-1
-                                                img(src="./assets/img/userWeb1.png")
-                                            .col-md-6
-                                                .row
-                                                    .col-sm-4.text-center
-                                                        span.fa.fa-star.checked
-                                                        span.fa.fa-star.checked
-                                                        span.fa.fa-star.checked
-                                                        span.fa.fa-star.checked
-                                                        span.fa.fa-star.checked
-                                                .row
-                                                    .col-sm-2
-                                                        h6 Erika Syifa
-                                                    .col-sm-3
-                                                        p  - 07 November 2024
-                                                    .col-sm-1
-                                                        img(src="./assets/img/icon/ic_shopee.png")
-                                                p On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.
-                                            .col-md-4
-                                                img(src="./assets/img/media_review.png")
-                                        br
-                                        .hr.border.border-secondary.border-1.opacity-20
-                                        br
-                                        .row
-                                            .col-md-1
-                                                img(src="./assets/img/userWeb1.png")
-                                            .col-md-6
-                                                .row
-                                                    .col-sm-4.text-center
-                                                        span.fa.fa-star.checked
-                                                        span.fa.fa-star.checked
-                                                        span.fa.fa-star.checked
-                                                        span.fa.fa-star.checked
-                                                        span.fa.fa-star.checked
-                                                .row
-                                                    .col-sm-2
-                                                        h6 Erika Syifa
-                                                    .col-sm-3
-                                                        p  - 07 November 2024
-                                                    .col-sm-1
-                                                        img(src="./assets/img/icon/ic_shopee.png")
-                                                p On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.
-                                            .col-md-4
-                                                img(src="./assets/img/media_review.png")
-                                    .tab-pane.fade.show.active#tab4(role="tabpanel" aria-labelledby="tab4-tab")
-                                        .container
-                                            .row
-                                                .col-md-2.text-center.py-3(style="background-color:#F2F2F2")
-                                                    br
-                                                    br
-                                                    br
-                                                    br
-                                                    br
-                                                    br
-                                                    h6.card-title.my-aut Exchange & Return
-                                                .col-md-10.align-start
-                                                    ul.p-4
-                                                        li If the product value is damaged by removing the product tag or opening the product, exchange or return is not possible even within 7 days of receiving the product.
-                                                        li For low-priced products and some special price products, the customer must pay the shipping fee for exchanges or returns due to change of mind (excluding product defects and delivery errors).
-                                                        Prices for some products may change due to manufacturer circumstances such as the release of a new model or fluctuations in parts prices.
-                                                        li  For shoes, if they were worn outdoors or have signs of use, exchanges and returns are not possible even within the exchange/return period.
-                                                        li In the case of custom-made products (heel height, width of the foot, size change) among handmade products, exchanges and returns are not possible even within the exchange/return period after production is completed and received.
-                                                        li  Please understand that in the case of imported or luxury products, exchanges and returns are not possible if the product or its box is damaged or lost, resulting in loss of product value.
-                                                        li For some special price products, exchanges or returns due to simple change of mind on the part of the customer may not be possible after purchase, except in cases of product defects or incorrect delivery. Please be sure to refer to the product details for each product.
-                                            .hr.border.border-secondary.border-1.opacity-50
-                                            .row
-                                                .col-md-2.text-center.py-3(style="background-color:#F2F2F2")
-                                                    br
-                                                    br
-                                                    br
-                                                    br
-                                                    p Exchange & Return
-                                                .col-md-10
-                                                    ul.p-4
-                                                        li Shipping fee: The basic shipping fee is 3,000 won. (Additional shipping fees may apply to some islands, mountainous areas, and remote areas.) Free shipping for purchases over 40,000 won.
-                                                        li The average delivery date for this product is 2 days (after payment confirmation). For installation products, delivery may be slightly delayed. [The expected delivery date may differ from the average delivery date due to the fluidity of the order time (order sequence).]
-                                                        li This product can be delivered within 3 days. The delivery possible date refers to the period during which the product can be delivered to customers who ordered this product. (However, holidays and public holidays are excluded when calculating the period, and in the case of cash orders, it is based on the date of deposit.)
+                                            .col-md-2.text-center.py-3(style="background-color:#F2F2F2")
+                                                br
+                                                br
+                                                br
+                                                br
+                                                p Exchange & Return
+                                            .col-md-10
+                                                ul.p-4
+                                                    li Shipping fee: The basic shipping fee is 3,000 won. (Additional shipping fees may apply to some islands, mountainous areas, and remote areas.) Free shipping for purchases over 40,000 won.
+                                                    li The average delivery date for this product is 2 days (after payment confirmation). For installation products, delivery may be slightly delayed. [The expected delivery date may differ from the average delivery date due to the fluidity of the order time (order sequence).]
+                                                    li This product can be delivered within 3 days. The delivery possible date refers to the period during which the product can be delivered to customers who ordered this product. (However, holidays and public holidays are excluded when calculating the period, and in the case of cash orders, it is based on the date of deposit.)
 
                                             
 
