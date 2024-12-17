@@ -14,13 +14,13 @@ html(lang='en')
                 .carousel-inner
                     .carousel-item.active
                         .row.align-items-center
-                            img(src="./assets/img/Hero 1.png", alt="Snovv Banner" style="height:810px; object-fit: cover;")
+                            img(src="./assets/img/Hero 1.png", alt="Snovv Banner" style="height:640px; object-fit: cover;")
                     .carousel-item
                         .row.align-items-center
-                            img(src="./assets/img/Hero 2.png", alt="Snovv Banner" style="height:810px; object-fit: cover;")
+                            img(src="./assets/img/Hero 2.png", alt="Snovv Banner" style="height:640px; object-fit: cover;")
                     .carousel-item
                         .row.align-items-center
-                            img(src="./assets/img/Hero 3.png", alt="Snovv Banner" style="height:810px; object-fit: cover;")
+                            img(src="./assets/img/Hero 3.png", alt="Snovv Banner" style="height:640px; object-fit: cover;")
 
         // Section Promotion Youtube Video
         section.vidYoutube
@@ -216,7 +216,6 @@ html(lang='en')
                                 span.carousel-control-next-icon(aria-hidden="true")
                                 span.visually-hidden Next
            
-
         section.reviewIGVid
             .multiple-card-slider
                 .carousel#igCarausel(data-bs-ride="false")
@@ -258,7 +257,69 @@ html(lang='en')
                         span.carousel-control-next-icon(aria-hidden="true")
                         span.visually-hidden Next
 
-            
+        section.reviewShop
+            .container
+                .multiple-card-slider
+                    .carousel#carouselExampleControls(data-bs-ride="false")
+                        .carousel-inner
+                            .carousel-item
+                                .itemWrapper
+                                    .imgReview 
+                                        img.picProduct(src="./assets/img/revShop1.png")
+                                    .reviewWrapper 
+                                        .ratingWrapper 
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                        p.textReview “On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.”
+                                        .userWrapper
+                                            img.iconShop(src="./assets/img/icon/ic_shopee.png")
+                                            .dateInfo
+                                                span.userWrapper UserShopee
+                                                span.dateWrapper 07 Februari 2024
+                            .carousel-item
+                                .itemWrapper
+                                    .imgReview 
+                                        img.picProduct(src="./assets/img/revShop2.png")
+                                    .reviewWrapper 
+                                        .ratingWrapper 
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                        p.textReview “On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.”
+                                        .userWrapper
+                                            img.iconShop(src="./assets/img/icon/ic_tokped.png")
+                                            .dateInfo
+                                                span.userWrapper UserShopee
+                                                span.dateWrapper 07 Februari 2024
+                            .carousel-item
+                                .itemWrapper
+                                    .imgReview 
+                                        img.picProduct(src="./assets/img/revShop2.png")
+                                    .reviewWrapper 
+                                        .ratingWrapper 
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                        p.textReview “On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.”
+                                        .userWrapper
+                                            img.iconShop(src="./assets/img/icon/ic_tokped.png")
+                                            .dateInfo
+                                                span.userWrapper UserShopee
+                                                span.dateWrapper 07 Februari 2024
+                            
+                        button.carousel-control-prev(type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next")
+                            span.carousel-control-prev-icon(aria-hidden="true")
+                            span.visually-hidden Preview
+                        button.carousel-control-next(type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next")
+                            span.carousel-control-next-icon(aria-hidden="true")
+                            span.visually-hidden Next
         
 
         section.avaibleStore

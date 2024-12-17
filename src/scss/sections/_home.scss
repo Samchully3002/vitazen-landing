@@ -1,5 +1,4 @@
 .hero {
-  margin-bottom: 4rem;
   .row {
     margin-top: unset;
   }
@@ -234,6 +233,8 @@
     border-radius: 50%;
     top: 50%;
     transform: translateY(-50%);
+    margin-left:20px;
+    margin-right: 20px;
     
     span {
       filter: invert(100%);
@@ -252,121 +253,91 @@
 }
 
 .reviewShop {
-  width: 100%; 
-  height: 100%; 
-  justify-content: flex-start; 
-  align-items: flex-start;
-  
+  width: 100%; height: 100%; position: relative; padding-top: 30px;
+
   .multiple-card-slider .carousel-inner {
-    width: 1276px; 
-    left: 82px; 
-    top: 9px; 
-    position: absolute; 
-    justify-content: flex-start; 
-    align-items: center; 
-    gap: 24px; 
+    width: 100%; height: 100%; 
+    justify-content: flex-start;
+    align-items: center; gap: 24px; 
     display: inline-flex;
   }
 
-  .multiple-card-slider .carousel-item { 
-    display: flex; /* Menggunakan Flexbox */
-    align-items: center; /* Pusatkan vertikal */
-    justify-content: space-between; /* Membuat elemen berjarak horizontal */
-    height: 200px;
-    max-width: 600px; /* Lebar maksimum box */
-    background: white; 
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15); 
-    border-radius: 10px; 
-    border: 1px rgba(0, 0, 0, 0) solid; 
-    gap: 20px; 
+    .itemWrapper{
+      width: 626px; height: 100%; background: white; 
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15); 
+      border-radius: 10px; border: 1px rgba(0, 0, 0, 0) solid; 
+      justify-content: center; align-items: center; 
+      gap: 20px; display: inline-flex;
 
-    .box {
-      flex: 1;
-    }
-
-    .imgWrapper {
-      width: 200px; 
-      height: 200px; 
-      border-radius: 10px 0 0 10px;
-      overflow: hidden; 
-      display: flex;
-      img {
-        width: 200px; height: 200px; 
-        object-fit: cover;
-      }
-    }
-
-    .detailWrapper {
-      width: 406px;
-      flex: 1 1 0; 
-      align-self: stretch; 
-      padding: 0 20px; 
-      flex-direction: column; 
-      justify-content: flex-start; 
-      align-items: flex-start; 
-      gap: 10px; 
-      display: inline-flex;
-
-      .ratingWrapper {
-        justify-content: flex-start; 
-        align-items: flex-start; 
-        gap: 5px; 
-        display: inline-flex;
-      }
-      .reviewWrapper {
-        align-self: stretch; 
-        height: 78px; 
-        color: black; 
-        font-size: 16px; 
-        font-family: Plus Jakarta Sans; 
-        font-weight: 400; 
-        line-height: 25.60px; 
+      .imgReview{
+        width: 200px; height: 200px;
+        border-radius: 10px 0 0 10px;
         overflow: hidden; 
-        text-overflow: ellipsis; 
-        display: -webkit-box; 
-        -webkit-line-clamp: 2; 
-        -webkit-box-orient: vertical; 
-        word-wrap: break-word;
-      }
-      .shopInfo {
-        justify-content: flex-start; align-items: center; 
-        gap: 10px; display: inline-flex;
-        img {
-          width: 32px; height: 32px;
-        }
-        .userInfo {
-          flex-direction: column; justify-content: flex-start; 
-          align-items: flex-start; gap: 4px; display: inline-flex;
+        justify-content: center; 
+        align-items: center; 
+        display: flex;
 
-          .nameWrapper {
-            color: #444444; 
-            font-size: 12px; 
-            font-family: Plus Jakarta Sans; 
-            font-weight: 500; 
-            line-height: 18px; 
-            word-wrap: break-word
+        .picProduct {
+          width: 200px; height: 200px;
+        }
+      }
+
+      .reviewWrapper {
+        flex: 1 1 0; align-self: stretch; 
+        padding-left: 20px; padding-right: 20px; 
+        flex-direction: column; justify-content: center; 
+        align-items: flex-start; gap: 10px; 
+        display: inline-flex;
+        
+        .ratingWrapper {
+          justify-content: flex-start; 
+          align-items: flex-start; 
+          gap: 5px; display: inline-flex;
+        }
+
+        .textReview {
+          align-self: stretch; height: 78px; 
+          color: black; font-size: 16px; 
+          font-family: General Sans; 
+          font-weight: 400; line-height: 25.60px; 
+          word-wrap: break-word;
+        }
+        .userWrapper {
+          justify-content: flex-start; align-items: center; 
+          gap: 10px; display: inline-flex;
+          .iconShop {
+            width: 32px; height: 32px;
           }
-          .dateWrapper {
-            color: #444444; 
-            font-size: 10px; 
-            font-family: Plus Jakarta Sans; 
-            font-weight: 400; 
-            line-height: 12px; 
-            word-wrap: break-word
+          .dateInfo {
+            flex-direction: column; justify-content: flex-start; 
+            align-items: flex-start; gap: 4px; display: inline-flex;
+            .userWrapper {
+              color: #444444; font-size: 12px; 
+              font-family: Plus Jakarta Sans; 
+              font-weight: 500; line-height: 18px; 
+              word-wrap: break-word;
+            }
+            .dateWrapper {
+              color: #444444; font-size: 10px; 
+              font-family: Plus Jakarta Sans; 
+              font-weight: 400; line-height: 12px;
+              word-wrap: break-word;
+            }
           }
         }
       }
     }
-  }
 
   .multiple-card-slider .carousel-control-prev,
   .multiple-card-slider .carousel-control-next {
-    filter: invert(100%);
-    width: 4em;
-    height: 4em;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
+      filter: invert(100%);
+      width: 4em;
+      height: 4em;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-left:-60px;
+      margin-right: -60px;
   }
   @media (min-width: 768px) {
     .multiple-card-slider .carousel-item {
