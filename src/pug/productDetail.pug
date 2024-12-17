@@ -10,7 +10,7 @@ html(lang='en')
             .container 
                 .wrapper 
                     .leftBox
-                        .carousel.slide#productCarausel(data-bs-ride="carousel" data-interval="false")
+                        .carousel.slide#productCarausel(data-bs-ride="false")
                             .carousel-inner
                                 .carousel-item.active
                                     img(src="./assets/img/product1.png")
@@ -24,19 +24,19 @@ html(lang='en')
                             button.carousel-control-next(type="button" data-bs-target="#productCarausel" data-bs-slide="next")
                                 span.carousel-control-next-icon(aria-hidden="true")
                                 span.visually-hidden Next
-
+            
                         .multiple-card-slider
                             .carousel#carouselExampleControls(data-bs-ride="false")
                                 .carousel-inner
-                                    .carousel-item
+                                    .carousel-item.active
                                         img(src="./assets/img/dtProduct1.png")
                                     .carousel-item
-                                        img(src="./assets/img/dtProduct1.png")
+                                        img(src="./assets/img/dtProduct2.png")
                                     .carousel-item
-                                        img(src="./assets/img/dtProduct1.png")
+                                        img(src="./assets/img/dtProduct2.png")
                                     .carousel-item
-                                        img(src="./assets/img/dtProduct1.png")
-                                button.carousel-control-prev(type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next")
+                                        img(src="./assets/img/dtProduct3.png")
+                                button.carousel-control-prev(type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev")
                                     span.carousel-control-prev-icon(aria-hidden="true")
                                     span.visually-hidden Preview
                                 button.carousel-control-next(type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next")
@@ -55,12 +55,12 @@ html(lang='en')
                                     span.fa.fa-star
                                 span.totalSpan (4 Reviews)
                             .productPrice
-                                span.discountPrice Rp150.000
+                                span.discountPrice ± Rp150.000
                                 span.normalPrice Rp. 250.000
                                 .discountRate 
                                     span 43%
                                     
-                        div(style="align-self: stretch; height: 1px; background: #C4C4C4")
+                        div(style="width:100%; align-self: stretch; height: 1px; background: #C4C4C4")
                         .shopLink 
                             span shop via
                             .btnWrapper
@@ -84,20 +84,19 @@ html(lang='en')
                                     li Inner Beauty Network System, GV5 formulation
                                     li Premium Glutathione from UK 250mg
                                     li Contains special ingredients for inner beauty selected based on H.
-                            div(style="align-self: stretch; height: 1px; background: #C4C4C4")
-                            .row(style="width: 100%;")
-                                .accordion.accordion-flush#productInfoAccordion 
-                                    .accordion-item
-                                        .accordion-header
-                                            button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#data1" aria-expanded="false" aria-controls="data1") How to use
-                                        .accordion-collapse.collapse#data1(data-bs-parent="#productInfoAccordion")
-                                            .accordion-body 
-                                                p this for How to use content
-                                    .accordion-item
-                                        .accordion-header
-                                            button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#data2" aria-expanded="false" aria-controls="data2") Ingredients
-                                        .accordion-collapse.collapse#data2(data-bs-parent="#productInfoAccordion")
-                                            .accordion-body this for Ingredient content
+                            div(style="width:100%; align-self: stretch; height: 1px; background: #C4C4C4")
+                            .accordion.accordion-flush#productInfoAccordion 
+                                .accordion-item
+                                    .accordion-header
+                                        button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#data1" aria-expanded="false" aria-controls="data1") How to use
+                                    .accordion-collapse.collapse#data1(data-bs-parent="#productInfoAccordion")
+                                        .accordion-body 
+                                            p this for How to use content
+                                .accordion-item
+                                    .accordion-header
+                                        button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#data2" aria-expanded="false" aria-controls="data2") Ingredients
+                                    .accordion-collapse.collapse#data2(data-bs-parent="#productInfoAccordion")
+                                        .accordion-body this for Ingredient content
 
         section.detailTab
             .container
@@ -116,7 +115,7 @@ html(lang='en')
                         .card-body
                             .tab-content#myTabContent
                                 .tab-pane.fade.show.active#tab1(role="tabpanel" aria-labelledby="tab1-tab")
-                                    img(src="./assets/img/dtinfoProduct.jpg" width="100%")
+                                    img(src="./assets/img/dtinfoProduct1.png" width="100%")
                                 .tab-pane.fade#tab2(role="tabpane2" aria-labelledby="tab2-tab")
                                     .reviewBox
                                         .reviewWrapper
@@ -166,7 +165,7 @@ html(lang='en')
 
                                                 .imgMedia 
                                                     img(src="./assets/img/media_review.png")
-                                            a.btnInput(href="#") Write a review
+                                            button.btnInput(type="button" data-bs-toggle="modal" data-bs-target="#reviewModal") Write a review
                                         .filterWrapper
                                             h6 Showing 1 - 4 of 4 reviews
                                             .dropdown
@@ -178,7 +177,8 @@ html(lang='en')
                                                         a.dropdown-item(href="#") Rating
                                                     li
                                                         a.dropdown-item(href="#") Media
-                                        div(style="width: 1236px; height: 1px; background: #E6E6E6")
+
+                                        div(style="width: 100%; height: 1px; background: #E6E6E6")
                                         .contentWrapper 
                                             .contentBox
                                                 img.imgUser(src="./assets/img/userWeb1.png")
@@ -196,7 +196,8 @@ html(lang='en')
                                                             img(src="./assets/img/icon/ic_shopee.png" style="width: 24px; height: 24px;")
                                                     p.reviewValue On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.
                                                 img.mediaBox(src="./assets/img/media_review.png")
-
+                                
+                                            div(style="width: 100%; height: 1px; background: #E6E6E6")
                                             .contentBox
                                                 img.imgUser(src="./assets/img/userWeb1.png")
                                                 .rowContent
@@ -214,6 +215,7 @@ html(lang='en')
                                                     p.reviewValue On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.
                                                 img.mediaBox(src="./assets/img/media_review.png")
 
+                                            div(style="width: 100%; height: 1px; background: #E6E6E6")
                                             .contentBox
                                                 img.imgUser(src="./assets/img/userWeb1.png")
                                                 .rowContent
@@ -231,6 +233,7 @@ html(lang='en')
                                                     p.reviewValue On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.
                                                 img.mediaBox(src="./assets/img/media_review.png")
 
+                                            div(style="width: 100%; height: 1px; background: #E6E6E6")
                                             .contentBox
                                                 img.imgUser(src="./assets/img/userWeb1.png")
                                                 .rowContent
@@ -248,43 +251,90 @@ html(lang='en')
                                                     p.reviewValue On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.
                                                 img.mediaBox(src="./assets/img/media_review.png")
                                 .tab-pane.fade#tab3(role="tabpane3" aria-labelledby="tab3-tab")
+                                    .faqBox
+                                        .accordion.border-0#accordionExample
+                                            .accordion-item
+                                                h2.accordion-header
+                                                    button.accordion-button(type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                        aria-expanded="true" aria-controls="collapseOne") 
+                                                        .spanBold Question 1?
+                                                .accordion-collapse.collapse.show#collapseOne(data-bs-parent="#accordionExample")
+                                                    .accordion-body
+                                                        .textBody Answer here
+                                            .accordion-item
+                                                h2.accordion-header
+                                                    button.accordion-button.collapsed(type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo")
+                                                        .spanBold  Question 2?
+                                                .accordion-collapse.collapse#collapseTwo(data-bs-parent="#accordionExample")
+                                                    .accordion-body
+                                                        .textBody Answer here
+                                            .accordion-item
+                                                h2.accordion-header
+                                                    button.accordion-button.collapsed(type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree")
+                                                        .spanBold Question 3?
+                                                .accordion-collapse.collapse#collapseThree(data-bs-parent="#accordionExample")
+                                                    .accordion-body
+                                                        .textBody Answer here
                                 .tab-pane.fade#tab4(role="tabpanel" aria-labelledby="tab4-tab")
-                                    .container
-                                        .row
-                                            .col-md-2.text-center.py-3(style="background-color:#F2F2F2")
-                                                br
-                                                br
-                                                br
-                                                br
-                                                br
-                                                br
-                                                h6.card-title.my-aut Exchange & Return
-                                            .col-md-10.align-start
-                                                ul.p-4
+                                    .shippingBox
+                                        .shippingWrapper 
+                                            .titleWrapper
+                                                span.text-center Exchange & Return
+                                            .descWrapper 
+                                                ul
                                                     li If the product value is damaged by removing the product tag or opening the product, exchange or return is not possible even within 7 days of receiving the product.
                                                     li For low-priced products and some special price products, the customer must pay the shipping fee for exchanges or returns due to change of mind (excluding product defects and delivery errors).
-                                                    Prices for some products may change due to manufacturer circumstances such as the release of a new model or fluctuations in parts prices.
+                                                    li Prices for some products may change due to manufacturer circumstances such as the release of a new model or fluctuations in parts prices.
                                                     li  For shoes, if they were worn outdoors or have signs of use, exchanges and returns are not possible even within the exchange/return period.
                                                     li In the case of custom-made products (heel height, width of the foot, size change) among handmade products, exchanges and returns are not possible even within the exchange/return period after production is completed and received.
                                                     li  Please understand that in the case of imported or luxury products, exchanges and returns are not possible if the product or its box is damaged or lost, resulting in loss of product value.
                                                     li For some special price products, exchanges or returns due to simple change of mind on the part of the customer may not be possible after purchase, except in cases of product defects or incorrect delivery. Please be sure to refer to the product details for each product.
-                                        .hr.border.border-secondary.border-1.opacity-50
-                                        .row
-                                            .col-md-2.text-center.py-3(style="background-color:#F2F2F2")
-                                                br
-                                                br
-                                                br
-                                                br
-                                                p Exchange & Return
-                                            .col-md-10
-                                                ul.p-4
-                                                    li Shipping fee: The basic shipping fee is 3,000 won. (Additional shipping fees may apply to some islands, mountainous areas, and remote areas.) Free shipping for purchases over 40,000 won.
+                                        div(style="align-self: stretch; height: 1px; background: #C4C4C4")
+                                        .shippingWrapper 
+                                            .titleWrapper
+                                                span.text-center Shipping Information
+                                            .descWrapper 
+                                                ul
+                                                    li Shipping fee: The basic shipping fee is Rp 10.000. (Additional shipping fees may apply to some islands, mountainous areas, and remote areas.) Free shipping for purchases over Rp 150.000.
                                                     li The average delivery date for this product is 2 days (after payment confirmation). For installation products, delivery may be slightly delayed. [The expected delivery date may differ from the average delivery date due to the fluidity of the order time (order sequence).]
-                                                    li This product can be delivered within 3 days. The delivery possible date refers to the period during which the product can be delivered to customers who ordered this product. (However, holidays and public holidays are excluded when calculating the period, and in the case of cash orders, it is based on the date of deposit.)
+                                                    li This product can be delivered within 3 days. The delivery possible date refers to the period during which the product can be delivered to customers who ordered this product. (However, holidays and public holidays are excluded when calculating the period, and in the case of cash orders, it is based on the date of deposit.)                             
 
-                                            
+        .modal.fade#reviewModal(tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true")
+            .modal-dialog.modal-lg
+                .modal-content
+                    .modal-header
+                        h5.modal-title#reviewModalLabel Add A Review “Snowv Glutathione”
+                        button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+                    .modal-body
+                        .star-rating
+                            d-flex.align-items-center
+                                div(data-coreui-toggle="rating")
+                                    div#myRatingResettable(data-coreui-toggle="rating" data-coreui-value="3")
+                                    button.btn.btn-primary.ms-3(type="button" onclick="coreui.Rating.getInstance('#myRatingResettable').reset()") Reset
+                        form
+                            .mb-3
+                                input(type="text" class="form-control" placeholder="Order Number")
+                            .row.mb-3
+                                .col
+                                    input(type="text" class="form-control" placeholder="Name")
+                                .col
+                                    input(type="email" class="form-control" placeholder="Email")
+                            .mb-3
+                                textarea.form-control(rows="3" placeholder="Write your review here")
 
-                              
+                            .upload-section
+                                span Upload videos (0/3)
+                                input.form-control(type="file" multiple)
+                                small Max size: 1024kb, max 3 files
+                            .upload-section
+                                span Upload photos (0/3)
+                                input.form-control(type="file" multiple)
+                                small Max size: 100kb, max 3 files
+                    .modal-footer
+                        button.btn.btn-primary(type="submit") Submit
+
         // Footer
         include includes/footer.pug
         include includes/customJS.pug

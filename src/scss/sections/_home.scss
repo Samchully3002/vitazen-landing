@@ -1,62 +1,8 @@
 .hero {
   margin-bottom: 4rem;
-    .carousel-item {
-      width: 100%;
-      .row {
-        align-items: center;
-      }
-  
-      .hero-text {
-        text-align: left;
-        padding: 2rem;
-  
-        h1 {
-          font-size: 2.5rem;
-          font-weight: bold;
-          color: #001f3f; // Dark blue for main text
-          line-height: 1.2;f
-  
-          br {
-            display: block;
-          }
-        }
-  
-        p {
-          margin: 1rem 0;
-          font-size: 1.2rem;
-          color: #6c757d; // Muted color for subheading
-        }
-  
-        .btn {
-          margin-top: 1rem;
-          padding: 0.8rem 1.5rem;
-          font-size: 1rem;
-          background-color: #BAA6E7; // Custom purple button
-          color: #fff;
-          border: none;
-          border-radius: 5px;
-          display: inline-flex;
-          align-items: center;
-  
-          i {
-            margin-left: 0.5rem;
-          }
-  
-          &:hover {
-            background-color: #5436d2; // Darker purple on hover
-          }
-        }
-      }
-  
-      .hero-image {
-        text-align: center;
-        img {
-          height: auto;
-          object-fit: cover;
-        }
-      }
-    }
-  
+  .row {
+    margin-top: unset;
+  }
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
       background-color: rgba(0, 0, 0, 0.5); // Semi-transparent controls
@@ -214,6 +160,7 @@
     justify-content: flex-start; 
     align-items: flex-start; 
     gap: 24px; 
+    padding: 44px 0;
     display: inline-flex;
   }
 
@@ -225,6 +172,8 @@
       border-radius: 50%;
       top: 50%;
       transform: translateY(-50%);
+      margin-left:-50px;
+      margin-right: -50px;
   }
   @media (min-width: 768px) {
     .multiple-card-slider .carousel-item {
@@ -369,7 +318,7 @@
         height: 78px; 
         color: black; 
         font-size: 16px; 
-        font-family: General Sans; 
+        font-family: Plus Jakarta Sans; 
         font-weight: 400; 
         line-height: 25.60px; 
         overflow: hidden; 
@@ -456,7 +405,7 @@
     text-align: center; 
     color: #9FA6AF; 
     font-size: 16px; 
-    font-family: Manrope; 
+    font-family: Plus Jakarta Sans; 
     font-weight: 700; 
     text-transform: uppercase; 
     line-height: 59px; 
@@ -471,10 +420,8 @@
   }
 }
 
-.vSight {
-  align-items: center; 
-  justify-content: center; 
-
+.vSight { 
+}
   .title {
     width: 100%; 
     text-align: center; 
@@ -505,13 +452,6 @@
     .vsight-container{
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
-  }
-  
-  .vsight{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
   }
 
   .linkToDetail {
@@ -556,4 +496,3 @@
     line-height: 25.60px; 
     word-wrap: break-word
   }
-}

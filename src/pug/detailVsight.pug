@@ -1,0 +1,31 @@
+doctype html
+html(lang='en')
+
+    include includes/head.pug
+    body
+        include includes/header.pug
+
+        // Section contact-us form
+        section.VsightDetail-section
+            .titleWrapper
+                label.titleText 7 Recommended Korean Supplements
+                label.dateText 1 November 2024
+            img.picVsight(src="./assets/img/dtVsight1.png")
+            p.contentText Discover the Secret to Korean Wellness, Now in Indonesia<br/><br/>At Vitazen, we believe that health and beauty are a harmony of the mind, body, and soul. Inspired by Korea's renowned commitment to innovation and excellence, we bring you premium wellness products tailored for the Indonesian market. Our mission is to redefine your health and beauty journey, making it more accessible, effective, and enjoyable.<br/><br/>With a commitment to quality, transparency, and customer care, Vitazen is not just a store—it's a community dedicated to empowering your health journey. Join us in shaping a future where wellness is a lifestyle, not a luxury.
+
+            nav
+                ul.pagination.justify-content-center
+                    li.page-item
+                        a.page-link(href="#") 
+                            i.fa.fa-chevron-left.colored
+                    li.page-item.active
+                        a.page-link(href="#") 1
+                    li.page-item
+                        a.page-link(href="#") 2
+                    li.page-item
+                        a.page-link(href="#")
+                            i.fa.fa-chevron-right.colored2
+
+    // Footer
+    include includes/footer.pug
+    include includes/customJS.pug
