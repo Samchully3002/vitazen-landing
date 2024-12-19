@@ -15,86 +15,60 @@ html(lang='en')
                     .carousel-item.active
                         .row.align-items-center
                             img(src="./assets/img/Hero 1.png", alt="Snovv Banner" style="height:640px; object-fit: cover;")
+                            .btnshopWrapperHero1
+                                a.btnshopLink(href="#")
+                                    span.shopLinkText Buy Now
+                                    img(src="./assets/img/icon/ic_arrow_right.svg")
                     .carousel-item
                         .row.align-items-center
                             img(src="./assets/img/Hero 2.png", alt="Snovv Banner" style="height:640px; object-fit: cover;")
+                            .btnshopWrapperHero2
+                                a.btnshopLink(href="#")
+                                    span.shopLinkText Buy Now
+                                    img(src="./assets/img/icon/ic_arrow_right.svg")
                     .carousel-item
                         .row.align-items-center
                             img(src="./assets/img/Hero 3.png", alt="Snovv Banner" style="height:640px; object-fit: cover;")
 
         // Section Promotion Youtube Video
         section.vidYoutube
-            div(style="width: 100%; height: 100%; padding-top: 82px; padding-bottom: 97px; padding-left: 90px; padding-right: 90px; background: rgba(255, 255, 255, 0.10); justify-content: center; align-items: center; display: inline-flex")
-                div(style="width: 1260px; height: 673px; position: relative")
-                    img#youtubeImg(src="./assets/img/img_youtube.png" style="width: 1260px; height: 673px; left: 0px; top: 0px; position: absolute; box-shadow: 0px 0px 0px; border-radius: 20px; filter: blur(0px); cursor: pointer;" onclick="changeToVideo()")
-                    img#icPlay(src="./assets/img/icon/ic_playVid.png" style="width: 109.43px; height: 108.56px; padding: 20px; left: 575.72px; top: 273.78px; position: absolute; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex; cursor: pointer;" onclick="changeToVideo()")
+            .vidBox
+                .thumbVid
+                    img.thumbVid#youtubeImg(src="./assets/img/img_youtube.png" onclick="changeToVideo()")
+                    img.playButton#icPlay(src="./assets/img/icon/ic_playVid.png" onclick="changeToVideo()")
 
         // section Top Product
         section.products
-            div(style="width: 100%; height: 100%; padding-top: 70px; padding-bottom: 31px; padding-left: 101px; padding-right: 101px; background: rgba(255, 255, 255, 0.10); justify-content: center; align-items: center; display: inline-flex")
-                div(style="padding-bottom: 48px; align-self: stretch; flex-direction: column; justify-content: center; align-items: flex-start; gap: 48px; display: inline-flex")
-                    div(style="align-self: stretch; justify-content: space-between; align-items: center; display: inline-flex")
-                        span(style="text-align: center; color: #020E35; font-size: 56px; font-family: Poppins; font-weight: 500; word-wrap: break-word") Products
-                        div(style="padding-left: 20px; padding-right: 20px; padding-top: 10px; padding-bottom: 10px; background: #F6F2FF; border-radius: 5px; justify-content: center; align-items: center; gap: 10px; display: flex")
-                            a(href="products.html" style="text-decoration: none; color: #A083DE; font-size: 16px; font-family: Poppins; font-weight: 500; word-wrap: break-word") View more
-                    div(style="justify-content: flex-start; align-items: flex-start; gap: 30px; display: inline-flex")
-                        a(href="productDetail.html" style="flex-direction: column; justify-content: center; align-items: center; gap: 20px; display: inline-flex; text-decoration: none;")
-                            div(style="width: 392px; height: 400px; border-radius: 10px; overflow: hidden; flex-direction: column; justify-content: center; align-items: center; display: flex")
-                                img(style="width: 392px; height: 400px" src="./assets/img/product1.png")
-                            div(style="align-self: stretch; height: 61px; padding-left: 5px; padding-right: 5px; flex-direction: column; justify-content: center; align-items: flex-start; display: flex")
-                                span(style="color: black; font-size: 20px; font-family: Poppins; font-weight: 400; line-height: 32px; word-wrap: break-word") Snovv Glutathione
-                                div(style="align-self: stretch; justify-content: flex-start; align-items: center; gap: 10px; display: inline-flex")
-                                    span(style="color: #020E35; font-size: 18px; font-family: Plus Jakarta Sans; font-weight: 700; line-height: 28.80px; word-wrap: break-word") ± Rp150.000
-                                    span(style="text-align: center; color: rgba(2, 14, 53, 0.50); font-size: 14px; font-family: Plus Jakarta Sans; font-weight: 500; text-decoration: line-through; text-transform: capitalize; line-height: 16.80px; word-wrap: break-word") Rp 250.000
-                                    div(style="padding-left: 8px; padding-right: 8px; padding-top: 5px; padding-bottom: 5px; background: #FFC9C9; border-radius: 50px; justify-content: center; align-items: center; gap: 2px; display: flex")
-                                        span(style="color: #CF0003; font-size: 14px; font-family: Inter; font-weight: 700; line-height: 16.80px; word-wrap: break-word") 43%
-
-                        a(href="#" style="flex-direction: column; justify-content: center; align-items: center; gap: 20px; display: inline-flex; text-decoration: none;")
-                            div(style="width: 392px; height: 400px; border-radius: 10px; overflow: hidden; flex-direction: column; justify-content: center; align-items: center; display: flex")
-                                img(style="width: 392px; height: 400px" src="./assets/img/product2.png")
-                            div(style="align-self: stretch; height: 61px; padding-left: 5px; padding-right: 5px; flex-direction: column; justify-content: center; align-items: flex-start; display: flex")
-                                span(style="color: black; font-size: 20px; font-family: Poppins; font-weight: 400; line-height: 32px; word-wrap: break-word") Snovv Magnesium
-                                div(style="align-self: stretch; justify-content: flex-start; align-items: center; gap: 10px; display: inline-flex")
-                                    span(style="color: #020E35; font-size: 18px; font-family: Plus Jakarta Sans; font-weight: 700; line-height: 28.80px; word-wrap: break-word") ± Rp93.000
-                                    span(style="text-align: center; color: rgba(2, 14, 53, 0.50); font-size: 14px; font-family: Plus Jakarta Sans; font-weight: 500; text-decoration: line-through; text-transform: capitalize; line-height: 16.80px; word-wrap: break-word") Rp 150.000
-                                    div(style="padding-left: 8px; padding-right: 8px; padding-top: 5px; padding-bottom: 5px; background: #FFC9C9; border-radius: 50px; justify-content: center; align-items: center; gap: 2px; display: flex")
-                                        span(style="color: #CF0003; font-size: 14px; font-family: Inter; font-weight: 700; line-height: 16.80px; word-wrap: break-word") 43%
-
-                        a(href="#" style="flex-direction: column; justify-content: center; align-items: center; gap: 20px; display: inline-flex; text-decoration: none;")
-                            div(style="width: 392px; height: 400px; border-radius: 10px; overflow: hidden; flex-direction: column; justify-content: center; align-items: center; display: flex")
-                                img(style="width: 392px; height: 400px" src="./assets/img/product3.png")
-                            div(style="align-self: stretch; height: 61px; padding-left: 5px; padding-right: 5px; flex-direction: column; justify-content: center; align-items: flex-start; display: flex")
-                                span(style="color: black; font-size: 20px; font-family: Poppins; font-weight: 400; line-height: 32px; word-wrap: break-word") Snovv Liposome Vitamin C
-                                div(style="align-self: stretch; justify-content: flex-start; align-items: center; gap: 10px; display: inline-flex")
-                                    span(style="color: #020E35; font-size: 18px; font-family: Plus Jakarta Sans; font-weight: 700; line-height: 28.80px; word-wrap: break-word") ± Rp93.000
-                                    span(style="text-align: center; color: rgba(2, 14, 53, 0.50); font-size: 14px; font-family: Plus Jakarta Sans; font-weight: 500; text-decoration: line-through; text-transform: capitalize; line-height: 16.80px; word-wrap: break-word") Rp 150.000
-                                    div(style="padding-left: 8px; padding-right: 8px; padding-top: 5px; padding-bottom: 5px; background: #FFC9C9; border-radius: 50px; justify-content: center; align-items: center; gap: 2px; display: flex")
-                                        span(style="color: #CF0003; font-size: 14px; font-family: Inter; font-weight: 700; line-height: 16.80px; word-wrap: break-word") 43%
+            .productWrapper
+                .headerWrapper
+                    span.titleText Products
+                    .viewmoreWrapper
+                        a.btnViewmore(href="products.html") View more
+                .listproductWrapper#dataproducts
 
         // Section Promotion Banner
         section.promo-section
-            div(style="padding: 32px 102px 108px 102px; width: 100%; height: 100%; align-items: center; justify-content: center;")
-                .carousel.slide#promoCarausel(data-bs-ride="carousel" style="align-items: center; justify-content: center;")
-                    .carousel-indicators.custom-indicators
-                        button(type="button" data-bs-target="#promoCarausel" data-bs-slide-to="0" class="active" aria-current="true")
-                        button(type="button" data-bs-target="#promoCarausel" data-bs-slide-to="1")
-                        button(type="button" data-bs-target="#promoCarausel" data-bs-slide-to="2")
-                    .carousel-inner
-                        .carousel-item.active
-                            .d-flex.justify-content-center
-                                img.text-center(src="./assets/img/promo1.png" style="width: 1236px;" alt="Snovv Promo")
-                        .carousel-item
-                            .d-flex.justify-content-center
-                                img(src="./assets/img/promo1.png" alt="Snovv Promo" style="width: 1236px;")
-                        .carousel-item
-                            .d-flex.justify-content-center
-                                img(src="./assets/img/promo1.png" alt="Snovv Promo" style="width: 1236px;")
-                    a.carousel-control-prev(type="button" data-bs-target="#promoCarausel" data-bs-slide="prev")
-                        span.carousel-control-prev-icon(aria-hidden="true")
-                        span.visually-hidden Previous
-                    a.carousel-control-next(type="button" data-bs-target="#promoCarausel" data-bs-slide="next")
-                        span.carousel-control-next-icon(aria-hidden="true")
-                        span.visually-hidden Next
+            .carousel.slide#promoCarausel(data-bs-ride="carousel" style="align-items: center; justify-content: center;")
+                .carousel-indicators.custom-indicators
+                    button(type="button" data-bs-target="#promoCarausel" data-bs-slide-to="0" class="active" aria-current="true")
+                    button(type="button" data-bs-target="#promoCarausel" data-bs-slide-to="1")
+                    button(type="button" data-bs-target="#promoCarausel" data-bs-slide-to="2")
+                .carousel-inner
+                    .carousel-item.active
+                        .d-flex.justify-content-center
+                            img.text-center(src="./assets/img/promo1.png" style="width: 1236px;" alt="Snovv Promo")
+                    .carousel-item
+                        .d-flex.justify-content-center
+                            img(src="./assets/img/promo1.png" alt="Snovv Promo" style="width: 1236px;")
+                    .carousel-item
+                        .d-flex.justify-content-center
+                            img(src="./assets/img/promo1.png" alt="Snovv Promo" style="width: 1236px;")
+                a.carousel-control-prev(type="button" data-bs-target="#promoCarausel" data-bs-slide="prev")
+                    span.carousel-control-prev-icon(aria-hidden="true")
+                    span.visually-hidden Previous
+                a.carousel-control-next(type="button" data-bs-target="#promoCarausel" data-bs-slide="next")
+                    span.carousel-control-next-icon(aria-hidden="true")
+                    span.visually-hidden Next
 
         // Section Website Review
         section.reviewWebsite
@@ -268,11 +242,11 @@ html(lang='en')
                                         img.picProduct(src="./assets/img/revShop1.png")
                                     .reviewWrapper 
                                         .ratingWrapper 
-                                            span.fa.fa-star
-                                            span.fa.fa-star
-                                            span.fa.fa-star
-                                            span.fa.fa-star
-                                            span.fa.fa-star
+                                            span.fa.fa-star(style="color:orange")
+                                            span.fa.fa-star(style="color:orange")
+                                            span.fa.fa-star(style="color:orange")
+                                            span.fa.fa-star(style="color:orange")
+                                            span.fa.fa-star(style="color:orange")
                                         p.textReview “On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.”
                                         .userWrapper
                                             img.iconShop(src="./assets/img/icon/ic_shopee.png")
@@ -285,11 +259,11 @@ html(lang='en')
                                         img.picProduct(src="./assets/img/revShop2.png")
                                     .reviewWrapper 
                                         .ratingWrapper 
-                                            span.fa.fa-star
-                                            span.fa.fa-star
-                                            span.fa.fa-star
-                                            span.fa.fa-star
-                                            span.fa.fa-star
+                                            span.fa.fa-star(style="color:orange")
+                                            span.fa.fa-star(style="color:orange")
+                                            span.fa.fa-star(style="color:orange")
+                                            span.fa.fa-star(style="color:orange")
+                                            span.fa.fa-star(style="color:orange")
                                         p.textReview “On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.”
                                         .userWrapper
                                             img.iconShop(src="./assets/img/icon/ic_tokped.png")
@@ -302,11 +276,11 @@ html(lang='en')
                                         img.picProduct(src="./assets/img/revShop2.png")
                                     .reviewWrapper 
                                         .ratingWrapper 
-                                            span.fa.fa-star
-                                            span.fa.fa-star
-                                            span.fa.fa-star
-                                            span.fa.fa-star
-                                            span.fa.fa-star
+                                            span.fa.fa-star(style="color:orange")
+                                            span.fa.fa-star(style="color:orange")
+                                            span.fa.fa-star(style="color:orange")
+                                            span.fa.fa-star(style="color:orange")
+                                            span.fa.fa-star(style="color:orange")
                                         p.textReview “On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.”
                                         .userWrapper
                                             img.iconShop(src="./assets/img/icon/ic_tokped.png")
@@ -363,6 +337,62 @@ html(lang='en')
         include includes/footer.pug
         include includes/customJS.pug
         script.
+            $(document).ready(function () {
+                // Replace with your API endpoint
+                const apiUrl = "http://localhost:3000/landing/home/getproducts?limit=3";
+
+                // Fetch data using jQuery AJAX
+                $.ajax({
+                    url: apiUrl,
+                    method: "GET",
+                    dataType: "json",
+                    success: function (response) {
+                        if (response.success) {
+                            const products = response.products;
+                            console.log(products);
+                            products.forEach(product => {
+                                let discountHTML = "";
+
+                                // Check if the discount sub-object exists
+                                if (product.discount) {
+                                    discountHTML = `
+                                        <div class="priceproductWrapper">
+                                            <span class="discountPrice">± Rp ${product.finalPrice.toLocaleString()}</span>
+                                            <span class="normalPrice"> Rp ${product.price.toLocaleString()}</span>
+                                            <div class="ratediscountWrapper">
+                                                <span class="rateText">${product.discount.value}%</span>
+                                            </div>
+                                        </div>`;
+                                } else {
+                                    discountHTML = `
+                                        <div class="priceproductWrapper">
+                                            <span class="discountPrice">± Rp ${product.finalPrice.toLocaleString()}</span>
+                                        </div>`;
+                                }
+                                const productHTML = `
+                                    <a class="cardProduct" href="productDetail1.html">
+                                        <div class="pictProductWrapper">
+                                            <img class="pictProduct" src="${product.thumbnail}"/>
+                                        </div>
+                                        <div class="productDescWrapper">
+                                            <span class="productName">${product.name}</span>
+                                            ${discountHTML}
+                                        </div>
+                                    </a>`;
+                    
+                                $('#dataproducts').append(productHTML);
+                            });
+                        } else {
+                            $("#product-list").html("<p>No products available.</p>");
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.error("Error fetching products:", error);
+                        $("#product-list").html("<p>Failed to load products.</p>");
+                    },
+                });
+            });
+       
             function changeToVideo() {
                 // Reference to the image element
                 const imgElement = document.getElementById('youtubeImg');

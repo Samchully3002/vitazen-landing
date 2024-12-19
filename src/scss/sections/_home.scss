@@ -2,108 +2,131 @@
   .row {
     margin-top: unset;
   }
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-      background-color: rgba(0, 0, 0, 0.5); // Semi-transparent controls
-      border-radius: 50%;
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); // Semi-transparent controls
+    border-radius: 50%;
+  }
+  .btnshopWrapperHero1 {
+    left: 78px; top: 363px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex;
+    .btnshopLink {
+      width: fit-content; height:fit-content; padding: 10px 20px; background: #A083DE; border-radius: 5px; border: 1px solid; 
+      justify-content: center; align-items: center; 
+      gap: 10px; display: inline-flex;
+      .shopLinkText {
+        color: white; font-size: 16px; 
+        font-family: Poppins; font-weight: 500; 
+        word-wrap: break-word;
+      }
     }
   }
+  .btnshopWrapperHero2 {
+    left: 78px; top: 384px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex;
+    .btnshopLink {
+      width: fit-content; height:fit-content; padding: 10px 20px; background: #020E35; border-radius: 5px; border: 1px solid; 
+      justify-content: center; align-items: center; 
+      gap: 10px; display: inline-flex;
+      .shopLinkText {
+        color: white; font-size: 16px; 
+        font-family: Poppins; font-weight: 500; 
+        word-wrap: break-word;
+      }
+    }
+  }
+}
 
   .vidYoutube {
-    align-items: center;
-    justify-content: center;
-    place-content: center;
-
-    .vid {
-      width:1280px;
-      height:720px;
-      border-radius: 7px;
-
+    width: 100%; height: 100%; padding-top: 82px; padding-bottom: 97px; padding-left: 90px; padding-right: 90px; background: rgba(255, 255, 255, 0.10); justify-content: center; align-items: center; display: inline-flex;
+    .vidBox {
+      width: 1260px; height: 673px; position: relative;
+    }
+    .thumbVid {
+      width: 1260px; height: 673px; left: 0px; top: 0px; position: absolute; box-shadow: 0px 0px 0px; border-radius: 20px; filter: blur(0px); cursor: pointer;
+    }
+    .playButton {
+      width: 109.43px; height: 108.56px; padding: 20px; left: 575.72px; top: 273.78px; position: absolute; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex; cursor: pointer;
     }
   }
-  
 
-.products {
-    .wrapper {
-      display: flex;
-      place-content: space-between;
-    }
-    .btn {
-      background-color: #F6F2FF;
-      border-radius: 7px;
-      color:#A083DE;
-      height: fit-content;
-      font-size: 1.5rem;
-      padding: 10px 1rem 10px 1rem;
-    }
+  .products {
+    width: 100%; height: 100%; 
+    padding: 70px 101px 31px 101px;
+    background: rgba(255, 255, 255, 0.10);
+    justify-content: center; align-items: center; 
+    display: inline-flex;
+      .productWrapper {
+        padding-bottom: 48px; align-self: stretch; 
+        flex-direction: column; justify-content: center; 
+        align-items: flex-start; gap: 48px; 
+        display: inline-flex;
   
-    h1 {
-      font-size: 3.5rem;
-      font-weight: 500;
-      margin-bottom: 3rem;
-    }
-  
-    .card {
-      border-radius: 10px;
-      overflow: hidden;
-  
-      &-img-top {
-        height: fit-content;
-        object-fit: cover;
-        border-bottom: 1px solid #ddd;
-      }
-  
-      &-body {
-        padding: 1.5rem;
-  
-        .card-title {
-          margin-left: 1rem;
-          font-size: x-large;
-          text-align: left;
-          font-weight: 500;
-          color: #001f3f;
-        }
-  
-        .card-price {
-          margin-left: 1rem;
-          text-align: left;
-          font-size: large;
-          margin-top: 0.5rem;
-  
-          .price-new {
-            font-weight: bold;
+        .headerWrapper {
+          width:1240px; align-self: stretch; justify-content: space-between; 
+          align-items: center; display: inline-flex;
+          .titleText {
+            text-align: center; color: #020E35; 
+            font-size: 56px; font-family: Poppins; 
+            font-weight: 500; word-wrap: break-word;
           }
-  
-          .price-old {
-            text-decoration: line-through;
-            margin-left: 0.5rem;
+          .viewmoreWrapper {
+            padding:10px 20px; background: #F6F2FF; 
+            border-radius: 5px; justify-content: center; 
+            align-items: center; gap: 10px; display: flex;
+            .btnViewmore {
+              text-decoration: none; color: #A083DE; 
+              font-size: 16px; font-family: Poppins; 
+              font-weight: 500; word-wrap: break-word;
+            }
           }
         }
-      }
   
-      &:hover {
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        .listproductWrapper {
+          justify-content: flex-start; align-items: flex-start; gap: 30px; display: inline-flex;
+          .cardProduct {
+            flex-direction: column; justify-content: center; align-items: center; gap: 20px; display: inline-flex; text-decoration: none;
+            .pictProductWrapper {
+              width: 392px; height: 400px; border-radius: 10px; overflow: hidden; flex-direction: column; justify-content: center; align-items: center; display: flex;
+              .pictProduct {
+                width: 392px; height: 400px;
+              }
+            }
+            .productDescWrapper {
+              align-self: stretch; height: 61px; 
+              padding:0 5px; flex-direction: column; 
+              justify-content: center; align-items: flex-start; 
+              display: flex;
+              .productName {
+                color: black; font-size: 20px; 
+                font-family: Poppins; font-weight: 400; 
+                line-height: 32px; word-wrap: break-word;
+              }
+              .priceproductWrapper {
+                align-self: stretch; justify-content: flex-start; 
+                align-items: center; gap: 10px; display: inline-flex;
+                .discountPrice {
+                  color: #020E35; font-size: 18px; font-family: Plus Jakarta Sans; font-weight: 700; line-height: 28.80px; word-wrap: break-word;
+                }
+                .normalPrice {
+                  text-align: center; color: rgba(2, 14, 53, 0.50); font-size: 14px; font-family: Plus Jakarta Sans; font-weight: 500; text-decoration: line-through; text-transform: capitalize; line-height: 16.80px; word-wrap: break-word;
+                }
+                .ratediscountWrapper {
+                  padding-left: 8px; padding-right: 8px; padding-top: 5px; padding-bottom: 5px; background: #FFC9C9; border-radius: 50px; justify-content: center; align-items: center; gap: 2px; display: flex;
+                  .rateText {
+                    color: #CF0003; font-size: 14px; font-family: Inter; font-weight: 700; line-height: 16.80px; word-wrap: break-word;
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
-  
-    .btn-outline-primary {
-      font-size: 1rem;
-      padding: 0.8rem 1.5rem;
-      border-radius: 5px;
-      transition: all 0.3s ease;
-  
-      &:hover {
-        color: #fff;
-      }
-    }
-  }
   
 .promo-section {
-   .container {
-      max-width: 1140px; // Menyesuaikan lebar container standar Bootstrap
-      padding-left: 15px;
-      padding-right: 15px;
-    }
+  padding: 32px 102px 108px 102px; 
+  width: 100%; height: 100%; 
+  align-items: center; 
+  justify-content: center;
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
       filter: invert(100%);
@@ -298,7 +321,7 @@
         .textReview {
           align-self: stretch; height: 78px; 
           color: black; font-size: 16px; 
-          font-family: General Sans; 
+          font-family: Plus Jakarta Sans;
           font-weight: 400; line-height: 25.60px; 
           word-wrap: break-word;
         }
