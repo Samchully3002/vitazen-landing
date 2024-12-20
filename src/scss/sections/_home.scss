@@ -123,10 +123,11 @@
     }
   
 .promo-section {
-  padding: 32px 102px 108px 102px; 
-  width: 100%; height: 100%; 
+  padding: 32px 102px 108px 102px;
+  width: 100%; height: 100%;
   align-items: center; 
   justify-content: center;
+
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
       filter: invert(100%);
@@ -146,31 +147,6 @@
         width: 10px; /* Default size */
         height: 10px;
         border-radius: 50%;
-    }
-
-
-    
-    h2 {
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: #333;
-    }
-  
-    h3 {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #6c63ff;
-      margin: 15px 0;
-    }
-  
-    a.btn-primary {
-      
-      padding: 10px 20px;
-      font-size: 1rem;
-      text-transform: uppercase;
-      transition: all 0.3s ease;
-      color:white;
-        
     }
   }
 
@@ -409,13 +385,11 @@
   .colImg {
     justify-content: flex-start; 
     align-items: center; 
-    gap: 80px; 
+    gap: 20px; 
     display: inline-flex;
   }
 }
 
-.vSight { 
-}
   .title {
     width: 100%; 
     text-align: center; 
@@ -433,7 +407,7 @@
     justify-content: flex-start;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 48px;
+    gap: 20px;
   }
   
   @media (min-width: 768px) {
@@ -453,14 +427,13 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    gap: 20px; 
     display: inline-flex
   }
   .Vimg {
-    width: 413.33px;
+    width: 406px;
     height: 300px; 
     position: relative; 
-    border-radius: 20px
+    border-radius: 10px
   }
   .Vwrapper {
     align-self: stretch; 

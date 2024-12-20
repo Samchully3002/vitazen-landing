@@ -6,52 +6,63 @@ html(lang='en')
         include includes/header.pug
 
         // Section Top Product
-        section.vSight
+        section.vSightpage
             .text-center
                 span.title V-Sight
             .row
+                .dropdown.d-flex.justify-content-end
+                    span.align-self-center(style="padding-right:15px;") Urutkan berdasarkan
+                    a.btn.btn-outline-secondary.dropdown-toggle#filterDropdown(href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false") Terbaru
+                    ul.dropdown-menu(aria-labelledby="filterDropdown")
+                        li
+                            a.dropdown-item(href="#") Date
+                        li
+                            a.dropdown-item(href="#") Rating
+                        li
+                            a.dropdown-item(href="#") Media
+                            
                 ul.vsight-container
                     li.vsight
                         a.linkToDetail(href="detailVsight.html")
-                            img.Vimg(src="./assets/img/article1.png")
+                            img.Vimg(src="./assets/img/article4.jpg")
                             .Vwrapper
-                                span.vTitle 7 Recommended Korean Supplements Supplements Supplements
+                                span.vTitle 7 Rekomendasi Suplemen Korea
                                 span.vDate 1 November 2024
                     li.vsight
                         a.linkToDetail(href="detailVsight.html")
-                            img.Vimg(src="./assets/img/article2.png")
+                            img.Vimg(src="./assets/img/article5.jpg")
                             .Vwrapper
-                                span.vTitle Keep healhty inside, fresh outside
+                                span.vTitle Sehat di dalam, Segar di luar
                                 span.vDate 1 November 2024
                     li.vsight
                         a.linkToDetail(href="detailVsight.html")
-                            img.Vimg(src="./assets/img/article3.png")
+                            img.Vimg(src="./assets/img/article6.jpg")
                             .Vwrapper
-                                span.vTitle 7 Keys to keep your face brighter through the day
+                                span.vTitle 7 Kunci Menjaga Wajah Tetap Cerah Sepanjang Hari
                                 span.vDate 1 November 2024
                     li.vsight
                         a.linkToDetail(href="detailVsight.html")
-                            img.Vimg(src="./assets/img/article1.png")
+                            img.Vimg(src="./assets/img/article4.jpg")
+                            .Vwrapper
+                                span.vTitle 7 Rekomendasi Suplemen Korea
+                                span.vDate 1 November 2024
+                    li.vsight
+                        a.linkToDetail(href="detailVsight.html")
+                            img.Vimg(src="./assets/img/article5.jpg")
                             .Vwrapper
                                 span.vTitle 7 Recommended Korean Supplements
                                 span.vDate 1 November 2024
                     li.vsight
                         a.linkToDetail(href="detailVsight.html")
-                            img.Vimg(src="./assets/img/article2.png")
+                            img.Vimg(src="./assets/img/article6.jpg")
                             .Vwrapper
-                                span.vTitle 7 Recommended Korean Supplements
+                                span.vTitle Sehat di dalam, Segar di luar
                                 span.vDate 1 November 2024
                     li.vsight
                         a.linkToDetail(href="detailVsight.html")
-                            img.Vimg(src="./assets/img/article3.png")
+                            img.Vimg(src="./assets/img/article4.jpg")
                             .Vwrapper
-                                span.vTitle 7 Recommended Korean Supplements
-                                span.vDate 1 November 2024
-                    li.vsight
-                        a.linkToDetail(href="detailVsight.html")
-                            img.Vimg(src="./assets/img/article2.png")
-                            .Vwrapper
-                                span.vTitle 7 Recommended Korean Supplements
+                                span.vTitle 7 Kunci Menjaga Wajah Tetap Cerah Sepanjang Hari
                                 span.vDate 1 November 2024
                 nav
                     ul.pagination.justify-content-center

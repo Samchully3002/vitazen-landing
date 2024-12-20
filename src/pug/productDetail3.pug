@@ -57,16 +57,16 @@ html(lang='en')
                                     span.fa.fa-star
                                     span.fa.fa-star
                                     span.fa.fa-star
-                                span.totalSpan (4 Reviews)
+                                span.totalSpan (4 Ulasan)
                             .productPrice
-                                span.discountPrice ± Rp150.000
+                                span.discountPrice ± Rp 150.000
                                 span.normalPrice Rp. 250.000
                                 .discountRate 
                                     span 43%
                                     
                         div(style="width:100%; align-self: stretch; height: 1px; background: #C4C4C4")
                         .shopLink 
-                            span shop via
+                            span Belanja dengan
                             .btnWrapper
                                 a.btnShop(href="#")
                                     img(src="./assets/img/icon/ic_shopee.png")
@@ -76,31 +76,31 @@ html(lang='en')
                                     span Tokopedia
                         .productDetail
                             .DescWrapper
-                                span.title Product Details
+                                span.titleTextProductDetail Detail Produk
                                 .infoWrapper
-                                    span.boldText Brand :
+                                    span.boldText Merek :
                                     span.valueText About H
                                     br
-                                    span.boldText Manufacture :
+                                    span.boldText Produsen :
                                     span.valueText Biofarm
                                 ul.descText 
-                                    li Dermatologist Formulated Formula.
-                                    li Inner Beauty Network System, GV5 formulation
-                                    li Premium Glutathione from UK 250mg
-                                    li Contains special ingredients for inner beauty selected based on H.
+                                    li Diformulasikan oleh Dokter Kulit Korea
+                                    li Formulasi GV5, Kecantikan dari dalam
+                                    li 250 mg Glutathione Premium dari Korea
+                                    li Mengandung Bahan Khusus untuk Kecantikan dari dalam, yang dipilih sesuai dengan standar yang tinggi
                             div(style="width:100%; align-self: stretch; height: 1px; background: #C4C4C4")
                             .accordion.accordion-flush#productInfoAccordion 
                                 .accordion-item
                                     .accordion-header
-                                        button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#data1" aria-expanded="false" aria-controls="data1") How to use
+                                        button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#data1" aria-expanded="false" aria-controls="data1") Cara Penyajian
                                     .accordion-collapse.collapse#data1(data-bs-parent="#productInfoAccordion")
                                         .accordion-body 
-                                            p this for How to use content
+                                            p Isi konten untuk cara penyajian
                                 .accordion-item
                                     .accordion-header
-                                        button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#data2" aria-expanded="false" aria-controls="data2") Ingredients
+                                        button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#data2" aria-expanded="false" aria-controls="data2") Bahan
                                     .accordion-collapse.collapse#data2(data-bs-parent="#productInfoAccordion")
-                                        .accordion-body this for Ingredient content
+                                        .accordion-body Isi konten untuk bahan
 
         section.detailTab
             .container
@@ -109,13 +109,11 @@ html(lang='en')
                         .card.border-0.text-center
                             ul.nav.nav-tabs.nav-justified.card-header-tabs#myTab(role="tablist" style="padding-bottom: 30px;")
                                 li.nav-item.active
-                                    a.nav-link.active#tab1-tab(data-bs-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true") Detail Information
+                                    a.nav-link.active#tab1-tab(data-bs-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true") Detail Informasi
                                 li.nav-item
-                                    a.nav-link#tab2-tab(data-bs-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="true") Reviews (4)
+                                    a.nav-link#tab2-tab(data-bs-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="true") Ulasan (4)
                                 li.nav-item
                                     a.nav-link#tab3-tab(data-bs-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="true") FAQ
-                                li.nav-item
-                                    a.nav-link#tab4-tab(data-bs-toggle="tab" href="#tab4" role="tab" aria-controls="tab4" aria-selected="true") Shipping
                         .card-body
                             .tab-content#myTabContent
                                 .tab-pane.fade.show.active#tab1(role="tabpanel" aria-labelledby="tab1-tab")
@@ -169,11 +167,12 @@ html(lang='en')
 
                                                 .imgMedia 
                                                     img(src="./assets/img/media_review.png")
-                                            button.btnInput(type="button" data-bs-toggle="modal" data-bs-target="#reviewModal") Write a review
+                                            button.btnInput(type="button" data-bs-toggle="modal" data-bs-target="#reviewModal") Tulis Ulasan
                                         .filterWrapper
-                                            h6 Showing 1 - 4 of 4 reviews
+                                            h6 Menampilkan 1 - 4 dari 4 ulasan
                                             .dropdown
-                                                a.btnFilter.dropdown-toggle#filterDropdown(href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false") Sort by Latest
+                                                span(style="padding-right:15px;") Urutkan berdasarkan
+                                                a.btn.btn-outline-secondary.dropdown-toggle#filterDropdown(href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false") Terbaru
                                                 ul.dropdown-menu(aria-labelledby="filterDropdown")
                                                     li
                                                         a.dropdown-item(href="#") Date
@@ -195,10 +194,10 @@ html(lang='en')
                                                             span.fa.fa-star.checked
                                                             span.fa.fa-star.checked
                                                         .userWrapper
-                                                            label Galang Aben 
-                                                            span 07 Desember 2024
-                                                            img(src="./assets/img/icon/ic_shopee.png" style="width: 24px; height: 24px;")
-                                                    p.reviewValue On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.
+                                                            label Nurul Fitriani 
+                                                            span - 07 Febuari 2024
+                                                            img(src="./assets/img/icon/ic_tokped.png" style="width: 24px; height: 24px;")
+                                                    p.reviewValue Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah
                                                 img.mediaBox(src="./assets/img/media_review.png")
                                 
                                             div(style="width: 100%; height: 1px; background: #E6E6E6")
@@ -213,10 +212,10 @@ html(lang='en')
                                                             span.fa.fa-star.checked
                                                             span.fa.fa-star.checked
                                                         .userWrapper
-                                                            label Galang Aben 
-                                                            span 07 Desember 2024
+                                                            label Amelia Putri
+                                                            span - 07 Desember 2024
                                                             img(src="./assets/img/icon/ic_shopee.png" style="width: 24px; height: 24px;")
-                                                    p.reviewValue On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.
+                                                    p.reviewValue Saya sangat senang karena dosisnya tercetak rapi di bagian depan. Saya juga sudah tes darah untuk vitamin D dan ternyata tidak masih kurang, jadi saya mengonsumsi produk ini yang juga mengandung bahan lain.
                                                 img.mediaBox(src="./assets/img/media_review.png")
 
                                             div(style="width: 100%; height: 1px; background: #E6E6E6")
@@ -231,10 +230,10 @@ html(lang='en')
                                                             span.fa.fa-star.checked
                                                             span.fa.fa-star.checked
                                                         .userWrapper
-                                                            label Galang Aben 
+                                                            label Nurul Fitriani
                                                             span 07 Desember 2024
                                                             img(src="./assets/img/icon/ic_shopee.png" style="width: 24px; height: 24px;")
-                                                    p.reviewValue On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.
+                                                    p.reviewValue Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah
                                                 img.mediaBox(src="./assets/img/media_review.png")
 
                                             div(style="width: 100%; height: 1px; background: #E6E6E6")
@@ -249,10 +248,10 @@ html(lang='en')
                                                             span.fa.fa-star.checked
                                                             span.fa.fa-star.checked
                                                         .userWrapper
-                                                            label Galang Aben 
-                                                            span 07 Desember 2024
+                                                            abel Amelia Putri
+                                                            span - 07 Desember 2024
                                                             img(src="./assets/img/icon/ic_shopee.png" style="width: 24px; height: 24px;")
-                                                    p.reviewValue On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.
+                                                    p.reviewValue Saya sangat senang karena dosisnya tercetak rapi di bagian depan. Saya juga sudah tes darah untuk vitamin D dan ternyata tidak masih kurang, jadi saya mengonsumsi produk ini yang juga mengandung bahan lain.
                                                 img.mediaBox(src="./assets/img/media_review.png")
                                 .tab-pane.fade#tab3(role="tabpane3" aria-labelledby="tab3-tab")
                                     .faqBox
@@ -261,26 +260,26 @@ html(lang='en')
                                                 h2.accordion-header
                                                     button.accordion-button(type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
                                                         aria-expanded="true" aria-controls="collapseOne") 
-                                                        .spanBold Question 1?
+                                                        .spanBold Pertanyaan 1?
                                                 .accordion-collapse.collapse.show#collapseOne(data-bs-parent="#accordionExample")
                                                     .accordion-body
-                                                        .textBody Answer here
+                                                        .textBody Jawaban
                                             .accordion-item
                                                 h2.accordion-header
                                                     button.accordion-button.collapsed(type="button" data-bs-toggle="collapse"
                                                         data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo")
-                                                        .spanBold  Question 2?
+                                                        .spanBold  Pertanyaan 2?
                                                 .accordion-collapse.collapse#collapseTwo(data-bs-parent="#accordionExample")
                                                     .accordion-body
-                                                        .textBody Answer here
+                                                        .textBody Jawaban
                                             .accordion-item
                                                 h2.accordion-header
                                                     button.accordion-button.collapsed(type="button" data-bs-toggle="collapse"
                                                         data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree")
-                                                        .spanBold Question 3?
+                                                        .spanBold Pertanyaan 3?
                                                 .accordion-collapse.collapse#collapseThree(data-bs-parent="#accordionExample")
                                                     .accordion-body
-                                                        .textBody Answer here
+                                                        .textBody Jawaban
                                 .tab-pane.fade#tab4(role="tabpanel" aria-labelledby="tab4-tab")
                                     .shippingBox
                                         .shippingWrapper 

@@ -1,5 +1,7 @@
-.vSight {
+.vSightpage {
   padding: 48.5px 80px;
+  justify-content: center;
+  align-items: center;
 
   .title {
     width: 100%; 
@@ -17,7 +19,7 @@
   .vsight-container {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 48px;
+    gap: 20px;
     margin-top: 1.5rem;
   }
   
@@ -34,6 +36,7 @@
   }
   
   .vsight{
+    padding: 0;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -41,20 +44,22 @@
   }
 
   .linkToDetail {
+    width: fit-content;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
     text-decoration: none;
-    gap: 20px; 
     display: inline-flex;
   }
   .Vimg {
-    width: 413.33px;
-    height: 300px; 
+    width: 406px;
+    height: 300px;
     position: relative; 
-    border-radius: 20px;
+    border-radius: 10px;
   }
   .Vwrapper {
+    width: 406px;
     align-self: stretch; 
     height: 50px;
     padding-left: 5px; 
@@ -65,7 +70,6 @@
     display: flex;
   }
   .vTitle {
-    width: 413px;
     align-self: stretch; 
     color: #020E35;
     font-size: 20px; 
