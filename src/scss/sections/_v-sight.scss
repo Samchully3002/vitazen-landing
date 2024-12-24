@@ -18,15 +18,9 @@
   
   .vsight-container {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 20px;
     margin-top: 1.5rem;
-  }
-  
-  @media (min-width: 768px) {
-    .vsight-container{
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
   }
   
   @media (min-width: 1024px) {
@@ -125,4 +119,12 @@
     }
   }
 }
-  
+
+@media screen and (max-width: 800px) {
+  .vSightpage {
+    padding: 40px 20px;
+  }
+  .vsight-container{
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}

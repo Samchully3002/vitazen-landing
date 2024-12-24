@@ -25,10 +25,22 @@
       word-wrap: break-word
     }
   
-    hr {
-      padding: 1rem 0;
-      border-top: 3px solid #020E3533;
-      margin-bottom: 20px;
+    .lineWrapper {
+      width: 100%; padding: 30px 0;
+      flex-direction: column; 
+      justify-content: flex-start; align-items: flex-start; 
+      gap: 10px; display: inline-flex;
+
+      .lineSeparator {
+        width: 100%; border: 1px rgba(2, 14, 53, 0.20) solid;
+      }
+    }
+
+    .lineWrapperGap {
+      display: none;
+      .lineSeparatorGap {
+        display: none;
+      }
     }
   
     .contact-info {
@@ -178,3 +190,25 @@
     }
   }
   
+@media screen and (max-width: 800px) {
+
+  .contactus-section {
+    padding: 56px 20px;
+    h1 {
+      // Contact Us
+      font-size: 24px;
+    }
+    .end_gap, .start_gap {
+      padding: unset;
+    }
+    .lineWrapperGap {
+      width: 100%; padding: 30px 0 50px 0;
+      flex-direction: column;
+      justify-content: flex-start; align-items: flex-start; 
+      gap: 10px; display: inline-flex;
+      .lineSeparatorGap {
+        display: inline-flex; width: 100%; border: 1px rgba(2, 14, 53, 0.20) solid;
+      }
+    }
+  }
+}
