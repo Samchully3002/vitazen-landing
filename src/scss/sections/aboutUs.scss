@@ -7,45 +7,49 @@
     align-items: center; 
     display: flex;
 
-    .fixWidth {
-        max-width: 1240px;
-        flex-direction: column; 
-        justify-content: center;
-        align-items: center; 
-        display: flex;
-    }
-
     .firstContent {
         align-self: stretch; height: fit-content; 
         flex-direction: column; justify-content: flex-start; 
         align-items: center; display: flex;
         
         .logo-parent {
-            width: 1240px; height: 587px; background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%); border-top-left-radius: 20px; border-top-right-radius: 20px; overflow: hidden; justify-content: center; align-items: center; display: inline-flex;
+            width: fit-content; height: fit-content; background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%); border-top-left-radius: 20px; border-top-right-radius: 20px; overflow: hidden; position: relative; display: inline-block;
+            .imgLogo1 {
+                display: block;
+                width: 100%; height: 587px;
+            }
+            .text-logo-parent {
+                width: fit-content;
+                height: 43px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
         }
 
         .textWrapper {
-            align-self: stretch; height: fit-content; padding-top: 100px; padding-bottom: 100px; background: #F9F9F9; border-radius: 20px; flex-direction: column; justify-content: center; align-items: center; gap: 16px; display: flex;
+            align-self: stretch; height: fit-content; padding: 100px; background: #F9F9F9; border-radius: 20px; flex-direction: column; justify-content: center; align-items: center; gap: 16px; display: flex;
 
             .titleText {
                 align-self: stretch; text-align: center; color: #020E35; font-size: 28px; font-family: Poppins; font-weight: 500; letter-spacing: 0.56px; word-wrap: break-word;
             }
             .descText1 {
-                width: 998px; text-align: center; color: #020E35; font-size: 18px; font-family: Inter; font-weight: 500; line-height: 26px; letter-spacing: 0.16px; word-wrap: break-word;
+                width: 100%; text-align: center; color: #020E35; font-size: 18px; font-family: Inter; font-weight: 500; line-height: 26px; letter-spacing: 0.16px; word-wrap: break-word;
             }
             .descText2 {
-                width: 998px; text-align: center; color: #020E35; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 26px; letter-spacing: 0.16px; word-wrap: break-word;
+                width: 100%; text-align: center; color: #020E35; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 26px; letter-spacing: 0.16px; word-wrap: break-word;
             }
         }
         .logo2 {
-            width: 1240px; height: 325px; position: relative;
+            width: 100%; height: 100%; position: relative;
         }
 
     }
     .secondContent {
-        align-self: stretch; height: fit-content; padding-left: 50px; padding-right: 50px; padding-top: 100px; padding-bottom: 100px; background: #F9F9F9; flex-direction: column; justify-content: center; align-items: center; gap: 50px; display: flex;
+        align-self: stretch; height: fit-content; padding: 100px; background: #F9F9F9; flex-direction: column; justify-content: center; align-items: center; gap: 50px; display: flex;
         .textWrapper {
-            width: 736px; text-align: center; gap: 50px; display: inline-flex; flex-direction: column;
+            width: 100%; text-align: center; gap: 50px; display: inline-flex; flex-direction: column;
             .titleText {
                 width: 100%; text-align: center; color: #020E35; font-size: 32px; 
                 font-family: Poppins; font-weight: 700; line-height: 36px; 
@@ -75,48 +79,48 @@
     .thirdContent {
         width: 100%; align-self: stretch; height: fit-content; padding-left: 50px; padding-right: 50px; padding-top: 100px; padding-bottom: 100px; background: #F9F9F9; flex-direction: column; justify-content: center; align-items: center; display: flex;
         .visionWrapper {
-            align-self: stretch; padding-top: 50px; padding-bottom: 50px; justify-content: center; align-items: center; gap: 100px; display: inline-flex;
+            align-self: stretch; padding: 50px; justify-content: center; align-items: center; gap: 100px; display: inline-flex;
 
             .leftText {
-                flex: 1 1 0; align-self: stretch; padding-left: 20px; padding-right: 20px; padding-top: 30px; padding-bottom: 30px; border-radius: 20px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 16px; display: inline-flex;
+                flex: 1 1 0; align-self: stretch; padding-left: 20px; padding-top: 30px; padding-bottom: 30px; border-radius: 20px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 16px; display: inline-flex;
 
                 .titleText {
                     color: #020E35; font-size: 24px; font-family: Inter; font-weight: 600; line-height: 26px; letter-spacing: 0.24px; word-wrap: break-word;
                 }
                 .visionContent {
-                    width: 500px;align-self: stretch; color: #020E35; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 26px; letter-spacing: 0.16px; word-wrap: break-word;
+                    width: 100%; align-self: stretch; color: #020E35; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 26px; letter-spacing: 0.16px; word-wrap: break-word;
                 }
             }
             .imgVision {
-                width: 520px; height: 400px; position: relative; background: linear-gradient(0deg,  0%,  100%); border-radius: 20px; overflow: hidden;
+                width: 100%; height: fit-content; position: relative; background: linear-gradient(0deg,  0%,  100%); border-radius: 20px; overflow: hidden;
             }
         }
 
         .misionWrapper {
-            align-self: stretch; padding-top: 50px; padding-bottom: 50px; justify-content: center; align-items: center; gap: 100px; display: inline-flex;
+            align-self: stretch; padding: 50px; justify-content: center; align-items: center; gap: 100px; display: inline-flex;
 
             .rightText {
-                flex: 1 1 0; padding-left: 20px; padding-right: 20px; padding-top: 30px; padding-bottom: 30px; border-radius: 20px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 16px; display: inline-flex;
+                flex: 1 1 0; padding-left: 20px; padding-top: 30px; padding-bottom: 30px; border-radius: 20px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 16px; display: inline-flex;
                 .titleText {
                     color: #020E35; font-size: 24px; font-family: Inter; font-weight: 600; line-height: 26px; letter-spacing: 0.24px; word-wrap: break-word;
                 }
                 .misionContent {
-                    align-self: stretch; color: #020E35; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 26px; letter-spacing: 0.16px; word-wrap: break-word;
+                    width: 100%; align-self: stretch; color: #020E35; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 26px; letter-spacing: 0.16px; word-wrap: break-word;
                 }
             }
             .imgMision {
-                width: 520px; height: 400px; position: relative; background: linear-gradient(0deg,  0%,  100%); border-radius: 20px;
+                width: 100%; height: fit-content; position: relative; background: linear-gradient(0deg,  0%,  100%); border-radius: 20px;
             }
         }
     }
     .fourContent {
-        width: 100%; align-self: stretch; height: fit-content; padding-left: 50px; padding-right: 50px; padding-top: 100px; padding-bottom: 100px; background: #F9F9F9; flex-direction: column; justify-content: center; align-items: center; display: flex;
+        width: 100%; align-self: stretch; height: fit-content; padding-top: 100px; padding-bottom: 100px; background: #F9F9F9; flex-direction: column; justify-content: center; align-items: center; display: flex;
 
         .leftWrapper {
-            align-self: stretch; padding-top: 50px; padding-bottom: 50px; justify-content: center; align-items: center; gap: 100px; display: inline-flex;
+            align-self: stretch; padding: 50px 100px; justify-content: center; align-items: center; gap: 100px; display: inline-flex;
 
             .leftText {
-                flex: 1 1 0; align-self: stretch; padding-left: 20px; padding-right: 20px; padding-top: 30px; padding-bottom: 30px; border-radius: 20px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 16px; display: inline-flex;
+                flex: 1 1 0; align-self: stretch; padding-right: 20px; padding-top: 30px; padding-bottom: 30px; border-radius: 20px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 16px; display: inline-flex;
 
                 .titleText {
                     color: #020E35; font-size: 20px; font-family: Inter; font-weight: 700; line-height: 26px; letter-spacing: 0.24px; word-wrap: break-word;
@@ -126,15 +130,15 @@
                 }
             }
             .imgRight {
-                width: 520px; height: 400px; position: relative; background: linear-gradient(0deg,  0%,  100%); border-radius: 20px; overflow: hidden;
+                width: 100%; height: fit-content; position: relative; background: linear-gradient(0deg,  0%,  100%); border-radius: 20px; overflow: hidden;
             }
         }
 
         .rightWrapper {
-            align-self: stretch; padding-top: 50px; padding-bottom: 50px; justify-content: center; align-items: center; gap: 100px; display: inline-flex;
+            align-self: stretch; padding: 50px 100px; justify-content: center; align-items: center; gap: 100px; display: inline-flex;
 
             .rightText {
-                flex: 1 1 0; padding-left: 20px; padding-right: 20px; padding-top: 30px; padding-bottom: 30px; border-radius: 20px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 16px; display: inline-flex;
+                flex: 1 1 0; padding-left: 20px; padding-top: 30px; padding-bottom: 30px; border-radius: 20px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 16px; display: inline-flex;
                 .titleText {
                     color: #020E35; font-size: 20px; font-family: Inter; font-weight: 700; line-height: 26px; letter-spacing: 0.24px; word-wrap: break-word;
                 }
@@ -143,26 +147,26 @@
                 }
             }
             .imgLeft {
-                width: 520px; height: 400px; position: relative; background: linear-gradient(0deg,  0%,  100%); border-radius: 20px;
+                width: 100%; height: fit-content; position: relative; background: linear-gradient(0deg,  0%,  100%); border-radius: 20px;
             }
         }
         .logo3 {
-            height: 325px; justify-content: center; align-items: center; display: inline-flex;
+            width: 100%; height: fit-content; justify-content: center; align-items: center; display: inline-flex;
         }
     }
     .fiveContent {
         align-self: stretch; height: fit-content; padding-top: 50px; padding-bottom: 50px; border-radius: 20px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 50px; display: flex;
 
         .contentWrapper {
-            width: 100%; height: 474px; padding-top: 50px; padding-bottom: 50px; background: #FBF7FF; border-radius: 20px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 50px; display: flex;
+            width: 100%; height: 100%; padding-top: 50px; padding-bottom: 50px; background: #FBF7FF; border-radius: 20px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 50px; display: flex;
 
             .titleText {
-                align-self: stretch; height: 64px; text-align: center; color: #020E35; font-size: 56px; font-family: Poppins; font-weight: 500; word-wrap: break-word;
+                align-self: stretch; text-align: center; color: #020E35; font-size: 56px; font-family: Poppins; font-weight: 500; word-wrap: break-word;
             }
             .contentText1 {
                 flex-direction: column; justify-content: flex-start; align-items: center; gap: 30px; display: flex;
                 .infoText {
-                    width: 870px; height: 28px; text-align: center; color: #9FA6AF; font-size: 16px; font-family: Manrope; font-weight: 700; text-transform: uppercase; letter-spacing: 1.60px; word-wrap: break-word;
+                    width: 100%; text-align: center; color: #9FA6AF; font-size: 16px; font-family: Manrope; font-weight: 700; text-transform: uppercase; letter-spacing: 1.60px; word-wrap: break-word;
                 }
                 .btnWrapper {
                     justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex;
@@ -180,10 +184,181 @@
             .contentText2 {
                 flex-direction: column; justify-content: flex-start; align-items: center; gap: 40px; display: flex;
                 .infoText {
-                    width: 870px; height: 28px; text-align: center; color: #9FA6AF; font-size: 16px; font-family: Manrope; font-weight: 700; text-transform: uppercase; line-height: 59px; letter-spacing: 1.60px; word-wrap: break-word;
+                    width: 100%; text-align: center; color: #9FA6AF; font-size: 16px; font-family: Manrope; font-weight: 700; text-transform: uppercase; line-height: 59px; letter-spacing: 1.60px; word-wrap: break-word;
                 }
                 .storeIconWrapper {
-                    justify-content: flex-start; align-items: center; gap: 80px; display: inline-flex;
+                    justify-content: flex-start; align-items: center; gap: 50px; display: inline-flex;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .aboutUs-section {
+
+        .firstContent {
+            .logo-parent {
+                .imgLogo1 {
+                    display: block;
+                    width: 100%; height: 243px;
+                }
+                .text-logo-parent {
+                    width: fit-content;
+                    height: 23px;
+                }
+            }
+            .textWrapper {
+                padding: 50px 20px;
+                flex-direction: column;
+                gap: 16px;
+                .titleText {
+                    font-size: 22px;
+                }
+                .descText1 {
+                    font-size: 16px;
+                }
+                .descText2 {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .secondContent {
+            padding: 50px 20px;
+            flex-direction: column;
+            gap: 50px;
+        
+            .textWrapper {
+                gap: 50px;
+                display: inline-flex;
+                flex-direction: column;
+                .titleText {
+                    font-size: 24px;
+                }
+                .definisiText {
+                    flex-direction: column;
+                    gap: 20px;
+
+                    .logoTitle {
+                        padding: 7px 10px;
+                        .logoText {
+                            font-size: 18px;
+                        }
+                    }
+                    .descText {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        .thirdContent {
+            padding: 50px 20px;
+            flex-direction: column;
+            display: flex;
+        
+            .visionWrapper {
+                padding: unset;
+                padding-bottom: 20px;
+                gap: 0px;
+                flex-direction: column;
+                display: inline-flex;
+                .leftText {
+                    padding-left: unset;
+                    flex-direction: column;
+                    gap: 16px;
+                    display: inline-flex;
+                }
+            }
+            .misionWrapper {
+                padding: unset;
+                padding-bottom: 20px;
+                gap: 0px;
+                flex-direction: column-reverse;
+                display: inline-flex;
+                .rightText {
+                    padding-left: unset;
+                    flex-direction: column;
+                    gap: 16px;
+                    display: inline-flex;
+                }
+            }
+        }
+
+        .fourContent {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            flex-direction: column;
+            display: flex;
+        
+            .leftWrapper {
+                padding: 50px 20px;
+                gap: 20px;
+                display: inline-flex;
+                flex-direction: column;
+                .leftText {
+                    padding-right: unset;
+                    flex-direction: column;
+                    gap: 16px;
+                    display: inline-flex;
+                    .titleText {
+                        font-size: 18px;
+                    }
+                    .descText {
+                        font-size: 16px;
+                    }
+                }
+            }
+            .rightWrapper {
+                padding: 50px 20px;
+                flex-direction: column-reverse;
+                gap: 20px;
+                display: inline-flex;
+                .rightText {
+                    padding-left: unset;
+                    flex-direction: column;
+                    gap: 16px;
+                    display: inline-flex;
+                }
+            }
+        }
+
+        .fiveContent {
+            align-self: stretch;
+            height: -moz-fit-content;
+            height: fit-content;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            border-radius: 20px;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 50px;
+            display: flex;
+
+            .contentWrapper {
+                width: 100%;
+                height: 100%;
+                gap: 40px;
+
+                .titleText {
+                    font-size: 26px;
+                }
+                .contentText1 { 
+                    .infoText {
+                        font-size: 14px;
+                        padding: 0px 15px;
+                    }
+                }
+                .contentText2 {
+                    .infoText {
+                        font-size: 14px;
+                    }
+                    .storeIconWrapper {
+                        gap: 40px;
+                        flex-direction: column;
+                    }
                 }
             }
         }

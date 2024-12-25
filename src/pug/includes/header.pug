@@ -1,43 +1,32 @@
 // Top bar for promotional message
 .texttop
-    a.text-center(href="productDetail3.html")
+    a.text-center(href="productDetail3.html" style="text-decoration:none;")
         span.firstText Edisi Terbatas!
         span.secondText Paket 1 Bulan Glutathione dan Vitamin C, diskon 40%!
-        img(src="./assets/img/icon/ic_arrow_right.svg")
+        img.iconTopText(src="./assets/img/icon/ic_arrow_right.svg")
 
 // Main navigation bar
-nav.navbar.navbar-expand-lg.navbar-light.bg-white.border-bottom.sticky-top(style="padding-left: 108px; padding-right: 108px; padding-top: 20px; padding-bottom: 20px;")
-    // Logo
-    a.navbar-brand(href="#") 
-        img.imgLogo(src="././assets/img/vita_icon.png" alt="Vitazen Logo")
+nav.navbar.navbar-expand-lg.navbar-light.bg-white.border-bottom.sticky-top
+    .container-fluid
+        // Logo
+        a.navbar-brand(href="index.html")
+            img.imgLogo(src="././assets/img/vita_icon.png" alt="Vitazen Logo")
 
-    // Hamburger menu for smaller screens
-    button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#navbarNav", aria-controls="navbarNav", aria-expanded="false", aria-label="Toggle navigation")
-        span.navbar-toggler-icon
+        // Hamburger menu for smaller screens
+        button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#navbarNav", aria-controls="navbarNav", aria-expanded="false", aria-label="Toggle navigation")
+            span.navbar-toggler-icon
 
-    // Navigation menu
-    .collapse.navbar-collapse#navbarNavdiv
-        ul.navbar-nav.mx-auto
-            .menuNav
-                li.nav-item
-                    a.nav-link.active(href="index.html") Beranda
-                li.nav-item
-                    a.nav-link(href="products.html") Produk
-                li.nav-item
-                    a.nav-link(href="v-sight.html") V-Sight
-                li.nav-item
-                    a.nav-link(href="aboutUs.html") Tentang kami
-    // Contact button to the right
-    a.btnContact(href="contact-us.html") Hubungi kami
-
-            ul
-                li
-                    a(href="contact-us.html") Beranda
-                li
-                    a(href="contact-us.html") Produk
-                li
-                    a(href="aboutUs.html") V-Sight
-                li
-                    a(href="contact-us.html") Tentang Kami
-                li
-                    a(href="contact-us.html") Hubungi Kami
+        // Navigation menu
+        .collapse.navbar-collapse#navbarNav
+            ul.navbar-nav.mx-auto
+                .menuNav
+                    li.nav-item
+                        a.nav-link.active(href="index.html") Beranda
+                    li.nav-item
+                        a.nav-link(href="products.html") Produk
+                    li.nav-item
+                        a.nav-link(href="v-sight.html") V-Sight
+                    li.nav-item
+                        a.nav-link(href="aboutUs.html") Tentang kami
+        // Contact button to the right
+        a.btnContact(href="contact-us.html") Hubungi kami

@@ -345,6 +345,9 @@
             }
           }
         }
+        .reviewProdukSeparator {
+          display: flex; align-items: center; height: 200px; width:1px; background: #E6E6E6;
+        }
         .imgMedia {
           width: 264px; height: 80px; justify-content: center; align-items: flex-start; display: flex;
           img {
@@ -367,14 +370,14 @@
       }
     }
     .contentWrapper {
-      height: 643px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 30px; display: flex;
+      height: 100%; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 30px; display: flex;
       .contentBox {
         align-self: stretch; justify-content: flex-start; align-items: flex-start; gap: 15px; display: inline-flex;
         .imgUser {
           width: 47px; height: 47px; border-radius: 9999px;
         }
         .rowContent {
-          flex: 1 1 0; height: 115px; padding-right: 60px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 10px; display: inline-flex;
+          flex: 1 1 0; height: 100%; padding-right: 60px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 10px; display: inline-flex;
 
           .detailContent {
             flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex;
@@ -393,7 +396,7 @@
             }
           }
           .reviewValue {
-            align-self: stretch; color: #020E35; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 25.60px; word-wrap: break-word;
+            padding-right: 10px; align-self: stretch; color: #020E35; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 25.60px; word-wrap: break-word;
           }
         }
         .mediaBox {
@@ -631,5 +634,68 @@
 
   .detailTab {
     padding: 0 20px 0 20px;
+
+    .reviewBox {
+      gap: 22px;
+      padding-bottom: 60px;
+      flex-direction: column;
+      display: inline-flex;
+      .reviewWrapper {
+        flex-direction: column;
+        display: inline-flex;
+        align-items: flex-start;
+        .boxReview {
+          display: inline-flex;
+          flex-direction: column;
+          align-items: flex-start;
+          .reviewProdukSeparator {
+            display: none;
+          }
+        }
+        .btnInput {
+          padding: 7px 15px;
+          font-size: 16px;
+          margin-top: 20px;
+          /* width: 100%; */
+        }
+      }
+      .filterWrapper {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 10px;
+        display: inline-flex;
+      }
+      .contentWrapper {
+        gap:18px;
+        .contentBox {
+          display: inline-flex;
+          flex-direction: column;
+
+          .mobileWrapperUser {
+            width: 100%;
+            align-items: flex-start;
+            display: inline-flex;
+            gap: 15px;
+
+            .rowContent {
+              display: inline-block;
+              padding-right: 10px;
+              .userWrapper {
+                label {
+                  font-size: 16px;
+                }
+                span {
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .faqBox { 
+      padding: unset;
+      padding-bottom: 50px;
+    }
   }
 }

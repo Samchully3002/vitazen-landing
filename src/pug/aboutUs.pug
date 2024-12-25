@@ -5,10 +5,11 @@ html(lang='en')
     body
         include includes/header.pug
         section.aboutUs-section
-            .fixWidth
+            .container
                 .firstContent
                     .logo-parent
-                        img(src="./assets/img/aboutUs/Logo1.png")
+                        img.imgLogo1(src="./assets/img/aboutUs/Logo1.png")
+                        img.text-logo-parent(src="./assets/img/aboutUs/textlogo.png")
                     .textWrapper
                         span.titleText Perkenalan
                         p.descText1 Rahasia Kesehatan dari Korea Kini Hadir di Indonesia
@@ -29,46 +30,58 @@ html(lang='en')
                 
                 .thirdContent
                     .visionWrapper
-                        .leftText
-                            span.titleText Visi Kami
-                            ul
-                                li.visionContent Membawa standar kesehatan terbaik dari Korea ke Indonesia.
-                                li.visionContent Menjadi pilihan utama bagi masyarakat Indonesia dalam memenuhi kebutuhan kesehatan dan kecantikan mereka.
-                        img.imgVision(src="./assets/img/aboutUs/Logo3.png")
-                    .misionWrapper 
-                        img.imgMision(src="./assets/img/aboutUs/Logo4.png")
-                        .rightText 
-                            span.titleText Misi Kami
-                            ul
-                                li.misionContent Menyediakan produk yang aman, berkualitas tinggi dan terpercaya.
-                                li.misionContent Meningkatkan kesadaran masyarakat tentang pentingnya menjaga kesehatan.
-                                li.misionContent Menjadi mitra kesehatan yang dapat diandalkan bagi setiap pelanggan.
+                        .col-md-6
+                            .leftText
+                                span.titleText Visi Kami
+                                ul
+                                    li.visionContent Membawa standar kesehatan terbaik dari Korea ke Indonesia.
+                                    li.visionContent Menjadi pilihan utama bagi masyarakat Indonesia dalam memenuhi kebutuhan kesehatan dan kecantikan mereka.
+                        .col-md-6
+                            img.imgVision(src="./assets/img/aboutUs/Logo3.png")
+                    .misionWrapper
+                        .col-md-6
+                            img.imgMision(src="./assets/img/aboutUs/Logo4.png")
+                        .col-md-6
+                            .rightText
+                                span.titleText Misi Kami
+                                ul
+                                    li.misionContent Menyediakan produk yang aman, berkualitas tinggi dan terpercaya.
+                                    li.misionContent Meningkatkan kesadaran masyarakat tentang pentingnya menjaga kesehatan.
+                                    li.misionContent Menjadi mitra kesehatan yang dapat diandalkan bagi setiap pelanggan.
 
                 .fourContent
                     .logo3
-                        img(src="./assets/img/aboutUs/Logo5.png")
+                        img(src="./assets/img/aboutUs/Logo5.png" width="100%")
                     .leftWrapper
-                        .leftText
-                            span.titleText Telah Teruji Secara Klinis dan Bersertifikat di Indonesia
-                            p.descText Semua produk kami telah melalui uji klinis yang ketat di Korea dan telah disertifikasi sesuai standar Indonesia. Kami memastikan bahwa setiap produk yang Anda terima aman, efektif dan memiliki kualitas terbaik.
-                        img.imgRight(src="./assets/img/aboutUs/Logo6.png")
+                        .col-md-6
+                            .leftText
+                                span.titleText Telah Teruji Secara Klinis dan Bersertifikat di Indonesia
+                                p.descText Semua produk kami telah melalui uji klinis yang ketat di Korea dan telah disertifikasi sesuai standar Indonesia. Kami memastikan bahwa setiap produk yang Anda terima aman, efektif dan memiliki kualitas terbaik.
+                        .col-md-6
+                            img.imgRight(src="./assets/img/aboutUs/Logo6.png")
                     
                     .rightWrapper
-                        img.imgLeft(src="./assets/img/aboutUs/Logo7.png")
-                        .rightText
-                            span.titleText Produk Premium dari Korea
-                            p.descText Hanya produk terbaik yang dipilih dengan cermat langsung dari Korea termasuk Snovv, minuman suplemen revolusioner dengan manfaat luar biasa untuk kulit, otot dan kekebalan tubuh Anda secara keseluruhan.
+                        .col-md-6
+                            img.imgLeft(src="./assets/img/aboutUs/Logo7.png")
+                        .col-md-6
+                            .rightText
+                                span.titleText Produk Premium dari Korea
+                                p.descText Hanya produk terbaik yang dipilih dengan cermat langsung dari Korea termasuk Snovv, minuman suplemen revolusioner dengan manfaat luar biasa untuk kulit, otot dan kekebalan tubuh Anda secara keseluruhan.
                     .leftWrapper
-                        .leftText
-                            span.titleText Pendekatan Holistik terhadap Kesehatan
-                            p.descText Vitazen tidak hanya menjual produk, kami menyediakan solusi kesehatan terpadu. Kami membantu Anda menemukan produk yang tepat untuk memenuhi kebutuhan kesehatan dan kecantikan Anda.
-                        img.imgRight(src="./assets/img/aboutUs/Logo8.png")
+                        .col-md-6
+                            .leftText
+                                span.titleText Pendekatan Holistik terhadap Kesehatan
+                                p.descText Vitazen tidak hanya menjual produk, kami menyediakan solusi kesehatan terpadu. Kami membantu Anda menemukan produk yang tepat untuk memenuhi kebutuhan kesehatan dan kecantikan Anda.
+                        .col-md-6
+                            img.imgRight(src="./assets/img/aboutUs/Logo8.png")
                     
                     .rightWrapper
-                        img.imgLeft(src="./assets/img/aboutUs/Logo9.png")
-                        .rightText
-                            span.titleText Produk yang Mendukung Gaya Hidup Sehat
-                            p.descText Dari suplemen kesehatan hingga produk perawatan kulit, kami menawarkan berbagai pilihan yang dirancang untuk meningkatkan gaya hidup sehat Anda.
+                        .col-md-6
+                            img.imgLeft(src="./assets/img/aboutUs/Logo9.png")
+                        .col-md-6
+                            .rightText
+                                span.titleText Produk yang Mendukung Gaya Hidup Sehat
+                                p.descText Dari suplemen kesehatan hingga produk perawatan kulit, kami menawarkan berbagai pilihan yang dirancang untuk meningkatkan gaya hidup sehat Anda.
 
                 .fiveContent 
                     .contentWrapper
@@ -85,10 +98,10 @@ html(lang='en')
                         .contentText2 
                             span.infoText Tersedia juga di
                             .storeIconWrapper
-                                img(src="./assets/img/partner1.png" "height: 50px")
-                                img(src="./assets/img/partner2.png" "height: 50px")
-                                img(src="./assets/img/partner3.png" "height: 50px")
-                                img(src="./assets/img/partner4.png" "height: 50px")
+                                img(src="./assets/img/partner1.png" "height: 40px")
+                                img(src="./assets/img/partner2.png" "height: 40px")
+                                img(src="./assets/img/partner3.png" "height: 40px")
+                                img(src="./assets/img/partner4.png" "height: 40px")
 
 
     // Footer

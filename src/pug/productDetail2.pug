@@ -7,99 +7,100 @@ html(lang='en')
 
         // Section contact-us form
         section.productDetail-section
-            .wrapper 
-                .leftBox
-                    .carousel.slide#productCarausel(data-bs-ride="false")
-                        .carousel-inner
-                            .carousel-item.active
-                                img(src="./assets/img/product2.png")
-                            .carousel-item
-                                img(src="./assets/img/product2.png")
-                            .carousel-item
-                                img(src="./assets/img/product2.png")
-                        button.carousel-control-prev(type="button" data-bs-target="#productCarausel" data-bs-slide="next")
-                            span.carousel-control-prev-icon(aria-hidden="true")
-                            span.visually-hidden Preview
-                        button.carousel-control-next(type="button" data-bs-target="#productCarausel" data-bs-slide="next")
-                            span.carousel-control-next-icon(aria-hidden="true")
-                            span.visually-hidden Next
-        
-                    .multiple-card-slider
-                        .carousel#carouselExampleControls(data-bs-ride="false")
+            .container
+                .wrapper 
+                    .leftBox
+                        .carousel.slide#productCarausel(data-bs-ride="false")
                             .carousel-inner
                                 .carousel-item.active
-                                    img(src="./assets/img/dtProduct1.png")
+                                    img(src="./assets/img/product2.png")
                                 .carousel-item
-                                    img(src="./assets/img/dtProduct2.png")
+                                    img(src="./assets/img/product2.png")
                                 .carousel-item
-                                    img(src="./assets/img/dtProduct2.png")
-                                .carousel-item
-                                    img(src="./assets/img/dtProduct3.png")
-                                .carousel-item
-                                    img(src="./assets/img/dtProduct3.png")
-                                .carousel-item
-                                    img(src="./assets/img/dtProduct1.png")
-                            button.carousel-control-prev(type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev")
+                                    img(src="./assets/img/product2.png")
+                            button.carousel-control-prev(type="button" data-bs-target="#productCarausel" data-bs-slide="next")
                                 span.carousel-control-prev-icon(aria-hidden="true")
                                 span.visually-hidden Preview
-                            button.carousel-control-next(type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next")
+                            button.carousel-control-next(type="button" data-bs-target="#productCarausel" data-bs-slide="next")
                                 span.carousel-control-next-icon(aria-hidden="true")
                                 span.visually-hidden Next
-                        
-                .rightBox 
-                    .productInfo
-                        span.productName Snovv Glutathione
-                        .ratingWrapper
-                            .starWrapper 
-                                span.fa.fa-star
-                                span.fa.fa-star
-                                span.fa.fa-star
-                                span.fa.fa-star
-                                span.fa.fa-star
-                            span.totalSpan (4 Ulasan)
-                        .productPrice
-                            span.discountPrice ± Rp 150.000
-                            span.normalPrice Rp. 250.000
-                            .discountRate 
-                                span 43%
-                                
-                    div(style="width:100%; align-self: stretch; height: 1px; background: #C4C4C4")
-                    .shopLink 
-                        span Belanja dengan
-                        .btnWrapper
-                            a.btnShop(href="#")
-                                img(src="./assets/img/icon/ic_shopee.png")
-                                span Shopee
-                            a.btnShop(href="#")
-                                img(src="./assets/img/icon/ic_tokped.png")
-                                span Tokopedia
-                    .productDetail
-                        .DescWrapper
-                            span.titleTextProductDetail Detail Produk
-                            .infoWrapper
-                                span.boldText Merek :
-                                span.valueText About H
-                                br
-                                span.boldText Produsen :
-                                span.valueText Biofarm
-                            ul.descText 
-                                li Diformulasikan oleh Dokter Kulit Korea
-                                li Formulasi GV5, Kecantikan dari dalam
-                                li 250 mg Glutathione Premium dari Korea
-                                li Mengandung Bahan Khusus untuk Kecantikan dari dalam, yang dipilih sesuai dengan standar yang tinggi
+            
+                        .multiple-card-slider
+                            .carousel#carouselExampleControls(data-bs-ride="false")
+                                .carousel-inner
+                                    .carousel-item.active
+                                        img(src="./assets/img/dtProduct1.png")
+                                    .carousel-item
+                                        img(src="./assets/img/dtProduct2.png")
+                                    .carousel-item
+                                        img(src="./assets/img/dtProduct2.png")
+                                    .carousel-item
+                                        img(src="./assets/img/dtProduct3.png")
+                                    .carousel-item
+                                        img(src="./assets/img/dtProduct3.png")
+                                    .carousel-item
+                                        img(src="./assets/img/dtProduct1.png")
+                                button.carousel-control-prev(type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev")
+                                    span.carousel-control-prev-icon(aria-hidden="true")
+                                    span.visually-hidden Preview
+                                button.carousel-control-next(type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next")
+                                    span.carousel-control-next-icon(aria-hidden="true")
+                                    span.visually-hidden Next
+                            
+                    .rightBox 
+                        .productInfo
+                            span.productName Snovv Glutathione
+                            .ratingWrapper
+                                .starWrapper 
+                                    span.fa.fa-star
+                                    span.fa.fa-star
+                                    span.fa.fa-star
+                                    span.fa.fa-star
+                                    span.fa.fa-star
+                                span.totalSpan (4 Ulasan)
+                            .productPrice
+                                span.discountPrice ± Rp 150.000
+                                span.normalPrice Rp. 250.000
+                                .discountRate 
+                                    span 43%
+                                    
                         div(style="width:100%; align-self: stretch; height: 1px; background: #C4C4C4")
-                        .accordion.accordion-flush#productInfoAccordion 
-                            .accordion-item
-                                .accordion-header
-                                    button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#data1" aria-expanded="false" aria-controls="data1") Cara Penyajian
-                                .accordion-collapse.collapse#data1(data-bs-parent="#productInfoAccordion")
-                                    .accordion-body 
-                                        p Isi konten untuk cara penyajian
-                            .accordion-item
-                                .accordion-header
-                                    button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#data2" aria-expanded="false" aria-controls="data2") Bahan
-                                .accordion-collapse.collapse#data2(data-bs-parent="#productInfoAccordion")
-                                    .accordion-body Isi konten untuk bahan
+                        .shopLink 
+                            span Belanja dengan
+                            .btnWrapper
+                                a.btnShop(href="#")
+                                    img(src="./assets/img/icon/ic_shopee.png")
+                                    span Shopee
+                                a.btnShop(href="#")
+                                    img(src="./assets/img/icon/ic_tokped.png")
+                                    span Tokopedia
+                        .productDetail
+                            .DescWrapper
+                                span.titleTextProductDetail Detail Produk
+                                .infoWrapper
+                                    span.boldText Merek :
+                                    span.valueText About H
+                                    br
+                                    span.boldText Produsen :
+                                    span.valueText Biofarm
+                                ul.descText 
+                                    li Diformulasikan oleh Dokter Kulit Korea
+                                    li Formulasi GV5, Kecantikan dari dalam
+                                    li 250 mg Glutathione Premium dari Korea
+                                    li Mengandung Bahan Khusus untuk Kecantikan dari dalam, yang dipilih sesuai dengan standar yang tinggi
+                            div(style="width:100%; align-self: stretch; height: 1px; background: #C4C4C4")
+                            .accordion.accordion-flush#productInfoAccordion 
+                                .accordion-item
+                                    .accordion-header
+                                        button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#data1" aria-expanded="false" aria-controls="data1") Cara Penyajian
+                                    .accordion-collapse.collapse#data1(data-bs-parent="#productInfoAccordion")
+                                        .accordion-body 
+                                            p Isi konten untuk cara penyajian
+                                .accordion-item
+                                    .accordion-header
+                                        button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#data2" aria-expanded="false" aria-controls="data2") Bahan
+                                    .accordion-collapse.collapse#data2(data-bs-parent="#productInfoAccordion")
+                                        .accordion-body Isi konten untuk bahan
 
         section.detailTab
             .row.justify-content-center.mt-2
@@ -160,12 +161,10 @@ html(lang='en')
                                                         .progress(role="progressbar" aria-label="Example with label" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 265px; height: 8px;")
                                                             .progress-bar(style="width: 0%")
                                                         span.spanStar 0
-                                            
-                                            div(style="align-items: center; height: 200px; width:1px; background: #E6E6E6")
-
+                                            .reviewProdukSeparator
                                             .imgMedia 
                                                 img(src="./assets/img/media_review.png")
-                                        button.btnInput(type="button" data-bs-toggle="modal" data-bs-target="#reviewModal") Tulis Ulasan
+                                        button.btnInput.border-0(type="button" data-bs-toggle="modal" data-bs-target="#reviewModal") Tulis Ulasan
                                     .filterWrapper
                                         h6 Menampilkan 1 - 4 dari 4 ulasan
                                         .dropdown
@@ -180,77 +179,15 @@ html(lang='en')
                                                     a.dropdown-item(href="#") Media
 
                                     div(style="width: 100%; height: 1px; background: #E6E6E6")
-                                    .contentWrapper 
-                                        .contentBox
-                                            img.imgUser(src="./assets/img/userWeb1.png")
-                                            .rowContent
-                                                .detailContent
-                                                    .ratingWrapper
-                                                        span.fa.fa-star.checked
-                                                        span.fa.fa-star.checked
-                                                        span.fa.fa-star.checked
-                                                        span.fa.fa-star.checked
-                                                        span.fa.fa-star.checked
-                                                    .userWrapper
-                                                        label Nurul Fitriani 
-                                                        span - 07 Febuari 2024
-                                                        img(src="./assets/img/icon/ic_tokped.png" style="width: 24px; height: 24px;")
-                                                p.reviewValue Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah
-                                            img.mediaBox(src="./assets/img/media_review.png")
-                            
+                                    .contentWrapper
+                                        .contentBox#dataReview1
                                         div(style="width: 100%; height: 1px; background: #E6E6E6")
-                                        .contentBox
-                                            img.imgUser(src="./assets/img/userWeb1.png")
-                                            .rowContent
-                                                .detailContent
-                                                    .ratingWrapper
-                                                        span.fa.fa-star.checked
-                                                        span.fa.fa-star.checked
-                                                        span.fa.fa-star.checked
-                                                        span.fa.fa-star.checked
-                                                        span.fa.fa-star.checked
-                                                    .userWrapper
-                                                        label Amelia Putri
-                                                        span - 07 Desember 2024
-                                                        img(src="./assets/img/icon/ic_shopee.png" style="width: 24px; height: 24px;")
-                                                p.reviewValue Saya sangat senang karena dosisnya tercetak rapi di bagian depan. Saya juga sudah tes darah untuk vitamin D dan ternyata tidak masih kurang, jadi saya mengonsumsi produk ini yang juga mengandung bahan lain.
-                                            img.mediaBox(src="./assets/img/media_review.png")
+                                        .contentBox#dataReview2
+                                        div(style="width: 100%; height: 1px; background: #E6E6E6")
+                                        .contentBox#dataReview3
 
                                         div(style="width: 100%; height: 1px; background: #E6E6E6")
-                                        .contentBox
-                                            img.imgUser(src="./assets/img/userWeb1.png")
-                                            .rowContent
-                                                .detailContent
-                                                    .ratingWrapper
-                                                        span.fa.fa-star.checked
-                                                        span.fa.fa-star.checked
-                                                        span.fa.fa-star.checked
-                                                        span.fa.fa-star.checked
-                                                        span.fa.fa-star.checked
-                                                    .userWrapper
-                                                        label Nurul Fitriani
-                                                        span 07 Desember 2024
-                                                        img(src="./assets/img/icon/ic_shopee.png" style="width: 24px; height: 24px;")
-                                                p.reviewValue Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah
-                                            img.mediaBox(src="./assets/img/media_review.png")
-
-                                        div(style="width: 100%; height: 1px; background: #E6E6E6")
-                                        .contentBox
-                                            img.imgUser(src="./assets/img/userWeb1.png")
-                                            .rowContent
-                                                .detailContent
-                                                    .ratingWrapper
-                                                        span.fa.fa-star.checked
-                                                        span.fa.fa-star.checked
-                                                        span.fa.fa-star.checked
-                                                        span.fa.fa-star.checked
-                                                        span.fa.fa-star.checked
-                                                    .userWrapper
-                                                        abel Amelia Putri
-                                                        span - 07 Desember 2024
-                                                        img(src="./assets/img/icon/ic_shopee.png" style="width: 24px; height: 24px;")
-                                                p.reviewValue Saya sangat senang karena dosisnya tercetak rapi di bagian depan. Saya juga sudah tes darah untuk vitamin D dan ternyata tidak masih kurang, jadi saya mengonsumsi produk ini yang juga mengandung bahan lain.
-                                            img.mediaBox(src="./assets/img/media_review.png")
+                                        .contentBox#dataReview4
                             .tab-pane.fade#tab3(role="tabpane3" aria-labelledby="tab3-tab")
                                 .faqBox
                                     .accordion.border-0#accordionExample
@@ -370,5 +307,66 @@ html(lang='en')
                     $(multipleItemCarousel).addClass('slide');
                 }
             });
+
+            // Function to handle the window resize
+            function handleResize() {
+                let reviewProductcss = "";
+                if (window.innerWidth < 800) {
+                    reviewProductcss = `
+                        <div class="mobileWrapperUser">
+                            <img class="imgUser" src="./assets/img/userWeb1.png"/>
+                            <div class="rowContent">
+                                <div class="detailContent">
+                                    <div class="ratingWrapper">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                    </div>
+                                    <div class="userWrapper">
+                                        <label> Amelia Putri </label>
+                                        <span> - 07 Desember 2024 </span>
+                                        <img src="./assets/img/icon/ic_shopee.png" style="width: 24px; height: 24px;"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="reviewValue"> Saya sangat senang karena dosisnya tercetak rapi di bagian depan. Saya juga sudah tes darah untuk vitamin D dan ternyata tidak masih kurang, jadi saya mengonsumsi produk ini yang juga mengandung bahan lain.</p>
+                        <img class="mediaBox" src="./assets/img/media_review.png">`;
+                } else {
+                    reviewProductcss = `
+                        <img class="imgUser" src="./assets/img/userWeb1.png"/>
+                        <div class="rowContent">
+                            <div class="detailContent">
+                                <div class="ratingWrapper">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                                <div class="userWrapper">
+                                    <label> Amelia Putri </label>
+                                    <span> - 07 Desember 2024 </span>
+                                    <img src="./assets/img/icon/ic_shopee.png" style="width: 24px; height: 24px;"/>
+                                </div>
+                            </div>
+                            <p class="reviewValue"> Saya sangat senang karena dosisnya tercetak rapi di bagian depan. Saya juga sudah tes darah untuk vitamin D dan ternyata tidak masih kurang, jadi saya mengonsumsi produk ini yang juga mengandung bahan lain.</p>
+                        </div>
+                        <img class="mediaBox" src="./assets/img/media_review.png">`;
+                }
+
+                $('#dataReview1').append(reviewProductcss);
+                $('#dataReview2').append(reviewProductcss);
+                $('#dataReview3').append(reviewProductcss);
+                $('#dataReview4').append(reviewProductcss);
+            }
+
+            // Attach the resize event listener
+            window.addEventListener('resize', handleResize);
+
+            // Call the function initially to set the correct class on page load
+            handleResize();
 
         
