@@ -11,6 +11,10 @@ html(lang='en')
                 .wrapper 
                     .leftBox
                         .carousel.slide#productCarausel(data-bs-ride="false")
+                            ol.carousel-indicators
+                                li(data-bs-target="#productCarausel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1")
+                                li(data-bs-target="#productCarausel" data-bs-slide-to="1" aria-label="Slide 2")
+                                li(data-bs-target="#productCarausel" data-bs-slide-to="2" aria-label="Slide 3")
                             .carousel-inner
                                 .carousel-item.active
                                     img(src="./assets/img/product2.png")
@@ -357,10 +361,7 @@ html(lang='en')
                         <img class="mediaBox" src="./assets/img/media_review.png">`;
                 }
 
-                $('#dataReview1').append(reviewProductcss);
-                $('#dataReview2').append(reviewProductcss);
-                $('#dataReview3').append(reviewProductcss);
-                $('#dataReview4').append(reviewProductcss);
+                $('#dataReview1,#dataReview2,#dataReview3,#dataReview4').append(reviewProductcss);
             }
 
             // Attach the resize event listener

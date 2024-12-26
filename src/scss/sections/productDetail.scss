@@ -56,16 +56,15 @@
         }
 
         .multiple-card-slider .carousel-inner {
-          width: 436px; height: 100%; 
+          width: 440px; height: 100%; 
           justify-content: flex-start; 
           align-items: center; gap: 12px; 
           display: inline-flex;
         }
 
-        .multiple-card-slider .carousel-inner .carousel-item.active,
-        .multiple-card-slider .carousel-inner .carousel-item {
-          width: 100px; height: 100px; justify-content: flex-start; align-items: center; gap: 12px; display: flex;
-          flex: none;
+        .multiple-card-slider .carousel-item.active,
+        .multiple-card-slider .carousel-item {
+          width: 100px; height: 100px; justify-content: flex-start; align-items: center; gap: 12px; margin-right: 0; display: flex; backface-visibility: visible; flex: none;
           img {
             width: 100px; height: 100px; border-radius: 10px;
           }
@@ -74,22 +73,15 @@
         .multiple-card-slider .carousel-control-next {
           filter: invert(100%);
           background-color: transparent;
-          width: 4em;
-          height: 4em;
+          width: 3em;
+          height: 3em;
           border-radius: 50%;
           top: 50%;
           transform: translateY(-50%);
           margin-left:-50px;
           margin-right: -50px;
         }
-        @media (min-width: 768px) {
-          .multiple-card-slider .carousel-item {
-          margin-right: 0;
-          display: block;
-          backface-visibility: visible;
-        }
       }
-    }
       .rightBox {
         flex: 1 1 0; 
         align-self: stretch; 
@@ -219,50 +211,6 @@
         }
       }
     }
-  }
-
-  .end_gap {
-      padding-right: 4rem;
-
-      .multiple-card-slider .carousel-inner {
-          margin-top: 1rem;
-          width: 550px;
-          padding: 1em;
-      }
-      .multiple-card-slider .carousel-inner .carousel-item.active,
-      .multiple-card-slider .carousel-inner .carousel-item {
-          margin: 0 5px;
-          width: 100px;
-          display: flex;
-          flex: none;
-      }
-      .multiple-card-slider .card {
-          width: 100px;
-          border-radius: 7px;
-          border: none;
-      }
-      .carousel-control-prev,
-      .carousel-control-next,
-      .multiple-card-slider .carousel-control-prev,
-      .multiple-card-slider .carousel-control-next {
-          background-color: #e1e1e1;
-          width: 3em;
-          height: 3em;
-          border-radius: 50%;
-          top: 50%;
-          transform: translateY(-50%);
-      }
-      @media (min-width: 768px) {
-          .multiple-card-slider .carousel-item {
-          margin-right: 0;
-          flex: 0 0 calc(100% / 3);
-          display: block;
-          backface-visibility: visible;
-          }
-          .multiple-card-slider .carousel-inner {
-          display: flex;
-          }
-      }
   }
 }
 
@@ -525,7 +473,7 @@
 
 @media screen and (max-width: 800px) {
   .productDetail-section {
-    padding: 40px 0;
+    padding: 10px 0 40px 0;
     .container {
       width: 100%; display: block;
       .wrapper {
@@ -544,7 +492,7 @@
           padding: unset;
 
           .carousel-inner {
-            width: 405px; height: 415px;
+            width: 400px; height: 415px;
             .carousel-item, .carousel-item.active {
               width: 100%;  
               height: 100%;
@@ -555,7 +503,7 @@
           }
   
           .multiple-card-slider .carousel-inner {
-            width: 356px; height: 100%;
+            width: 320px; height: 100%;
 
             .carousel-item.active, .carousel-item {
               width: 80px; height: 80px;

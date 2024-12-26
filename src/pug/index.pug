@@ -38,7 +38,7 @@ html(lang='en')
                     img.playButton#icPlay(src="./assets/img/icon/ic_playVid.png" onclick="changeToVideo()")
 
         // section Top Product
-        section.products
+        section.products-home
             .productWrapper
                 .headerWrapper
                     span.titleText Produk
@@ -56,15 +56,15 @@ html(lang='en')
                 .carousel-inner
                     .carousel-item.active
                         .d-flex.justify-content-center
-                            img(src="./assets/img/promo1.png" style="width: 1236px;" alt="Snovv Promo")
+                            img.itemPromo(src="./assets/img/promo1.png" alt="Snovv Promo")
                         
                     .carousel-item
                         .d-flex.justify-content-center
-                            img(src="./assets/img/promo1.png" alt="Snovv Promo" style="width: 1236px;")
+                            img.itemPromo(src="./assets/img/promo1.png" alt="Snovv Promo")
                         
                     .carousel-item
                         .d-flex.justify-content-center
-                            img(src="./assets/img/promo1.png" alt="Snovv Promo" style="width: 1236px;")                            
+                            img.itemPromo(src="./assets/img/promo1.png" alt="Snovv Promo")                            
                         
                 a.carousel-control-prev(type="button" data-bs-target="#promoCarau sel" data-bs-slide="prev")
                     span.carousel-control-prev-icon(aria-hidden="true")
@@ -343,6 +343,8 @@ html(lang='en')
         include includes/footer.pug
         include includes/customJS.pug
         script.
+            const width = window.innerWidth;
+            console.log(width); // 711 1440
             $(document).ready(function () {
                 // Replace with your API endpoint
                 const apiUrl = "http://localhost:3000/landing/home/getproducts?limit=3";
@@ -403,10 +405,17 @@ html(lang='en')
                 // Reference to the image element
                 const imgElement = document.getElementById('youtubeImg');
                 const icplay = document.getElementById('icPlay');
+                let widthVid = "";
+
+                if (window.innerWidth < 1000) {
+                    widthVid = 400;
+                }else{
+                    widthVid = 1260;
+                }
 
                 // Create a new video element
                 const videoElement = document.createElement('video');
-                videoElement.width = 1260; // Set the width of the video
+                videoElement.width = widthVid; // Set the width of the video
                 videoElement.controls = true; // Add controls to the video
                 videoElement.autoplay = true; // Optional: start playing automatically
                 videoElement.style.borderRadius = '20px';

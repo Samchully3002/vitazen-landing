@@ -16,80 +16,72 @@ html(lang='en')
                                 img.imgProduct(src="./assets/img/product1.png")
                             .infoProduct
                                 span.productName Snovv Glutathione
-                                .priceWrapper
-                                    span.discountPrice ± Rp 150.000
-                                    .mobilediscountWrapper#removeClass
-                                        span.normalPrice Rp 250.000
-                                        .rateWrapper
-                                            span.numberRate 43%
+                                .priceWrapper#priceTagcss1
                     li.product
                         a.linkToDetail(href="productDetail2.html")
                             .imgWrapper
                                 img.imgProduct(src="./assets/img/product2.png")
                             .infoProduct
                                 span.productName Snovv Magnesium
-                                .priceWrapper
-                                    span.discountPrice ± Rp 93.000
-                                    .mobilediscountWrapper#removeClass
-                                        span.normalPrice Rp 150.000
-                                        .rateWrapper
-                                            span.numberRate 43%
+                                .priceWrapper#priceTagcss2
                     li.product
                         a.linkToDetail(href="productDetail3.html")
                             .imgWrapper
                                 img.imgProduct(src="./assets/img/product3.png")
                             .infoProduct
                                 span.productName Snovv Liposome Vitamin C
-                                .priceWrapper
-                                    span.discountPrice ± Rp 93.000
-                                    .mobilediscountWrapper#removeClass
-                                        span.normalPrice Rp 150.000
-                                        .rateWrapper
-                                            span.numberRate 43%
+                                .priceWrapper#priceTagcss3
                     li.product
                         a.linkToDetail(href="productDetail.html")
                             .imgWrapper
                                 img.imgProduct(src="./assets/img/product4.png")
                             .infoProduct
                                 span.productName Snovv Glutathione + Vitamin C
-                                .priceWrapper
-                                    span.discountPrice ± Rp 450.000
-                                    .mobilediscountWrapper#removeClass
-                                        span.normalPrice Rp 950.000
-                                        .rateWrapper
-                                            span.numberRate 43%
+                                .priceWrapper#priceTagcss4
                     li.product
                         a.linkToDetail(href="productDetail.html")
                             .imgWrapper
                                 img.imgProduct(src="./assets/img/product5.png")
                             .infoProduct
                                 span.productName Snovv 3 Mini Pack
-                                .priceWrapper
-                                    span.discountPrice ± Rp 350.000
-                                    .mobilediscountWrapper#removeClass
-                                        span.normalPrice Rp 500.000
-                                        .rateWrapper
-                                            span.numberRate 43%
+                                .priceWrapper#priceTagcss5
                     li.product
                         a.linkToDetail(href="productDetail.html")
                             .imgWrapper
                                 img.imgProduct(src="./assets/img/product5.png")
                             .infoProduct
                                 span.productName Snovv 3 Mini Pack
-                                .priceWrapper
-                                    span.discountPrice ± Rp 350.000
-                                    .mobilediscountWrapper#removeClass
-                                        span.normalPrice Rp 500.000
-                                        .rateWrapper
-                                            span.numberRate 43%
+                                .priceWrapper#priceTagcss6
                     
         // Footer
         include includes/footer.pug
         include includes/customJS.pug
         script.
-            $(window).on("load, resize", function() {
-                var viewportWidth = $(window).width();
-                if (viewportWidth > 800) {
-                        $(".removeClass").removeClass("mobilediscountWrapper");
+            // Function to handle the window resize
+            function handleResize() {
+                let priceWrappercss = "";
+                if (window.innerWidth < 800) {
+                    priceWrappercss = `
+                        <span class="discountPrice"> ± Rp 350.000 </span>
+                        <div class="mobilediscountWrapper">
+                            <span class="normalPrice"> Rp 500.000 </span>
+                            <div class="rateWrapper">
+                                <span class="numberRate"> 43% </span>
+                            </div>
+                        </div>`;
+                } else {
+                    priceWrappercss = `
+                        <span class="discountPrice"> ± Rp 450.000 </span>
+                        <span class="normalPrice"> Rp 950.000 </span>
+                        <div class="rateWrapper">
+                            <span class="numberRate"> 43% </span>
+                        </div>`;
                 }
-            });       
+
+                $('#priceTagcss1,#priceTagcss2,#priceTagcss3,#priceTagcss4,#priceTagcss5,#priceTagcss6').append(priceWrappercss);
+            }
+
+            // Attach the resize event listener
+            window.addEventListener('resize', handleResize);
+
+            handleResize();  

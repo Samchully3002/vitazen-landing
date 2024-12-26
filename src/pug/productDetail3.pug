@@ -11,6 +11,10 @@ html(lang='en')
                 .wrapper 
                     .leftBox
                         .carousel.slide#productCarausel(data-bs-ride="false")
+                            ol.carousel-indicators
+                                li(data-bs-target="#productCarausel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1")
+                                li(data-bs-target="#productCarausel" data-bs-slide-to="1" aria-label="Slide 2")
+                                li(data-bs-target="#productCarausel" data-bs-slide-to="2" aria-label="Slide 3")
                             .carousel-inner
                                 .carousel-item.active
                                     img(src="./assets/img/product3.png")
@@ -103,206 +107,144 @@ html(lang='en')
                                         .accordion-body Isi konten untuk bahan
 
         section.detailTab
-            .container
-                .row.justify-content-center.mt-2
-                    .col-md-12
-                        .card.border-0.text-center
-                            ul.nav.nav-tabs.nav-justified.card-header-tabs#myTab(role="tablist" style="padding-bottom: 30px;")
-                                li.nav-item.active
-                                    a.nav-link.active#tab1-tab(data-bs-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true") Detail Informasi
-                                li.nav-item
-                                    a.nav-link#tab2-tab(data-bs-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="true") Ulasan (4)
-                                li.nav-item
-                                    a.nav-link#tab3-tab(data-bs-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="true") FAQ
-                        .card-body
-                            .tab-content#myTabContent
-                                .tab-pane.fade.show.active#tab1(role="tabpanel" aria-labelledby="tab1-tab")
-                                    img(src="./assets/img/dtinfoProduct3.png" width="100%")
-                                .tab-pane.fade#tab2(role="tabpane2" aria-labelledby="tab2-tab")
-                                    .reviewBox
-                                        .reviewWrapper
-                                            .boxReview
-                                                .ratingBox
-                                                    .starBox
-                                                        label 5.0
-                                                        .starWrapper
-                                                            span.fa.fa-star.checked
-                                                            span.fa.fa-star.checked
-                                                            span.fa.fa-star.checked
-                                                            span.fa.fa-star.checked
-                                                            span.fa.fa-star.checked
-                                                    .totalRating
-                                                        .rateWrapper
-                                                            label 5
-                                                            span.fa.fa-star.checked
-                                                            .progress(role="progressbar" aria-label="Example with label" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 265px; height: 8px;")
-                                                                .progress-bar(style="width: 100%")
-                                                            span.spanStar 10
-                                                        .rateWrapper
-                                                            label 4
-                                                            span.fa.fa-star.checked
-                                                            .progress(role="progressbar" aria-label="Example with label" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 265px; height: 8px;")
-                                                                .progress-bar(style="width: 35%")
-                                                            span.spanStar 5
-                                                        .rateWrapper
-                                                            label 3
-                                                            span.fa.fa-star.checked
-                                                            .progress(role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 265px; height: 8px;")
-                                                                .progress-bar(style="width: 10%")
-                                                            span.spanStar 2
-                                                        .rateWrapper
-                                                            label 2
-                                                            span.fa.fa-star.checked
-                                                            .progress(role="progressbar" aria-label="Example with label" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 265px; height: 8px;")
-                                                                .progress-bar(style="width: 0%")
-                                                            span.spanStar 0
-                                                        .rateWrapper
-                                                            label 1
-                                                            span.fa.fa-star.checked
-                                                            .progress(role="progressbar" aria-label="Example with label" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 265px; height: 8px;")
-                                                                .progress-bar(style="width: 0%")
-                                                            span.spanStar 0
-                                                
-                                                div(style="align-items: center; height: 200px; width:1px; background: #E6E6E6")
+            .row.justify-content-center.mt-2
+                .col-md-12
+                    .card.border-0.text-center
+                        ul.nav.nav-tabs.nav-justified.card-header-tabs#myTab(role="tablist" style="padding-bottom: 30px;")
+                            li.nav-item.active
+                                a.nav-link.active#tab1-tab(data-bs-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true") Detail Informasi
+                            li.nav-item
+                                a.nav-link#tab2-tab(data-bs-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="true") Ulasan (4)
+                            li.nav-item
+                                a.nav-link#tab3-tab(data-bs-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="true") FAQ
+                    .card-body
+                        .tab-content#myTabContent
+                            .tab-pane.fade.show.active#tab1(role="tabpanel" aria-labelledby="tab1-tab")
+                                img(src="./assets/img/dtinfoProduct3.png" width="100%")
+                            .tab-pane.fade#tab2(role="tabpane2" aria-labelledby="tab2-tab")
+                                .reviewBox
+                                    .reviewWrapper
+                                        .boxReview
+                                            .ratingBox
+                                                .starBox
+                                                    label 5.0
+                                                    .starWrapper
+                                                        span.fa.fa-star.checked
+                                                        span.fa.fa-star.checked
+                                                        span.fa.fa-star.checked
+                                                        span.fa.fa-star.checked
+                                                        span.fa.fa-star.checked
+                                                .totalRating
+                                                    .rateWrapper
+                                                        label 5
+                                                        span.fa.fa-star.checked
+                                                        .progress(role="progressbar" aria-label="Example with label" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 265px; height: 8px;")
+                                                            .progress-bar(style="width: 100%")
+                                                        span.spanStar 10
+                                                    .rateWrapper
+                                                        label 4
+                                                        span.fa.fa-star.checked
+                                                        .progress(role="progressbar" aria-label="Example with label" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 265px; height: 8px;")
+                                                            .progress-bar(style="width: 35%")
+                                                        span.spanStar 5
+                                                    .rateWrapper
+                                                        label 3
+                                                        span.fa.fa-star.checked
+                                                        .progress(role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 265px; height: 8px;")
+                                                            .progress-bar(style="width: 10%")
+                                                        span.spanStar 2
+                                                    .rateWrapper
+                                                        label 2
+                                                        span.fa.fa-star.checked
+                                                        .progress(role="progressbar" aria-label="Example with label" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 265px; height: 8px;")
+                                                            .progress-bar(style="width: 0%")
+                                                        span.spanStar 0
+                                                    .rateWrapper
+                                                        label 1
+                                                        span.fa.fa-star.checked
+                                                        .progress(role="progressbar" aria-label="Example with label" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 265px; height: 8px;")
+                                                            .progress-bar(style="width: 0%")
+                                                        span.spanStar 0
+                                            .reviewProdukSeparator
+                                            .imgMedia 
+                                                img(src="./assets/img/media_review.png")
+                                        button.btnInput(type="button" data-bs-toggle="modal" data-bs-target="#reviewModal") Tulis Ulasan
+                                    .filterWrapper
+                                        h6 Menampilkan 1 - 4 dari 4 ulasan
+                                        .dropdown
+                                            span(style="padding-right:15px;") Urutkan berdasarkan
+                                            a.btn.btn-outline-secondary.dropdown-toggle#filterDropdown(href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false") Terbaru
+                                            ul.dropdown-menu(aria-labelledby="filterDropdown")
+                                                li
+                                                    a.dropdown-item(href="#") Date
+                                                li
+                                                    a.dropdown-item(href="#") Rating
+                                                li
+                                                    a.dropdown-item(href="#") Media
 
-                                                .imgMedia 
-                                                    img(src="./assets/img/media_review.png")
-                                            button.btnInput(type="button" data-bs-toggle="modal" data-bs-target="#reviewModal") Tulis Ulasan
-                                        .filterWrapper
-                                            h6 Menampilkan 1 - 4 dari 4 ulasan
-                                            .dropdown
-                                                span(style="padding-right:15px;") Urutkan berdasarkan
-                                                a.btn.btn-outline-secondary.dropdown-toggle#filterDropdown(href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false") Terbaru
-                                                ul.dropdown-menu(aria-labelledby="filterDropdown")
-                                                    li
-                                                        a.dropdown-item(href="#") Date
-                                                    li
-                                                        a.dropdown-item(href="#") Rating
-                                                    li
-                                                        a.dropdown-item(href="#") Media
-
+                                    div(style="width: 100%; height: 1px; background: #E6E6E6")
+                                    .contentWrapper 
+                                        .contentBox#dataReview1
                                         div(style="width: 100%; height: 1px; background: #E6E6E6")
-                                        .contentWrapper 
-                                            .contentBox
-                                                img.imgUser(src="./assets/img/userWeb1.png")
-                                                .rowContent
-                                                    .detailContent
-                                                        .ratingWrapper
-                                                            span.fa.fa-star.checked
-                                                            span.fa.fa-star.checked
-                                                            span.fa.fa-star.checked
-                                                            span.fa.fa-star.checked
-                                                            span.fa.fa-star.checked
-                                                        .userWrapper
-                                                            label Nurul Fitriani 
-                                                            span - 07 Febuari 2024
-                                                            img(src="./assets/img/icon/ic_tokped.png" style="width: 24px; height: 24px;")
-                                                    p.reviewValue Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah
-                                                img.mediaBox(src="./assets/img/media_review.png")
-                                
-                                            div(style="width: 100%; height: 1px; background: #E6E6E6")
-                                            .contentBox
-                                                img.imgUser(src="./assets/img/userWeb1.png")
-                                                .rowContent
-                                                    .detailContent
-                                                        .ratingWrapper
-                                                            span.fa.fa-star.checked
-                                                            span.fa.fa-star.checked
-                                                            span.fa.fa-star.checked
-                                                            span.fa.fa-star.checked
-                                                            span.fa.fa-star.checked
-                                                        .userWrapper
-                                                            label Amelia Putri
-                                                            span - 07 Desember 2024
-                                                            img(src="./assets/img/icon/ic_shopee.png" style="width: 24px; height: 24px;")
-                                                    p.reviewValue Saya sangat senang karena dosisnya tercetak rapi di bagian depan. Saya juga sudah tes darah untuk vitamin D dan ternyata tidak masih kurang, jadi saya mengonsumsi produk ini yang juga mengandung bahan lain.
-                                                img.mediaBox(src="./assets/img/media_review.png")
 
-                                            div(style="width: 100%; height: 1px; background: #E6E6E6")
-                                            .contentBox
-                                                img.imgUser(src="./assets/img/userWeb1.png")
-                                                .rowContent
-                                                    .detailContent
-                                                        .ratingWrapper
-                                                            span.fa.fa-star.checked
-                                                            span.fa.fa-star.checked
-                                                            span.fa.fa-star.checked
-                                                            span.fa.fa-star.checked
-                                                            span.fa.fa-star.checked
-                                                        .userWrapper
-                                                            label Nurul Fitriani
-                                                            span 07 Desember 2024
-                                                            img(src="./assets/img/icon/ic_shopee.png" style="width: 24px; height: 24px;")
-                                                    p.reviewValue Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah
-                                                img.mediaBox(src="./assets/img/media_review.png")
+                                        .contentBox#dataReview2
+                                        div(style="width: 100%; height: 1px; background: #E6E6E6")
 
-                                            div(style="width: 100%; height: 1px; background: #E6E6E6")
-                                            .contentBox
-                                                img.imgUser(src="./assets/img/userWeb1.png")
-                                                .rowContent
-                                                    .detailContent
-                                                        .ratingWrapper
-                                                            span.fa.fa-star.checked
-                                                            span.fa.fa-star.checked
-                                                            span.fa.fa-star.checked
-                                                            span.fa.fa-star.checked
-                                                            span.fa.fa-star.checked
-                                                        .userWrapper
-                                                            abel Amelia Putri
-                                                            span - 07 Desember 2024
-                                                            img(src="./assets/img/icon/ic_shopee.png" style="width: 24px; height: 24px;")
-                                                    p.reviewValue Saya sangat senang karena dosisnya tercetak rapi di bagian depan. Saya juga sudah tes darah untuk vitamin D dan ternyata tidak masih kurang, jadi saya mengonsumsi produk ini yang juga mengandung bahan lain.
-                                                img.mediaBox(src="./assets/img/media_review.png")
-                                .tab-pane.fade#tab3(role="tabpane3" aria-labelledby="tab3-tab")
-                                    .faqBox
-                                        .accordion.border-0#accordionExample
-                                            .accordion-item
-                                                h2.accordion-header
-                                                    button.accordion-button(type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                                        aria-expanded="true" aria-controls="collapseOne") 
-                                                        .spanBold Pertanyaan 1?
-                                                .accordion-collapse.collapse.show#collapseOne(data-bs-parent="#accordionExample")
-                                                    .accordion-body
-                                                        .textBody Jawaban
-                                            .accordion-item
-                                                h2.accordion-header
-                                                    button.accordion-button.collapsed(type="button" data-bs-toggle="collapse"
-                                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo")
-                                                        .spanBold  Pertanyaan 2?
-                                                .accordion-collapse.collapse#collapseTwo(data-bs-parent="#accordionExample")
-                                                    .accordion-body
-                                                        .textBody Jawaban
-                                            .accordion-item
-                                                h2.accordion-header
-                                                    button.accordion-button.collapsed(type="button" data-bs-toggle="collapse"
-                                                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree")
-                                                        .spanBold Pertanyaan 3?
-                                                .accordion-collapse.collapse#collapseThree(data-bs-parent="#accordionExample")
-                                                    .accordion-body
-                                                        .textBody Jawaban
-                                .tab-pane.fade#tab4(role="tabpanel" aria-labelledby="tab4-tab")
-                                    .shippingBox
-                                        .shippingWrapper 
-                                            .titleWrapper
-                                                span.text-center Exchange & Return
-                                            .descWrapper 
-                                                ul
-                                                    li If the product value is damaged by removing the product tag or opening the product, exchange or return is not possible even within 7 days of receiving the product.
-                                                    li For low-priced products and some special price products, the customer must pay the shipping fee for exchanges or returns due to change of mind (excluding product defects and delivery errors).
-                                                    li Prices for some products may change due to manufacturer circumstances such as the release of a new model or fluctuations in parts prices.
-                                                    li  For shoes, if they were worn outdoors or have signs of use, exchanges and returns are not possible even within the exchange/return period.
-                                                    li In the case of custom-made products (heel height, width of the foot, size change) among handmade products, exchanges and returns are not possible even within the exchange/return period after production is completed and received.
-                                                    li  Please understand that in the case of imported or luxury products, exchanges and returns are not possible if the product or its box is damaged or lost, resulting in loss of product value.
-                                                    li For some special price products, exchanges or returns due to simple change of mind on the part of the customer may not be possible after purchase, except in cases of product defects or incorrect delivery. Please be sure to refer to the product details for each product.
-                                        div(style="align-self: stretch; height: 1px; background: #C4C4C4")
-                                        .shippingWrapper 
-                                            .titleWrapper
-                                                span.text-center Shipping Information
-                                            .descWrapper 
-                                                ul
-                                                    li Shipping fee: The basic shipping fee is Rp 10.000. (Additional shipping fees may apply to some islands, mountainous areas, and remote areas.) Free shipping for purchases over Rp 150.000.
-                                                    li The average delivery date for this product is 2 days (after payment confirmation). For installation products, delivery may be slightly delayed. [The expected delivery date may differ from the average delivery date due to the fluidity of the order time (order sequence).]
-                                                    li This product can be delivered within 3 days. The delivery possible date refers to the period during which the product can be delivered to customers who ordered this product. (However, holidays and public holidays are excluded when calculating the period, and in the case of cash orders, it is based on the date of deposit.)                             
+                                        .contentBox#dataReview3
+                                        div(style="width: 100%; height: 1px; background: #E6E6E6")
+                                        
+                                        .contentBox#dataReview4
+                                    
+                            .tab-pane.fade#tab3(role="tabpane3" aria-labelledby="tab3-tab")
+                                .faqBox
+                                    .accordion.border-0#accordionExample
+                                        .accordion-item
+                                            h2.accordion-header
+                                                button.accordion-button(type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                    aria-expanded="true" aria-controls="collapseOne") 
+                                                    .spanBold Pertanyaan 1?
+                                            .accordion-collapse.collapse.show#collapseOne(data-bs-parent="#accordionExample")
+                                                .accordion-body
+                                                    .textBody Jawaban
+                                        .accordion-item
+                                            h2.accordion-header
+                                                button.accordion-button.collapsed(type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo")
+                                                    .spanBold  Pertanyaan 2?
+                                            .accordion-collapse.collapse#collapseTwo(data-bs-parent="#accordionExample")
+                                                .accordion-body
+                                                    .textBody Jawaban
+                                        .accordion-item
+                                            h2.accordion-header
+                                                button.accordion-button.collapsed(type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree")
+                                                    .spanBold Pertanyaan 3?
+                                            .accordion-collapse.collapse#collapseThree(data-bs-parent="#accordionExample")
+                                                .accordion-body
+                                                    .textBody Jawaban
+                            .tab-pane.fade#tab4(role="tabpanel" aria-labelledby="tab4-tab")
+                                .shippingBox
+                                    .shippingWrapper 
+                                        .titleWrapper
+                                            span.text-center Exchange & Return
+                                        .descWrapper 
+                                            ul
+                                                li If the product value is damaged by removing the product tag or opening the product, exchange or return is not possible even within 7 days of receiving the product.
+                                                li For low-priced products and some special price products, the customer must pay the shipping fee for exchanges or returns due to change of mind (excluding product defects and delivery errors).
+                                                li Prices for some products may change due to manufacturer circumstances such as the release of a new model or fluctuations in parts prices.
+                                                li  For shoes, if they were worn outdoors or have signs of use, exchanges and returns are not possible even within the exchange/return period.
+                                                li In the case of custom-made products (heel height, width of the foot, size change) among handmade products, exchanges and returns are not possible even within the exchange/return period after production is completed and received.
+                                                li  Please understand that in the case of imported or luxury products, exchanges and returns are not possible if the product or its box is damaged or lost, resulting in loss of product value.
+                                                li For some special price products, exchanges or returns due to simple change of mind on the part of the customer may not be possible after purchase, except in cases of product defects or incorrect delivery. Please be sure to refer to the product details for each product.
+                                    div(style="align-self: stretch; height: 1px; background: #C4C4C4")
+                                    .shippingWrapper 
+                                        .titleWrapper
+                                            span.text-center Shipping Information
+                                        .descWrapper 
+                                            ul
+                                                li Shipping fee: The basic shipping fee is Rp 10.000. (Additional shipping fees may apply to some islands, mountainous areas, and remote areas.) Free shipping for purchases over Rp 150.000.
+                                                li The average delivery date for this product is 2 days (after payment confirmation). For installation products, delivery may be slightly delayed. [The expected delivery date may differ from the average delivery date due to the fluidity of the order time (order sequence).]
+                                                li This product can be delivered within 3 days. The delivery possible date refers to the period during which the product can be delivered to customers who ordered this product. (However, holidays and public holidays are excluded when calculating the period, and in the case of cash orders, it is based on the date of deposit.)                             
 
         .modal.fade#reviewModal(tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true")
             .modal-dialog.modal-lg
@@ -372,5 +314,63 @@ html(lang='en')
                     $(multipleItemCarousel).addClass('slide');
                 }
             });
+
+            // Function to handle the window resize
+            function handleResize() {
+                let reviewProductcss = "";
+                if (window.innerWidth < 800) {
+                    reviewProductcss = `
+                        <div class="mobileWrapperUser">
+                            <img class="imgUser" src="./assets/img/userWeb1.png"/>
+                            <div class="rowContent">
+                                <div class="detailContent">
+                                    <div class="ratingWrapper">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                    </div>
+                                    <div class="userWrapper">
+                                        <label> Amelia Putri </label>
+                                        <span> - 07 Desember 2024 </span>
+                                        <img src="./assets/img/icon/ic_shopee.png" style="width: 24px; height: 24px;"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="reviewValue"> Saya sangat senang karena dosisnya tercetak rapi di bagian depan. Saya juga sudah tes darah untuk vitamin D dan ternyata tidak masih kurang, jadi saya mengonsumsi produk ini yang juga mengandung bahan lain.</p>
+                        <img class="mediaBox" src="./assets/img/media_review.png">`;
+                } else {
+                    reviewProductcss = `
+                        <img class="imgUser" src="./assets/img/userWeb1.png"/>
+                        <div class="rowContent">
+                            <div class="detailContent">
+                                <div class="ratingWrapper">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                                <div class="userWrapper">
+                                    <label> Amelia Putri </label>
+                                    <span> - 07 Desember 2024 </span>
+                                    <img src="./assets/img/icon/ic_shopee.png" style="width: 24px; height: 24px;"/>
+                                </div>
+                            </div>
+                            <p class="reviewValue"> Saya sangat senang karena dosisnya tercetak rapi di bagian depan. Saya juga sudah tes darah untuk vitamin D dan ternyata tidak masih kurang, jadi saya mengonsumsi produk ini yang juga mengandung bahan lain.</p>
+                        </div>
+                        <img class="mediaBox" src="./assets/img/media_review.png">`;
+                }
+
+                $('#dataReview1,#dataReview2,#dataReview3,#dataReview4').append(reviewProductcss);
+            }
+
+            // Attach the resize event listener
+            window.addEventListener('resize', handleResize);
+
+            // Call the function initially to set the correct class on page load
+            handleResize();
 
         
