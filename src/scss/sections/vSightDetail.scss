@@ -1,7 +1,7 @@
 .VsightDetail-section {
     width: 100%; 
     height: 100%; 
-    padding: 50px 0;  
+    padding: 50px 200px;  
     display: flex;
     flex-direction: column; /* Stack items vertically */
     justify-content: center; /* Center content vertically (optional) */
@@ -33,12 +33,12 @@
         }
     }
     .picVsight {
-        width: 100%; height: 100%; 
+        width: 100%; height: 600px;
         position: relative; border-radius: 10px;
     }
     .contentText {
         align-self: stretch; text-align: justify; 
-        color: #020E35; font-size: 16px; 
+        color: #020E35; font-size: 20px; 
         font-family: Plus Jakarta Sans; 
         font-weight: 400; line-height: 26px; 
         letter-spacing: 0.16px; word-wrap: break-word;
@@ -81,17 +81,18 @@
 
     .VsightDetail-section {
         gap: 20px;
+        padding: 0 20px;
 
         .titleWrapper {
             .titleText {
                 align-items: flex-start;
                 font-size: 24px;
-                padding: 0 20px;
+                // padding: 0 20px;
                 margin-bottom: 10px;
             }
             .dateText {
                 font-size: 16px;
-                padding: 0 20px;
+                // padding: 0 20px;
             }
         }
         
@@ -99,12 +100,12 @@
             width: 100%;
             height: 100%;
             position: relative;
-            padding: 0 20px;
+            // padding: 0 20px;
         }
 
         .contentText {
             font-size: 16px;
-            padding: 0 20px;
+            // padding: 0 20px;
         }
     }
 }

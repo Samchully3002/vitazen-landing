@@ -28,5 +28,23 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-white.border-bottom.sticky-top
                         a.nav-link(href="v-sight.html") V-Sight
                     li.nav-item
                         a.nav-link(href="aboutUs.html") Tentang kami
+                    li.nav-item#kontakMobile
+                        a.nav-link(href="contact-us.html") Hubungi kami
         // Contact button to the right
         a.btnContact(href="contact-us.html") Hubungi kami
+
+script.
+    function handleResize() {
+                if (window.innerWidth < 800) {
+                    document.getElementById("kontakMobile").style.display = "flex";
+                } else {
+                    document.getElementById("kontakMobile").style.display = "none";
+                }
+                    
+            }
+
+            // Attach the resize event listener
+            window.addEventListener('resize', handleResize);
+
+            // Call the function initially to set the correct class on page load
+            handleResize();

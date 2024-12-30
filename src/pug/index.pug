@@ -44,7 +44,20 @@ html(lang='en')
                     span.titleText Produk
                     .viewmoreWrapper
                         a.btnViewmore(href="products.html") Lihat lainnya
-                .listproductWrapper#dataproducts
+                .listproductWrapper
+                    a.cardProduct(href="productDetail1.html")
+                        .pictProductWrapper
+                            img.pictProduct(src="./assets/img/product1.png")
+                        .productDescWrapper
+                            span.productName Snovv Glutathione
+                            .priceproductWrapper#priceTagcss1
+
+                    a.cardProduct(href="productDetail2.html")
+                        .pictProductWrapper
+                            img.pictProduct(src="./assets/img/product2.png")
+                        .productDescWrapper
+                            span.productName Snovv Magnesium
+                            .priceproductWrapper#priceTagcss2
 
         // Section Promotion Banner
         section.promo-section
@@ -79,7 +92,7 @@ html(lang='en')
             .container
                 .multiple-card-slider
                     .carousel#carouselWebsiteRev(data-bs-ride="false")
-                        .container
+                        .mobilerapperrev
                             .carousel-inner
                                 .carousel-item
                                     .websiterevWrapper
@@ -239,7 +252,7 @@ html(lang='en')
         section.reviewShop
             .container
                 .multiple-card-slider
-                    .carousel#carouselExampleControls(data-bs-ride="false")
+                    .carousel#sliderReviewShop(data-bs-ride="false")
                         .carousel-inner
                             .carousel-item
                                 .itemWrapper
@@ -292,11 +305,10 @@ html(lang='en')
                                             .dateInfo
                                                 span.userWrapper Pengguna Shopee
                                                 span.dateWrapper 07 Februari 2024
-                            
-                        button.carousel-control-prev(type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next")
+                        button.carousel-control-prev(type="button" data-bs-target="#sliderReviewShop" data-bs-slide="prev")
                             span.carousel-control-prev-icon(aria-hidden="true")
                             span.visually-hidden Sebelumnya
-                        button.carousel-control-next(type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next")
+                        button.carousel-control-next(type="button" data-bs-target="#sliderReviewShop" data-bs-slide="next")
                             span.carousel-control-next-icon(aria-hidden="true")
                             span.visually-hidden Berikutnya
         
@@ -344,62 +356,7 @@ html(lang='en')
         include includes/customJS.pug
         script.
             const width = window.innerWidth;
-            console.log(width); // 711 1440
-            $(document).ready(function () {
-                // Replace with your API endpoint
-                const apiUrl = "http://localhost:3000/landing/home/getproducts?limit=3";
-
-                // Fetch data using jQuery AJAX
-                $.ajax({
-                    url: apiUrl,
-                    method: "GET",
-                    dataType: "json",
-                    success: function (response) {
-                        if (response.success) {
-                            const products = response.products;
-                            console.log(products);
-                            products.forEach(product => {
-                                let discountHTML = "";
-
-                                // Check if the discount sub-object exists
-                                if (product.discount) {
-                                    discountHTML = `
-                                        <div class="priceproductWrapper">
-                                            <span class="discountPrice">± Rp ${product.finalPrice.toLocaleString()}</span>
-                                            <span class="normalPrice"> Rp ${product.price.toLocaleString()}</span>
-                                            <div class="ratediscountWrapper">
-                                                <span class="rateText">${product.discount.value}%</span>
-                                            </div>
-                                        </div>`;
-                                } else {
-                                    discountHTML = `
-                                        <div class="priceproductWrapper">
-                                            <span class="discountPrice">± Rp ${product.finalPrice.toLocaleString()}</span>
-                                        </div>`;
-                                }
-                                const productHTML = `
-                                    <a class="cardProduct" href="productDetail1.html">
-                                        <div class="pictProductWrapper">
-                                            <img class="pictProduct" src="${product.thumbnail}"/>
-                                        </div>
-                                        <div class="productDescWrapper">
-                                            <span class="productName">${product.name}</span>
-                                            ${discountHTML}
-                                        </div>
-                                    </a>`;
-                    
-                                $('#dataproducts').append(productHTML);
-                            });
-                        } else {
-                            $("#product-list").html("<p>No products available.</p>");
-                        }
-                    },
-                    error: function (xhr, status, error) {
-                        console.error("Error fetching products:", error);
-                        $("#product-list").html("<p>Failed to load products.</p>");
-                    },
-                });
-            });
+            console.log(width);
        
             function changeToVideo() {
                 // Reference to the image element
@@ -447,20 +404,46 @@ html(lang='en')
                 imgElement.parentNode.replaceChild(videoElement, imgElement);
             }
 
+            // Function to handle the window resize
+            function handleResize() {
+                let priceWrappercss = "";
+                if (window.innerWidth < 800) {
+                    priceWrappercss = `
+                        <span class="discountPrice"> ± Rp 350.000 </span>
+                        <div class="mobilediscountWrapper">
+                            <span class="normalPrice"> Rp 500.000 </span>
+                            <div class="ratediscountWrapper">
+                                <span class="rateText"> 43% </span>
+                            </div>
+                        </div>`;
+                } else {
+                    priceWrappercss = `
+                        <span class="discountPrice"> ± Rp 450.000 </span>
+                        <span class="normalPrice"> Rp 950.000 </span>
+                        <div class="ratediscountWrapper">
+                            <span class="rateText"> 43% </span>
+                        </div>`;
+                }
+
+                $('#priceTagcss1,#priceTagcss2').append(priceWrappercss);
+            }
+            
+            window.addEventListener('resize', handleResize);
+            handleResize();
+
             $('.multiple-card-slider .carousel').each(function(){
                 var currentCarouselId = '#' + $(this).attr('id');
                 const multipleItemCarousel = document.querySelector(currentCarouselId);
 
-                if(window.matchMedia("(min-width:576px)").matches){
                     const carousel = new bootstrap.Carousel(multipleItemCarousel, {
                         interval: false,
                         wrap: false
-                    })
+                    });
                     var carouselWidth = $(currentCarouselId + ' .carousel-inner')[0].scrollWidth;
                     var cardWidth = $(currentCarouselId + ' .carousel-item').width();
                     var scrollPosition = 0;    
                     $(currentCarouselId + ' .carousel-control-next').on('click', function(){
-                        if(scrollPosition < (carouselWidth - (cardWidth * 4))){
+                        if(scrollPosition < (carouselWidth - (cardWidth * 2))){
                             console.log('next');
                             scrollPosition = scrollPosition + cardWidth;
                             $(currentCarouselId + ' .carousel-inner').animate({scrollLeft: scrollPosition},600);
@@ -473,7 +456,4 @@ html(lang='en')
                             $(currentCarouselId + ' .carousel-inner').animate({scrollLeft: scrollPosition},600);
                         }
                     });
-                }else{
-                    $(multipleItemCarousel).addClass('slide');
-                }
             });

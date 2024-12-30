@@ -38,7 +38,7 @@
   }
 }
 
-  .vidYoutube {
+.vidYoutube {
     width: 100%; height: 100%; padding: 82px 90px 97px 90px; background: rgba(255, 255, 255, 0.10); justify-content: center; align-items: center; display: inline-flex;
     .vidBox {
       width: 1260px; height: 673px; position: relative;
@@ -49,9 +49,9 @@
     .playButton {
       width: 109.43px; height: 108.56px; padding: 20px; left: 575.72px; top: 273.78px; position: absolute; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex; cursor: pointer;
     }
-  }
+}
 
-  .products-home {
+.products-home {
     width: 100%; height: 100%; 
     padding: 70px 101px 31px 101px;
     background: rgba(255, 255, 255, 0.10);
@@ -123,7 +123,7 @@
           }
         }
       }
-    }
+}
   
 .promo-section {
   padding: 32px 102px 108px 102px;
@@ -132,12 +132,14 @@
   justify-content: center;
 
     .itemPromo {
-      width: 100%; height: 100%; padding: 200px;
+      width: 100%; height: 100%; padding: 0 200px;
     }
 
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
       filter: invert(100%);
+      width: 3rem;
+      height: 3rem;
     }
     .custom-indicators {
       position: absolute;
@@ -155,9 +157,9 @@
         height: 10px;
         border-radius: 50%;
     }
-  }
+}
 
-  .reviewWebsite {
+.reviewWebsite {
 
     .titleTextrev {
       padding:70px 0 65px 0; width:100%; 
@@ -170,6 +172,7 @@
     .multiple-card-slider .carousel-inner {
       width: 100%; 
       height: 100%; 
+      position: relative;
       justify-content: flex-start; 
       align-items: flex-start; 
       gap: 24px; 
@@ -190,7 +193,7 @@
     }
 
     .websiterevWrapper {
-      width: 302px; flex: 1 1 0; 
+      width: 100%; flex: 1 1 0; 
       padding-bottom: 20px; 
       background: white; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15); 
       border-radius: 10px; border: 1px rgba(0, 0, 0, 0) solid; 
@@ -199,7 +202,7 @@
       gap: 20px; display: inline-flex;
 
       .revImgBox {
-        width: 302px; 
+        width: 100%; 
         border-top-left-radius: 10px; 
         border-top-right-radius: 10px; 
         overflow: hidden; flex-direction: column; 
@@ -210,8 +213,7 @@
         }
       }
       .commentrevWrapper {
-        width:302px; align-self: stretch; 
-        height: 138px; 
+        width:100%; align-self: stretch;
         padding-left: 20px; padding-right: 20px; 
         flex-direction: column; 
         justify-content: center; align-items: flex-start; 
@@ -222,7 +224,7 @@
           gap: 5px; display: inline-flex;
         }
         .websiterevText {
-          align-self: stretch; height: 56px; 
+          align-self: stretch;
           color: black; font-size: 16px; 
           font-family: Plus Jakarta Sans; 
           font-weight: 400; overflow: hidden; 
@@ -257,7 +259,6 @@
         }
       }
     }
-    @media (min-width: 768px) {
       .multiple-card-slider .carousel-item {
         margin-right: 0;
         display: block;
@@ -266,15 +267,14 @@
       .multiple-card-slider .carousel-inner {
         display: flex;
       }
-    }
-  }
+}
 
 .reviewIGVid {
 
   .multiple-card-slider .carousel-inner {
     width: 100%; 
     height: 100%; 
-    justify-content: flex-start; 
+    justify-content: flex-start;
     align-items: flex-start;
     gap: 40px;
     padding: 50px 0; 
@@ -283,7 +283,7 @@
 
   .multiple-card-slider .carousel-item,
   .multiple-card-slider .carousel-item.active {
-    width: 338.37px; height: 600px; position: relative;
+    width: 338px; height: 600px; position: relative; display: block; flex: none;
 
     .btnPlay {
       position: absolute;
@@ -297,8 +297,7 @@
     }
 
     .IGimg {
-      width: 338.37px; 
-      height: 600px; 
+      width: 338px; height: 600px; 
       border-radius: 20px; 
       overflow: hidden; 
       display: inline-flex;
@@ -323,15 +322,13 @@
       filter: invert(100%);
     }
   }
-  @media (min-width: 768px) {
-    .multiple-card-slider .carousel-item {
-      margin-right: 0;
-      display: block;
-      backface-visibility: visible;
-    }
-    .multiple-card-slider .carousel-inner {
-      display: flex;
-    }
+  .multiple-card-slider .carousel-item {
+    margin-right: 0;
+    display: block;
+    backface-visibility: visible;
+  }
+  .multiple-card-slider .carousel-inner {
+    display: flex;
   }
 }
 
@@ -562,7 +559,7 @@
 @media screen and (max-width: 800px) {
   .hero {
     .imgHeroItem {
-      width:fit-content; height:400px; object-fit: cover;
+      width:fit-content; height:205px; object-fit: cover;
     }
     .row {
       margin-top: unset;
@@ -600,24 +597,20 @@
     }
   }
 
-  .products-Home {
-    width: fit-content;
+  .products-home {
+    width: 100%;
     height: 100%;
-    padding: 40px 20px 30px 20px;
-    background: rgba(255, 255, 255, 0.1);
     justify-content: center;
     align-items: center;
-    display: inline-block;
+    display: inline-flex;
+    padding: 0 20px 30px 20px; 
   
     .productWrapper {
       padding-bottom: 30px;
-      justify-content: center;
-      flex-direction: column; 
-      align-items: flex-start; gap: 48px; 
-      display: inline-flex;
+      gap:30px; 
 
       .headerWrapper {
-        padding: unset;
+        padding: unset; width: 100%;
 
         .titleText {
           font-size: 36px;
@@ -630,11 +623,55 @@
           }
         }
       }
+
+      .listproductWrapper {
+        gap: 20px;
+        .cardProduct {
+
+          .pictProductWrapper {
+            width: 100%; height: 100%;
+            .pictProduct {
+              width: 100%; height: 100%;
+            }
+          }
+          .productDescWrapper {
+            align-self: stretch; height: 61px;
+            padding:0 5px; flex-direction: column; 
+            justify-content: center; align-items: flex-start; 
+            display: flex;
+            .productName {
+              font-size: 16px;
+            }
+            .priceproductWrapper {
+              flex-direction: column;
+              align-items: flex-start;
+              .discountPrice {
+                font-size: 14px;
+              }
+              .mobilediscountWrapper {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+              }
+              .normalPrice {
+                font-size: 12px;
+              }
+              .ratediscountWrapper {
+                padding: 1px 5px;
+                .rateText {
+                  font-size: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 
   .vidYoutube {
-    width: 100%; height: 100%; padding: 62px 20px 77px 20px; background: rgba(255, 255, 255, 0.10); justify-content: center; align-items: center; display: inline-flex;
+    width: 100%; height: 100%; padding: 50px 20px 50px 20px; background: rgba(255, 255, 255, 0.10); justify-content: center; align-items: center; display: inline-flex;
     .vidBox {
       width: 400px; height: 230px; position: relative;
     }
@@ -650,6 +687,11 @@
     }
     .carousel-inner {
       padding: 0 35px;
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      width: 2rem;
+      height: 2rem;
     }
     .carousel-control-prev,
     .carousel-control-next {
@@ -673,13 +715,13 @@
         border-radius: 50%;
     }
   }
-
+  
   .avaibleStore {
     width: 100%;
     margin: 70px 0 70px 0; 
   
     .container {
-      width: 1240px;
+      width: 100%;
       padding-top: 50px; 
       padding-bottom: 50px; 
       background: #FBF7FF; 
@@ -715,6 +757,114 @@
     }
   }
 
+  .reviewWebsite {
+
+    .titleTextrev {
+      padding:50px 0 0 0; font-size: 34px;
+    }
+
+    .multiple-card-slider .carousel-control-prev, .multiple-card-slider .carousel-control-next {
+      width: 3em;
+      height: 3em;
+      margin-left: -22px;
+      margin-right: -22px;
+    }
+    .mobilerapperrev {
+      padding: 0 25px;
+    }
+
+    .multiple-card-slider .carousel-inner {
+      gap: 18px;
+      padding: 30px 0;
+    }
+
+    .websiterevWrapper {
+      width: 100%;
+      gap: 15px;
+      padding-bottom: 10px;
+
+      .revImgBox {
+        width: 100%; height: 100%;
+        .websiterevPict {
+          width: 150px; height: 150px;
+        }
+      }
+      .commentrevWrapper {
+        width: 100%; padding: 0 10px 10px 10px;
+
+        .ratingrevBox {
+          justify-content: flex-start; align-items: flex-start; 
+          gap: 5px; display: inline-flex;
+        }
+        .websiterevText {
+          font-size: 13px;
+        }
+        .custInfoWrapper {
+
+          .userFoto {
+            width: 30px; height: 30px;
+          }
+          .userNameDateWrapper {
+            gap: 1px;
+            .revNameText {
+              font-size: 10px;
+            }
+            .revDateText {
+              font-size: 9px;
+            }
+          }
+        }
+      }
+    }
+}
+
+.reviewIGVid {
+
+  .multiple-card-slider .carousel-inner {
+    gap: 14px;
+    padding: 50px 0; 
+  }
+
+  .multiple-card-slider .carousel-item,
+  .multiple-card-slider .carousel-item.active {
+    width: 100%; height: 100%; position: relative; display: block; flex: none;
+
+    .btnPlay {
+      width: 20px;
+      position: absolute;
+      top: 50%; 
+      left: 50%; 
+      transform: translate(-50%, -50%); 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      cursor: pointer;
+    }
+
+    .IGimg {
+      width: 120px; height: 220px; 
+      border-radius: 15px; 
+    }
+  }
+  .multiple-card-slider .carousel-control-prev,
+  .multiple-card-slider .carousel-control-next {
+    overflow: hidden; 
+    backdrop-filter: blur(10px);
+    background-color: #FFFFFF;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left:10px;
+    margin-right: 10px;
+    
+    span {
+      filter: invert(100%);
+    }
+  }
+}
+
   .vSight-Home {
       width: fit-content;
       height: 100%;
@@ -745,7 +895,6 @@
           }
         }
       }
-      
       .containerList-vSight {
         width: fit-content;
         display: inline-block;
@@ -774,107 +923,5 @@
           }
         }
       }
-  }
-
-  .reviewWebsite {
-
-    .titleTextrev {
-      padding:50px 0 45px 0; width:100%; 
-      font-size: 34px;
-    }
-  
-    .multiple-card-slider .carousel-inner {
-      width: 100%;
-      height: 100%;
-      justify-content: flex-start; 
-      align-items: flex-start; 
-      gap: 15px;
-      padding: 44px 0;
-      display: inline-flex;
-    }
-  
-    .multiple-card-slider .carousel-control-prev,
-    .multiple-card-slider .carousel-control-next {
-        filter: invert(100%);
-        width: 3em;
-        height: 3em;
-        border-radius: 50%;
-        top: 50%;
-        transform: translateY(-50%);
-        margin-left:-60px;
-        margin-right: -60px;
-    }
-
-    .multiple-card-slider .carousel-item {
-      margin-right: 0;
-      display: block;
-      backface-visibility: visible;
-    }
-    .multiple-card-slider .carousel-inner {
-      display: flex;
-    }
-
-    .websiterevWrapper {
-      width: 100%;
-      display: inline-flex;
-
-      .revImgBox {
-        width: fit-content;
-        border-top-left-radius: 10px; 
-        border-top-right-radius: 10px; 
-        overflow: hidden; flex-direction: column; 
-        justify-content: center; align-items: center; 
-        display: flex;
-        .websiterevPict {
-          width: 100%; height: 100%;
-        }
-      }
-      .commentrevWrapper {
-        width:100%; align-self: stretch; 
-        height: fit-content; 
-        flex-direction: column; 
-        justify-content: center; align-items: flex-start; 
-        gap: 10px; display: flex;
-
-        .ratingrevBox {
-          justify-content: flex-start; align-items: flex-start; 
-          gap: 5px; display: inline-flex;
-        }
-        .websiterevText {
-          align-self: stretch; height: 56px; 
-          color: black; font-size: 16px; 
-          font-family: Plus Jakarta Sans; 
-          font-weight: 400; overflow: hidden; 
-          text-overflow: ellipsis; 
-          display: -webkit-box; 
-          -webkit-line-clamp: 2; 
-          -webkit-box-orient: vertical; 
-          word-wrap: break-word; line-height: 1.3;
-        }
-        .custInfoWrapper {
-          justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex;
-
-          .userFoto {
-            width: 30px; height: 30px;
-            background: linear-gradient(0deg, #D9D9D9 0%, #D9D9D9 100%); 
-            border-radius: 9999px;
-          }
-          .userNameDateWrapper {
-            flex-direction: column; 
-            justify-content: flex-start; align-items: flex-start; 
-            gap: 4px; display: inline-flex;
-
-            .revNameText {
-              color: #444444; font-size: 12px; font-family: Plus Jakarta Sans; 
-              font-weight: 600; line-height: 18px; word-wrap: break-word;
-            }
-            .revDateText {
-              color: #444444; font-size: 10px; font-family: Plus Jakarta Sans; 
-              font-weight: 400; line-height: 12px; word-wrap: break-word;
-            }
-          }
-        }
-      }
-    }
   }
 }
