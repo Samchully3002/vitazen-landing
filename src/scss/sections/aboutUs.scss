@@ -266,9 +266,16 @@
                 display: inline-flex;
                 .leftText {
                     padding-left: unset;
+                    padding-top: unset;
                     flex-direction: column;
                     gap: 16px;
                     display: inline-flex;
+                    .titleText {
+                        font-size: 24px;
+                    }
+                    .visionContent {
+                        font-size:  16px;
+                    }
                 }
             }
             .misionWrapper {
@@ -282,6 +289,13 @@
                     flex-direction: column;
                     gap: 16px;
                     display: inline-flex;
+
+                    .titleText {
+                        font-size: 24px;
+                    }
+                    .misionContent {
+                        font-size:  16px;
+                    }
                 }
             }
         }

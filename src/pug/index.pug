@@ -18,14 +18,14 @@ html(lang='en')
                             .btnshopWrapperHero1
                                 a.btnshopLink(href="products.html")
                                     span.shopLinkText Beli sekarang
-                                    img(src="./assets/img/icon/ic_arrow_right.svg")
+                                    img.ic_size(src="./assets/img/icon/ic_arrow_right.svg")
                     .carousel-item
                         .row.align-items-center
                             img.imgHeroItem(src="./assets/img/Hero 2.png", alt="Snovv Banner")
                             .btnshopWrapperHero2
                                 a.btnshopLink(href="productDetail3.html")
                                     span.shopLinkText Beli sekarang
-                                    img(src="./assets/img/icon/ic_arrow_right.svg")
+                                    img.ic_size(src="./assets/img/icon/ic_arrow_right.svg")
                     .carousel-item
                         .row.align-items-center
                             img.imgHeroItem(src="./assets/img/Hero 3.png", alt="Snovv Banner")
@@ -58,6 +58,8 @@ html(lang='en')
                         .productDescWrapper
                             span.productName Snovv Magnesium
                             .priceproductWrapper#priceTagcss2
+                            
+                    a.cardProduct#showOnlyDesktop(href="productDetail3.html")
 
         // Section Promotion Banner
         section.promo-section
@@ -79,7 +81,7 @@ html(lang='en')
                         .d-flex.justify-content-center
                             img.itemPromo(src="./assets/img/promo1.png" alt="Snovv Promo")                            
                         
-                a.carousel-control-prev(type="button" data-bs-target="#promoCarau sel" data-bs-slide="prev")
+                a.carousel-control-prev(type="button" data-bs-target="#promoCarausel" data-bs-slide="prev")
                     span.carousel-control-prev-icon(aria-hidden="true")
                     span.visually-hidden Sebelumnya
                 a.carousel-control-next(type="button" data-bs-target="#promoCarausel" data-bs-slide="next")
@@ -105,7 +107,7 @@ html(lang='en')
                                                 span.fa.fa-star
                                                 span.fa.fa-star
                                                 span.fa.fa-star
-                                            p.websiterevText Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah
+                                            p.websiterevText#expandText1(onclick="expandtext(this.id)") Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah
                                             .custInfoWrapper
                                                 img.userFoto(src="./assets/img/userWeb1.png")
                                                 .userNameDateWrapper
@@ -123,7 +125,7 @@ html(lang='en')
                                                 span.fa.fa-star
                                                 span.fa.fa-star
                                                 span.fa.fa-star
-                                            p.websiterevText I like that the dosage is printed neatly on the front. I had a blood test for vitamin D and it came out to be insufficient, so I am taking this product that also contains other ingredients.
+                                            p.websiterevText#expandText2(onclick="expandtext(this.id)") I like that the dosage is printed neatly on the front. I had a blood test for vitamin D and it came out to be insufficient, so I am taking this product that also contains other ingredients.
                                             .custInfoWrapper
                                                 img.userFoto(src="./assets/img/userWeb1.png")
                                                 .userNameDateWrapper
@@ -141,7 +143,7 @@ html(lang='en')
                                                 span.fa.fa-star
                                                 span.fa.fa-star
                                                 span.fa.fa-star
-                                            p.websiterevText Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah
+                                            p.websiterevText#expandText3(onclick="expandtext(this.id)") Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah
                                             .custInfoWrapper
                                                 img.userFoto(src="./assets/img/userWeb1.png")
                                                 .userNameDateWrapper
@@ -159,7 +161,7 @@ html(lang='en')
                                                 span.fa.fa-star
                                                 span.fa.fa-star
                                                 span.fa.fa-star
-                                            p.websiterevText Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah
+                                            p.websiterevText#expandText4(onclick="expandtext(this.id)") Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah
                                             .custInfoWrapper
                                                 img.userFoto(src="./assets/img/userWeb1.png")
                                                 .userNameDateWrapper
@@ -177,7 +179,7 @@ html(lang='en')
                                                 span.fa.fa-star
                                                 span.fa.fa-star
                                                 span.fa.fa-star
-                                            p.websiterevText Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah
+                                            p.websiterevText#expandText5(onclick="expandtext(this.id)") Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah
                                             .custInfoWrapper
                                                 img.userFoto(src="./assets/img/userWeb1.png")
                                                 .userNameDateWrapper
@@ -195,7 +197,7 @@ html(lang='en')
                                                 span.fa.fa-star
                                                 span.fa.fa-star
                                                 span.fa.fa-star
-                                            p.websiterevText Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah
+                                            p.websiterevText#expandText6(onclick="expandtext(this.id)") Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah
                                             .custInfoWrapper
                                                 img.userFoto(src="./assets/img/userWeb1.png")
                                                 .userNameDateWrapper
@@ -224,10 +226,7 @@ html(lang='en')
                         .carousel-item
                             img.btnPlay(src="./assets/img/icon/ic_playIG.png")
                             img.IGimg(src="./assets/img/igVid.png")
-                        .carousel-item
-                            img.btnPlay(src="./assets/img/icon/ic_playIG.png")
-                            img.IGimg(src="./assets/img/igVid.png")
-                        .carousel-item
+                        .carousel-item.active
                             img.btnPlay(src="./assets/img/icon/ic_playIG.png")
                             img.IGimg(src="./assets/img/igVid.png")
                         .carousel-item
@@ -265,7 +264,7 @@ html(lang='en')
                                             span.fa.fa-star(style="color:orange")
                                             span.fa.fa-star(style="color:orange")
                                             span.fa.fa-star(style="color:orange")
-                                        p.textReview “Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah”
+                                        p.textReview#expandText7(onclick="expandtext(this.id)") “Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah”
                                         .userWrapper
                                             img.iconShop(src="./assets/img/icon/ic_shopee.png")
                                             .dateInfo
@@ -282,7 +281,7 @@ html(lang='en')
                                             span.fa.fa-star(style="color:orange")
                                             span.fa.fa-star(style="color:orange")
                                             span.fa.fa-star(style="color:orange")
-                                        p.textReview “On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.”
+                                        p.textReview#expandText8(onclick="expandtext(this.id)") “On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.”
                                         .userWrapper
                                             img.iconShop(src="./assets/img/icon/ic_tokped.png")
                                             .dateInfo
@@ -299,7 +298,7 @@ html(lang='en')
                                             span.fa.fa-star(style="color:orange")
                                             span.fa.fa-star(style="color:orange")
                                             span.fa.fa-star(style="color:orange")
-                                        p.textReview “On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.”
+                                        p.textReview#expandText9(onclick="expandtext(this.id)") “On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.”
                                         .userWrapper
                                             img.iconShop(src="./assets/img/icon/ic_tokped.png")
                                             .dateInfo
@@ -357,7 +356,17 @@ html(lang='en')
         script.
             const width = window.innerWidth;
             console.log(width);
-       
+
+            function expandtext(currentId) {
+                const revTextWeb = document.getElementById(currentId);
+                    console.log(revTextWeb.style.display);
+                if (revTextWeb.style.display === '-webkit-box') {
+                    revTextWeb.style.display = 'flex';
+                }else{
+                    revTextWeb.style.display = '-webkit-box';
+                }
+            }
+
             function changeToVideo() {
                 // Reference to the image element
                 const imgElement = document.getElementById('youtubeImg');
@@ -406,9 +415,11 @@ html(lang='en')
 
             // Function to handle the window resize
             function handleResize() {
-                let priceWrappercss = "";
+                let priceWrappercss1 = "";
+                let priceWrappercss2 = "";
+                let itemProductDesktop = "";
                 if (window.innerWidth < 800) {
-                    priceWrappercss = `
+                    priceWrappercss1 = `
                         <span class="discountPrice"> ± Rp 350.000 </span>
                         <div class="mobilediscountWrapper">
                             <span class="normalPrice"> Rp 500.000 </span>
@@ -416,16 +427,48 @@ html(lang='en')
                                 <span class="rateText"> 43% </span>
                             </div>
                         </div>`;
+                    priceWrappercss2 = `
+                        <span class="discountPrice"> ± Rp 350.000 </span>
+                        <div class="mobilediscountWrapper">
+                            <span class="normalPrice"> Rp 500.000 </span>
+                            <div class="ratediscountWrapper">
+                                <span class="rateText"> 43% </span>
+                            </div>
+                        </div>`;
+                     const link = document.getElementById('showOnlyDesktop');
+                     link.style.display = 'none';
+
                 } else {
-                    priceWrappercss = `
+                    priceWrappercss1 = `
                         <span class="discountPrice"> ± Rp 450.000 </span>
                         <span class="normalPrice"> Rp 950.000 </span>
                         <div class="ratediscountWrapper">
                             <span class="rateText"> 43% </span>
                         </div>`;
-                }
+                    priceWrappercss2 = `
+                        <span class="discountPrice"> ± Rp 450.000 </span>
+                        <span class="normalPrice"> Rp 950.000 </span>
+                        <div class="ratediscountWrapper">
+                            <span class="rateText"> 43% </span>
+                        </div>`;
 
-                $('#priceTagcss1,#priceTagcss2').append(priceWrappercss);
+                    itemProductDesktop = `
+                        <div class="pictProductWrapper">
+                            <img class="pictProduct" src="./assets/img/product3.png"/>
+                        </div>
+                        <div class="productDescWrapper">
+                            <span class="productName"> Snovv Liposome Vitamin C </span>
+                            <div class="priceproductWrapper">
+                            <span class="discountPrice"> ± Rp 450.000 </span>
+                            <span class="normalPrice"> Rp 950.000 </span>
+                            <div class="ratediscountWrapper">
+                                <span class="rateText"> 43% </span>
+                            </div>
+                        </div>`;
+                    $('#showOnlyDesktop').append(itemProductDesktop);
+                }
+                $('#priceTagcss1').append(priceWrappercss1);
+                $('#priceTagcss2').append(priceWrappercss2);
             }
             
             window.addEventListener('resize', handleResize);

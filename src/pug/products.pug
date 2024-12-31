@@ -32,21 +32,21 @@ html(lang='en')
                                 span.productName Snovv Liposome Vitamin C
                                 .priceWrapper#priceTagcss3
                     li.product
-                        a.linkToDetail(href="productDetail.html")
+                        a.linkToDetail(href="productDetail3.html")
                             .imgWrapper
                                 img.imgProduct(src="./assets/img/product4.png")
                             .infoProduct
                                 span.productName Snovv Glutathione + Vitamin C
                                 .priceWrapper#priceTagcss4
                     li.product
-                        a.linkToDetail(href="productDetail.html")
+                        a.linkToDetail(href="productDetail3.html")
                             .imgWrapper
                                 img.imgProduct(src="./assets/img/product5.png")
                             .infoProduct
                                 span.productName Snovv 3 Mini Pack
                                 .priceWrapper#priceTagcss5
                     li.product
-                        a.linkToDetail(href="productDetail.html")
+                        a.linkToDetail(href="productDetail3.html")
                             .imgWrapper
                                 img.imgProduct(src="./assets/img/product5.png")
                             .infoProduct
@@ -59,9 +59,54 @@ html(lang='en')
         script.
             // Function to handle the window resize
             function handleResize() {
-                let priceWrappercss = "";
+                let priceWrappercss1 = "";
+                let priceWrappercss2 = "";
+                let priceWrappercss3 = "";
+                let priceWrappercss4 = "";
+                let priceWrappercss5 = "";
+                let priceWrappercss6 = "";
                 if (window.innerWidth < 800) {
-                    priceWrappercss = `
+                    priceWrappercss1 = `
+                        <span class="discountPrice"> ± Rp 350.000 </span>
+                        <div class="mobilediscountWrapper">
+                            <span class="normalPrice"> Rp 500.000 </span>
+                            <div class="rateWrapper">
+                                <span class="numberRate"> 43% </span>
+                            </div>
+                        </div>`;
+                    priceWrappercss2 = `
+                        <span class="discountPrice"> ± Rp 350.000 </span>
+                        <div class="mobilediscountWrapper">
+                            <span class="normalPrice"> Rp 500.000 </span>
+                            <div class="rateWrapper">
+                                <span class="numberRate"> 43% </span>
+                            </div>
+                        </div>`;
+                    priceWrappercss3 = `
+                        <span class="discountPrice"> ± Rp 350.000 </span>
+                        <div class="mobilediscountWrapper">
+                            <span class="normalPrice"> Rp 500.000 </span>
+                            <div class="rateWrapper">
+                                <span class="numberRate"> 43% </span>
+                            </div>
+                        </div>`;
+                    priceWrappercss4 = `
+                        <span class="discountPrice"> ± Rp 350.000 </span>
+                        <div class="mobilediscountWrapper">
+                            <span class="normalPrice"> Rp 500.000 </span>
+                            <div class="rateWrapper">
+                                <span class="numberRate"> 43% </span>
+                            </div>
+                        </div>`;
+                    priceWrappercss5 = `
+                        <span class="discountPrice"> ± Rp 350.000 </span>
+                        <div class="mobilediscountWrapper">
+                            <span class="normalPrice"> Rp 500.000 </span>
+                            <div class="rateWrapper">
+                                <span class="numberRate"> 43% </span>
+                            </div>
+                        </div>`;
+                    priceWrappercss6 = `
                         <span class="discountPrice"> ± Rp 350.000 </span>
                         <div class="mobilediscountWrapper">
                             <span class="normalPrice"> Rp 500.000 </span>
@@ -70,7 +115,37 @@ html(lang='en')
                             </div>
                         </div>`;
                 } else {
-                    priceWrappercss = `
+                    priceWrappercss1 = `
+                        <span class="discountPrice"> ± Rp 450.000 </span>
+                        <span class="normalPrice"> Rp 950.000 </span>
+                        <div class="rateWrapper">
+                            <span class="numberRate"> 43% </span>
+                        </div>`;
+                    priceWrappercss2 = `
+                        <span class="discountPrice"> ± Rp 450.000 </span>
+                        <span class="normalPrice"> Rp 950.000 </span>
+                        <div class="rateWrapper">
+                            <span class="numberRate"> 43% </span>
+                        </div>`;
+                    priceWrappercss3 = `
+                        <span class="discountPrice"> ± Rp 450.000 </span>
+                        <span class="normalPrice"> Rp 950.000 </span>
+                        <div class="rateWrapper">
+                            <span class="numberRate"> 43% </span>
+                        </div>`;
+                    priceWrappercss4 = `
+                        <span class="discountPrice"> ± Rp 450.000 </span>
+                        <span class="normalPrice"> Rp 950.000 </span>
+                        <div class="rateWrapper">
+                            <span class="numberRate"> 43% </span>
+                        </div>`;
+                    priceWrappercss5 = `
+                        <span class="discountPrice"> ± Rp 450.000 </span>
+                        <span class="normalPrice"> Rp 950.000 </span>
+                        <div class="rateWrapper">
+                            <span class="numberRate"> 43% </span>
+                        </div>`;
+                    priceWrappercss6 = `
                         <span class="discountPrice"> ± Rp 450.000 </span>
                         <span class="normalPrice"> Rp 950.000 </span>
                         <div class="rateWrapper">
@@ -78,7 +153,12 @@ html(lang='en')
                         </div>`;
                 }
 
-                $('#priceTagcss1,#priceTagcss2,#priceTagcss3,#priceTagcss4,#priceTagcss5,#priceTagcss6').append(priceWrappercss);
+                $('#priceTagcss1').append(priceWrappercss1);
+                $('#priceTagcss2').append(priceWrappercss2);
+                $('#priceTagcss3').append(priceWrappercss3);
+                $('#priceTagcss4').append(priceWrappercss4);
+                $('#priceTagcss5').append(priceWrappercss5);
+                $('#priceTagcss6').append(priceWrappercss6);
             }
 
             // Attach the resize event listener

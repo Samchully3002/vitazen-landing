@@ -503,7 +503,7 @@
           }
   
           .multiple-card-slider .carousel-inner {
-            width: 320px; height: 100%;
+            width: 320px; height: 100%; overflow: scroll; padding-bottom: 20px;
 
             .carousel-item.active, .carousel-item {
               width: 80px; height: 80px;

@@ -288,7 +288,6 @@ html(lang='en')
                 var currentCarouselId = '#' + $(this).attr('id');
                 const multipleItemCarousel = document.querySelector(currentCarouselId);
 
-                if(window.matchMedia("(min-width:576px)").matches){
                     const carousel = new bootstrap.Carousel(multipleItemCarousel, {
                         interval: false,
                         wrap: false
@@ -310,9 +309,6 @@ html(lang='en')
                             $(currentCarouselId + ' .carousel-inner').animate({scrollLeft: scrollPosition},600);
                         }
                     });
-                }else{
-                    $(multipleItemCarousel).addClass('slide');
-                }
             });
 
             // Function to handle the window resize
