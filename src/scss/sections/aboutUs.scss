@@ -202,6 +202,7 @@
                 .imgLogo1 {
                     display: block;
                     width: 100%; height: 243px;
+                    object-fit: fill;
                 }
                 .text-logo-parent {
                     width: fit-content;
@@ -254,7 +255,7 @@
         }
 
         .thirdContent {
-            padding: 50px 20px;
+            padding: 30px 20px;
             flex-direction: column;
             display: flex;
         

@@ -41,7 +41,7 @@ html(lang='en')
         section.products-home
             .productWrapper
                 .headerWrapper
-                    span.titleText Produk
+                    h1 Produk
                     .viewmoreWrapper
                         a.btnViewmore(href="products.html") Lihat lainnya
                 .listproductWrapper
@@ -70,15 +70,15 @@ html(lang='en')
                     button(type="button" data-bs-target="#promoCarausel" data-bs-slide-to="2")
                 .carousel-inner
                     .carousel-item.active
-                        .d-flex.justify-content-center
+                        a.d-flex.justify-content-center(href="productDetail3.html")
                             img.itemPromo(src="./assets/img/promo1.png" alt="Snovv Promo")
                         
                     .carousel-item
-                        .d-flex.justify-content-center
+                        a.d-flex.justify-content-center(href="productDetail3.html")
                             img.itemPromo(src="./assets/img/promo1.png" alt="Snovv Promo")
                         
                     .carousel-item
-                        .d-flex.justify-content-center
+                        a.d-flex.justify-content-center(href="productDetail3.html")
                             img.itemPromo(src="./assets/img/promo1.png" alt="Snovv Promo")                            
                         
                 a.carousel-control-prev(type="button" data-bs-target="#promoCarausel" data-bs-slide="prev")
@@ -90,11 +90,11 @@ html(lang='en')
 
         // Section Website Review
         section.reviewWebsite
-            span.titleTextrev Apa Kata Mereka?
-            .container
+            .reviewCover
+                h1.text-center Apa Kata Mereka?
                 .multiple-card-slider
                     .carousel#carouselWebsiteRev(data-bs-ride="false")
-                        .mobilerapperrev
+                        .container
                             .carousel-inner
                                 .carousel-item
                                     .websiterevWrapper
@@ -211,42 +211,43 @@ html(lang='en')
                                 span.visually-hidden Berikutnya
            
         section.reviewIGVid
-            .multiple-card-slider
-                .carousel#igCarausel(data-bs-ride="false")
-                    .carousel-inner
-                        .carousel-item
-                            img.btnPlay(src="./assets/img/icon/ic_playIG.png")
-                            img.IGimg(src="./assets/img/igVid.png")
-                        .carousel-item
-                            img.btnPlay(src="./assets/img/icon/ic_playIG.png")
-                            img.IGimg(src="./assets/img/igVid.png")
-                        .carousel-item
-                            img.btnPlay(src="./assets/img/icon/ic_playIG.png")
-                            img.IGimg(src="./assets/img/igVid.png")
-                        .carousel-item
-                            img.btnPlay(src="./assets/img/icon/ic_playIG.png")
-                            img.IGimg(src="./assets/img/igVid.png")
-                        .carousel-item.active
-                            img.btnPlay(src="./assets/img/icon/ic_playIG.png")
-                            img.IGimg(src="./assets/img/igVid.png")
-                        .carousel-item
-                            img.btnPlay(src="./assets/img/icon/ic_playIG.png")
-                            img.IGimg(src="./assets/img/igVid.png")
-                        .carousel-item
-                            img.btnPlay(src="./assets/img/icon/ic_playIG.png")
-                            img.IGimg(src="./assets/img/igVid.png")
-                        .carousel-item
-                            img.btnPlay(src="./assets/img/icon/ic_playIG.png")
-                            img.IGimg(src="./assets/img/igVid.png")
-                        .carousel-item
-                            img.btnPlay(src="./assets/img/icon/ic_playIG.png")
-                            img.IGimg(src="./assets/img/igVid.png")
-                    button.carousel-control-prev(type="button" data-bs-target="#igCarausel" data-bs-slide="prev")
-                        span.carousel-control-prev-icon
-                        span.visually-hidden Sebelumnya
-                    button.carousel-control-next(type="button" data-bs-target="#igCarausel" data-bs-slide="next")
-                        span.carousel-control-next-icon(aria-hidden="true")
-                        span.visually-hidden Berikutnya
+            .reviewCoverIG
+                .multiple-card-slider
+                    .carousel#igCarausel(data-bs-ride="false")
+                        .carousel-inner
+                            .carousel-item
+                                img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                                img.IGimg(src="./assets/img/igVid.png")
+                            .carousel-item
+                                img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                                img.IGimg(src="./assets/img/igVid.png")
+                            .carousel-item
+                                img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                                img.IGimg(src="./assets/img/igVid.png")
+                            .carousel-item
+                                img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                                img.IGimg(src="./assets/img/igVid.png")
+                            .carousel-item.active
+                                img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                                img.IGimg(src="./assets/img/igVid.png")
+                            .carousel-item
+                                img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                                img.IGimg(src="./assets/img/igVid.png")
+                            .carousel-item
+                                img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                                img.IGimg(src="./assets/img/igVid.png")
+                            .carousel-item
+                                img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                                img.IGimg(src="./assets/img/igVid.png")
+                            .carousel-item
+                                img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                                img.IGimg(src="./assets/img/igVid.png")
+                        button.carousel-control-prev(type="button" data-bs-target="#igCarausel" data-bs-slide="prev")
+                            span.carousel-control-prev-icon
+                            span.visually-hidden Sebelumnya
+                        button.carousel-control-next(type="button" data-bs-target="#igCarausel" data-bs-slide="next")
+                            span.carousel-control-next-icon(aria-hidden="true")
+                            span.visually-hidden Berikutnya
 
         section.reviewShop
             .container
@@ -325,7 +326,7 @@ html(lang='en')
         section.vSight-Home
             .vSight-Wrapper 
                 .vSight-Header
-                    span.vSight-Title V-Sight
+                    h1 V-Sight
                     a.vSightlist-Link(href="v-sight.html")
                         span.btnLinkvSight Lihat lainnya
                 .containerList-vSight
@@ -356,6 +357,8 @@ html(lang='en')
         script.
             const width = window.innerWidth;
             console.log(width);
+
+            //- Function Load Data from API
 
             function expandtext(currentId) {
                 const revTextWeb = document.getElementById(currentId);
@@ -413,13 +416,17 @@ html(lang='en')
                 imgElement.parentNode.replaceChild(videoElement, imgElement);
             }
 
+            function isMobileDevice() {
+                return window.innerWidth <= 768; // Adjust the width threshold as needed
+            }
+
             // Function to handle the window resize
-            function handleResize() {
-                let priceWrappercss1 = "";
-                let priceWrappercss2 = "";
+            function createAppend() {
+
+                let priceWrappercss = "";
                 let itemProductDesktop = "";
                 if (window.innerWidth < 800) {
-                    priceWrappercss1 = `
+                    priceWrappercss = `
                         <span class="discountPrice"> ± Rp 350.000 </span>
                         <div class="mobilediscountWrapper">
                             <span class="normalPrice"> Rp 500.000 </span>
@@ -427,25 +434,17 @@ html(lang='en')
                                 <span class="rateText"> 43% </span>
                             </div>
                         </div>`;
-                    priceWrappercss2 = `
-                        <span class="discountPrice"> ± Rp 350.000 </span>
-                        <div class="mobilediscountWrapper">
-                            <span class="normalPrice"> Rp 500.000 </span>
-                            <div class="ratediscountWrapper">
-                                <span class="rateText"> 43% </span>
-                            </div>
-                        </div>`;
+                    const existingChild1 = document.getElementById('#priceTagcss1');
+                    const existingChild2 = document.getElementById('#priceTagcss2');
+                    if ((existingChild1) && (existingChild2)){
+                        $('#priceTagcss1').removeChild(existingChild1);
+                        $('#priceTagcss2').removeChild(existingChild2);
+                    }
                      const link = document.getElementById('showOnlyDesktop');
                      link.style.display = 'none';
 
                 } else {
-                    priceWrappercss1 = `
-                        <span class="discountPrice"> ± Rp 450.000 </span>
-                        <span class="normalPrice"> Rp 950.000 </span>
-                        <div class="ratediscountWrapper">
-                            <span class="rateText"> 43% </span>
-                        </div>`;
-                    priceWrappercss2 = `
+                    priceWrappercss = `
                         <span class="discountPrice"> ± Rp 450.000 </span>
                         <span class="normalPrice"> Rp 950.000 </span>
                         <div class="ratediscountWrapper">
@@ -467,12 +466,40 @@ html(lang='en')
                         </div>`;
                     $('#showOnlyDesktop').append(itemProductDesktop);
                 }
-                $('#priceTagcss1').append(priceWrappercss1);
-                $('#priceTagcss2').append(priceWrappercss2);
+                $('#priceTagcss1').append(priceWrappercss);
+                $('#priceTagcss2').append(priceWrappercss);
             }
+
+            let isAppending = false; // Prevent multiple appends at the same time
+            window.addEventListener("scroll", () => {
+                if (!isMobileDevice()) return; // Skip appending if not a mobile device
+                    const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+
+                // Check if the user scrolled near the bottom
+                if (scrollTop + clientHeight >= scrollHeight - 1 && !isAppending) {
+                    isAppending = true; // Block multiple executions
+                    createAppend(); // Add new content
+                    isAppending = false; // Allow further appends
+                    // Simulated delay for appending
+                }
+            });
+
+            //- if (isMobileDevice()) {
+            //-     createAppend();
+            //- }
+
+            function debounce(func, wait) {
+                let timeout;
+                return function () {
+                    const context = this, args = arguments;
+                    clearTimeout(timeout);
+                    timeout = setTimeout(() => func.apply(context, args), wait);
+                };
+            }
+
             
-            window.addEventListener('resize', handleResize);
-            handleResize();
+            window.addEventListener('resize', debounce(createAppend, 200));
+            //- createAppend();
 
             $('.multiple-card-slider .carousel').each(function(){
                 var currentCarouselId = '#' + $(this).attr('id');
