@@ -37,8 +37,8 @@
   }
 
   .imgWrapper {
-    width: 392px;
-    height: 400px;
+    width: 100%;
+    height: auto;
     border-radius: 10px;
     overflow: hidden;
     flex-direction: column;
@@ -48,8 +48,8 @@
   }
 
   .imgProduct {
-    width: 392px;
-    height: 400px
+    width: 100%;
+    height: auto;
   }
 
   .infoProduct {
@@ -63,11 +63,11 @@
   }
 
   .productName {
+    margin-bottom: 5px;
     color: black; 
     font-size: 20px;
     font-family: Poppins; 
     font-weight: 400; 
-    line-height: 32px; 
     word-wrap: break-word
   }
 
@@ -76,7 +76,14 @@
     justify-content: flex-start; 
     align-items: center; 
     gap: 10px; 
-    display: inline-flex
+    display: inline-flex;
+  }
+  .priceGroup {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; 
+    align-items: center; 
+    justify-content: center;
   }
 
   .discountPrice {
@@ -84,7 +91,6 @@
     font-size: 18px; 
     font-family: Plus Jakarta Sans !important; 
     font-weight: 700; 
-    line-height: 28.80px; 
     word-wrap: break-word
   }
   .normalPrice {
@@ -95,28 +101,19 @@
     font-weight: 500; 
     text-decoration: line-through; 
     text-transform: capitalize; 
-    line-height: 16.80px; 
     word-wrap: break-word
   }
 
-  .rateWrapper {
-    padding-left: 8px; 
-    padding-right: 8px; 
-    padding-top: 5px; 
-    padding-bottom: 5px; 
+  .numberRate {
+    padding:5px 8px; 
     background: #FFC9C9; 
     border-radius: 50px; 
-    justify-content: center; align-items: center; 
-    gap: 2px; 
-    display: flex
-  }
-
-  .numberRate {
     color: #CF0003; 
+    gap: 2px; 
+    justify-content: center; align-items: center; 
     font-size: 14px; 
     font-family: Inter; 
     font-weight: 700; 
-    line-height: 16.80px; 
     word-wrap: break-word
   }
   .linkToDetail:hover {
@@ -124,17 +121,20 @@
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
 
   .listproducts {
-    padding: 50px 20px;
+    padding: 30px 20px;
     h1 {
-      font-size: 36px;
+      font-size: 32px;
     }
 
     .product-container{
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 28px;
+      gap: 16px;
+    }
+    .linkToDetail {
+      gap: 10px; 
     }
 
     .imgWrapper {
@@ -148,33 +148,27 @@
     }
 
     .productName {
-      font-size: 16px;
+      font-size: 1.8vh;
     }
 
     .priceWrapper {
       justify-content: flex-start; 
       align-items: flex-start; 
-      flex-direction: column;
+      flex-direction: column; 
       gap: 3px;
     }
+    .priceGroup {
+      flex-direction: row;
+    }
     .discountPrice {
-      font-size: 16px;
+      font-size: 1.8vh;
     }
     .normalPrice { 
-      font-size: 14px;
+      font-size: 11px;
     }
-    .mobilediscountWrapper {
-      display: inline-flex;
-      gap: 10px;
-    }
-    .rateWrapper {
-      padding-left: 5px; 
-      padding-right: 5px; 
-      padding-top: 3px; 
-      padding-bottom: 3px;
-    }
-    .numberRate {
-      font-size: 11px; 
+    .numberRate {      
+      padding:2px 5px; 
+      font-size: 10px; 
     }
   }
 }

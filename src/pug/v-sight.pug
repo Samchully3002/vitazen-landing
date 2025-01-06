@@ -7,12 +7,12 @@ html(lang='en')
 
         // Section Top Product
         section.vSightpage
-            .text-center
-                span.title V-Sight
-            .row
+            .headerBox
+                .text-center
+                    h1.title V-Sight
                 .dropdown.d-flex.justify-content-end
-                    span.align-self-center(style="padding-right:15px;") Urutkan berdasarkan
-                    a.btn.btn-outline-secondary.dropdown-toggle#filterDropdown(href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false") Terbaru
+                    span.align-self-center#hideForMobile(style="padding-right:15px;") Urutkan berdasarkan
+                    a.btn.btn-outline-secondary.btn-sm.dropdown-toggle#filterDropdown(href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false") Terbaru
                     ul.dropdown-menu(aria-labelledby="filterDropdown")
                         li
                             a.dropdown-item(href="#") Date
@@ -20,47 +20,48 @@ html(lang='en')
                             a.dropdown-item(href="#") Rating
                         li
                             a.dropdown-item(href="#") Media
-                            
+                
+            .row            
                 ul.vsight-container
                     li.vsight
                         a.linkToDetail(href="detailVsight.html")
-                            img.Vimg(src="./assets/img/article4.jpg")
+                            img.Vimg(src="./assets/img/article1.jpg")
                             .Vwrapper
                                 span.vTitle 7 Rekomendasi Suplemen Korea
                                 span.vDate 1 November 2024
                     li.vsight
                         a.linkToDetail(href="detailVsight.html")
-                            img.Vimg(src="./assets/img/article5.jpg")
+                            img.Vimg(src="./assets/img/article2.jpg")
                             .Vwrapper
                                 span.vTitle Sehat di dalam, Segar di luar
                                 span.vDate 1 November 2024
                     li.vsight
                         a.linkToDetail(href="detailVsight.html")
-                            img.Vimg(src="./assets/img/article6.jpg")
+                            img.Vimg(src="./assets/img/article3.jpg")
                             .Vwrapper
                                 span.vTitle 7 Kunci Menjaga Wajah Tetap Cerah Sepanjang Hari
                                 span.vDate 1 November 2024
                     li.vsight
                         a.linkToDetail(href="detailVsight.html")
-                            img.Vimg(src="./assets/img/article4.jpg")
+                            img.Vimg(src="./assets/img/article1.jpg")
                             .Vwrapper
                                 span.vTitle 7 Rekomendasi Suplemen Korea
                                 span.vDate 1 November 2024
                     li.vsight
                         a.linkToDetail(href="detailVsight.html")
-                            img.Vimg(src="./assets/img/article5.jpg")
+                            img.Vimg(src="./assets/img/article2.jpg")
                             .Vwrapper
                                 span.vTitle 7 Recommended Korean Supplements
                                 span.vDate 1 November 2024
                     li.vsight
                         a.linkToDetail(href="detailVsight.html")
-                            img.Vimg(src="./assets/img/article6.jpg")
+                            img.Vimg(src="./assets/img/article3.jpg")
                             .Vwrapper
                                 span.vTitle Sehat di dalam, Segar di luar
                                 span.vDate 1 November 2024
                     li.vsight
                         a.linkToDetail(href="detailVsight.html")
-                            img.Vimg(src="./assets/img/article4.jpg")
+                            img.Vimg(src="./assets/img/article1.jpg")
                             .Vwrapper
                                 span.vTitle 7 Kunci Menjaga Wajah Tetap Cerah Sepanjang Hari
                                 span.vDate 1 November 2024

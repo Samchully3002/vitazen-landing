@@ -13,13 +13,12 @@
         align-items: center; display: flex;
         
         .logo-parent {
-            width: fit-content; height: fit-content; background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%); border-top-left-radius: 20px; border-top-right-radius: 20px; overflow: hidden; position: relative; display: inline-block;
+            width: 100%; height: fit-content; background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%); border-top-left-radius: 20px; border-top-right-radius: 20px; overflow: hidden; position: relative; display: inline-block;
             .imgLogo1 {
                 display: block;
-                width: 100%; height: 587px;
+                width: 100%; height: fit-content;   
             }
             .text-logo-parent {
-                width: fit-content;
                 height: 43px;
                 position: absolute;
                 top: 50%;
@@ -32,7 +31,7 @@
             align-self: stretch; height: fit-content; padding: 100px; background: #F9F9F9; border-radius: 20px; flex-direction: column; justify-content: center; align-items: center; gap: 16px; display: flex;
 
             .titleText {
-                align-self: stretch; text-align: center; color: #020E35; font-size: 32px; font-family: Poppins; font-weight: 700; letter-spacing: 0.56px; word-wrap: break-word;
+                align-self: stretch; text-align: center; color: #020E35; font-size: 32px; font-family: Poppins; font-weight: 500; letter-spacing: 0.56px; word-wrap: break-word;
             }
             .descText1 {
                 width: 100%; text-align: center; color: #020E35; font-size: 20px; font-family: Inter; font-weight: 500; line-height: 26px; letter-spacing: 0.16px; word-wrap: break-word;
@@ -42,7 +41,7 @@
             }
         }
         .logo2 {
-            width: 100%; height: 100%; position: relative;
+            width: 100%; height: fit-content; position: relative;
         }
 
     }
@@ -91,8 +90,19 @@
                     width: 100%; align-self: stretch; color: #020E35; font-size: 20px; font-family: Inter; font-weight: 400; line-height: 26px; letter-spacing: 0.16px; word-wrap: break-word;
                 }
             }
-            .imgVision {
-                width: 100%; height: fit-content; position: relative; background: linear-gradient(0deg,  0%,  100%); border-radius: 20px; overflow: hidden;
+            .wrapperimgVision {
+                position: relative;
+                width: 100%;
+                height: fit-content;
+                overflow: hidden;
+                .imgVision {
+                    background: linear-gradient(0deg,  0%,  100%);
+                    border-radius: 20px;
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
             }
         }
 
@@ -108,8 +118,19 @@
                     width: 100%; align-self: stretch; color: #020E35; font-size: 20px; font-family: Inter; font-weight: 400; line-height: 26px; letter-spacing: 0.16px; word-wrap: break-word;
                 }
             }
-            .imgMision {
-                width: 100%; height: fit-content; position: relative; background: linear-gradient(0deg,  0%,  100%); border-radius: 20px;
+            .wrapperimgMision {
+                position: relative;
+                width: 100%;
+                height: fit-content;
+                overflow: hidden;
+                .imgMision {
+                    background: linear-gradient(0deg,  0%,  100%);
+                    border-radius: 20px;
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
             }
         }
     }
@@ -129,8 +150,19 @@
                     align-self: stretch; color: #020E35; font-size: 20px; font-family: Inter; font-weight: 400; line-height: 26px; letter-spacing: 0.16px; word-wrap: break-word;
                 }
             }
-            .imgRight {
-                width: 100%; height: fit-content; position: relative; background: linear-gradient(0deg,  0%,  100%); border-radius: 20px; overflow: hidden;
+            .wrapperImgRight {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                .imgRight {
+                    border-radius: 20px;
+                    object-position: center;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover; 
+                    display: block; /* Menghindari ruang bawaan inline elemen img */
+                }
             }
         }
 
@@ -146,8 +178,18 @@
                     align-self: stretch; color: #020E35; font-size: 20px; font-family: Inter; font-weight: 400; line-height: 26px; letter-spacing: 0.16px; word-wrap: break-word;
                 }
             }
-            .imgLeft {
-                width: 100%; height: fit-content; position: relative; background: linear-gradient(0deg,  0%,  100%); border-radius: 20px;
+            .wrapperImgLeft {
+                position: relative;
+                width: 100%;
+                height: fit-content;
+                overflow: hidden;
+                .imgLeft {
+                    border-radius: 20px;
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
             }
         }
         .logo3 {
@@ -188,24 +230,27 @@
                 }
                 .storeIconWrapper {
                     justify-content: flex-start; align-items: center; gap: 50px; display: inline-flex;
+                    .storeIC {
+                        height: 40px;
+                    }
                 }
             }
         }
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
     .aboutUs-section {
-        padding: unset;
+        padding: 50px 0;
         .firstContent {
             .logo-parent {
                 .imgLogo1 {
-                    display: block;
-                    width: 100%; height: 243px;
+                    display: flex;
+                    width: 100%;
+                    height: 236px;
                     object-fit: fill;
                 }
                 .text-logo-parent {
-                    width: fit-content;
                     height: 23px;
                 }
             }
@@ -214,24 +259,27 @@
                 flex-direction: column;
                 gap: 16px;
                 .titleText {
-                    font-size: 22px;
+                    font-size: 28px;
                 }
                 .descText1 {
-                    font-size: 16px;
+                    font-size: 18px;
                 }
                 .descText2 {
-                    font-size: 14px;
+                    font-size: 16px;
                 }
+            }
+            .logo2 {
+                object-fit: contain;
+                content: url("../assets/img/aboutUs/Logo2_m.jpg");
             }
         }
 
         .secondContent {
             padding: 50px 20px;
             flex-direction: column;
-            gap: 50px;
         
             .textWrapper {
-                gap: 50px;
+                gap: 30px;
                 display: inline-flex;
                 flex-direction: column;
                 .titleText {
@@ -239,10 +287,10 @@
                 }
                 .definisiText {
                     flex-direction: column;
-                    gap: 20px;
+                    gap: 10px;
 
                     .logoTitle {
-                        padding: 7px 10px;
+                        padding: 5px 15px;
                         .logoText {
                             font-size: 18px;
                         }
@@ -255,21 +303,27 @@
         }
 
         .thirdContent {
-            padding: 30px 20px;
+            padding: 30px 0;
             flex-direction: column;
             display: flex;
         
             .visionWrapper {
                 padding: unset;
-                padding-bottom: 20px;
+                padding-bottom: 0;
                 gap: 0px;
-                flex-direction: column;
+                flex-direction: column-reverse;
                 display: inline-flex;
+                .wrapperimgVision {
+                    padding: 0 10px;
+                    aspect-ratio: 3 / 4;
+                    .imgVision {
+                        height: 85%;
+                    }
+                }
                 .leftText {
-                    padding-left: unset;
-                    padding-top: unset;
+                    padding: 0 20px;
                     flex-direction: column;
-                    gap: 16px;
+                    gap: 14px;
                     display: inline-flex;
                     .titleText {
                         font-size: 24px;
@@ -281,14 +335,20 @@
             }
             .misionWrapper {
                 padding: unset;
-                padding-bottom: 20px;
                 gap: 0px;
-                flex-direction: column-reverse;
+                flex-direction: column;
                 display: inline-flex;
+                .wrapperimgMision {
+                    padding: 0 10px;
+                    aspect-ratio: 3 / 4;
+                    .imgMision {
+                        height: 85%;
+                    }
+                }
                 .rightText {
-                    padding-left: unset;
+                    padding: 0 20px;
                     flex-direction: column;
-                    gap: 16px;
+                    gap: 14px;
                     display: inline-flex;
 
                     .titleText {
@@ -302,20 +362,35 @@
         }
 
         .fourContent {
-            padding-top: 50px;
-            padding-bottom: 50px;
+            padding: unset;
+            padding-bottom: 20px;
             flex-direction: column;
             display: flex;
+            .logo3 {
+                width: 100vw;
+                height: -moz-fit-content;
+                display: inline-flex;
+                content: url("../assets/img/aboutUs/Logo5_m.jpg");
+            }
         
             .leftWrapper {
-                padding: 50px 20px;
+                width: 100%; height: auto;
+                padding: 20px 0 0 0;
                 gap: 20px;
                 display: inline-flex;
-                flex-direction: column;
+                flex-direction: column-reverse;
+                .wrapperImgRight {
+                    aspect-ratio: 3 / 4;
+                    padding: 0 10px;
+                    margin-bottom: -20%;
+                    .imgRight {
+                        height: 85%;
+                    }
+                }
                 .leftText {
-                    padding-right: unset;
+                    padding: 0 10px 20px 10px;
                     flex-direction: column;
-                    gap: 16px;
+                    gap: 10px;
                     display: inline-flex;
                     .titleText {
                         font-size: 18px;
@@ -326,14 +401,22 @@
                 }
             }
             .rightWrapper {
-                padding: 50px 20px;
-                flex-direction: column-reverse;
+                padding: 0;
+                flex-direction: column;
                 gap: 20px;
                 display: inline-flex;
+                .wrapperImgLeft {
+                    padding: 0 10px;
+                    aspect-ratio: 3 / 4;
+                    margin-bottom: -20%;
+                    .imgLeft {
+                        height: 85%;
+                    }
+                }
                 .rightText {
-                    padding-left: unset;
+                    padding: 0 10px 20px 10px;
                     flex-direction: column;
-                    gap: 16px;
+                    gap: 10px;
                     display: inline-flex;
                 }
             }
@@ -342,10 +425,8 @@
         .fiveContent {
             align-self: stretch;
             height: -moz-fit-content;
-            height: fit-content;
-            padding-top: 50px;
-            padding-bottom: 50px;
-            border-radius: 20px;
+            padding: 50px 0 0 0;
+            border-radius: 10px;
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
@@ -365,14 +446,27 @@
                         font-size: 14px;
                         padding: 0px 15px;
                     }
+                    .btnWrapper {
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+
+                        .btnShop {
+                            width: 150px;
+                            padding: 10px 0;
+                        }
+                    }
                 }
                 .contentText2 {
                     .infoText {
                         font-size: 14px;
                     }
                     .storeIconWrapper {
-                        gap: 40px;
+                        gap: 80px;
                         flex-direction: column;
+                        .storeIC {
+                            height: 30px;
+                        }
                     }
                 }
             }

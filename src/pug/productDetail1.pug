@@ -7,14 +7,14 @@ html(lang='en')
 
         // Section contact-us form
         section.productDetail-section
-            .container 
-                .wrapper 
-                    .leftBox
-                        .carousel.slide#productCarausel(data-bs-ride="false")
-                            ol.carousel-indicators
-                                li(data-bs-target="#productCarausel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1")
-                                li(data-bs-target="#productCarausel" data-bs-slide-to="1" aria-label="Slide 2")
-                                li(data-bs-target="#productCarausel" data-bs-slide-to="2" aria-label="Slide 3")
+            .wrapper 
+                .leftBox
+                    .carousel.slide#productCarausel(data-bs-ride="false")
+                        ol.carousel-indicators
+                            li(data-bs-target="#productCarausel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1")
+                            li(data-bs-target="#productCarausel" data-bs-slide-to="1" aria-label="Slide 2")
+                            li(data-bs-target="#productCarausel" data-bs-slide-to="2" aria-label="Slide 3")
+                        .wrapCarouselImg
                             .carousel-inner
                                 .carousel-item.active
                                     img(src="./assets/img/product1.png")
@@ -28,83 +28,83 @@ html(lang='en')
                             button.carousel-control-next(type="button" data-bs-target="#productCarausel" data-bs-slide="next")
                                 span.carousel-control-next-icon(aria-hidden="true")
                                 span.visually-hidden Next
-            
-                        .multiple-card-slider
-                            .carousel#carouselExampleControls(data-bs-ride="false")
-                                .carousel-inner
-                                    .carousel-item.active
-                                        img(src="./assets/img/dtProduct1.png")
-                                    .carousel-item
-                                        img(src="./assets/img/dtProduct2.png")
-                                    .carousel-item
-                                        img(src="./assets/img/dtProduct2.png")
-                                    .carousel-item
-                                        img(src="./assets/img/dtProduct3.png")
-                                    .carousel-item
-                                        img(src="./assets/img/dtProduct3.png")
-                                    .carousel-item
-                                        img(src="./assets/img/dtProduct1.png")
-                                button.carousel-control-prev(type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev")
-                                    span.carousel-control-prev-icon(aria-hidden="true")
-                                    span.visually-hidden Preview
-                                button.carousel-control-next(type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next")
-                                    span.carousel-control-next-icon(aria-hidden="true")
-                                    span.visually-hidden Next
-                            
-                    .rightBox 
-                        .productInfo
-                            span.productName Snovv Glutathione
-                            .ratingWrapper
-                                .starWrapper 
-                                    span.fa.fa-star
-                                    span.fa.fa-star
-                                    span.fa.fa-star
-                                    span.fa.fa-star
-                                    span.fa.fa-star
-                                span.totalSpan (4 Ulasan)
-                            .productPrice
-                                span.discountPrice ± Rp 150.000
-                                span.normalPrice Rp. 250.000
-                                .discountRate 
-                                    span 43%
-                                    
+        
+                    .multiple-card-slider
+                        .carousel#carouselExampleControls(data-bs-ride="false")
+                            .carousel-inner
+                                .carousel-item.active
+                                    img(src="./assets/img/dtProduct1.png")
+                                .carousel-item.active
+                                    img(src="./assets/img/dtProduct2.png")
+                                .carousel-item.active
+                                    img(src="./assets/img/dtProduct2.png")
+                                .carousel-item.active
+                                    img(src="./assets/img/dtProduct3.png")
+                                .carousel-item.active
+                                    img(src="./assets/img/dtProduct3.png")
+                                .carousel-item.active
+                                    img(src="./assets/img/dtProduct1.png")
+                            button.carousel-control-prev(type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev")
+                                span.carousel-control-prev-icon(aria-hidden="true")
+                                span.visually-hidden Preview
+                            button.carousel-control-next(type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next")
+                                span.carousel-control-next-icon(aria-hidden="true")
+                                span.visually-hidden Next
+                        
+                .rightBox 
+                    .productInfo
+                        span.productName Snovv Glutathione
+                        .ratingWrapper
+                            .starWrapper 
+                                span.fa.fa-star
+                                span.fa.fa-star
+                                span.fa.fa-star
+                                span.fa.fa-star
+                                span.fa.fa-star
+                            span.totalSpan (4 Ulasan)
+                        .productPrice
+                            span.discountPrice ± Rp 150.000
+                            span.normalPrice Rp. 250.000
+                            .discountRate 
+                                span 43%
+                                
+                    div(style="width:100%; align-self: stretch; height: 1px; background: #C4C4C4")
+                    .shopLink 
+                        span Belanja dengan
+                        .btnWrapper
+                            a.btnShop(href="#")
+                                img(src="./assets/img/icon/ic_shopee.png")
+                                span Shopee
+                            a.btnShop(href="#")
+                                img(src="./assets/img/icon/ic_tokped.png")
+                                span Tokopedia
+                    .productDetail
+                        .DescWrapper
+                            span.titleTextProductDetail Detail Produk
+                            .infoWrapper
+                                span.boldText Merek :
+                                span.valueText About H
+                                br
+                                span.boldText Produsen :
+                                span.valueText Biofarm
+                            ul.descText 
+                                li Diformulasikan oleh Dokter Kulit Korea
+                                li Formulasi GV5, Kecantikan dari dalam
+                                li 250 mg Glutathione Premium dari Korea
+                                li Mengandung Bahan Khusus untuk Kecantikan dari dalam, yang dipilih sesuai dengan standar yang tinggi
                         div(style="width:100%; align-self: stretch; height: 1px; background: #C4C4C4")
-                        .shopLink 
-                            span Belanja dengan
-                            .btnWrapper
-                                a.btnShop(href="#")
-                                    img(src="./assets/img/icon/ic_shopee.png")
-                                    span Shopee
-                                a.btnShop(href="#")
-                                    img(src="./assets/img/icon/ic_tokped.png")
-                                    span Tokopedia
-                        .productDetail
-                            .DescWrapper
-                                span.titleTextProductDetail Detail Produk
-                                .infoWrapper
-                                    span.boldText Merek :
-                                    span.valueText About H
-                                    br
-                                    span.boldText Produsen :
-                                    span.valueText Biofarm
-                                ul.descText 
-                                    li Diformulasikan oleh Dokter Kulit Korea
-                                    li Formulasi GV5, Kecantikan dari dalam
-                                    li 250 mg Glutathione Premium dari Korea
-                                    li Mengandung Bahan Khusus untuk Kecantikan dari dalam, yang dipilih sesuai dengan standar yang tinggi
-                            div(style="width:100%; align-self: stretch; height: 1px; background: #C4C4C4")
-                            .accordion.accordion-flush#productInfoAccordion 
-                                .accordion-item
-                                    .accordion-header
-                                        button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#data1" aria-expanded="false" aria-controls="data1") Cara Penyajian
-                                    .accordion-collapse.collapse#data1(data-bs-parent="#productInfoAccordion")
-                                        .accordion-body 
-                                            p Isi konten untuk cara penyajian
-                                .accordion-item
-                                    .accordion-header
-                                        button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#data2" aria-expanded="false" aria-controls="data2") Bahan
-                                    .accordion-collapse.collapse#data2(data-bs-parent="#productInfoAccordion")
-                                        .accordion-body Isi konten untuk bahan
+                        .accordion.accordion-flush#productInfoAccordion 
+                            .accordion-item
+                                .accordion-header
+                                    button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#data1" aria-expanded="false" aria-controls="data1") Cara Penyajian
+                                .accordion-collapse.collapse#data1(data-bs-parent="#productInfoAccordion")
+                                    .accordion-body 
+                                        p Isi konten untuk cara penyajian
+                            .accordion-item
+                                .accordion-header
+                                    button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#data2" aria-expanded="false" aria-controls="data2") Bahan
+                                .accordion-collapse.collapse#data2(data-bs-parent="#productInfoAccordion")
+                                    .accordion-body Isi konten untuk bahan
 
         section.detailTab
             .row.justify-content-center.mt-2
@@ -112,7 +112,7 @@ html(lang='en')
                     .card.border-0.text-center
                         ul.nav.nav-tabs.nav-justified.card-header-tabs#myTab(role="tablist" style="padding-bottom: 30px;")
                             li.nav-item.active
-                                a.nav-link.active#tab1-tab(data-bs-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true") Detail Informasi
+                                a.nav-link.active#tab1-tab(data-bs-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true") Informasi
                             li.nav-item
                                 a.nav-link#tab2-tab(data-bs-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="true") Ulasan (4)
                             li.nav-item
@@ -120,7 +120,8 @@ html(lang='en')
                     .card-body
                         .tab-content#myTabContent
                             .tab-pane.fade.show.active#tab1(role="tabpanel" aria-labelledby="tab1-tab")
-                                img(src="./assets/img/dtinfoProduct1.png" width="100%")
+                                .container
+                                    img(src="./assets/img/dtinfoProduct1.png" width="100%")
                             .tab-pane.fade#tab2(role="tabpane2" aria-labelledby="tab2-tab")
                                 .reviewBox
                                     .reviewWrapper
@@ -184,16 +185,77 @@ html(lang='en')
 
                                     div(style="width: 100%; height: 1px; background: #E6E6E6")
                                     .contentWrapper 
-                                        .contentBox#dataReview1
+                                        .contentBox
+                                            .wrap1
+                                                .reviewHeaderShop
+                                                    img.imgUser(src="./assets/img/userWeb1.png")
+                                                    .wrap2
+                                                        .ratingWrapper
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                        .userWrapper
+                                                            label Amelia Putri
+                                                            span - 07 Desember 2024 
+                                                            img(src="./assets/img/icon/ic_shopee.png" style="width: 24px; height: 24px;")
+                                                p.reviewValue Saya sangat senang karena dosisnya tercetak rapi di bagian depan. Saya juga sudah tes darah untuk vitamin D dan ternyata tidak masih kurang, jadi saya mengonsumsi produk ini yang juga mengandung bahan lain.
+                                            img.mediaBox(src="./assets/img/media_review.png")
                                         div(style="width: 100%; height: 1px; background: #E6E6E6")
-
-                                        .contentBox#dataReview2
+                                        .contentBox
+                                            .wrap1
+                                                .reviewHeaderShop
+                                                    img.imgUser(src="./assets/img/userWeb1.png")
+                                                    .wrap2
+                                                        .ratingWrapper
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                        .userWrapper
+                                                            label Amelia Putri
+                                                            span - 07 Desember 2024 
+                                                            img(src="./assets/img/icon/ic_shopee.png" style="width: 24px; height: 24px;")
+                                                p.reviewValue Saya sangat senang karena dosisnya tercetak rapi di bagian depan. Saya juga sudah tes darah untuk vitamin D dan ternyata tidak masih kurang, jadi saya mengonsumsi produk ini yang juga mengandung bahan lain.
+                                            img.mediaBox(src="./assets/img/media_review.png")
                                         div(style="width: 100%; height: 1px; background: #E6E6E6")
-
-                                        .contentBox#dataReview3
+                                        .contentBox
+                                            .wrap1
+                                                .reviewHeaderShop
+                                                    img.imgUser(src="./assets/img/userWeb1.png")
+                                                    .wrap2
+                                                        .ratingWrapper
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                        .userWrapper
+                                                            label Amelia Putri
+                                                            span - 07 Desember 2024 
+                                                            img(src="./assets/img/icon/ic_shopee.png" style="width: 24px; height: 24px;")
+                                                p.reviewValue Saya sangat senang karena dosisnya tercetak rapi di bagian depan. Saya juga sudah tes darah untuk vitamin D dan ternyata tidak masih kurang, jadi saya mengonsumsi produk ini yang juga mengandung bahan lain.
+                                            img.mediaBox(src="./assets/img/media_review.png")
                                         div(style="width: 100%; height: 1px; background: #E6E6E6")
-
-                                        .contentBox#dataReview4
+                                        .contentBox
+                                            .wrap1
+                                                .reviewHeaderShop
+                                                    img.imgUser(src="./assets/img/userWeb1.png")
+                                                    .wrap2
+                                                        .ratingWrapper
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                            span.fa.fa-star.checked
+                                                        .userWrapper
+                                                            label Amelia Putri
+                                                            span - 07 Desember 2024 
+                                                            img(src="./assets/img/icon/ic_shopee.png" style="width: 24px; height: 24px;")
+                                                p.reviewValue Saya sangat senang karena dosisnya tercetak rapi di bagian depan. Saya juga sudah tes darah untuk vitamin D dan ternyata tidak masih kurang, jadi saya mengonsumsi produk ini yang juga mengandung bahan lain.
+                                            img.mediaBox(src="./assets/img/media_review.png")
                                             
                             .tab-pane.fade#tab3(role="tabpane3" aria-labelledby="tab3-tab")
                                 .faqBox
