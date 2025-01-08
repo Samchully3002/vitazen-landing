@@ -1,5 +1,5 @@
 .vSightpage {
-  padding: 48.5px 80px;
+  padding: 48px 80px;
   justify-content: center;
   align-items: center;
   display: inline-flex;
@@ -119,6 +119,10 @@
   }
 }
 
+@media screen and (max-width: 375px) {
+  
+}
+
 @media screen and (max-width: 768px) {
   .vSightpage {
     padding: 40px 20px;
@@ -148,4 +152,70 @@
       }
     }
   }
+}
+
+@media screen and (min-width: 769px) and (max-width: 991px) {
+
+  .vSightpage {
+    padding: 45px 40px;
+
+    .headerBox {
+      .title {
+        font-size: 38px; 
+      }
+      #hideForMobile {
+        display: block;
+      }
+      #filterDropdown{
+        display: block;
+      }
+    }
+    .row {
+      margin-top: 20px;
+      .vsight-container{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        .vsight {
+          .linkToDetail {
+            gap: 10px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1380px) {
+
+  .vSightpage {
+    padding: 45px 40px;
+
+    .headerBox {
+      .title {
+        font-size: 38px; 
+      }
+      #hideForMobile {
+        display: block;
+      }
+      #filterDropdown{
+        display: block;
+      }
+    }
+    .row {
+      margin-top: 20px;
+      .vsight-container{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        .vsight {
+          .linkToDetail {
+            gap: 10px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
+
 }

@@ -1,6 +1,6 @@
 
 .listproducts {
-  padding: 78.5px 102px;
+  padding: 75px 100px;
   h1 {
     font-size: 56px;
     font-weight: 500;
@@ -121,6 +121,10 @@
   }
 }
 
+@media screen and (max-width: 375px) {
+  
+}
+
 @media screen and (max-width: 768px) {
 
   .listproducts {
@@ -171,4 +175,83 @@
       font-size: 10px; 
     }
   }
+}
+
+@media screen and (min-width: 769px) and (max-width: 991px) {
+
+  .listproducts {
+    padding: 30px 40px;
+    h1 {
+      font-size: 52px;
+    }
+
+    .product-container{
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 30px;
+    }
+    .linkToDetail {
+      gap: 15px; 
+    }
+
+    .productName {
+      font-size: 1.4rem;
+    }
+    .discountPrice {
+      font-size: 1.4rem;
+    }
+    .normalPrice { 
+      font-size: 16px;
+    }
+    .numberRate {      
+      padding:5px 10px; 
+      font-size: 14px; 
+    }
+  }
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1380px) {
+
+  .listproducts {
+    padding: 40px 50px;
+    h1 {
+      font-size: 52px;
+    }
+
+    .product-container{
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 30px;
+    }
+    .linkToDetail {
+      gap: 15px; 
+    }
+
+    .productName {
+      font-size: 1.6rem;
+    }
+    .priceWrapper {
+      justify-content: flex-start; 
+      align-items: flex-start; 
+      flex-direction: column; 
+      gap: 3px;
+    }
+    .discountPrice {
+      font-size: 1.6rem;
+    }
+    .priceGroup {
+      flex-direction: row;
+    }
+    .normalPrice { 
+      font-size: 18px;
+    }
+    .numberRate {      
+      padding:5px 10px; 
+      font-size: 16px; 
+    }
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
+
 }

@@ -1,7 +1,10 @@
 //Header
+#kontakMobile {
+    display: none;
+}
 .texttop {
     width: 100%; height: 100%;
-    padding: 10px 0; background: #392B56; 
+    padding: 10px; background: #392B56; 
     justify-content: center; align-items: center; 
     display: inline-flex;
     .firstText {
@@ -13,78 +16,50 @@
         font-weight: 500; word-wrap: break-word;
     }
     .iconTopText {
-        width: auto;
-    }
-    
-    @media screen and (max-width: 800px) {
-            .firstText {
-                font-size: 1.5vh;
-            }
-            .secondText {
-                font-size: 1.5vh;
-            }
-            .iconTopText {
-                width: 1.5vh;
-            }
-    }
-    @media screen and (max-width: 500px) {
-            .firstText {
-                font-size: 1rem;
-            }
-            .secondText {
-                font-size: 1rem;
-            }
-            .iconTopText {
-                width: 13px;
-            }
-    }
-    @media screen and (max-width: 375px) {
-        .firstText {
-            font-size: 10px;
-        }
-        .secondText {
-            font-size: 10px;
-        }
-        .iconTopText {
-            width: 11px;
-        }
+        margin-left: 7px;
+        width: fit-content;
     }
 }
     
 
 .navbar {
-    padding: 20px 108px !important;
+    padding: 1.5rem !important;
     .imgLogo_h {
         width: fit-content; max-height: 30px;
     }
 }
 .menuNav {
     justify-content: center; align-items: center; gap: 31px; display: flex;
-    .nav-link, .nav-link.active {
+    .nav-link {
         text-align: center; color: #0F1C38; font-size: 16px; 
         font-family: Poppins !important; font-weight: 600; 
         word-wrap: break-word;
+        .active,
+        &:hover {
+            color: #5f6061;
+        }
     }
 }
 
 .btnContact{
-    padding-left: 20px; padding-right: 20px; padding-top: 10px; padding-bottom: 10px; background: #A083DE; border-radius: 5px; justify-content: center; align-items: center; gap: 10px; display: flex; text-align: center; color: white; font-size: 16px; font-family: Poppins; font-weight: 500; word-wrap: break-word; text-decoration: none;
+    padding: 10px 20px; background: #A083DE; border-radius: 5px; justify-content: center; align-items: center; gap: 10px; display: none; text-align: center; color: white; font-size: 16px; font-family: Poppins; font-weight: 500; word-wrap: break-word; text-decoration: none;
 }
 
 //Footer
 .benefit-wrapper {
     width: 100%; height: 100%; padding-top: 50px; padding-bottom: 50px; background: #A083DE; flex-direction: column; justify-content: space-between; align-items: center; gap: 10px; display: inline-flex;
     .benefitBox {
-        justify-content: center; align-items: center; gap: 100px; display: inline-flex;
+        width: 100%; justify-content: center; align-items: center; display: inline-flex; gap: 5%;
         .benefitContent {
-            justify-content: center; align-items: center; gap: 10px; display: flex;
+            justify-content: flex-start; align-items: center; gap: 10px; display: flex;
             .benefitImgwrapper {
-                width: 60px; height: 60px; padding: 10px; background: #F1E9FA; border-radius: 100px; overflow: hidden; border: 3px #ECDCFF solid; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex;
+                height: auto; background: #F1E9FA; border-radius: 100px; overflow: hidden; border: 3px #ECDCFF solid; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex;
+                img {height:auto;}
             }
             .benefitTextwrapper {
                 flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 2px; display: inline-flex;
                 .benefitTitle {
-                    color: white; font-size: 18px; font-family: Poppins; font-weight: 600; line-height: 27px; word-wrap: break-word;
+                    color: white; font-size: 1.2rem; font-family: Poppins; font-weight: 600; line-height: 27px; word-wrap: break-word;
                 }
                 .benefitSubtitle {
                     color: white; font-size: 14px; font-family: Poppins; font-weight: 500; line-height: 21px; word-wrap: break-word;
@@ -156,10 +131,33 @@
     }
 }
 
+@media screen and (max-width: 375px) {
+    #kontakMobile {
+        display: flex;
+    }
+    .texttop {
+        .firstText, .secondText,.iconTopText {
+            width: 1.4vh;
+        }
+    }
+    .navbar {
+        padding: 0 !important;
+    }
+}
 @media screen and (max-width: 768px) {
-
-    .btnContact{
-        display: none;
+    #kontakMobile {
+        display: flex;
+    }
+    .texttop {
+        .firstText {
+        font-size: 1.6vh;
+        }
+        .secondText {
+            font-size: 1.6vh;
+        }
+        .iconTopText {
+            width: 1.5vh;
+        }
     }
     .navbar {
         padding: 10px 0px !important;
@@ -172,61 +170,31 @@
         display: flex; 
         align-items: flex-start;
         padding: 30px 0 0 20px;
-    }
-    .nav-mobile {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
-        .nav-wrapper {
-            display: flex;
-            width: 100%;
-            justify-content: space-between;
-        }
-    }
-    .mobile-menu {
-        display: none;
-        position: fixed;
-        left: 0px;
-        top: 0px;
-        background: rgba(0, 0, 0, 0.5);
-        width: 100%;
-        height: 100vh;
-        z-index: -1;
-        
-        .inner {
-            background: #fff;
-            width: 100%;
-            display: none;
-        }
+        gap: 15px;
     }
 
     .benefit-wrapper {
-        width: 100%; height: 100%; padding-top: 50px; padding-bottom: 50px; background: #A083DE; flex-direction: column; justify-content: space-between; align-items: center; gap: 10px; display: inline-flex;
         .benefitBox {
-            justify-content: center; align-items: center; gap: 50px; display: inline-flex; flex-direction: column;
+            gap: 50px; flex-direction: column;
             .benefitContent {
-                justify-content: center; align-items: center; gap: 10px; display: inline-flex; flex-direction: column; 
+                flex-direction: column; 
                 .benefitImgwrapper {
-                    width: 60px; height: 60px; padding: 10px; background: #F1E9FA; border-radius: 100px; overflow: hidden; border: 3px #ECDCFF solid; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex;
+                    width: 60px; height: 60px;
                 }
                 .benefitTextwrapper {
-                    flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 2px; display: inline-flex;
+                    flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 2px; line-height: unset;
                     .benefitTitle {
-                        width: 100%; color: white; font-size: 18px; font-family: Poppins; font-weight: 600; line-height: 27px; word-wrap: break-word; display: inline-flex; flex-direction: column; align-items: center;
+                        width: 100%; font-size: 1.3rem; display: inline-flex; flex-direction: column; align-items: center;
                     }
                     .benefitSubtitle {
-                        width: 100%; color: white; font-size: 14px; font-family: Poppins; font-weight: 500; line-height: 21px; word-wrap: break-word; display: inline-flex; flex-direction: column; align-items: center;
+                        width: 100%; font-size: 1rem; line-height: unset; display: inline-flex; flex-direction: column; align-items: center;
                     }
                 }
             }
         }
     }
     .footer-wrapper {
-        width: 100%; height: fit-content; 
         padding: 51px 30px 66px 30px; 
-        background: #E8DDFF;
-        border-top: 1px rgba(20, 65, 80, 0.20) solid; 
         display: block;
         .footerLeft {
             width: 100%;
@@ -237,7 +205,7 @@
             display: inline-flex;
             gap: 20px;
             .imgLogo_f {
-                width: 40%; max-height: 15px;
+                width: auto; max-height: 15px;
             }
             .footerLeftWrapper {
                 width: 100%;
@@ -247,7 +215,7 @@
                 gap: 20px;
                 display: flex;
                 .subscribeEmail {
-                    width: 100%;
+                    width: auto;
                     color: #0F1C38;
                     font-size: 17px;
                     font-family: Plus Jakarta Sans;
@@ -261,7 +229,7 @@
         .footerRight {
             margin-top: 100px; width:100%; height: 100%; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 20px; display: inline-flex;
             .addressFooterWrapper {
-                width:100%; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 20px; display: flex;
+                width:100%; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex;
                 .footerRightTitle {
                     width:100%; color: #0F1C38; font-size: 16px; font-family: Plus Jakarta Sans; font-weight: 700; line-height: 24px; word-wrap: break-word;
                 }
@@ -280,7 +248,6 @@
             }
         }
     }
-
     .footer-bottom {
         width: 100%;
         height: 100%;
@@ -294,5 +261,380 @@
         display: inline-flex;
         flex-direction: column;
         gap: 20px;
+    }
+    .navbar {
+        padding: 10px !important;
+        .imgLogo_h {
+            width: fit-content; max-height: 15px;
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 991px) {
+    #kontakMobile {
+        display: flex;
+    }
+    .texttop {
+        .firstText {
+            font-size: 1rem;
+        }
+        .secondText {
+            font-size: 1rem;
+        }
+        .iconTopText {
+            width: 1rem;
+        }
+    }
+    .navbar {
+        padding: 1.5rem !important;
+        .imgLogo_h {
+            width: fit-content; max-height: 20px;
+        }
+    }
+    .menuNav {
+        flex-direction: column; 
+        display: flex; 
+        align-items: flex-start;
+        padding: 30px 0 0 20px;
+        gap: 15px;
+    }
+    .benefit-wrapper {
+        .benefitBox {
+            width: auto;
+            gap: 30px;
+            display:grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            .benefitContent {
+                flex-direction: column; 
+                .benefitImgwrapper {
+                    width: 50px; height: 50px;
+                }
+                .benefitTextwrapper {
+                    flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 2px; line-height: unset;
+                    .benefitTitle {
+                        width: 100%; font-size: 1.1rem; display: inline-flex; flex-direction: column; align-items: center;
+                    }
+                    .benefitSubtitle {
+                        width: 100%; font-size: 12px; line-height: unset; display: inline-flex; flex-direction: column; align-items: center;
+                    }
+                }
+            }
+        }
+    }
+    
+    .footer-wrapper {
+        padding: 50px 40px 65px 40px; 
+        display: flex; justify-content: space-around; 
+        gap: 0; align-items: center;
+
+        .footerLeft {
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            display: inline-flex;
+            gap: 20px;
+            .imgLogo_f {
+                width: auto; max-height: 15px;
+            }
+            .footerLeftWrapper {
+                width: auto;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 20px;
+                display: flex;
+                .subscribeEmail {
+                    width: auto;
+                    color: #0F1C38;
+                    font-size: 17px;
+                    font-family: Plus Jakarta Sans;
+                    font-weight: 400;
+                    line-height: 26px;
+                    word-wrap: break-word;
+                }
+            }
+        }
+        .footerRight {
+            width: 100%; justify-content: center; align-items: flex-end; gap: 0;
+            .addressFooterWrapper {
+                flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex;
+                .footerRightTitle {
+                    color: #0F1C38; font-size: 16px; font-family: Plus Jakarta Sans; font-weight: 700; line-height: 24px; word-wrap: break-word;
+                }
+                .footerRightAddress {
+                    color: #0F1C38; font-size: 16px; font-family: Plus Jakarta Sans; font-weight: 400; line-height: 24px; word-wrap: break-word
+                }
+                .sosmedEmailWrapper {
+                    flex-direction: column; display: flex;
+                    .emailLink {
+                        text-align: center; color: #0F1C38; font-size: 18px; font-family: Plus Jakarta Sans; font-weight: 400; text-decoration: underline; line-height: 28.80px; word-wrap: break-word; margin-bottom: 10px;
+                    }
+                    .social-icons {
+                        margin: 10px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        padding: 10px 40px;
+        .leftBottomText {
+            font-size: 14px;
+        }
+        .rightBottomText {
+            text-align: center; color: white; font-size: 18px; font-family: Atkinson Hyperlegible; font-weight: 400; line-height: 28.80px; word-wrap: break-word;
+            .privacyLink {
+                text-decoration:none; text-align: center; color: white; font-size: 18px; font-family: Atkinson Hyperlegible; font-weight: 400; line-height: 28.80px; word-wrap: break-word; margin-right: 42px;;
+            }
+            .termLink {
+                text-decoration:none; text-align: center; color: white; font-size: 18px; font-family: Atkinson Hyperlegible; font-weight: 400; line-height: 28.80px; word-wrap: break-word;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .texttop {
+        .firstText {
+            font-size: 1.1rem;
+        }
+        .secondText {
+            font-size: 1.1rem;
+        }
+        .iconTopText {
+            width: 1rem;
+        }
+    }
+    .navbar {
+        padding: 20px 40px !important;
+        .imgLogo_h {
+            width: fit-content; max-height: 20px;
+        }
+    }
+    .btnContact{
+        padding: 10px 15px;
+        gap: 5px; 
+        display: flex;
+        font-size: 14px;
+    }
+
+    .benefit-wrapper {
+        .benefitBox {
+            width: auto;
+            gap: 50px;
+            display:flex;
+            justify-content: space-around;
+            .benefitContent {
+                flex-direction: column; 
+                .benefitImgwrapper {
+                    width: 55px; height: 55px;
+                }
+                .benefitTextwrapper {
+                    flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 2px; line-height: unset;
+                    .benefitTitle {
+                        width: 100%; font-size: 1.1rem; display: inline-flex; flex-direction: column; align-items: center;
+                    }
+                    .benefitSubtitle {
+                        width: 100%; font-size: 12px; line-height: unset; display: inline-flex; flex-direction: column; align-items: center;
+                    }
+                }
+            }
+        }
+    }
+    
+    .footer-wrapper {
+        padding: 50px 40px 65px 40px; 
+        display: flex; justify-content: space-around; 
+        gap: 0; align-items: center;
+
+        .footerLeft {
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            display: inline-flex;
+            gap: 20px;
+            .imgLogo_f {
+                width: auto; max-height: 15px;
+            }
+            .footerLeftWrapper {
+                width: auto;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 20px;
+                display: flex;
+                .subscribeEmail {
+                    width: auto;
+                    color: #0F1C38;
+                    font-size: 17px;
+                    font-family: Plus Jakarta Sans;
+                    font-weight: 400;
+                    line-height: 26px;
+                    word-wrap: break-word;
+                }
+            }
+        }
+        .footerRight {
+            width: 100%; justify-content: center; align-items: flex-end; gap: 0;
+            .addressFooterWrapper {
+                flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex;
+                .footerRightTitle {
+                    color: #0F1C38; font-size: 16px; font-family: Plus Jakarta Sans; font-weight: 700; line-height: 24px; word-wrap: break-word;
+                }
+                .footerRightAddress {
+                    color: #0F1C38; font-size: 16px; font-family: Plus Jakarta Sans; font-weight: 400; line-height: 24px; word-wrap: break-word
+                }
+                .sosmedEmailWrapper {
+                    flex-direction: column; display: flex;
+                    .emailLink {
+                        text-align: center; color: #0F1C38; font-size: 18px; font-family: Plus Jakarta Sans; font-weight: 400; text-decoration: underline; line-height: 28.80px; word-wrap: break-word; margin-bottom: 10px;
+                    }
+                    .social-icons {
+                        margin: 10px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        padding: 10px 40px;
+        .leftBottomText {
+            font-size: 14px;
+        }
+        .rightBottomText {
+            text-align: center; color: white; font-size: 18px; font-family: Atkinson Hyperlegible; font-weight: 400; line-height: 28.80px; word-wrap: break-word;
+            .privacyLink {
+                text-decoration:none; text-align: center; color: white; font-size: 18px; font-family: Atkinson Hyperlegible; font-weight: 400; line-height: 28.80px; word-wrap: break-word; margin-right: 42px;;
+            }
+            .termLink {
+                text-decoration:none; text-align: center; color: white; font-size: 18px; font-family: Atkinson Hyperlegible; font-weight: 400; line-height: 28.80px; word-wrap: break-word;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .texttop {
+        .firstText {
+            font-size: 1.1rem;
+        }
+        .secondText {
+            font-size: 1.1rem;
+        }
+        .iconTopText {
+            width: 1.1rem;
+        }
+    }
+    .navbar {
+        padding: 1.5rem !important;
+        .imgLogo_h {
+            width: fit-content; max-height: 30px;
+        }
+    }
+    .btnContact{
+        display: flex;
+    }
+
+    .benefit-wrapper {
+        .benefitBox {
+            width: auto;
+            gap: 50px;
+            display:flex;
+            justify-content: space-around;
+            .benefitContent {
+                flex-direction: unset; 
+                .benefitImgwrapper {
+                    width: 60px; height: 60px;
+                }
+                .benefitTextwrapper {
+                    justify-content: flex-start; align-items: flex-start; gap: 2px; line-height: unset;
+                    .benefitTitle {
+                        font-size: 1.3rem;
+                    }
+                    .benefitSubtitle {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    
+    .footer-wrapper {
+        padding: 50px 40px 65px 40px; 
+        display: flex; justify-content: space-around; 
+        gap: 0; align-items: center;
+
+        .footerLeft {
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            display: inline-flex;
+            gap: 20px;
+            .imgLogo_f {
+                width: auto; max-height: 15px;
+            }
+            .footerLeftWrapper {
+                width: auto;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 20px;
+                display: flex;
+                .subscribeEmail {
+                    width: auto;
+                    color: #0F1C38;
+                    font-size: 17px;
+                    font-family: Plus Jakarta Sans;
+                    font-weight: 400;
+                    line-height: 26px;
+                    word-wrap: break-word;
+                }
+            }
+        }
+        .footerRight {
+            width: 100%; justify-content: center; align-items: flex-end; gap: 0;
+            .addressFooterWrapper {
+                flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex;
+                .footerRightTitle {
+                    color: #0F1C38; font-size: 16px; font-family: Plus Jakarta Sans; font-weight: 700; line-height: 24px; word-wrap: break-word;
+                }
+                .footerRightAddress {
+                    color: #0F1C38; font-size: 16px; font-family: Plus Jakarta Sans; font-weight: 400; line-height: 24px; word-wrap: break-word
+                }
+                .sosmedEmailWrapper {
+                    flex-direction: column; display: flex;
+                    .emailLink {
+                        text-align: center; color: #0F1C38; font-size: 18px; font-family: Plus Jakarta Sans; font-weight: 400; text-decoration: underline; line-height: 28.80px; word-wrap: break-word; margin-bottom: 10px;
+                    }
+                    .social-icons {
+                        margin: 10px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        padding: 10px 40px;
+        .leftBottomText {
+            font-size: 14px;
+        }
+        .rightBottomText {
+            text-align: center; color: white; font-size: 18px; font-family: Atkinson Hyperlegible; font-weight: 400; line-height: 28.80px; word-wrap: break-word;
+            .privacyLink {
+                text-decoration:none; text-align: center; color: white; font-size: 18px; font-family: Atkinson Hyperlegible; font-weight: 400; line-height: 28.80px; word-wrap: break-word; margin-right: 42px;;
+            }
+            .termLink {
+                text-decoration:none; text-align: center; color: white; font-size: 18px; font-family: Atkinson Hyperlegible; font-weight: 400; line-height: 28.80px; word-wrap: break-word;
+            }
+        }
     }
 }
