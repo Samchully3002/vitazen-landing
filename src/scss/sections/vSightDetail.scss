@@ -37,7 +37,7 @@
         position: relative; border-radius: 10px;
     }
     .contentText {
-        align-self: stretch; text-align: justify; 
+        align-self: stretch; text-align: left;
         color: #020E35; font-size: 20px; 
         font-family: Plus Jakarta Sans; 
         font-weight: 400; line-height: 26px; 
@@ -60,6 +60,7 @@
         
         .page-item.active a {
           color:white;
+          background-color: #A083DE;
         }
         .page-link {
           color: #7E8299; 
@@ -76,19 +77,21 @@
         }
     }
 }
+@media screen and (max-width: 375px) {
+  
+}
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
 
     .VsightDetail-section {
         gap: 20px;
-        padding: 0 20px;
+        padding: 40px 20px;
 
         .titleWrapper {
             .titleText {
                 align-items: flex-start;
                 font-size: 24px;
                 // padding: 0 20px;
-                margin-bottom: 10px;
             }
             .dateText {
                 font-size: 16px;
@@ -108,4 +111,49 @@
             // padding: 0 20px;
         }
     }
+}
+
+@media screen and (min-width: 769px) and (max-width: 991px) {
+
+  .VsightDetail-section {
+    gap: 20px;
+    padding: 40px 40px;
+
+    .titleWrapper {
+        .titleText {
+            align-items: flex-start;
+            font-size: 28px;
+            // padding: 0 20px;
+        }
+        .dateText {
+            font-size: 18px;
+            // padding: 0 20px;
+        }
+    }
+
+    .contentText {
+        font-size: 16px;
+        // padding: 0 20px;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1380px) {
+
+  .VsightDetail-section {
+    gap: 20px;
+    padding: 40px 40px;
+
+    .titleWrapper {
+        .titleText {
+            align-items: flex-start;
+            font-size: 28px;
+            // padding: 0 20px;
+        }
+        .dateText {
+            font-size: 18px;
+            // padding: 0 20px;
+        }
+    }
+  }
 }

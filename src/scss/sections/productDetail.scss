@@ -494,15 +494,118 @@
   }
 
 }
-.customModal {
-  width: 100%; height: 100%; padding: 30px; background: white; border-radius: 20px; flex-direction: column; justify-content: flex-start; align-items: flex-end; gap: 30px; display: inline-flex;
-  .bodyWrapper {
-    align-self: stretch; height: 738.33px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 30px; display: flex;
+
+
+.wrapperModal {
+  width: 100%; height: 100%;
+  align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: center; gap: 30px; display: flex;
+  padding: 10px 10px 30px 10px;
+  .titleWrapperText {
+    flex-direction: column; justify-content: flex-start; 
+    align-items: center; gap: 10px; display: flex;
+    .titleModalReview {
+      color: #181C32;
+      font-size: 18px; font-family: Plus Jakarta Sans; 
+      font-weight: 600; line-height: 22px; word-wrap: break-word;
+    }
+    .emailTextLabel {
+      color: #181C32; 
+      font-size: 12px; font-family: Inter; 
+      font-weight: 400; line-height: 18px; word-wrap: break-word;
+    }
   }
-  
-
-
+  .formWrapper{
+    width: 100%;
+    align-self: stretch; flex-direction: column;
+    justify-content: flex-start; align-items: center;
+    gap: 30px; display: flex;
+    .rating {
+      float:left;
+      border:none;
+    }
+    .rating:not(:checked) > input {
+        position:absolute;
+        top:-9999px;
+        clip:rect(0, 0, 0, 0);
+    }
+    .rating:not(:checked) > label {
+        float:right;
+        width:1em;
+        padding:0 .1em;
+        overflow:hidden;
+        white-space:nowrap;
+        cursor:pointer;
+        font-size:200%;
+        line-height:1.2;
+        color:#ddd;
+    }
+    .rating:not(:checked) > label:before {
+        content:'★ ';
+    }
+    .rating > input:checked ~ label {
+        color: #f70;
+    }
+    .rating:not(:checked) > label:hover, .rating:not(:checked) > label:hover ~ label {
+        color: gold;
+    }
+    .rating > input:checked + label:hover, .rating > input:checked + label:hover ~ label, .rating > input:checked ~ label:hover, .rating > input:checked ~ label:hover ~ label, .rating > label:hover ~ input:checked ~ label {
+        color: #ea0;
+    }
+    .rating > label:active {
+        position:relative;
+    }
+    .userWrapperspan {
+      align-self: stretch; justify-content: flex-start; 
+      align-items: flex-start; gap: 15px; display: inline-flex
+    }
+    .inputBox {
+      width: 100%; padding: 13px 12px; border-radius: 6px; border: 1px #C4C4C4 solid;
+      input::placeholder {
+        color: #878787; font-size: 14px; 
+        font-family: Inter; font-weight: 400; 
+        line-height: 18px; word-wrap: break-word;
+      }
+    }
+    .uploadFile {
+    width: 100%;
+    align-self: stretch; padding: 16px 14px; 
+    background: #F8F5FF; border-radius: 7px; 
+    overflow: hidden; border: 1px #A083DE dotted; 
+    justify-content: flex-start; 
+    align-items: center; gap: 13px; 
+    display: inline-flex;
+    .labelWrapper {
+      flex: 1 1 0; flex-direction: column; 
+      justify-content: center; align-items: flex-start; 
+      gap: 5px; display: inline-flex;
+      .labelUpload {
+        align-self: stretch; color: #020E35; 
+        font-size: 15px; font-family: Plus Jakarta Sans; 
+        font-weight: 600; line-height: 16px; word-wrap: break-word;
+      }
+      .labelInfoUpload {
+        align-self: stretch; color: #7E8299; 
+        font-size: 13px; font-family: Plus Jakarta Sans; 
+        font-weight: 500; line-height: 14px; word-wrap: break-word;
+      }
+    }
+    }
+    .wrapperBtnKirim {
+      width: 100%; justify-content: flex-end; align-items: center; display: flex;
+      .btnKirimRev {
+        padding: 18px; background: #A083DE; 
+        border-radius: 10px; overflow: hidden; 
+        justify-content: flex-end; align-items: flex-end; 
+        gap: 6px; display: inline-flex;
+        .labelBtn {
+          color: white; font-size: 16px; font-family: Poppins; 
+          font-weight: 600; line-height: 16px; word-wrap: break-word;
+        }
+      }
+    }
+  }
 }
+
 .star-rating {
   display: flex;
   justify-content: center;

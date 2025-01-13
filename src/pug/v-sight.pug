@@ -21,7 +21,25 @@ html(lang='en')
                         li
                             a.dropdown-item(href="#") Media
                 
-            .row            
+            .row
+                nav.navbar.navbar-expand-lg.navbar-light(style="display:flex;")
+                    ul.navbar-nav.me-auto.mb-2.mb-lg-0
+                        li.nav-item
+                            a.nav-link.active(href="index.html") Beranda
+                        li.nav-item
+                            a.nav-link(href="products.html") Produk
+                        li.nav-item
+                            a.nav-link(href="v-sight.html") V-Sight
+                        li.nav-item
+                            a.nav-link(href="aboutUs.html") Tentang kami
+                        li.nav-item#kontakMobile
+                            a.nav-link(href="contact-us.html") Hubungi kami
+                    form.d-flex(role="search")
+                        input.form-control.me-2(type="search" placeholder="Search" aria-label="Search")
+                        button.btn.btn-outline-secondary(type="submit") Cari
+                    
+                    
+            .row
                 ul.vsight-container
                     li.vsight
                         a.linkToDetail(href="detailVsight.html")
@@ -73,10 +91,8 @@ html(lang='en')
                         li.page-item.active
                             a.page-link(href="#") 1
                         li.page-item
-                            a.page-link(href="#") 2
-                        li.page-item
                             a.page-link(href="#")
-                                i.fa.fa-chevron-right.colored2
+                                i.fa.fa-chevron-right.colored
 
         
     // Footer

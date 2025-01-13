@@ -1,0 +1,460 @@
+doctype html
+html(lang='en')
+
+    include includes/head.pug
+    body
+        include includes/header.pug
+        // Section hero banner
+        section.hero
+            .carousel.slide#heroCarousel(data-bs-ride="false")
+                .carousel-indicators
+                    button(type="button", data-bs-target="#heroCarousel", data-bs-slide-to="0", class="active", aria-current="true", aria-label="Slide 1")
+                    button(type="button", data-bs-target="#heroCarousel", data-bs-slide-to="1", aria-label="Slide 2")
+                    button(type="button", data-bs-target="#heroCarousel", data-bs-slide-to="2", aria-label="Slide 3")
+                .carousel-inner
+                    .carousel-item.active
+                        .row.align-items-center
+                            img.imgHeroItem(src="./assets/img/Hero 1.png", alt="Snovv Banner")
+                            .btnshopWrapperHero1
+                                a.btn.btnshopLink(href="products.html")
+                                    span.shopLinkText Beli sekarang
+                                    img.ic_size(src="./assets/img/icon/ic_arrow_right.svg")
+                    .carousel-item
+                        .row.align-items-center
+                            img.imgHeroItem(src="./assets/img/Hero 2.png", alt="Snovv Banner")
+                            .btnshopWrapperHero2
+                                a.btn.btnshopLink(href="productDetail3.html")
+                                    span.shopLinkText Beli sekarang
+                                    img.ic_size(src="./assets/img/icon/ic_arrow_right.svg")
+                    .carousel-item
+                        .row.align-items-center
+                            img.imgHeroItem(src="./assets/img/Hero 3.png", alt="Snovv Banner")
+
+        // Section Promotion Youtube Video
+        section.vidYoutube
+            .vidBox
+                .thumbVid
+                    img.thumbVid#youtubeImg(src="./assets/img/img_youtube.png" onclick="changeToVideo()")
+                    img.playButton#icPlay(src="./assets/img/icon/ic_playVid.png" onclick="changeToVideo()")
+
+        // section Top Product
+        section.products-home
+            .productWrapper
+                .headerWrapper
+                    h1.titleText Produk
+                    .viewmoreWrapper
+                        a.btnViewmore(href="products.html") Lihat lainnya
+                .listproductWrapper
+                    a.cardProduct(href="productDetail1.html")
+                        .pictProductWrapper
+                            img.pictProduct(src="./assets/img/product1.png")
+                        .productDescWrapper
+                            span.productName Snovv Glutathione
+                            .priceWrapper
+                                span.discountPrice ± Rp 350.000
+                                .priceGroup
+                                    span.normalPrice Rp 500.000
+                                    span.numberRate 43%
+
+                    a.cardProduct(href="productDetail2.html")
+                        .pictProductWrapper
+                            img.pictProduct(src="./assets/img/product2.png")
+                        .productDescWrapper
+                            span.productName Snovv Energy Magnesium
+                            .priceWrapper
+                                span.discountPrice ± Rp 350.000
+                                .priceGroup
+                                    span.normalPrice Rp 500.000
+                                    span.numberRate 43%
+                    a.cardProduct(href="productDetail3.html")
+                        .pictProductWrapper
+                            img.pictProduct(src="./assets/img/product3.png")
+                        .productDescWrapper
+                            span.productName Snovv Liposome Vitamin C
+                            .priceWrapper
+                                span.discountPrice ± Rp 350.000
+                                .priceGroup
+                                    span.normalPrice Rp 500.000
+                                    span.numberRate 43%
+
+        // Section Promotion Banner
+        section.promo-section
+            .carousel.slide#promoCarausel(data-bs-ride="carousel" style="align-items: center; justify-content: center;")
+                .carousel-indicators.custom-indicators
+                    button(type="button" data-bs-target="#promoCarausel" data-bs-slide-to="0" class="active" aria-current="true")
+                    button(type="button" data-bs-target="#promoCarausel" data-bs-slide-to="1")
+                    button(type="button" data-bs-target="#promoCarausel" data-bs-slide-to="2")
+                .carousel-inner
+                    .carousel-item.active
+                        a.d-flex.justify-content-center(href="productDetail3.html")
+                            img.itemPromo(src="./assets/img/promo1.png" alt="Snovv Promo")
+                        
+                    .carousel-item
+                        a.d-flex.justify-content-center(href="productDetail3.html")
+                            img.itemPromo(src="./assets/img/promo1.png" alt="Snovv Promo")
+                        
+                    .carousel-item
+                        a.d-flex.justify-content-center(href="productDetail3.html")
+                            img.itemPromo(src="./assets/img/promo1.png" alt="Snovv Promo")                            
+                        
+                a.carousel-control-prev(type="button" data-bs-target="#promoCarausel" data-bs-slide="prev")
+                    span.carousel-control-prev-icon(aria-hidden="true")
+                    span.visually-hidden Sebelumnya
+                a.carousel-control-next(type="button" data-bs-target="#promoCarausel" data-bs-slide="next")
+                    span.carousel-control-next-icon(aria-hidden="true")
+                    span.visually-hidden Berikutnya
+
+        // Section Website Review
+        section.reviewWebsite
+            .reviewCover
+                h1.titleTextrev Apa Kata Mereka?
+                .multiple-card-slider
+                    .carousel#carouselWebsiteRev(data-bs-ride="false")
+                        .container
+                            .carousel-inner
+                                .carousel-item
+                                    .websiterevWrapper
+                                        .revImgBox
+                                            img.websiterevPict(src="./assets/img/revWeb2.png")
+                                        .commentrevWrapper
+                                            .ratingrevBox
+                                                span.fa.fa-star
+                                                span.fa.fa-star
+                                                span.fa.fa-star
+                                                span.fa.fa-star
+                                                span.fa.fa-star
+                                            p.websiterevText#expandText1(onclick="expandtext(this.id)") Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah
+                                            .custInfoWrapper
+                                                img.userFoto(src="./assets/img/userWeb1.png")
+                                                .userNameDateWrapper
+                                                    span.revNameText Nurul Fitriani
+                                                    span.revDateText 07 Februari 2024
+
+                                .carousel-item
+                                    .websiterevWrapper
+                                        .revImgBox
+                                            img.websiterevPict(src="./assets/img/revWeb2.png")
+                                        .commentrevWrapper
+                                            .ratingrevBox
+                                                span.fa.fa-star
+                                                span.fa.fa-star
+                                                span.fa.fa-star
+                                                span.fa.fa-star
+                                                span.fa.fa-star
+                                            p.websiterevText#expandText2(onclick="expandtext(this.id)") I like that the dosage is printed neatly on the front. I had a blood test for vitamin D and it came out to be insufficient, so I am taking this product that also contains other ingredients.
+                                            .custInfoWrapper
+                                                img.userFoto(src="./assets/img/userWeb1.png")
+                                                .userNameDateWrapper
+                                                    span.revNameText Nurul Fitriani
+                                                    span.revDateText 07 Februari 2024
+
+                                .carousel-item
+                                    .websiterevWrapper
+                                        .revImgBox
+                                            img.websiterevPict(src="./assets/img/revWeb2.png")
+                                        .commentrevWrapper
+                                            .ratingrevBox
+                                                span.fa.fa-star
+                                                span.fa.fa-star
+                                                span.fa.fa-star
+                                                span.fa.fa-star
+                                                span.fa.fa-star
+                                            p.websiterevText#expandText3(onclick="expandtext(this.id)") Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah
+                                            .custInfoWrapper
+                                                img.userFoto(src="./assets/img/userWeb1.png")
+                                                .userNameDateWrapper
+                                                    span.revNameText Nurul Fitriani
+                                                    span.revDateText 07 Februari 2024
+
+                                .carousel-item
+                                    .websiterevWrapper
+                                        .revImgBox
+                                            img.websiterevPict(src="./assets/img/revWeb2.png")
+                                        .commentrevWrapper
+                                            .ratingrevBox
+                                                span.fa.fa-star
+                                                span.fa.fa-star
+                                                span.fa.fa-star
+                                                span.fa.fa-star
+                                                span.fa.fa-star
+                                            p.websiterevText#expandText4(onclick="expandtext(this.id)") Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah
+                                            .custInfoWrapper
+                                                img.userFoto(src="./assets/img/userWeb1.png")
+                                                .userNameDateWrapper
+                                                    span.revNameText Nurul Fitriani
+                                                    span.revDateText 07 Februari 2024
+
+                                .carousel-item
+                                    .websiterevWrapper
+                                        .revImgBox
+                                            img.websiterevPict(src="./assets/img/revWeb2.png")
+                                        .commentrevWrapper
+                                            .ratingrevBox
+                                                span.fa.fa-star
+                                                span.fa.fa-star
+                                                span.fa.fa-star
+                                                span.fa.fa-star
+                                                span.fa.fa-star
+                                            p.websiterevText#expandText5(onclick="expandtext(this.id)") Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah
+                                            .custInfoWrapper
+                                                img.userFoto(src="./assets/img/userWeb1.png")
+                                                .userNameDateWrapper
+                                                    span.revNameText Nurul Fitriani
+                                                    span.revDateText 07 Februari 2024
+
+                                .carousel-item
+                                    .websiterevWrapper
+                                        .revImgBox
+                                            img.websiterevPict(src="./assets/img/revWeb2.png")
+                                        .commentrevWrapper
+                                            .ratingrevBox
+                                                span.fa.fa-star
+                                                span.fa.fa-star
+                                                span.fa.fa-star
+                                                span.fa.fa-star
+                                                span.fa.fa-star
+                                            p.websiterevText#expandText6(onclick="expandtext(this.id)") Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah
+                                            .custInfoWrapper
+                                                img.userFoto(src="./assets/img/userWeb1.png")
+                                                .userNameDateWrapper
+                                                    span.revNameText Nurul Fitriani
+                                                    span.revDateText 07 Februari 2024
+                            button.carousel-control-prev(type="button" data-bs-target="#carouselWebsiteRev" data-bs-slide="next")
+                                span.carousel-control-prev-icon(aria-hidden="true")
+                                span.visually-hidden Sebelumnya
+                            button.carousel-control-next(type="button" data-bs-target="#carouselWebsiteRev" data-bs-slide="next")
+                                span.carousel-control-next-icon(aria-hidden="true")
+                                span.visually-hidden Berikutnya
+           
+        section.reviewIGVid
+            .reviewCoverIG
+                .multiple-card-slider
+                    .carousel#igCarausel(data-bs-ride="false")
+                        .carousel-inner
+                            .carousel-item
+                                img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                                img.IGimg(src="./assets/img/igVid.png")
+                            .carousel-item
+                                img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                                img.IGimg(src="./assets/img/igVid.png")
+                            .carousel-item
+                                img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                                img.IGimg(src="./assets/img/igVid.png")
+                            .carousel-item
+                                img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                                img.IGimg(src="./assets/img/igVid.png")
+                            .carousel-item.active
+                                img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                                img.IGimg(src="./assets/img/igVid.png")
+                            .carousel-item
+                                img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                                img.IGimg(src="./assets/img/igVid.png")
+                            .carousel-item
+                                img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                                img.IGimg(src="./assets/img/igVid.png")
+                            .carousel-item
+                                img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                                img.IGimg(src="./assets/img/igVid.png")
+                            .carousel-item
+                                img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                                img.IGimg(src="./assets/img/igVid.png")
+                        button.carousel-control-prev(type="button" data-bs-target="#igCarausel" data-bs-slide="prev")
+                            span.carousel-control-prev-icon
+                            span.visually-hidden Sebelumnya
+                        button.carousel-control-next(type="button" data-bs-target="#igCarausel" data-bs-slide="next")
+                            span.carousel-control-next-icon(aria-hidden="true")
+                            span.visually-hidden Berikutnya
+
+        section.reviewShop
+            .multiple-card-slider
+                .carousel#sliderReviewShop(data-bs-ride="false")
+                    .carousel-inner
+                        .carousel-item
+                            .itemWrapper
+                                .imgReview 
+                                    img.picProduct(src="./assets/img/revShop1.png")
+                                .reviewWrapper 
+                                    .ratingWrapper 
+                                        span.fa.fa-star(style="color:orange")
+                                        span.fa.fa-star(style="color:orange")
+                                        span.fa.fa-star(style="color:orange")
+                                        span.fa.fa-star(style="color:orange")
+                                        span.fa.fa-star(style="color:orange")
+                                    p.textReview#expandText7(onclick="expandtext(this.id)") “Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah”
+                                    .userWrapper
+                                        img.iconShop(src="./assets/img/icon/ic_shopee.png")
+                                        .dateInfo
+                                            span.userWrapper Pengguna Shopee
+                                            span.dateWrapper 07 Februari 2024
+                        .carousel-item
+                            .itemWrapper
+                                .imgReview 
+                                    img.picProduct(src="./assets/img/revShop2.png")
+                                .reviewWrapper 
+                                    .ratingWrapper 
+                                        span.fa.fa-star(style="color:orange")
+                                        span.fa.fa-star(style="color:orange")
+                                        span.fa.fa-star(style="color:orange")
+                                        span.fa.fa-star(style="color:orange")
+                                        span.fa.fa-star(style="color:orange")
+                                    p.textReview#expandText8(onclick="expandtext(this.id)") “On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.”
+                                    .userWrapper
+                                        img.iconShop(src="./assets/img/icon/ic_tokped.png")
+                                        .dateInfo
+                                            span.userWrapper Pengguna Tokopedia
+                                            span.dateWrapper 07 Februari 2024
+                        .carousel-item
+                            .itemWrapper
+                                .imgReview 
+                                    img.picProduct(src="./assets/img/revShop2.png")
+                                .reviewWrapper 
+                                    .ratingWrapper 
+                                        span.fa.fa-star(style="color:orange")
+                                        span.fa.fa-star(style="color:orange")
+                                        span.fa.fa-star(style="color:orange")
+                                        span.fa.fa-star(style="color:orange")
+                                        span.fa.fa-star(style="color:orange")
+                                    p.textReview#expandText9(onclick="expandtext(this.id)") “On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.”
+                                    .userWrapper
+                                        img.iconShop(src="./assets/img/icon/ic_tokped.png")
+                                        .dateInfo
+                                            span.userWrapper Pengguna Shopee
+                                            span.dateWrapper 07 Februari 2024
+                    button.carousel-control-prev(type="button" data-bs-target="#sliderReviewShop" data-bs-slide="prev")
+                        span.carousel-control-prev-icon(aria-hidden="true")
+                        span.visually-hidden Sebelumnya
+                    button.carousel-control-next(type="button" data-bs-target="#sliderReviewShop" data-bs-slide="next")
+                        span.carousel-control-next-icon(aria-hidden="true")
+                        span.visually-hidden Berikutnya
+        
+
+        section.avaibleStore
+            .kontentWrapper
+                span Produk tersedia di
+                .colImg
+                    img.widthImg(src="./assets/img/partner1.png")
+                    img.widthImg(src="./assets/img/partner2.png")
+                    img.widthImg(src="./assets/img/partner3.png")
+                    img.widthImg(src="./assets/img/partner4.png")
+
+        // Section Top Product
+        section.vSight-Home
+            .vSight-Wrapper 
+                .vSight-Header
+                    h1.vSight-Title V-Sight
+                    a.vSightlist-Link(href="v-sight.html")
+                        span.btnLinkvSight Lihat lainnya
+                .containerList-vSight
+                    a.vSightBoxLink(href="detailVsight.html")
+                        .vSight-contentWrapper
+                            img.vSight-Pict(src="./assets/img/article1.jpg")
+                            .vSight-infoWrapper
+                                span.vSight-Title 7 Rekomendasi Suplemen Korea
+                                span.vSight-Date 1 November 2024
+
+                    a.vSightBoxLink(href="detailVsight.html")
+                        .vSight-contentWrapper
+                            img.vSight-Pict(src="./assets/img/article2.jpg")
+                            .vSight-infoWrapper
+                                span.vSight-Title Sehat di dalam, Segar di luar
+                                span.vSight-Date 1 November 2024
+                   
+                    a.vSightBoxLink(href="detailVsight.html")
+                        .vSight-contentWrapper
+                            img.vSight-Pict(src="./assets/img/article3.jpg")
+                            .vSight-infoWrapper
+                                span.vSight-Title 7 Kunci Menjaga Wajah Tetap Cerah Sepanjang Hari
+                                span.vSight-Date 1 November 2024
+
+        // Footer
+        include includes/footer.pug
+        include includes/customJS.pug
+        script.
+            const width = window.innerWidth;
+            console.log(width);
+
+            //- Function Load Data from API
+
+            function expandtext(currentId) {
+                const revTextWeb = document.getElementById(currentId);
+                    console.log(revTextWeb.style.display);
+                if (revTextWeb.style.display === '-webkit-box') {
+                    revTextWeb.style.display = 'flex';
+                }else{
+                    revTextWeb.style.display = '-webkit-box';
+                }
+            }
+
+            function changeToVideo() {
+                // Reference to the image element
+                const imgElement = document.getElementById('youtubeImg');
+                const icplay = document.getElementById('icPlay');
+                let borderSize = "";
+
+                if (window.innerWidth < 768) {
+                    borderSize = '10px';
+                }else{
+                    borderSize = '20px';
+                }
+
+                // Create a new video element
+                const videoElement = document.createElement('video');
+                videoElement.style.width = '100%';
+                videoElement.style.height = 'auto';
+                videoElement.controls = true; // Add controls to the video
+                videoElement.autoplay = true; // Optional: start playing automatically
+                videoElement.style.borderRadius = borderSize;
+                videoElement.style.boxShadow = '0px 0px 0px';
+
+                // Create a source element for the video
+                const sourceElement = document.createElement('source');
+                sourceElement.src = "./assets/video/snovv_ads.mp4"; // Set the video source URL
+                sourceElement.type = "video/mp4"; // Set the video type
+
+                videoElement.addEventListener('play', () => {
+                    icplay.style.display = 'none'; // Show the element
+                });
+
+                videoElement.addEventListener('pause', () => {
+                    icplay.style.display = 'none'; // Hide the element
+                });
+
+                // Optionally, hide the element when the video ends
+                videoElement.addEventListener('ended', () => {
+                    icplay.style.display = 'block';
+                    videoElement.parentNode.replaceChild(imgElement, videoElement);
+                });
+
+                // Append the source to the video
+                videoElement.appendChild(sourceElement);
+
+                // Replace the image with the video
+                imgElement.parentNode.replaceChild(videoElement, imgElement);
+            }
+
+            $('.multiple-card-slider .carousel').each(function(){
+                var currentCarouselId = '#' + $(this).attr('id');
+                const multipleItemCarousel = document.querySelector(currentCarouselId);
+
+                    const carousel = new bootstrap.Carousel(multipleItemCarousel, {
+                        interval: false,
+                        wrap: false
+                    });
+                    var carouselWidth = $(currentCarouselId + ' .carousel-inner')[0].scrollWidth;
+                    var cardWidth = $(currentCarouselId + ' .carousel-item').width();
+                    var scrollPosition = 0;    
+                    $(currentCarouselId + ' .carousel-control-next').on('click', function(){
+                        if(scrollPosition < (carouselWidth - (cardWidth * 2))){
+                            console.log('next');
+                            scrollPosition = scrollPosition + cardWidth;
+                            $(currentCarouselId + ' .carousel-inner').animate({scrollLeft: scrollPosition},600);
+                        }
+                    });
+                    $(currentCarouselId + ' .carousel-control-prev').on('click', function(){
+                        if(scrollPosition > 0){
+                            console.log('prev');
+                            scrollPosition = scrollPosition - cardWidth;
+                            $(currentCarouselId + ' .carousel-inner').animate({scrollLeft: scrollPosition},600);
+                        }
+                    });
+            });

@@ -142,7 +142,6 @@
         display: inline-flex;
   
         input,textarea {
-          align-self: stretch; 
           height: 70px; 
           padding-left: 15px; 
           padding-right: 15px; 
@@ -246,7 +245,7 @@
 
 }
 
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+@media screen and (min-width: 992px) and (max-width: 1380px) {
 
   .contactus-section {
     padding: 55px 40px;
@@ -258,9 +257,5 @@
       padding: 1.5rem;
     }
   }
-
-}
-
-@media screen and (min-width: 1200px) {
 
 }

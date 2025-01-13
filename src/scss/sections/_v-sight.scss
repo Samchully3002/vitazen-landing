@@ -100,6 +100,7 @@
       
       .page-item.active a {
         color:white;
+        background-color: #A083DE;
       }
 
       .page-link {
@@ -147,6 +148,9 @@
         .vsight {
           .linkToDetail {
             gap: 10px;
+            .Vimg {
+              height: auto;
+            }
           }
         }
       }
@@ -177,6 +181,9 @@
         .vsight {
           .linkToDetail {
             gap: 10px;
+            .Vimg {
+              height: auto;
+            }
           }
         }
       }
@@ -208,14 +215,13 @@
         .vsight {
           .linkToDetail {
             gap: 10px;
+            .Vimg {
+              height: auto;
+            }
           }
         }
       }
     }
   }
-
-}
-
-@media screen and (min-width: 1200px) {
 
 }

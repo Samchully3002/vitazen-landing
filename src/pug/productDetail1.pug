@@ -169,7 +169,7 @@ html(lang='en')
                                             .reviewProdukSeparator
                                             .imgMedia 
                                                 img(src="./assets/img/media_review.png")
-                                        button.btnInput(type="button") Tulis Ulasan
+                                        button.btnInput(type="button" data-bs-toggle="modal" data-bs-target="#modalReviewProduct") Tulis Ulasan
                                     .filterWrapper
                                         h6 Menampilkan 1 - 4 dari 4 ulasan
                                         .dropdown
@@ -308,44 +308,121 @@ html(lang='en')
                                                 li The average delivery date for this product is 2 days (after payment confirmation). For installation products, delivery may be slightly delayed. [The expected delivery date may differ from the average delivery date due to the fluidity of the order time (order sequence).]
                                                 li This product can be delivered within 3 days. The delivery possible date refers to the period during which the product can be delivered to customers who ordered this product. (However, holidays and public holidays are excluded when calculating the period, and in the case of cash orders, it is based on the date of deposit.)                             
 
-        .modal.fade#reviewModal(tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true")
-            .modal-dialog.modal-lg
+        .modal.fade#modalReviewProduct(tabindex="-1" aria-labelledby="modalReviewProduct" aria-hidden="true")
+            .modal-dialog(style="width:1200px;" role="document")
                 .modal-content
-                    .modal-header
-                        h5.modal-title#reviewModalLabel Add A Review “Snowv Glutathione”
+                    .modal-header 
                         button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
                     .modal-body
-                        .star-rating
-                            d-flex.align-items-center
-                                div(data-coreui-toggle="rating")
-                                    div#myRatingResettable(data-coreui-toggle="rating" data-coreui-value="3")
-                                    button.btn.btn-primary.ms-3(type="button" onclick="coreui.Rating.getInstance('#myRatingResettable').reset()") Reset
-                        form
-                            .mb-3
-                                input(type="text" class="form-control" placeholder="Order Number")
-                            .row.mb-3
-                                .col
-                                    input(type="text" class="form-control" placeholder="Name")
-                                .col
-                                    input(type="email" class="form-control" placeholder="Email")
-                            .mb-3
-                                textarea.form-control(rows="3" placeholder="Write your review here")
-
-                            .upload-section
-                                span Upload videos (0/3)
-                                input.form-control(type="file" multiple)
-                                small Max size: 1024kb, max 3 files
-                            .upload-section
-                                span Upload photos (0/3)
-                                input.form-control(type="file" multiple)
-                                small Max size: 100kb, max 3 files
-                    .modal-footer
-                        button.btn.btn-primary(type="submit") Submit
+                        .wrapperModal
+                            .titleWrapperText
+                                span.titleModalReview Tambah Ulasan “Snovv Glutathione”
+                                span.emailTextLabel Alamat email Anda tidak akan dipublikasikan. Kolom yang wajib diisi ditandai *
+                            form.formWrapper
+                                fieldset.rating
+                                    input#star5(type="radio" name="rating" value="5")
+                                    label(for="star5") 5 stars
+                                    input#star4(type="radio" name="rating" value="4")
+                                    label(for="star4") 4 stars
+                                    input#star3(type="radio" name="rating" value="3")
+                                    label(for="star3") 3 stars
+                                    input#star2(type="radio" name="rating" value="2")
+                                    label(for="star2") 2 stars
+                                    input#star1(type="radio" name="rating" value="1")
+                                    label(for="star1") 1 stars
+                                input.inputBox(type="text" class="form-control" placeholder="Nomor Pesanan *")
+                                .userWrapperspan
+                                    input.inputBox(type="text" class="form-control" placeholder="Nama *")
+                                    input.inputBox(type="email" class="form-control" placeholder="Email *")
+                                textarea.inputBox(rows="3" class="form-control" placeholder="Tulis Ulasanmu Di sini *" style="height:160px;")
+                                input(type="file" id="input_video" style="display: none;" multiple)
+                                input(type="file" name="uploadFoto" id="input_foto" style="display: none;" multiple)
+                                .uploadFile#inputVideo
+                                    img(src="./assets/img/icon/ic_uploadvideo.svg")
+                                    .labelWrapper
+                                        span.labelUpload Unggah video (0/3)
+                                        span.labelInfoUpload#changeText1 Ukuran file maksimum 1024kb, maks 3 file
+                                        span#warning1(style="color: red; display: none;") Hanya boleh upload 3 file!
+                                .uploadFile#uploadFoto
+                                    img(src="./assets/img/icon/ic_uploadfoto.svg")
+                                    .labelWrapper
+                                        span.labelUpload Unggah foto (0/3)
+                                        small.labelInfoUpload#changeText2 Ukuran file maksimum 100kb, maks 3 file
+                                        span#warning2(style="color: red; display: none;") Hanya boleh upload 3 file!
+                                .wrapperBtnKirim
+                                    button.btn.btnKirimRev(type="submit") 
+                                        span.labelBtn Kirim
 
         // Footer
         include includes/footer.pug
         include includes/customJS.pug
         script.
+            const div1 = document.getElementById("inputVideo");
+            const fileInput1 = document.getElementById("input_video");
+            const fileNameDisplay1 = document.getElementById("changeText1");
+            const warning = document.getElementById("warning");
+            
+            const div2 = document.getElementById("uploadFoto");
+            const fileInput2 = document.getElementById("input_foto");
+            const fileNameDisplay2 = document.getElementById("changeText2");
+
+            // Add a click event listener to the div
+            div1.addEventListener("click", () => {
+            fileInput1.click(); // Programmatically trigger the hidden input
+            });
+
+            // Add a change event listener to the input
+            fileInput1.addEventListener("change", () => {
+                const files = fileInput1.files; // Get the list of selected files
+                fileNameDisplay1.innerHTML = ""; // Clear previous file list
+
+                if (files.length > 3) {
+                    warning1.style.display = "block";
+                } else {
+                    warning1.style.display = "none";
+
+                    if (files.length > 0) {
+                        // Loop through all selected files and display their names
+                        Array.from(files).forEach((file, index) => {
+                        const listItem = document.createElement("span");
+                        listItem.textContent = `${file.name}, `;
+                        fileNameDisplay1.appendChild(listItem);
+                        });
+                    } else {
+                        fileNameDisplay1.innerHTML = "<span>Tidak ada file yang dipilih</span>";
+                    }
+                }
+            });
+
+                        // Add a click event listener to the div
+            div2.addEventListener("click", () => {
+            fileInput2.click(); // Programmatically trigger the hidden input
+            });
+
+            // Add a change event listener to the input
+            fileInput2.addEventListener("change", () => {
+            const files = fileInput2.files; // Get the list of selected files
+                fileNameDisplay2.innerHTML = ""; // Clear previous file list
+
+                if (files.length > 3) {
+                    warning2.style.display = "block";
+                    fileList.innerHTML = "<li>No files displayed due to excess selection</li>";
+                } else {
+                    warning2.style.display = "none";
+
+                    if (files.length > 0) {
+                        // Loop through all selected files and display their names
+                        Array.from(files).forEach((file, index) => {
+                        const listItem = document.createElement("span");
+                        listItem.textContent = `${file.name}, `;
+                        fileNameDisplay2.appendChild(listItem);
+                        });
+                    } else {
+                        fileNameDisplay2.innerHTML = "<span>Tidak ada file yang dipilih</span>";
+                    }
+                }
+            });
+
             $('.multiple-card-slider .carousel').each(function(){
                 var currentCarouselId = '#' + $(this).attr('id');
                 const multipleItemCarousel = document.querySelector(currentCarouselId);

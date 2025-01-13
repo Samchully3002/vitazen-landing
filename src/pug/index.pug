@@ -79,30 +79,31 @@ html(lang='en')
 
         // Section Promotion Banner
         section.promo-section
-            .carousel.slide#promoCarausel(data-bs-ride="carousel" style="align-items: center; justify-content: center;")
-                .carousel-indicators.custom-indicators
-                    button(type="button" data-bs-target="#promoCarausel" data-bs-slide-to="0" class="active" aria-current="true")
-                    button(type="button" data-bs-target="#promoCarausel" data-bs-slide-to="1")
-                    button(type="button" data-bs-target="#promoCarausel" data-bs-slide-to="2")
-                .carousel-inner
-                    .carousel-item.active
-                        a.d-flex.justify-content-center(href="productDetail3.html")
-                            img.itemPromo(src="./assets/img/promo1.png" alt="Snovv Promo")
-                        
-                    .carousel-item
-                        a.d-flex.justify-content-center(href="productDetail3.html")
-                            img.itemPromo(src="./assets/img/promo1.png" alt="Snovv Promo")
-                        
-                    .carousel-item
-                        a.d-flex.justify-content-center(href="productDetail3.html")
-                            img.itemPromo(src="./assets/img/promo1.png" alt="Snovv Promo")                            
-                        
-                a.carousel-control-prev(type="button" data-bs-target="#promoCarausel" data-bs-slide="prev")
-                    span.carousel-control-prev-icon(aria-hidden="true")
-                    span.visually-hidden Sebelumnya
-                a.carousel-control-next(type="button" data-bs-target="#promoCarausel" data-bs-slide="next")
-                    span.carousel-control-next-icon(aria-hidden="true")
-                    span.visually-hidden Berikutnya
+            .promoWrapper
+                .carousel.slide#promoCarausel(data-bs-ride="carousel" style="align-items: center; justify-content: center;")
+                    .carousel-indicators.custom-indicators
+                        button(type="button" data-bs-target="#promoCarausel" data-bs-slide-to="0" class="active" aria-current="true")
+                        button(type="button" data-bs-target="#promoCarausel" data-bs-slide-to="1")
+                        button(type="button" data-bs-target="#promoCarausel" data-bs-slide-to="2")
+                    .carousel-inner
+                        .carousel-item.active
+                            a.d-flex.justify-content-center(href="productDetail3.html")
+                                img.itemPromo(src="./assets/img/promo1.png" alt="Snovv Promo")
+                            
+                        .carousel-item
+                            a.d-flex.justify-content-center(href="productDetail3.html")
+                                img.itemPromo(src="./assets/img/promo1.png" alt="Snovv Promo")
+                            
+                        .carousel-item
+                            a.d-flex.justify-content-center(href="productDetail3.html")
+                                img.itemPromo(src="./assets/img/promo1.png" alt="Snovv Promo")                            
+                            
+                    a.carousel-control-prev(type="button" data-bs-target="#promoCarausel" data-bs-slide="prev")
+                        span.carousel-control-prev-icon(aria-hidden="true")
+                        span.visually-hidden Sebelumnya
+                    a.carousel-control-next(type="button" data-bs-target="#promoCarausel" data-bs-slide="next")
+                        span.carousel-control-next-icon(aria-hidden="true")
+                        span.visually-hidden Berikutnya
 
         // Section Website Review
         section.reviewWebsite
@@ -110,163 +111,154 @@ html(lang='en')
                 h1.titleTextrev Apa Kata Mereka?
                 .multiple-card-slider
                     .carousel#carouselWebsiteRev(data-bs-ride="false")
-                        .container
-                            .carousel-inner
-                                .carousel-item
-                                    .websiterevWrapper
-                                        .revImgBox
-                                            img.websiterevPict(src="./assets/img/revWeb2.png")
-                                        .commentrevWrapper
-                                            .ratingrevBox
-                                                span.fa.fa-star
-                                                span.fa.fa-star
-                                                span.fa.fa-star
-                                                span.fa.fa-star
-                                                span.fa.fa-star
-                                            p.websiterevText#expandText1(onclick="expandtext(this.id)") Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah
-                                            .custInfoWrapper
-                                                img.userFoto(src="./assets/img/userWeb1.png")
-                                                .userNameDateWrapper
-                                                    span.revNameText Nurul Fitriani
-                                                    span.revDateText 07 Februari 2024
-
-                                .carousel-item
-                                    .websiterevWrapper
-                                        .revImgBox
-                                            img.websiterevPict(src="./assets/img/revWeb2.png")
-                                        .commentrevWrapper
-                                            .ratingrevBox
-                                                span.fa.fa-star
-                                                span.fa.fa-star
-                                                span.fa.fa-star
-                                                span.fa.fa-star
-                                                span.fa.fa-star
-                                            p.websiterevText#expandText2(onclick="expandtext(this.id)") I like that the dosage is printed neatly on the front. I had a blood test for vitamin D and it came out to be insufficient, so I am taking this product that also contains other ingredients.
-                                            .custInfoWrapper
-                                                img.userFoto(src="./assets/img/userWeb1.png")
-                                                .userNameDateWrapper
-                                                    span.revNameText Nurul Fitriani
-                                                    span.revDateText 07 Februari 2024
-
-                                .carousel-item
-                                    .websiterevWrapper
-                                        .revImgBox
-                                            img.websiterevPict(src="./assets/img/revWeb2.png")
-                                        .commentrevWrapper
-                                            .ratingrevBox
-                                                span.fa.fa-star
-                                                span.fa.fa-star
-                                                span.fa.fa-star
-                                                span.fa.fa-star
-                                                span.fa.fa-star
-                                            p.websiterevText#expandText3(onclick="expandtext(this.id)") Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah
-                                            .custInfoWrapper
-                                                img.userFoto(src="./assets/img/userWeb1.png")
-                                                .userNameDateWrapper
-                                                    span.revNameText Nurul Fitriani
-                                                    span.revDateText 07 Februari 2024
-
-                                .carousel-item
-                                    .websiterevWrapper
-                                        .revImgBox
-                                            img.websiterevPict(src="./assets/img/revWeb2.png")
-                                        .commentrevWrapper
-                                            .ratingrevBox
-                                                span.fa.fa-star
-                                                span.fa.fa-star
-                                                span.fa.fa-star
-                                                span.fa.fa-star
-                                                span.fa.fa-star
-                                            p.websiterevText#expandText4(onclick="expandtext(this.id)") Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah
-                                            .custInfoWrapper
-                                                img.userFoto(src="./assets/img/userWeb1.png")
-                                                .userNameDateWrapper
-                                                    span.revNameText Nurul Fitriani
-                                                    span.revDateText 07 Februari 2024
-
-                                .carousel-item
-                                    .websiterevWrapper
-                                        .revImgBox
-                                            img.websiterevPict(src="./assets/img/revWeb2.png")
-                                        .commentrevWrapper
-                                            .ratingrevBox
-                                                span.fa.fa-star
-                                                span.fa.fa-star
-                                                span.fa.fa-star
-                                                span.fa.fa-star
-                                                span.fa.fa-star
-                                            p.websiterevText#expandText5(onclick="expandtext(this.id)") Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah
-                                            .custInfoWrapper
-                                                img.userFoto(src="./assets/img/userWeb1.png")
-                                                .userNameDateWrapper
-                                                    span.revNameText Nurul Fitriani
-                                                    span.revDateText 07 Februari 2024
-
-                                .carousel-item
-                                    .websiterevWrapper
-                                        .revImgBox
-                                            img.websiterevPict(src="./assets/img/revWeb2.png")
-                                        .commentrevWrapper
-                                            .ratingrevBox
-                                                span.fa.fa-star
-                                                span.fa.fa-star
-                                                span.fa.fa-star
-                                                span.fa.fa-star
-                                                span.fa.fa-star
-                                            p.websiterevText#expandText6(onclick="expandtext(this.id)") Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah
-                                            .custInfoWrapper
-                                                img.userFoto(src="./assets/img/userWeb1.png")
-                                                .userNameDateWrapper
-                                                    span.revNameText Nurul Fitriani
-                                                    span.revDateText 07 Februari 2024
-                            button.carousel-control-prev(type="button" data-bs-target="#carouselWebsiteRev" data-bs-slide="next")
-                                span.carousel-control-prev-icon(aria-hidden="true")
-                                span.visually-hidden Sebelumnya
-                            button.carousel-control-next(type="button" data-bs-target="#carouselWebsiteRev" data-bs-slide="next")
-                                span.carousel-control-next-icon(aria-hidden="true")
-                                span.visually-hidden Berikutnya
-           
-        section.reviewIGVid
-            .reviewCoverIG
-                .multiple-card-slider
-                    .carousel#igCarausel(data-bs-ride="false")
                         .carousel-inner
                             .carousel-item
-                                img.btnPlay(src="./assets/img/icon/ic_playIG.png")
-                                img.IGimg(src="./assets/img/igVid.png")
+                                .websiterevWrapper
+                                    .revImgBox
+                                        img.websiterevPict(src="./assets/img/revWeb2.png")
+                                    .commentrevWrapper
+                                        .ratingrevBox
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                        p.websiterevText#expandText1(onclick="expandtext(this.id)") 01. Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah
+                                        .custInfoWrapper
+                                            img.userFoto(src="./assets/img/userWeb1.png")
+                                            .userNameDateWrapper
+                                                span.revNameText Nurul Fitriani
+                                                span.revDateText 07 Februari 2024
+
                             .carousel-item
-                                img.btnPlay(src="./assets/img/icon/ic_playIG.png")
-                                img.IGimg(src="./assets/img/igVid.png")
+                                .websiterevWrapper
+                                    .revImgBox
+                                        img.websiterevPict(src="./assets/img/revWeb2.png")
+                                    .commentrevWrapper
+                                        .ratingrevBox
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                        p.websiterevText#expandText2(onclick="expandtext(this.id)") 02. I like that the dosage is printed neatly on the front. I had a blood test for vitamin D and it came out to be insufficient, so I am taking this product that also contains other ingredients.
+                                        .custInfoWrapper
+                                            img.userFoto(src="./assets/img/userWeb1.png")
+                                            .userNameDateWrapper
+                                                span.revNameText Nurul Fitriani
+                                                span.revDateText 07 Februari 2024
+
                             .carousel-item
-                                img.btnPlay(src="./assets/img/icon/ic_playIG.png")
-                                img.IGimg(src="./assets/img/igVid.png")
+                                .websiterevWrapper
+                                    .revImgBox
+                                        img.websiterevPict(src="./assets/img/revWeb2.png")
+                                    .commentrevWrapper
+                                        .ratingrevBox
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                        p.websiterevText#expandText3(onclick="expandtext(this.id)") 03. Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah
+                                        .custInfoWrapper
+                                            img.userFoto(src="./assets/img/userWeb1.png")
+                                            .userNameDateWrapper
+                                                span.revNameText Nurul Fitriani
+                                                span.revDateText 07 Februari 2024
+
                             .carousel-item
-                                img.btnPlay(src="./assets/img/icon/ic_playIG.png")
-                                img.IGimg(src="./assets/img/igVid.png")
-                            .carousel-item.active
-                                img.btnPlay(src="./assets/img/icon/ic_playIG.png")
-                                img.IGimg(src="./assets/img/igVid.png")
+                                .websiterevWrapper
+                                    .revImgBox
+                                        img.websiterevPict(src="./assets/img/revWeb2.png")
+                                    .commentrevWrapper
+                                        .ratingrevBox
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                        p.websiterevText#expandText4(onclick="expandtext(this.id)") 04. Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah
+                                        .custInfoWrapper
+                                            img.userFoto(src="./assets/img/userWeb1.png")
+                                            .userNameDateWrapper
+                                                span.revNameText Nurul Fitriani
+                                                span.revDateText 07 Februari 2024
+
                             .carousel-item
-                                img.btnPlay(src="./assets/img/icon/ic_playIG.png")
-                                img.IGimg(src="./assets/img/igVid.png")
+                                .websiterevWrapper
+                                    .revImgBox
+                                        img.websiterevPict(src="./assets/img/revWeb2.png")
+                                    .commentrevWrapper
+                                        .ratingrevBox
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                        p.websiterevText#expandText5(onclick="expandtext(this.id)") 05. Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah
+                                        .custInfoWrapper
+                                            img.userFoto(src="./assets/img/userWeb1.png")
+                                            .userNameDateWrapper
+                                                span.revNameText Nurul Fitriani
+                                                span.revDateText 07 Februari 2024
+
                             .carousel-item
-                                img.btnPlay(src="./assets/img/icon/ic_playIG.png")
-                                img.IGimg(src="./assets/img/igVid.png")
-                            .carousel-item
-                                img.btnPlay(src="./assets/img/icon/ic_playIG.png")
-                                img.IGimg(src="./assets/img/igVid.png")
-                            .carousel-item
-                                img.btnPlay(src="./assets/img/icon/ic_playIG.png")
-                                img.IGimg(src="./assets/img/igVid.png")
-                        button.carousel-control-prev(type="button" data-bs-target="#igCarausel" data-bs-slide="prev")
-                            span.carousel-control-prev-icon
+                                .websiterevWrapper
+                                    .revImgBox
+                                        img.websiterevPict(src="./assets/img/revWeb2.png")
+                                    .commentrevWrapper
+                                        .ratingrevBox
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                            span.fa.fa-star
+                                        p.websiterevText#expandText6(onclick="expandtext(this.id)") 06. Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah
+                                        .custInfoWrapper
+                                            img.userFoto(src="./assets/img/userWeb1.png")
+                                            .userNameDateWrapper
+                                                span.revNameText Nurul Fitriani
+                                                span.revDateText 07 Februari 2024
+                        button.carousel-control-prev(type="button" data-bs-target="#carouselWebsiteRev" data-bs-slide="next")
+                            span.carousel-control-prev-icon(aria-hidden="true")
                             span.visually-hidden Sebelumnya
-                        button.carousel-control-next(type="button" data-bs-target="#igCarausel" data-bs-slide="next")
+                        button.carousel-control-next(type="button" data-bs-target="#carouselWebsiteRev" data-bs-slide="next")
                             span.carousel-control-next-icon(aria-hidden="true")
                             span.visually-hidden Berikutnya
+        
+        // Section IG Review
+        section.reviewIGVid
+            .reviewCoverIG.js-flickity(data-flickity-options='{ "wrapAround": true }')
+                .gallery-cell
+                    img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                    img.IGimg(src="./assets/img/igVid.png")
+                .gallery-cell
+                    img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                    img.IGimg(src="./assets/img/igVid.png")
+                .gallery-cell
+                    img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                    img.IGimg(src="./assets/img/igVid.png")
+                .gallery-cell
+                    img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                    img.IGimg(src="./assets/img/igVid.png")
+                .gallery-cell
+                    img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                    img.IGimg(src="./assets/img/igVid.png")
+                .gallery-cell
+                    img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                    img.IGimg(src="./assets/img/igVid.png")
+                .gallery-cell
+                    img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                    img.IGimg(src="./assets/img/igVid.png")
+                .gallery-cell
+                    img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                    img.IGimg(src="./assets/img/igVid.png")
+                .gallery-cell
+                    img.btnPlay(src="./assets/img/icon/ic_playIG.png")
+                    img.IGimg(src="./assets/img/igVid.png")
 
         section.reviewShop
-            .container
+            .ShoprevWrapper
                 .multiple-card-slider
                     .carousel#sliderReviewShop(data-bs-ride="false")
                         .carousel-inner
@@ -281,7 +273,7 @@ html(lang='en')
                                             span.fa.fa-star(style="color:orange")
                                             span.fa.fa-star(style="color:orange")
                                             span.fa.fa-star(style="color:orange")
-                                        p.textReview#expandText7(onclick="expandtext(this.id)") “Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah”
+                                        span.textReview#expandText7(onclick="expandtext(this.id)") “Di cuaca yang panas seperti ini, lebih nikmat rasanya juga meminumnya dengan air es. Dan kulitku terasa lebih cerah”
                                         .userWrapper
                                             img.iconShop(src="./assets/img/icon/ic_shopee.png")
                                             .dateInfo
@@ -298,7 +290,7 @@ html(lang='en')
                                             span.fa.fa-star(style="color:orange")
                                             span.fa.fa-star(style="color:orange")
                                             span.fa.fa-star(style="color:orange")
-                                        p.textReview#expandText8(onclick="expandtext(this.id)") “On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.”
+                                        span.textReview#expandText8(onclick="expandtext(this.id)") “On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.”
                                         .userWrapper
                                             img.iconShop(src="./assets/img/icon/ic_tokped.png")
                                             .dateInfo
@@ -315,11 +307,28 @@ html(lang='en')
                                             span.fa.fa-star(style="color:orange")
                                             span.fa.fa-star(style="color:orange")
                                             span.fa.fa-star(style="color:orange")
-                                        p.textReview#expandText9(onclick="expandtext(this.id)") “On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.”
+                                        span.textReview#expandText9(onclick="expandtext(this.id)") “On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.”
+                                        .userWrapper
+                                            img.iconShop(src="./assets/img/icon/ic_shopee.png")
+                                            .dateInfo
+                                                span.userWrapper Pengguna Shopee
+                                                span.dateWrapper 07 Februari 2024
+                            .carousel-item
+                                .itemWrapper
+                                    .imgReview 
+                                        img.picProduct(src="./assets/img/revShop2.png")
+                                    .reviewWrapper 
+                                        .ratingWrapper 
+                                            span.fa.fa-star(style="color:orange")
+                                            span.fa.fa-star(style="color:orange")
+                                            span.fa.fa-star(style="color:orange")
+                                            span.fa.fa-star(style="color:orange")
+                                            span.fa.fa-star(style="color:orange")
+                                        span.textReview#expandText9(onclick="expandtext(this.id)") “On hot days like these, it tastes even better when you put it in ice water and drink it. It makes your face feel brighter.”
                                         .userWrapper
                                             img.iconShop(src="./assets/img/icon/ic_tokped.png")
                                             .dateInfo
-                                                span.userWrapper Pengguna Shopee
+                                                span.userWrapper Pengguna Tokopedia
                                                 span.dateWrapper 07 Februari 2024
                         button.carousel-control-prev(type="button" data-bs-target="#sliderReviewShop" data-bs-slide="prev")
                             span.carousel-control-prev-icon(aria-hidden="true")
@@ -330,7 +339,7 @@ html(lang='en')
         
 
         section.avaibleStore
-            .container
+            .kontentWrapper
                 span Produk tersedia di
                 .colImg
                     img.widthImg(src="./assets/img/partner1.png")
@@ -392,7 +401,7 @@ html(lang='en')
                 const icplay = document.getElementById('icPlay');
                 let borderSize = "";
 
-                if (window.innerWidth < 1000) {
+                if (window.innerWidth < 768) {
                     borderSize = '10px';
                 }else{
                     borderSize = '20px';
@@ -445,17 +454,17 @@ html(lang='en')
                     var cardWidth = $(currentCarouselId + ' .carousel-item').width();
                     var scrollPosition = 0;    
                     $(currentCarouselId + ' .carousel-control-next').on('click', function(){
-                        if(scrollPosition < (carouselWidth - (cardWidth * 2))){
+                        if(scrollPosition < (carouselWidth - (cardWidth * 4))){
                             console.log('next');
                             scrollPosition = scrollPosition + cardWidth;
-                            $(currentCarouselId + ' .carousel-inner').animate({scrollLeft: scrollPosition},600);
+                            $(currentCarouselId + ' .carousel-inner').animate({scrollLeft: scrollPosition},300);
                         }
                     });
                     $(currentCarouselId + ' .carousel-control-prev').on('click', function(){
                         if(scrollPosition > 0){
                             console.log('prev');
                             scrollPosition = scrollPosition - cardWidth;
-                            $(currentCarouselId + ' .carousel-inner').animate({scrollLeft: scrollPosition},600);
+                            $(currentCarouselId + ' .carousel-inner').animate({scrollLeft: scrollPosition},300);
                         }
                     });
             });

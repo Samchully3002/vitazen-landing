@@ -34,7 +34,7 @@
   .btnshopWrapperHero2 {
     position: absolute;
     top: 61%;
-    left: 11%; 
+    left: 10%; 
     transform: translate(-50%, -50%);
     display: flex; 
     align-items: center; 
@@ -54,8 +54,8 @@
 }
 
 .vidYoutube {
-    width: 100%; height: 100%;
-    padding: 82px 105px 97px 105px;
+    width: 100%; height: 100%; 
+    padding: 82px 90px 97px 90px; 
     background: rgba(255, 255, 255, 0.10); 
     justify-content: center; align-items: center; display: inline-flex;
     .vidBox { 
@@ -89,7 +89,7 @@
 
 .products-home {
     width: 100%; height: 100%; 
-    padding: 70px 105px 31px 105px;
+    padding: 70px 101px 31px 101px;
     background: rgba(255, 255, 255, 0.10);
     justify-content: center; align-items: center;
     display: inline-flex;
@@ -195,26 +195,26 @@
 }
   
 .promo-section {
-  padding: 32px 112px 68px 112px;
+  padding: 32px 102px 68px 102px;
   width: 100%; height: 100%;
-  display: flex;
-  align-items: center;
+  align-items: center; 
   justify-content: center;
-  .promoWrapper {
-    width: 100%; height: 100%;
 
     .itemPromo {
       width: 100%; height: 100%;
     }
+
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
       filter: invert(100%);
       width: 3rem; height: 3rem;
     }
+
     .carousel-control-prev,
     .carousel-control-next {
-      margin: 0 -10%;
+      margin: 0 75px;
     }
+    
     .custom-indicators {
       position: absolute;
       bottom: -60px;
@@ -222,27 +222,26 @@
     .custom-indicators .active {
       background-color: black; /* Black for the active dot */
       width: 30px; /* Elongate the active indicator */
-      height: 10px;
       border-radius: 14px; /* Round shape */
     }
+
     .custom-indicators button {
-      background-color: gray; /* Gray for inactive dots */
-      width: 10px; /* Default size */
-      height: 10px;
-      border-radius: 50%;
+        background-color: gray; /* Gray for inactive dots */
+        width: 10px; /* Default size */
+        height: 10px;
+        border-radius: 50%;
     }
-  }
 }
 
 .reviewWebsite {
   width: 100%; height: 100%;
-  padding: 70px  105px 44px 105px;
+  padding: 70px  80px 44px 80px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
   .reviewCover {
-    width: 100%; height: 100%;
+    width: 100%; height: 100%; 
 
     .titleTextrev {
       width:100%;
@@ -257,10 +256,10 @@
       width: 100%; 
       height: 100%; 
       position: relative;
-      align-items: flex-start;
       justify-content: flex-start; 
+      align-items: flex-start; 
       gap: 24px; 
-      padding: 65px 0;
+      padding: 50px 0;
       display: inline-flex;
     }
 
@@ -270,15 +269,17 @@
       backface-visibility: visible;
     }
   
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
+    .multiple-card-slider .carousel-control-prev,
+    .multiple-card-slider .carousel-control-next {
       filter: invert(100%);
-      width: 45px; height: 45px;
-    }
-    .carousel-control-prev,
-    .carousel-control-next {
-      margin: 0 -10%;
-    }
+      margin: 0;
+
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        width: 3.5em;
+        height: 3.5em;
+      }
+  }
 
     .websiterevWrapper {
       width: 100%; flex: 1 1 0; 
@@ -297,12 +298,12 @@
         justify-content: center; align-items: center; 
         display: flex;
         .websiterevPict {
-          width: auto; height: 320px;
+          width: 302px; height: 320px;
         }
       }
       .commentrevWrapper {
         width:100%; align-self: stretch;
-        padding-left: 20px; padding-right: 20px;
+        padding-left: 20px; padding-right: 20px; 
         flex-direction: column; 
         justify-content: center; align-items: flex-start; 
         gap: 10px; display: flex;
@@ -320,7 +321,7 @@
           display: -webkit-box; 
           -webkit-line-clamp: 2; 
           -webkit-box-orient: vertical; 
-          word-wrap: break-word;
+          word-wrap: break-word; line-height: 1.3;
           cursor: pointer;
         }
         .custInfoWrapper {
@@ -359,29 +360,22 @@
 
   .reviewCoverIG {
     width: 100%; height: 100%; max-width: 100vw;
-    .flickity-page-dots {
-      display: none;
+
+    .multiple-card-slider .carousel-inner {
+      gap: 40px; 
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
     }
-    .flickity-prev-next-button.previous {
-      width: 45px; height: 45px;
-      left: 2.2%;
-    }
-    .flickity-prev-next-button.next {
-      width: 3rem; height: 3rem;
-      right: 2.2%;
-    }
-    .gallery {
-      background: #EEE;
-    }
-    .gallery-cell {
-      width: 342px;
-      height: auto;
-      border-radius: 20px; 
-      margin:0 20px;
-      counter-increment: gallery-cell;
+
+    .multiple-card-slider .carousel-item,
+    .multiple-card-slider .carousel-item.active {
+      display: block; flex: none; margin-right: 0;
+      backface-visibility: visible;
+      width: 338px; height: 600px; position: relative;
 
       .btnPlay {
-        width: 30%;
         position: absolute;
         top: 50%; 
         left: 50%; 
@@ -392,50 +386,66 @@
         cursor: pointer;
       }
       .IGimg {
-        width: 100%; height: auto; 
-        border-radius: 20px;
+        width: 338px; height: 600px; 
+        border-radius: 20px; 
         overflow: hidden; 
         display: inline-flex;
         cursor: pointer;
+      }
+    }
+
+    .multiple-card-slider .carousel-control-prev,
+    .multiple-card-slider .carousel-control-next {
+      overflow: hidden; 
+      backdrop-filter: blur(10px);
+      background-color: #FFFFFF;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-left:20px;
+      margin-right: 20px;
+      
+      span {
+        filter: invert(100%);
       }
     }
   }
 }
 
 .reviewShop {
-  width: 100%; height: 100%; display: flex; 
-  padding: 58px 105px 0 105px;
-  align-items: center; justify-content: center;
-  .ShoprevWrapper {
-    width: 100%; height: 100%;
+  width: 100%; height: 100%; position: relative; padding: 50px 82px 80px 82px;
 
-    .multiple-card-slider .carousel-inner {
-      width: 100%; height: 100%; 
-      justify-content: flex-start;
-      align-items: center; gap: 0;
-      display: inline-flex;
-      padding: 30px 0;
-    }
+  .multiple-card-slider .carousel-inner {
+    width: 100%; height: 100%; 
+    justify-content: flex-start;
+    align-items: center; gap: 24px; 
+    display: inline-flex;
+    padding: 30px 0;
+  }
+
     .itemWrapper{
-      width: 626px; height: 100%; background: white; 
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15); margin-right: 24px;
+      width: 100%; height: 100%; background: white; 
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15); 
       border-radius: 10px; border: 1px rgba(0, 0, 0, 0) solid; 
       justify-content: center; align-items: center; 
       gap: 20px; display: inline-flex;
 
       .imgReview{
-        width: 200px; height: 200px;
+        width: fit-content; height: auto;
         border-radius: 10px 0 0 10px;
         overflow: hidden; 
         justify-content: center; 
         align-items: center; 
         display: flex;
+
         .picProduct {
-          width: 200px; height: 200px;
+          width: fit-content; height: 300px;
         }
       }
       .reviewWrapper {
-        width: 100%;
+        width: 100%; height: 100%;
         flex: 1 1 0; align-self: stretch; 
         padding-left: 20px; padding-right: 20px; 
         flex-direction: column; justify-content: center; 
@@ -447,10 +457,11 @@
           align-items: flex-start; 
           gap: 5px; display: inline-flex;
         }
-        .textReview { 
-          color: black; font-size: 16px; 
+        .textReview {
+          align-self: stretch; width: 100%; height: auto; 
+          color: black; font-size: 20px; 
           font-family: Plus Jakarta Sans;
-          font-weight: 400; 
+          font-weight: 400;
           word-wrap: break-word;
         }
         .userWrapper {
@@ -463,13 +474,13 @@
             flex-direction: column; justify-content: flex-start; 
             align-items: flex-start; gap: 4px; display: inline-flex;
             .userWrapper {
-              color: #444444; font-size: 12px; 
+              color: #444444; font-size: 16px; 
               font-family: Plus Jakarta Sans; 
               font-weight: 500; line-height: 18px; 
               word-wrap: break-word;
             }
             .dateWrapper {
-              color: #444444; font-size: 10px; 
+              color: #444444; font-size: 14px; 
               font-family: Plus Jakarta Sans; 
               font-weight: 400; line-height: 12px;
               word-wrap: break-word;
@@ -479,27 +490,29 @@
       }
     }
 
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
+  .multiple-card-slider .carousel-control-prev,
+  .multiple-card-slider .carousel-control-next {
       filter: invert(100%);
-      width: 45px; height: 45px;
-    }
-    .carousel-control-prev,
-    .carousel-control-next {
-      margin: 0 -10%;
-    }
-    .multiple-card-slider .carousel-item {
-      margin-right: 0;
-      display: block;
-      backface-visibility: visible;
-    }
+      width: 4em;
+      height: 4em;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-left:-60px;
+      margin-right: -60px;
+  }
+  .multiple-card-slider .carousel-item {
+    width: 100%; height: auto;
+    margin-right: 0;
+    display: block;
+    backface-visibility: visible;
   }
 }
 
 .avaibleStore {
   width: 100%;
   height: 100%;
-  padding: 80px 105px 84px 105px;
+  padding: 80px 100px 84px 100px;
   align-items: center;
   justify-content: center;
   /* gap: 68px; */
@@ -509,8 +522,8 @@
     background: #FBF7FF;
     width: 100%;
     height: 100%;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     border-radius: 20px;
     flex-direction: column;
     justify-content: space-around;
@@ -535,7 +548,7 @@
     justify-content: center;
     align-items: center; 
     display: inline-flex;
-    gap: 20%;
+    gap: 80px;
     .widthImg {
       width: 100%; height: auto;
     }
@@ -543,8 +556,8 @@
 }
 
 .vSight-Home {
-  width: 100%; height: 100%;
-  padding: 76px 105px 102px 105px; 
+  width: 100%; height: 100%; 
+  padding: 76px 80px 102px 80px; 
   background: rgba(255, 255, 255, 0.10); 
   justify-content: center; align-items: center; 
   display: inline-flex;
@@ -579,12 +592,10 @@
     }
     
     .containerList-vSight {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
       width: 100%; height: 100%; 
-      padding-bottom: 20px;
-      justify-content: flex-start; align-items: flex-start; 
-      gap: 40px;
+      padding-bottom: 20px; 
+      justify-content: flex-start; align-items: flex-end; 
+      gap: 24px; display: inline-flex;
 
       .vSightBoxLink {
         text-decoration:none; flex: 1 1 0; 
@@ -685,7 +696,7 @@
       }
     }
     .btnshopWrapperHero2 {
-      top: 63%; 
+      top: 62%; 
       left: 13%;
       transform: translate(-50%, -50%);
       .btnshopLink {
@@ -717,9 +728,6 @@
 
       .headerWrapper {
         padding: unset;
-        .titleText {
-          font-size: 32px; 
-        }
         .viewmoreWrapper {
           padding:10px;
 
@@ -776,38 +784,37 @@
 
   .promo-section {
     padding: 20px 0 30px 0;
-    .promoWrapper {
-      .itemPromo {
-        padding: unset;
-      }
-      .carousel-inner .carousel-item.active,
-      .carousel-inner .carousel-item {
-        padding: 0 20px;
-      }
-      .carousel-control-prev,
-      .carousel-control-next {
+    
+    .itemPromo {
+      padding: unset;
+    }
+    .carousel-inner .carousel-item.active,
+    .carousel-inner .carousel-item {
+      padding: 0 20px;
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
         display: none !important;
-      }
+    }
 
-      .custom-indicators {
-        bottom: -40px;
-      }
-      .custom-indicators .active {
-        width: 10px; /* Elongate the active indicator */
-        border-radius: 14px; /* Round shape */
-      }
+    .custom-indicators {
+      bottom: -40px;
+    }
+    .custom-indicators .active {
+      width: 10px; /* Elongate the active indicator */
+      border-radius: 14px; /* Round shape */
+    }
 
-      .custom-indicators button {
+    .custom-indicators button {
         width: 5px; /* Default size */
         height: 5px;
         border-radius: 50%;
-      }
     }
   }
   
   .avaibleStore {
     width: 100%;
-    padding: 30px 20px; 
+    padding: 30px 0; 
   
     .container {
       width: 100%;
@@ -821,34 +828,56 @@
       gap: 50px; 
       display: inline-flex;
     }
+    span {
+      width: 100%; 
+      height: 100%; 
+      text-align: center; 
+      color: #9FA6AF; 
+      font-size: 16px; 
+      font-family: Plus Jakarta Sans; 
+      font-weight: 700; 
+      text-transform: uppercase; 
+      line-height: 59px; 
+      letter-spacing: 1.60px; 
+      word-wrap: break-word;
+    }
     .colImg {
       justify-content: flex-start; 
       align-items: center; 
-      gap: 80px; 
+      gap: 40px; 
       display: inline-flex;
       flex-direction: column;
       .widthImg {
-        width: auto;
         height: 40px
       }
     }
   }
 
   .reviewWebsite {
-    padding: 30px 20px;
+    padding: 30px 0;
     .reviewCover {
       .titleTextrev {
-        padding:50px 0 0 0; font-size: 32px;
-      }
-      
-      .multiple-card-slider .carousel-inner {
-        gap: 14px;
-        padding: 30px 0;
-        overflow: scroll;
+        padding:50px 0 0 0; font-size: 34px;
       }
       .multiple-card-slider .carousel-control-prev,
       .multiple-card-slider .carousel-control-next {
         display: none;
+        overflow: hidden; 
+        background-color: #FFFFFF;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0 5px;
+        span {
+          filter: invert(100%);
+        }
+      }
+      .multiple-card-slider .carousel-inner {
+        gap: 14px;
+        padding: 30px 0;
+        overflow: scroll;
       }
       .websiterevWrapper {
         width: 100%;
@@ -893,42 +922,21 @@
 
   .reviewIGVid {
     .reviewCoverIG {
-      .flickity-prev-next-button {
-        width: 30px;
-        height: 30px;
-      }
-      .gallery-cell {
-        width: 300px;
-        height: 531px;
-        margin:0 10px;
-        counter-increment: gallery-cell;
-        .btnPlay {
-          width: 30%; height: auto;
-        }
-        .IGimg {
-          width: 300px;
-          height: 531px;
-        }
-      }
-
       .multiple-card-slider .carousel-inner {
-        gap: 20px;
+        gap: 14px;
         padding: 30px 0;
         scroll-snap-type: x mandatory;
         overflow-x: scroll;
         overflow-y: hidden;
         scroll-behavior: smooth;
-        justify-content: flex-start;
-        align-items: center;
       }
 
       .multiple-card-slider .carousel-item,
       .multiple-card-slider .carousel-item.active {
-        
-        width: 100%; height: 100%;
+        width: 300px; height: 531px; position: relative; display: block; flex: none;
 
         .btnPlay {
-          width: 35%;
+          width: 40px;
           position: absolute;
           top: 50%; 
           left: 50%; 
@@ -940,12 +948,7 @@
         }
         .IGimg {
           width: 300px; height: 531px;
-          counter-increment: IGimg;
-        }
-        .IGimg:before {
-          display: block;
-          text-align: center;
-          content: counter(IGimg);
+          border-radius: 10px;
         }
       }
 
@@ -953,9 +956,9 @@
       .multiple-card-slider .carousel-control-next {
         overflow: hidden; 
         backdrop-filter: blur(10px);
-        background-color: rgba(0, 0, 0, 0.50);
-        width: 24px;
-        height: 24px;
+        background-color: #FFFFFF;
+        width: 2rem;
+        height: 2rem;
         border-radius: 50%;
         top: 50%;
         transform: translateY(-50%);
@@ -963,25 +966,20 @@
         margin-right: 10px;
         
         span {
-          filter: invert(0%);
+          filter: invert(100%);
         }
       }
     }
   }
 
   .reviewShop {
-    padding: 20px;
 
-    .ShoprevWrapper {
-      .multiple-card-slider .carousel-inner {
-        gap: 0;
-        overflow: scroll;
-        padding-bottom: 20px;
-      }
-      .multiple-card-slider .carousel-control-prev,
-      .multiple-card-slider .carousel-control-next {
-        display: none;
-      }
+    .multiple-card-slider .carousel-inner {
+      gap: 14px;
+      overflow: scroll;
+      padding: 0 0 20px 0;
+    }
+
       .itemWrapper{
         width: 164px; height: 100%;
         gap: 12px; display: inline-flex;
@@ -1022,10 +1020,30 @@
           }
         }
       }
-    }
+
+      .multiple-card-slider .carousel-control-prev,
+      .multiple-card-slider .carousel-control-next {
+        display: none;
+        overflow: hidden; 
+        backdrop-filter: blur(10px);
+        background-color: #FFFFFF;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left:5px;
+        margin-right: 5px;
+        
+        span {
+          filter: invert(100%);
+        }
+      }
   }
 
   .vSight-Home {
+      width: fit-content;
+      height: 100%;
       padding: 30px 20px;
       justify-content: center;
       align-items: center;
@@ -1052,8 +1070,8 @@
         }
       }
       .containerList-vSight {
-        display: grid;
-        grid-template-columns: repeat(1, minmax(0, 1fr));
+        width: fit-content;
+        display: inline-block;
   
         .vSightBoxLink {
           height: fit-content;
@@ -1065,8 +1083,8 @@
           
             .vSight-Pict {
               width: auto;
-              height: auto;
               max-width: 100%;
+              max-height: 300px;
               object-fit: cover;
               border-radius: 10px;
             }
@@ -1135,14 +1153,14 @@
   }
 
   .vidYoutube {
-    padding: 30px 40px;
+    padding: 30px;
     .thumbVid {
       border-radius: 20px;
     }
   }
 
   .products-home {
-    padding: 30px 40px; 
+    padding: 30px; 
   
     .productWrapper {
       gap: 25px;
@@ -1200,18 +1218,18 @@
   }
 
   .promo-section {
-    padding: 30px 40px;
+    padding: 30px 0;
     
     .itemPromo {
       padding: unset;
     }
     .carousel-inner .carousel-item.active,
     .carousel-inner .carousel-item {
-      padding: 0;
+      padding: 0 30px;
     }
-    .carousel-control-prev,
-    .carousel-control-next {
-      margin: 0 -128px;
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        display: none !important;
     }
 
     .custom-indicators {
@@ -1229,678 +1247,14 @@
     }
   }
 
-  .avaibleStore {
-    width: 100%;
-    padding: 30px 40px; 
-  
-    .container {
-      width: 100%;
-      padding-top: 50px; 
-      padding-bottom: 50px; 
-      background: #FBF7FF; 
-      border-radius: 20px; 
-      flex-direction: column; 
-      justify-content: flex-start; 
-      align-items: center; 
-      gap: 50px; 
-      display: inline-flex;
-    }
-    .colImg {
-      width: auto;
-      gap: 50px;
-      display:grid;
-      justify-items: center;
-      align-items: center;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      .widthImg {
-        width: auto; height: 50px;
-      }
-    }
-  }
-
-  .reviewWebsite {
-    padding: 30px 50px;
-    .reviewCover {
-      .titleTextrev {
-        padding:40px 0 0 0; font-size: 32px;
-      }
-      .multiple-card-slider .carousel-control-prev,
-        .multiple-card-slider .carousel-control-next {
-          filter: invert(100%);
-          margin: 0 -11%;
-
-          .carousel-control-prev-icon,
-          .carousel-control-next-icon {
-            width: 40px;
-            height: 40px;
-          }
-      }
-      .multiple-card-slider .carousel-inner {
-        gap: 16px;
-        padding: 30px 0;
-        overflow: scroll;
-      }
-      .websiterevWrapper {
-        width: 100%;
-        gap: 15px;
-        padding-bottom: 10px;
-
-        .revImgBox {
-          width: 100%; height: 100%;
-          .websiterevPict {
-            width: auto; height: 250px;
-          }
-        }
-        .commentrevWrapper {
-          width: 100%; padding: 0 10px 10px 10px;
-
-          .ratingrevBox {
-            justify-content: flex-start; align-items: flex-start; 
-            gap: 5px; display: inline-flex;
-          }
-          .websiterevText {
-            font-size: 16px;
-          }
-          .custInfoWrapper {
-
-            .userFoto {
-              width: auto; height: 40px;
-            }
-            .userNameDateWrapper {
-              gap: 1px;
-              .revNameText {
-                font-size: 14px;
-              }
-              .revDateText {
-                font-size: 13px;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .reviewIGVid {
-    .reviewCoverIG {
-      .multiple-card-slider .carousel-inner {
-        gap: 20px;
-        padding: 30px 0;
-        scroll-snap-type: x mandatory;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        scroll-behavior: smooth;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .multiple-card-slider .carousel-item,
-      .multiple-card-slider .carousel-item.active {
-        width: 100%; height: 100%; position: relative; display: block; flex: 1;
-
-        .btnPlay {
-          width: auto;
-          position: absolute;
-          top: 50%; 
-          left: 50%; 
-          transform: translate(-50%, -50%); 
-          display: flex; 
-          align-items: center; 
-          justify-content: center; 
-          cursor: pointer;
-        }
-        .IGimg {
-          width: auto; height: 100%;
-        }
-      }
-
-      .multiple-card-slider .carousel-control-prev,
-      .multiple-card-slider .carousel-control-next {
-        overflow: hidden; 
-        backdrop-filter: blur(10px);
-        background-color: rgba(0, 0, 0, 0.50);
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        top: 50%;
-        transform: translateY(-50%);
-        margin-left:10px;
-        margin-right: 10px;
-        
-        span {
-          filter: invert(0%);
-        }
-      }
-    }
-  }
-
-  .reviewShop {
-    padding: 30px 50px;
-
-    .ShoprevWrapper {
-      .multiple-card-slider .carousel-inner {
-        gap: 14px;
-        overflow: scroll;
-        padding-bottom: 20px;
-      }
-      .multiple-card-slider .carousel-control-prev,
-      .multiple-card-slider .carousel-control-next {
-        filter: invert(100%);
-        margin: 0 -11%;
-
-        .carousel-control-prev-icon,
-        .carousel-control-next-icon {
-          width: 40px;
-          height: 40px;
-        }
-      }
-      .itemWrapper{
-        width: 100%; height: 100%;
-        gap: 12px; display: inline-flex;
-        flex-direction: column; padding-bottom: 10px;
-
-        .imgReview{
-          width: 100%; height: 100%;
-          border-radius: 10px 10px 0 0;
-          .picProduct {
-            width: auto; height: 250px;
-          }
-        }
-
-        .reviewWrapper {
-          padding:0 15px;
-
-          .textReview {
-            font-size: 16px; overflow: hidden; 
-            text-overflow: ellipsis; height: 100%;
-            display: -webkit-box; 
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical; 
-            word-wrap: break-word; line-height: 1.3;
-            cursor: pointer;
-          }
-          .userWrapper {
-            .iconShop {
-              width: auto; height: 30px;
-            }
-            .dateInfo {
-              gap: 5px;
-              .userWrapper {
-                font-size: 14px; line-height: 12px; 
-              }
-              .dateWrapper {
-                font-size: 13px; 
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .vSight-Home {
-      padding: 30px 40px;
-    
-    .vSight-Wrapper {
-      justify-content: center;
-      flex-direction: column; 
-      align-items: flex-start; gap: 20px; 
-      display: inline-flex;
-  
-      .vSight-Header {
-        padding: unset;
-  
-        .vSight-Title {
-          font-size: 36px;
-        }
-        .vSightlist-Link {
-          padding:10px;
-
-          .btnLinkvSight {
-            font-size: 12px;
-          }
-        }
-      }
-      .containerList-vSight {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-  
-        .vSightBoxLink {
-          height: fit-content;
-          display: block;
-          margin-bottom: 20px;
-
-          .vSight-contentWrapper {
-            gap: 15px;
-          
-            .vSight-Pict {
-              width: auto;
-              height: auto;
-              max-width: 100%;
-              object-fit: cover;
-              border-radius: 10px;
-            }
-
-            .vSight-infoWrapper {
-              .vSight-Title { 
-                font-size: 18px;
-              }
-              .vSight-Date {
-                font-size: 14px;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1380px) {
 
-  .hero {
-    padding-bottom: 30px;
-    .carousel-indicators {
-      margin-bottom: -4px;
-    }
-    .imgHeroItem {
-      width: 100%; height:100%; object-fit: fill;
-    }
-    .row {
-      margin-top: unset;
-    }
-    .btnshopWrapperHero1 {
-      top: 61%; 
-      left: 13%;
-      transform: translate(-50%, -50%);
-      .btnshopLink {
-        width: fit-content; height: auto;
-        padding: 5px 10px;
-        gap: 8px;
-        .shopLinkText {
-          font-size: 1.5vw;
-        }
-        .ic_size {
-          width: 1.5vw;
-        }
-      }
-    }
-    .btnshopWrapperHero2 {
-      top: 61%; 
-      left: 13%;
-      transform: translate(-50%, -50%);
-      .btnshopLink {
-        width: fit-content; height: auto;
-        padding: 5px 10px;
-        gap: 8px;
-        .shopLinkText {
-          font-size: 1.5vw;
-        }
-        .ic_size {
-          width: 1.5vw;
-        }
-      }
-    }
-  }
 
-  .vidYoutube {
-    padding: 30px 40px;
-    .thumbVid {
-      border-radius: 20px;
-    }
-  }
 
-  .products-home {
-    padding: 30px 40px; 
-  
-    .productWrapper {
-      gap: 25px;
+}
 
-      .headerWrapper {
-        padding: unset;
-
-        .titleText {
-          font-size: 42px;
-        }
-        .viewmoreWrapper {
-          .btnViewmore {
-            font-size: 22px;
-          }
-        }
-      }
-
-      .listproductWrapper {
-        gap: 30px;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        .cardProduct {
-
-          .productDescWrapper {
-            align-self: stretch;
-            padding:0 5px; flex-direction: column;
-            gap: 5px;
-            justify-content: center; align-items: flex-start; 
-            display: flex;
-            .productName {
-              font-size: 1.6rem;
-            }
-            .priceWrapper {
-              justify-content: flex-start; 
-              align-items: flex-start; 
-              flex-direction: column; 
-              gap: 3px;
-            }
-            .priceGroup {
-              flex-direction: row;
-            }
-            .discountPrice {
-              font-size: 1.5rem;
-            }
-            .normalPrice { 
-              font-size: 1.2rem;
-            }
-            .numberRate {      
-              padding:4px 8px; 
-              font-size: 1.2rem; 
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .promo-section {
-    padding: 30px 40px;
-    
-    .itemPromo {
-      padding: unset;
-    }
-    .carousel-inner .carousel-item.active,
-    .carousel-inner .carousel-item {
-      padding: 0;
-    }
-    .carousel-control-prev,
-    .carousel-control-next {
-      margin: 0 -128px;
-    }
-
-    .custom-indicators {
-      bottom: -50px;
-    }
-    .custom-indicators .active {
-      width: 18px; /* Elongate the active indicator */
-      border-radius: 20px; /* Round shape */
-    }
-
-    .custom-indicators button {
-        width: 10px; /* Default size */
-        height: 10px;
-        border-radius: 50%;
-    }
-  }
-
-  .avaibleStore {
-    width: 100%;
-    padding: 30px 40px; 
-  
-    .container {
-      width: 100%;
-      padding-top: 50px; 
-      padding-bottom: 50px; 
-      background: #FBF7FF; 
-      border-radius: 20px; 
-      flex-direction: column; 
-      justify-content: flex-start; 
-      align-items: center; 
-      gap: 50px; 
-      display: inline-flex;
-    }
-    .colImg {
-      width: auto;
-      gap: 30px;
-      display:flex;
-      justify-items: center;
-      align-items: center;
-      .widthImg {
-        width: auto; height: 50px;
-      }
-    }
-  }
-
-  .reviewWebsite {
-    padding: 30px 50px;
-    .reviewCover {
-      .titleTextrev {
-        padding:40px 0 0 0; font-size: 32px;
-      }
-      .multiple-card-slider .carousel-control-prev,
-        .multiple-card-slider .carousel-control-next {
-          filter: invert(100%);
-          margin: 0 -11%;
-
-          .carousel-control-prev-icon,
-          .carousel-control-next-icon {
-            width: 45px;
-            height: 45px;
-          }
-      }
-      .multiple-card-slider .carousel-inner {
-        gap: 16px;
-        padding: 30px 0;
-        overflow: scroll;
-      }
-      .websiterevWrapper {
-        width: 100%;
-        gap: 15px;
-        padding-bottom: 10px;
-
-        .revImgBox {
-          width: 100%; height: 100%;
-          .websiterevPict {
-            width: auto; height: 280px;
-          }
-        }
-        .commentrevWrapper {
-          width: 100%; padding: 0 10px 10px 10px;
-
-          .ratingrevBox {
-            justify-content: flex-start; align-items: flex-start; 
-            gap: 5px; display: inline-flex;
-          }
-          .websiterevText {
-            font-size: 16px;
-          }
-          .custInfoWrapper {
-
-            .userFoto {
-              width: auto; height: 40px;
-            }
-            .userNameDateWrapper {
-              gap: 1px;
-              .revNameText {
-                font-size: 15px;
-              }
-              .revDateText {
-                font-size: 14px;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .reviewIGVid {
-    .reviewCoverIG {
-      .multiple-card-slider .carousel-inner {
-        gap: 20px;
-        padding: 30px 0;
-        scroll-snap-type: x mandatory;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        scroll-behavior: smooth;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .multiple-card-slider .carousel-item,
-      .multiple-card-slider .carousel-item.active {
-        width: 100%; height: 100%; position: relative; display: block; flex: 1;
-
-        .btnPlay {
-          width: auto;
-          position: absolute;
-          top: 50%; 
-          left: 50%; 
-          transform: translate(-50%, -50%); 
-          display: flex; 
-          align-items: center; 
-          justify-content: center; 
-          cursor: pointer;
-        }
-        .IGimg {
-          width: auto; height: 100%;
-        }
-      }
-
-      .multiple-card-slider .carousel-control-prev,
-      .multiple-card-slider .carousel-control-next {
-        overflow: hidden; 
-        backdrop-filter: blur(10px);
-        background-color: rgba(0, 0, 0, 0.50);
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        top: 50%;
-        transform: translateY(-50%);
-        margin-left:10px;
-        margin-right: 10px;
-        
-        span {
-          filter: invert(0%);
-        }
-      }
-    }
-  }
-
-  .reviewShop {
-    padding: 30px 50px;
-
-    .ShoprevWrapper {
-      .multiple-card-slider .carousel-inner {
-        gap: 14px;
-        overflow: scroll;
-        padding-bottom: 20px;
-      }
-      .multiple-card-slider .carousel-control-prev,
-      .multiple-card-slider .carousel-control-next {
-        filter: invert(100%);
-        margin: 0 -11%;
-
-        .carousel-control-prev-icon,
-        .carousel-control-next-icon {
-          width: 45px;
-          height: 45px;
-        }
-      }
-      .itemWrapper{
-        width: 100%; height: 100%;
-        gap: 12px; display: inline-flex;
-        flex-direction: column; padding-bottom: 10px;
-
-        .imgReview{
-          width: 100%; height: 100%;
-          border-radius: 10px 10px 0 0;
-          .picProduct {
-            width: auto; height: 280px;
-          }
-        }
-
-        .reviewWrapper {
-          padding:0 15px;
-
-          .textReview {
-            font-size: 16px; overflow: hidden; 
-            text-overflow: ellipsis; height: 100%;
-            display: -webkit-box; 
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical; 
-            word-wrap: break-word; line-height: 1.3;
-            cursor: pointer;
-          }
-          .userWrapper {
-            .iconShop {
-              width: auto; height: 30px;
-            }
-            .dateInfo {
-              gap: 5px;
-              .userWrapper {
-                font-size: 15px;
-              }
-              .dateWrapper {
-                font-size: 14px; 
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .vSight-Home {
-      padding: 30px 40px;
-    
-    .vSight-Wrapper {
-      justify-content: center;
-      flex-direction: column; 
-      align-items: flex-start; gap: 20px; 
-      display: inline-flex;
-  
-      .vSight-Header {
-        padding: unset;
-  
-        .vSight-Title {
-          font-size: 36px;
-        }
-        .vSightlist-Link {
-          padding:10px;
-
-          .btnLinkvSight {
-            font-size: 12px;
-          }
-        }
-      }
-      .containerList-vSight {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-  
-        .vSightBoxLink {
-          height: fit-content;
-          display: block;
-          margin-bottom: 20px;
-
-          .vSight-contentWrapper {
-            gap: 15px;
-          
-            .vSight-Pict {
-              width: auto;
-              height: auto;
-              max-width: 100%;
-              object-fit: cover;
-              border-radius: 10px;
-            }
-
-            .vSight-infoWrapper {
-              .vSight-Title { 
-                font-size: 18px;
-              }
-              .vSight-Date {
-                font-size: 14px;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+@media screen and (min-width: 1200px) {
 
 }
