@@ -125,7 +125,7 @@
   
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 
   .listproducts {
     padding: 30px 20px;
@@ -177,7 +177,7 @@
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
 
   .listproducts {
     padding: 30px 40px;
@@ -194,10 +194,10 @@
     }
 
     .productName {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
     }
     .discountPrice {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
     }
     .normalPrice { 
       font-size: 16px;

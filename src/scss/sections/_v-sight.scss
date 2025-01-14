@@ -1,17 +1,10 @@
-.vSightpage {
-  padding: 48px 80px;
-  justify-content: center;
-  align-items: center;
+.headerBox {
+  width: 100%;
+  padding: 50px 80px;
   display: inline-flex;
   flex-direction: column;
-  width: 100%;
-
-  .headerBox {
-    width: 100%;
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: center;
-  
+  justify-content: center;
+  align-items: center;
     .title {
       width: 100%; 
       text-align: center; 
@@ -21,6 +14,48 @@
       word-wrap: break-word;
     }
   }
+
+  .has-search .form-control {
+    padding-left: 2.375rem;
+  }
+
+  .has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+  }
+
+  .kategoriWrapper {
+    width: fit-content;
+    padding: 5px 15px; background: white; 
+    border-radius: 20px; 
+    border: 1px #E1E3EA solid; 
+    justify-content: center; 
+    align-items: center; gap: 5px; display: flex;
+    color: #292D32; font-size: 16px; 
+    font-family: Inter; font-weight: 500; word-wrap: break-word;
+    text-align: center; 
+    text-decoration: none;
+  }
+  .aktif, .kategoriWrapper:hover {
+    background-color: #ECDCFF;
+    color: #A083DE;
+  }
+
+.vSightpage {
+  padding: 30px 80px;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+
   .row {
     margin-top: 48px;
     .vsight-container {
@@ -124,7 +159,7 @@
   
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .vSightpage {
     padding: 40px 20px;
 
@@ -158,7 +193,7 @@
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
 
   .vSightpage {
     padding: 45px 40px;
