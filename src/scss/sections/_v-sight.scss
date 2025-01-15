@@ -1,6 +1,6 @@
 .headerBox {
   width: 100%;
-  padding: 50px 80px;
+  padding: 50px 105px;
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
@@ -31,6 +31,8 @@
     color: #aaa;
   }
 
+  .menuNav1 {
+      justify-content: center; align-items: center; gap: 15px; display: flex;
   .kategoriWrapper {
     width: fit-content;
     padding: 5px 15px; background: white; 
@@ -47,20 +49,21 @@
     background-color: #ECDCFF;
     color: #A083DE;
   }
+}
 
 .vSightpage {
-  padding: 30px 80px;
+  padding: 30px 105px;
   justify-content: center;
   align-items: center;
   display: inline-flex;
   flex-direction: column;
-  width: 100%;
+  width: fit-content;
 
   .row {
     margin-top: 48px;
     .vsight-container {
       display: grid;
-      grid-template-columns: repeat(4, minmax(300px, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 30px;
   
       .vsight{
@@ -82,7 +85,7 @@
           .Vimg {
             width: 100%;
             object-fit: fill;
-            height: 300px;
+            height: auto;
             position: relative; 
             border-radius: 10px;
           }
@@ -160,22 +163,25 @@
 }
 
 @media screen and (max-width: 767px) {
-  .vSightpage {
-    padding: 40px 20px;
-
-    .headerBox {
-      justify-content: center;
-    
-      .title {
-        font-size: 32px; 
-      }
-      #hideForMobile {
-        display: none;
-      }
-      #filterDropdown{
-        display: none;
-      }
+  #hideNavmobile {
+    display: none;
+  }
+  #hideForMobile {
+    display: none;
+  }
+  #filterDropdown{
+    display: none;
+  }
+  .headerBox {
+    padding: 20px 0 0 0;
+    justify-content: center;
+  
+    .title {
+      font-size: 32px; 
     }
+  }
+  .vSightpage {
+    padding: 30px 20px;
     .row {
       margin-top: 20px;
       .vsight-container{

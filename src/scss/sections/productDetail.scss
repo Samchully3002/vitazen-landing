@@ -98,6 +98,22 @@
           }
         }
 
+        @media screen and (min-width: 767px) {
+
+          .multiple-card-slider .carousel-inner {
+            width: 450px; height: 100%;
+            overflow: hidden; padding-bottom: 20px;
+          }
+  
+          .multiple-card-slider .carousel-item.active,
+          .multiple-card-slider .carousel-item {
+            width: 100px; height: 100px; justify-content: flex-start; align-items: center; gap: 12px; margin-right: 0; display: flex; backface-visibility: visible; flex: none;
+            img {
+              width: 100px; height: 100px; border-radius: 10px;
+            }
+          }
+        }
+
         .multiple-card-slider .carousel-control-prev,
         .multiple-card-slider .carousel-control-next {
           filter: invert(100%);
@@ -482,17 +498,19 @@
   }
 }
 
-
+.sizeModal {
+  width:1400px;
+}
 .wrapperModal {
   width: 100%; height: 100%;
   align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: center; gap: 30px; display: flex;
   padding: 10px 10px 30px 10px;
   .titleWrapperText {
     flex-direction: column; justify-content: flex-start; 
-    align-items: center; gap: 10px; display: flex;
+    align-items: center; gap: 10px; display: flex; text-align: center;
     .titleModalReview {
       color: #181C32;
-      font-size: 18px; font-family: Plus Jakarta Sans; 
+      font-size: 18px; font-family: Plus Jakarta Sans;  
       font-weight: 600; line-height: 22px; word-wrap: break-word;
     }
     .emailTextLabel {
@@ -545,13 +563,19 @@
       align-self: stretch; justify-content: flex-start; 
       align-items: flex-start; gap: 15px; display: inline-flex
     }
+
+    
     .inputBox {
       width: 100%; padding: 13px 12px; border-radius: 6px; border: 1px #C4C4C4 solid;
-      input::placeholder {
-        color: #878787; font-size: 14px; 
-        font-family: Inter; font-weight: 400; 
-        line-height: 18px; word-wrap: break-word;
-      }
+      color: #878787; font-size: 14px; 
+      font-family: Inter; font-weight: 400; 
+      line-height: 18px; word-wrap: break-word;
+    }
+    .inputBox1 {
+      width: 100%; height:160px; padding: 13px 12px; border-radius: 6px; border: 1px #C4C4C4 solid;
+      color: #878787; font-size: 14px; 
+      font-family: Inter; font-weight: 400; 
+      line-height: 18px; word-wrap: break-word;
     }
     .uploadFile {
     width: 100%;
@@ -789,6 +813,64 @@
       padding: unset;
       padding-bottom: 50px;
     }
+  }
+  .sizeModal {
+    width:350px;
+  }
+  .wrapperModal {
+    gap: 10px; padding: 0 0 15px 0;
+    .titleWrapperText {
+      gap: 5px;
+      .titleModalReview {
+        font-size: 14px;
+      }
+      .emailTextLabel {
+        color: #181C32; 
+        font-size: 10px;
+      }
+    }
+    .formWrapper{
+      gap: 10px;
+
+      .userWrapperspan {
+        gap: 10px;
+      }
+      .inputBox {
+        padding: 7px; 
+        font-size: 11px;
+      }
+      .inputBox1 {
+        height: 80px; padding: 7px; 
+        font-size: 11px;
+      }
+      .uploadFile {
+        padding: 10px; gap: 8px;
+      .labelWrapper {
+        gap: 3px;
+        .labelUpload {
+          font-size: 12px;
+        }
+        .labelInfoUpload {
+          font-size: 9px;
+        }
+      }
+      }
+      .wrapperBtnKirim {
+        .btnKirimRev {
+          padding: 10px;
+          gap: 4px;
+          .labelBtn {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  .upload-section {
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
   }
 }
 

@@ -31,13 +31,16 @@
 .menuNav {
     justify-content: center; align-items: center; gap: 31px; display: flex;
     .nav-link {
-        text-align: center; color: #0F1C38; font-size: 16px; 
-        font-family: Poppins !important; font-weight: 600;
+        text-align: center; color: #0F1C38B2; font-size: 16px; 
+        font-family: Poppins; font-weight: 400;
         word-wrap: break-word;
         .active,
         &:hover {
-            color: #5f6061;
+            color: #0F1C38;font-weight: 600;
         }
+    }
+    .activ {
+        color: #0F1C38;font-weight: 600;
     }
 }
 
@@ -539,7 +542,8 @@
             width: 100%;
             padding: 0 103px;
             display:flex;
-            justify-content: space-between;
+            justify-content: space-around;
+            gap: 0;
             .benefitContent {
                 flex-direction: unset; 
                 .benefitImgwrapper {

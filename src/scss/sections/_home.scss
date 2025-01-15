@@ -209,13 +209,13 @@
     .carousel-control-prev-icon {
       filter: invert(100%);
       width: 45px; height: 45px;
-      margin: 0 0 0 -318px;
+      margin: 0 0 0 -442px;
     }
 
     .carousel-control-next-icon {
       filter: invert(100%);
       width: 3rem; height: 3rem;
-      margin: 0 -318px 0 0;
+      margin: 0 -442px 0 0;
     }
     .custom-indicators {
       position: absolute;
@@ -275,13 +275,13 @@
     .carousel-control-prev-icon {
       filter: invert(100%);
       width: 45px; height: 45px;
-      margin: 0 0 0 -318px;
+      margin: 0 0 0 -440px;
     }
 
     .carousel-control-next-icon {
       filter: invert(100%);
       width: 45px; height: 45px;
-      margin: 0 -318px 0 0;
+      margin: 0 -440px 0 0;
     }
 
     .websiterevWrapper {
@@ -368,11 +368,11 @@
     }
     .flickity-prev-next-button.previous {
       width: 45px; height: 45px;
-      left: 2.5%;
+      left: 50px;
     }
     .flickity-prev-next-button.next {
       width: 45px; height: 45px;
-      right: 2.5%;
+      right: 50px;
     }
     .gallery {
       background: #EEE;
@@ -428,14 +428,14 @@
       gap: 20px; display: inline-flex;
 
       .imgReview{
-        width: 200px; height: 200px;
+        width: auto; height: 100%;
         border-radius: 10px 0 0 10px;
         overflow: hidden; 
         justify-content: center; 
         align-items: center; 
         display: flex;
         .picProduct {
-          width: 200px; height: 200px;
+          width: auto; height: 20%;
         }
       }
       .reviewWrapper {
@@ -486,13 +486,13 @@
     .carousel-control-prev-icon {
       filter: invert(100%);
       width: 45px; height: 45px;
-      margin: 0 0 0 -318px;
+      margin: 0 0 0 -440px;
     }
 
     .carousel-control-next-icon {
       filter: invert(100%);
       width: 45px; height: 45px;
-      margin: 0 -318px 0 0;
+      margin: 0 -440px 0 0;
     }
     .multiple-card-slider .carousel-item {
       margin-right: 0;
@@ -541,9 +541,9 @@
     justify-content: center;
     align-items: center; 
     display: inline-flex;
-    gap: 20%;
+    gap: 80px;
     .widthImg {
-      width: 100%; height: auto;
+      width: 100%; height: 50px;
     }
   }
 }
@@ -799,8 +799,8 @@
         bottom: -40px;
       }
       .custom-indicators .active {
-        width: 10px; /* Elongate the active indicator */
-        border-radius: 14px; /* Round shape */
+        width: 5px; height: 5px; /* Elongate the active indicator */
+        border-radius: 50%; /* Round shape */
       }
 
       .custom-indicators button {
@@ -852,9 +852,26 @@
         padding: 30px 0;
         overflow: scroll;
       }
+
       .multiple-card-slider .carousel-control-prev,
       .multiple-card-slider .carousel-control-next {
-        display: none;
+        overflow: hidden; 
+        backdrop-filter: blur(10px);
+        background-color: #000000;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left:-12px;
+        margin-right: -12px;
+      }
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        filter: unset;
+        width: 20px;
+        height: 20px;
+        margin: 0;
       }
       .websiterevWrapper {
         width: 100%;
@@ -899,78 +916,38 @@
 
   .reviewIGVid {
     .reviewCoverIG {
-      .flickity-prev-next-button {
-        width: 30px;
-        height: 30px;
+
+      .flickity-prev-next-button.previous {
+        filter: invert(100%);
+        width: 24px; height: 24px;
+        left: 9px;
+      }
+      .flickity-prev-next-button.next {
+        filter: invert(100%);
+        width: 24px; height: 24px;
+        right: 9px;
+      }
+      .gallery {
+        background: #EEE;
       }
       .gallery-cell {
         width: 300px;
         height: 531px;
-        margin:0 10px;
-        counter-increment: gallery-cell;
+        margin:0 8px;
+  
         .btnPlay {
           width: 30%; height: auto;
         }
         .IGimg {
+
           width: 300px;
           height: 531px;
         }
       }
-
-      .multiple-card-slider .carousel-inner {
-        gap: 20px;
-        padding: 30px 0;
-        scroll-snap-type: x mandatory;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        scroll-behavior: smooth;
-        justify-content: flex-start;
-        align-items: center;
-      }
-
-      .multiple-card-slider .carousel-item,
-      .multiple-card-slider .carousel-item.active {
-        
-        width: 100%; height: 100%;
-
-        .btnPlay {
-          width: 35%;
-          position: absolute;
-          top: 50%; 
-          left: 50%; 
-          transform: translate(-50%, -50%); 
-          display: flex; 
-          align-items: center; 
-          justify-content: center; 
-          cursor: pointer;
-        }
-        .IGimg {
-          width: 300px; height: 531px;
-          counter-increment: IGimg;
-        }
-        .IGimg:before {
-          display: block;
-          text-align: center;
-          content: counter(IGimg);
-        }
-      }
-
-      .multiple-card-slider .carousel-control-prev,
-      .multiple-card-slider .carousel-control-next {
-        overflow: hidden; 
-        backdrop-filter: blur(10px);
-        background-color: rgba(0, 0, 0, 0.50);
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-        top: 50%;
-        transform: translateY(-50%);
-        margin-left:10px;
-        margin-right: 10px;
-        
-        span {
-          filter: invert(0%);
-        }
+      .IGimg:before {
+        display: block;
+        text-align: center;
+        content: counter(IGimg);
       }
     }
   }
@@ -986,7 +963,23 @@
       }
       .multiple-card-slider .carousel-control-prev,
       .multiple-card-slider .carousel-control-next {
-        display: none;
+        overflow: hidden; 
+        backdrop-filter: blur(10px);
+        background-color: #000000;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left:-10px;
+        margin-right: -10px;
+      }
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        filter: unset;
+        width: 20px;
+        height: 20px;
+        margin: 0;
       }
       .itemWrapper{
         width: 164px; height: 100%;

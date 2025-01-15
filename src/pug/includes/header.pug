@@ -20,8 +20,8 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-white.border-bottom.sticky-top
         .collapse.navbar-collapse#navbarNav
             ul.navbar-nav.mx-auto
                 .menuNav
-                    li.nav-item
-                        a.nav-link.active(href="index.html") Beranda
+                    li(class=(url === 'index.html' ? 'activ' : ''))
+                        a.nav-link(href="index.html" ) Beranda
                     li.nav-item
                         a.nav-link(href="products.html") Produk
                     li.nav-item
@@ -32,3 +32,16 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-white.border-bottom.sticky-top
                         a.nav-link(href="contact-us.html") Hubungi kami
         // Contact button to the right
         a.btnContact(href="contact-us.html") Hubungi kami
+script.
+    const currentPath = window.location.pathname;
+    // Select all nav links
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    // Loop through links and set the active class
+    navLinks.forEach(link => {
+    if (link.getAttribute('href') === currentPath) {
+        link.classList.add('activ');
+    } else {
+        link.classList.remove('activ');
+    }
+    });

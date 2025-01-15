@@ -18,14 +18,12 @@ html(lang='en')
                             .btnshopWrapperHero1
                                 a.btn.btnshopLink(href="products.html")
                                     span.shopLinkText Beli sekarang
-                                    img.ic_size(src="./assets/img/icon/ic_arrow_right.svg")
                     .carousel-item
                         .row.align-items-center
                             img.imgHeroItem(src="./assets/img/Hero 2.png", alt="Snovv Banner")
                             .btnshopWrapperHero2
                                 a.btn.btnshopLink(href="productDetail3.html")
                                     span.shopLinkText Beli sekarang
-                                    img.ic_size(src="./assets/img/icon/ic_arrow_right.svg")
                     .carousel-item
                         .row.align-items-center
                             img.imgHeroItem(src="./assets/img/Hero 3.png", alt="Snovv Banner")
@@ -341,10 +339,10 @@ html(lang='en')
             .kontentWrapper
                 span Produk tersedia di
                 .colImg
-                    img.widthImg(src="./assets/img/partner1.png")
                     img.widthImg(src="./assets/img/partner2.png")
-                    img.widthImg(src="./assets/img/partner3.png")
+                    img.widthImg(src="./assets/img/partner1.png")
                     img.widthImg(src="./assets/img/partner4.png")
+                    img.widthImg(src="./assets/img/partner3.png")
 
         // Section Top Product
         section.vSight-Home
@@ -454,7 +452,7 @@ html(lang='en')
                     var cardWidth = $(currentCarouselId + ' .carousel-item').width();
                     var scrollPosition = 0;    
                     $(currentCarouselId + ' .carousel-control-next').on('click', function(){
-                        if(scrollPosition < (carouselWidth - (cardWidth * 4))){
+                        if(scrollPosition < (carouselWidth - (cardWidth * 2))){
                             console.log('next');
                             scrollPosition = scrollPosition + cardWidth;
                             $(currentCarouselId + ' .carousel-inner').animate({scrollLeft: scrollPosition},300);

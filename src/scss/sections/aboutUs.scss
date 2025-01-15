@@ -1,7 +1,7 @@
 .aboutUs-section {
     width: 100%;
     height: fit-content; 
-    padding: 50px 0;
+    padding: 50px 105px;
     flex-direction: column; 
     justify-content: center;
     align-items: center; 
@@ -16,7 +16,7 @@
             width: 100%; height: fit-content; background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%); border-top-left-radius: 20px; border-top-right-radius: 20px; overflow: hidden; position: relative; display: inline-block;
             .imgLogo1 {
                 display: block;
-                width: 100%; height: fit-content;   
+                width: 100%; height: 650px;   
             }
             .text-logo-parent {
                 height: 43px;
@@ -229,9 +229,10 @@
                     width: 100%; text-align: center; color: #9FA6AF; font-size: 16px; font-family: Manrope; font-weight: 700; text-transform: uppercase; line-height: 59px; letter-spacing: 1.60px; word-wrap: break-word;
                 }
                 .storeIconWrapper {
-                    justify-content: flex-start; align-items: center; gap: 50px; display: inline-flex;
+                    justify-content: flex-start; align-items: center; display: inline-flex;
+                    gap: 80px;
                     .storeIC {
-                        height: 40px;
+                        height: 50px;
                     }
                 }
             }
@@ -241,7 +242,7 @@
 
 @media screen and (max-width: 767px) {
     .aboutUs-section {
-        padding: 50px 0;
+        padding: 50px 15px;
         .firstContent {
             .logo-parent {
                 .imgLogo1 {
@@ -255,17 +256,17 @@
                 }
             }
             .textWrapper {
-                padding: 50px 20px;
+                padding: 100px 20px 50px 20px;
                 flex-direction: column;
                 gap: 16px;
                 .titleText {
-                    font-size: 22px;
+                    font-size: 28px;
                 }
                 .descText1 {
-                    font-size: 14px;
+                    font-size: 18px;
                 }
                 .descText2 {
-                    font-size: 12px;
+                    font-size: 16px;
                 }
             }
             .logo2 {
@@ -283,20 +284,20 @@
                 display: inline-flex;
                 flex-direction: column;
                 .titleText {
-                    font-size: 22px;
+                    font-size: 32px;
                 }
                 .definisiText {
                     flex-direction: column;
                     gap: 10px;
 
                     .logoTitle {
-                        padding: 5px 15px;
+                        padding: 10px 15px;
                         .logoText {
-                            font-size: 14px;
+                            font-size: 24px;
                         }
                     }
                     .descText {
-                        font-size: 12px;
+                        font-size: 20px;
                     }
                 }
             }
@@ -326,10 +327,10 @@
                     gap: 14px;
                     display: inline-flex;
                     .titleText {
-                        font-size: 20px;
+                        font-size: 24px;
                     }
                     .visionContent {
-                        font-size:  12px;
+                        font-size:  16px;
                     }
                 }
             }
@@ -352,10 +353,10 @@
                     display: inline-flex;
 
                     .titleText {
-                        font-size: 20px;
+                        font-size: 24px;
                     }
                     .misionContent {
-                        font-size:  12px;
+                        font-size:  16px;
                     }
                 }
             }
@@ -393,10 +394,10 @@
                     gap: 10px;
                     display: inline-flex;
                     .titleText {
-                        font-size: 14px;
+                        font-size: 20px;
                     }
                     .descText {
-                        font-size: 12px;
+                        font-size: 20px;
                     }
                 }
             }
@@ -419,10 +420,10 @@
                     gap: 10px;
                     display: inline-flex;
                     .titleText {
-                        font-size: 14px;
+                        font-size: 20px;
                     }
                     .descText {
-                        font-size: 12px;
+                        font-size: 20px;
                     }
                 }
             }
@@ -445,7 +446,7 @@
                 gap: 40px;
 
                 .titleText {
-                    font-size: 26px;
+                    font-size: 24px;
                 }
                 .contentText1 { 
                     .infoText {
@@ -471,7 +472,7 @@
                         gap: 80px;
                         flex-direction: column;
                         .storeIC {
-                            height: 30px;
+                            height: 50px;
                         }
                     }
                 }
