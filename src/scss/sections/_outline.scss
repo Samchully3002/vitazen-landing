@@ -28,18 +28,18 @@
         width: auto; height: 23px;
     }
 }
-.menuNav {
+.navbar-nav {
     justify-content: center; align-items: center; gap: 31px; display: flex;
-    .nav-link {
+    li > a {
         text-align: center; color: #0F1C38B2; font-size: 16px; 
         font-family: Poppins; font-weight: 400;
-        word-wrap: break-word;
-        .active,
-        &:hover {
+        word-wrap: break-word; text-decoration: none;
+        &:hover,
+        &:focus {
             color: #0F1C38;font-weight: 600;
         }
     }
-    .activ {
+    li.activ > a {
         color: #0F1C38;font-weight: 600;
     }
 }
@@ -293,13 +293,15 @@
             width: fit-content; max-height: 20px;
         }
     }
-    .menuNav {
+
+    .navbar-nav {
         flex-direction: column; 
         display: flex; 
         align-items: flex-start;
-        padding: 30px 0 0 20px;
+        padding: 40px 20px 30px 20px;
         gap: 15px;
     }
+
     .benefit-wrapper {
         .benefitBox {
             width: 100%;

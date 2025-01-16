@@ -6,6 +6,7 @@
         img.iconTopText(src="./assets/img/icon/ic_arrow_right.svg")
 
 // Main navigation bar
+div#topHeader
 nav.navbar.navbar-expand-lg.navbar-light.bg-white.border-bottom.sticky-top
     .container-fluid
         // Logo
@@ -19,29 +20,20 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-white.border-bottom.sticky-top
         // Navigation menu
         .collapse.navbar-collapse#navbarNav
             ul.navbar-nav.mx-auto
-                .menuNav
-                    li(class=(url === 'index.html' ? 'activ' : ''))
-                        a.nav-link(href="index.html" ) Beranda
-                    li.nav-item
-                        a.nav-link(href="products.html") Produk
-                    li.nav-item
-                        a.nav-link(href="v-sight.html") V-Sight
-                    li.nav-item
-                        a.nav-link(href="aboutUs.html") Tentang kami
-                    li.nav-item#kontakMobile
-                        a.nav-link(href="contact-us.html") Hubungi kami
+                li
+                    a(href="index.html" ) Beranda
+                li
+                    a(href="products.html") Produk
+                li
+                    a(href="v-sight.html") V-Sight
+                li
+                    a(href="aboutUs.html") Tentang kami
+                li#kontakMobile
+                    a(href="contact-us.html") Hubungi kami
         // Contact button to the right
         a.btnContact(href="contact-us.html") Hubungi kami
 script.
-    const currentPath = window.location.pathname;
-    // Select all nav links
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    // Loop through links and set the active class
-    navLinks.forEach(link => {
-    if (link.getAttribute('href') === currentPath) {
-        link.classList.add('activ');
-    } else {
-        link.classList.remove('activ');
-    }
+    $( '#topHeader .navbar-nav a' ).on( 'click', function () {
+        $( '#topheader .navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
+        $( this ).parent( 'li' ).addClass( 'active' );
     });

@@ -17,7 +17,7 @@ html(lang='en')
                     input.form-control(type="text" placeholder="Cari Artikel" style="background-color: #F7F7F7;")
                 .collapse.navbar-collapse#navbarNav
                     ul.navbar-nav.mx-auto
-                        .menuNav1
+                        .menuNav1#kategoriSelect
                             li.nav-item
                                 a.kategoriWrapper(href="#") Kategori 1
                             li.nav-item
@@ -102,3 +102,15 @@ html(lang='en')
     // Footer
     include includes/footer.pug
     include includes/customJS.pug
+    script.
+        var header = document.getElementById("kategoriSelect");
+        var btns = header.getElementsByClassName("kategoriWrapper");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("aktif");
+                if (current.length > 0) { 
+                    current[0].className = current[0].className.replace(" aktif", "");
+                }
+                this.className += " aktif";
+            });
+        }
