@@ -1,5 +1,5 @@
 // Top bar for promotional message
-.texttop
+.texttop#hideInTermco
     a.text-center(href="productDetail3.html" style="text-decoration:none;")
         span.firstText Edisi Terbatas!
         span.secondText Paket 1 Bulan Glutathione dan Vitamin C, diskon 40%!
@@ -7,11 +7,11 @@
 
 // Main navigation bar
 div#topHeader
-nav.navbar.navbar-expand-lg.navbar-light.bg-white.border-bottom.sticky-top
+nav.navbar.navbar-expand-lg.border-bottom.sticky-top
     .container-fluid
         // Logo
         a(href="index.html")
-            img.imgLogo_h(src="././assets/img/vita_icon.png" alt="Vitazen Logo")
+            img.imgLogo_h(src="././assets/img/icon/logo.png" alt="Areumcy Logo")
 
         // Hamburger menu for smaller screens
         button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#navbarNav", aria-controls="navbarNav", aria-expanded="false", aria-label="Toggle navigation")
@@ -25,15 +25,10 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-white.border-bottom.sticky-top
                 li
                     a(href="products.html") Produk
                 li
-                    a(href="v-sight.html") V-Sight
+                    a(href="v-sight.html") Cy-Sight
                 li
                     a(href="aboutUs.html") Tentang kami
                 li#kontakMobile
                     a(href="contact-us.html") Hubungi kami
         // Contact button to the right
         a.btnContact(href="contact-us.html") Hubungi kami
-script.
-    $( '#topHeader .navbar-nav a' ).on( 'click', function () {
-        $( '#topheader .navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
-        $( this ).parent( 'li' ).addClass( 'active' );
-    });

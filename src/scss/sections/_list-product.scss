@@ -182,52 +182,19 @@
   .listproducts {
     padding: 30px 40px;
     h1 {
-      font-size: 52px;
-    }
-
-    .product-container{
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 30px;
-    }
-    .linkToDetail {
-      gap: 15px; 
-    }
-
-    .productName {
-      font-size: 1.3rem;
-    }
-    .discountPrice {
-      font-size: 1.3rem;
-    }
-    .normalPrice { 
-      font-size: 16px;
-    }
-    .numberRate {      
-      padding:5px 10px; 
-      font-size: 14px; 
-    }
-  }
-
-}
-
-@media screen and (min-width: 992px) and (max-width: 1490px) {
-
-  .listproducts {
-    padding: 40px 50px;
-    h1 {
-      font-size: 52px;
+      font-size: 42px;
     }
 
     .product-container{
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 30px;
+      gap: 20px;
     }
     .linkToDetail {
       gap: 15px; 
     }
 
     .productName {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
     }
     .priceWrapper {
       justify-content: flex-start; 
@@ -235,19 +202,59 @@
       flex-direction: column; 
       gap: 3px;
     }
-    .discountPrice {
-      font-size: 1.4rem;
-    }
     .priceGroup {
       flex-direction: row;
+    }
+    .discountPrice {
+      font-size: 1.1rem;
     }
     .normalPrice { 
       font-size: 16px;
     }
     .numberRate {      
-      padding:5px 10px; 
-      font-size: 14px; 
+      padding:3px 7px; 
+      font-size: 12px; 
     }
   }
+}
 
+@media screen and (min-width: 992px) and (max-width: 1380px) {
+
+  .listproducts {
+    padding: 30px 50px;
+    h1 {
+      font-size: 48px;
+    }
+
+    .product-container{
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+    .linkToDetail {
+      gap: 15px; 
+    }
+
+    .productName {
+      font-size: 1.3rem;
+    }
+    .priceWrapper {
+      justify-content: flex-start; 
+      align-items: flex-start; 
+      flex-direction: column; 
+      gap: 3px;
+    }
+    .priceGroup {
+      flex-direction: row;
+    }
+    .discountPrice {
+      font-size: 1.2rem;
+    }
+    .normalPrice { 
+      font-size: 16px;
+    }
+    .numberRate {      
+      padding:4px 8px; 
+      font-size: 12px; 
+    }
+  }
 }

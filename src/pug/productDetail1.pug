@@ -168,9 +168,10 @@ html(lang='en')
                                                             .progress-bar(style="width: 0%")
                                                         span.spanStar 0
                                             .reviewProdukSeparator
-                                            .imgMedia 
-                                                img(src="./assets/img/media_review.png")
-                                        button.btnInput.border-0(type="button" data-bs-toggle="modal" data-bs-target="#modalReviewProduct") Tulis Ulasan
+                                            .imgMedia
+                                                img(src="./assets/img/media_review.png")                                            
+                                                button.btnInput.border-0#showInTab(type="button" data-bs-toggle="modal" data-bs-target="#modalReviewProduct") Tulis Ulasan
+                                        button.btnInput.border-0#hideinTab(type="button" data-bs-toggle="modal" data-bs-target="#modalReviewProduct") Tulis Ulasan
                                     .filterWrapper
                                         h6 Menampilkan 1 - 4 dari 4 ulasan
                                         .dropdown
@@ -358,6 +359,11 @@ html(lang='en')
         include includes/footer.pug
         include includes/customJS.pug
         script.
+
+            bkLib.onDomLoaded(function() {
+                new nicEditor({buttonList : ['fontSize','bold','italic','underline','strikeThrough','subscript','superscript','html']}).panelInstance('formatInput');
+            });
+
             const div1 = document.getElementById("inputVideo");
             const fileInput1 = document.getElementById("input_video");
             const fileNameDisplay1 = document.getElementById("changeText1");

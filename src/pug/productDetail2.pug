@@ -169,7 +169,8 @@ html(lang='en')
                                             .reviewProdukSeparator
                                             .imgMedia 
                                                 img(src="./assets/img/media_review.png")
-                                        button.btnInput.border-0(type="button" data-bs-toggle="modal" data-bs-target="#modalReviewProduct") Tulis Ulasan
+                                                button.btnInput.border-0#showInTab(type="button" data-bs-toggle="modal" data-bs-target="#modalReviewProduct") Tulis Ulasan
+                                        button.btnInput.border-0#hideinTab(type="button" data-bs-toggle="modal" data-bs-target="#modalReviewProduct") Tulis Ulasan
                                     .filterWrapper
                                         h6 Menampilkan 1 - 4 dari 4 ulasan
                                         .dropdown
@@ -309,7 +310,7 @@ html(lang='en')
                                                 li This product can be delivered within 3 days. The delivery possible date refers to the period during which the product can be delivered to customers who ordered this product. (However, holidays and public holidays are excluded when calculating the period, and in the case of cash orders, it is based on the date of deposit.)                             
 
         .modal.fade#modalReviewProduct(tabindex="-1" aria-labelledby="modalReviewProduct" aria-hidden="true")
-            .modal-dialog(style="width:1200px;" role="document")
+            .modal-dialog.sizeModal(role="document")
                 .modal-content
                     .modal-header 
                         button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
@@ -334,7 +335,7 @@ html(lang='en')
                                 .userWrapperspan
                                     input.inputBox(type="text" class="form-control" placeholder="Nama *")
                                     input.inputBox(type="email" class="form-control" placeholder="Email *")
-                                textarea.inputBox(rows="3" class="form-control" placeholder="Tulis Ulasanmu Di sini *" style="height:160px;")
+                                textarea.inputBox1(rows="3" class="form-control" placeholder="Tulis Ulasanmu Di sini *")
                                 input(type="file" id="input_video" style="display: none;" multiple)
                                 input(type="file" name="uploadFoto" id="input_foto" style="display: none;" multiple)
                                 .uploadFile#inputVideo

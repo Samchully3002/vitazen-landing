@@ -19,11 +19,13 @@
                 width: 100%; height: 650px;   
             }
             .text-logo-parent {
-                height: 43px;
+                height: 100%;
+                width: auto;
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
+                filter: invert(1);
             }
         }
 
@@ -50,6 +52,11 @@
         .textWrapper {
             width: 100%; text-align: center; gap: 50px; display: inline-flex; flex-direction: column;
             .titleText {
+                width: 100%; text-align: center; color: #020E35; font-size: 32px; 
+                font-family: Poppins; font-weight: 700; line-height: 36px; 
+                letter-spacing: 0.32px; word-wrap: break-word;
+            }
+            .subtitleText {
                 width: 100%; text-align: center; color: #020E35; font-size: 32px; 
                 font-family: Poppins; font-weight: 700; line-height: 36px; 
                 letter-spacing: 0.32px; word-wrap: break-word;
@@ -193,7 +200,29 @@
             }
         }
         .logo3 {
-            width: 100%; height: fit-content; justify-content: center; align-items: center; display: inline-flex;
+            width: 100%; height: fit-content; justify-content: center; align-items: center; display: inline-block;
+        }
+
+        .logo-parent4 {
+            width: 100%; height: fit-content; position: relative; display: inline-block;
+            .imgLogo4 {
+                width: 100%; height: 100%; display: block;
+            }
+            .text-logo-parent4 {
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                display: flex;
+                font-size: 42px;
+                align-items: center;
+                justify-content: center;
+                font-weight: 500;
+                font-family: Poppins;
+                color: #F9F9F9;
+                transform: translate(-50%, -50%);
+            }
         }
     }
     .fiveContent {
@@ -251,9 +280,6 @@
                     height: 236px;
                     object-fit: fill;
                 }
-                .text-logo-parent {
-                    height: 23px;
-                }
             }
             .textWrapper {
                 padding: 100px 20px 50px 20px;
@@ -284,7 +310,10 @@
                 display: inline-flex;
                 flex-direction: column;
                 .titleText {
-                    font-size: 32px;
+                    font-size: 28px;
+                }
+                .subtitleText {
+                    font-size: 18px;
                 }
                 .definisiText {
                     flex-direction: column;
@@ -293,11 +322,11 @@
                     .logoTitle {
                         padding: 10px 15px;
                         .logoText {
-                            font-size: 24px;
+                            font-size: 20px;
                         }
                     }
                     .descText {
-                        font-size: 20px;
+                        font-size: 16px;
                     }
                 }
             }
@@ -310,7 +339,7 @@
         
             .visionWrapper {
                 padding: unset;
-                padding-bottom: 0;
+                padding-bottom: 40px;
                 gap: 0px;
                 flex-direction: column-reverse;
                 display: inline-flex;
@@ -347,7 +376,7 @@
                     }
                 }
                 .rightText {
-                    padding: 0 20px;
+                    padding: 0 30px 0 0;
                     flex-direction: column;
                     gap: 14px;
                     display: inline-flex;
@@ -367,11 +396,16 @@
             padding-bottom: 20px;
             flex-direction: column;
             display: flex;
-            .logo3 {
-                width: 100vw;
-                height: -moz-fit-content;
-                display: inline-flex;
-                content: url("../assets/img/aboutUs/Logo5_m.jpg");
+
+            .logo-parent4 {
+                .imgLogo4 {
+                    content: url("../assets/img/aboutUs/Logo5_m.jpg");
+                }
+                .text-logo-parent4 {
+                    font-size: 20px;
+                    text-align: center;
+                    padding: 0 4rem;
+                }
             }
         
             .leftWrapper {
@@ -394,10 +428,10 @@
                     gap: 10px;
                     display: inline-flex;
                     .titleText {
-                        font-size: 20px;
+                        font-size: 18px;
                     }
                     .descText {
-                        font-size: 20px;
+                        font-size: 16px;
                     }
                 }
             }
@@ -420,10 +454,10 @@
                     gap: 10px;
                     display: inline-flex;
                     .titleText {
-                        font-size: 20px;
+                        font-size: 18px;
                     }
                     .descText {
-                        font-size: 20px;
+                        font-size: 16px;
                     }
                 }
             }
@@ -483,7 +517,7 @@
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
     .aboutUs-section {
-        padding: 50px 20px;
+        padding: 50px 40px;
         .container {
             max-width: unset;
         }
@@ -495,22 +529,19 @@
                     height: 236px;
                     object-fit: fill;
                 }
-                .text-logo-parent {
-                    height: 23px;
-                }
             }
             .textWrapper {
                 padding: 50px 40px;
                 flex-direction: column;
                 gap: 16px;
                 .titleText {
-                    font-size: 26px;
+                    font-size: 32px;
                 }
                 .descText1 {
-                    font-size: 20px;
+                    font-size: 22px;
                 }
                 .descText2 {
-                    font-size: 14px;
+                    font-size: 18px;
                 }
             }
             .logo2 {
@@ -527,20 +558,23 @@
                 display: inline-flex;
                 flex-direction: column;
                 .titleText {
-                    font-size: 26px;
+                    font-size: 32px;
+                }
+                .subtitleText {
+                    font-size: 22px;
                 }
                 .definisiText {
                     flex-direction: column;
                     gap: 10px;
 
                     .logoTitle {
-                        padding: 5px 15px;
+                        padding: 10px 15px;
                         .logoText {
-                            font-size: 20px;
+                            font-size: 24px;
                         }
                     }
                     .descText {
-                        font-size: 14px;
+                        font-size: 18px;
                     }
                 }
             }
@@ -569,10 +603,10 @@
                     gap: 14px;
                     display: inline-flex;
                     .titleText {
-                        font-size: 22px;
+                        font-size: 28px;
                     }
                     .visionContent {
-                        font-size:  14px;
+                        font-size:  18px;
                     }
                 }
             }
@@ -595,10 +629,10 @@
                     display: inline-flex;
 
                     .titleText {
-                        font-size: 22px;
+                        font-size: 28px;
                     }
                     .misionContent {
-                        font-size:  14px;
+                        font-size:  18px;
                     }
                 }
             }
@@ -609,10 +643,11 @@
             padding-bottom: 20px;
             flex-direction: column;
             display: flex;
-            .logo3 {
-                width: 100%;
-                height: -moz-fit-content;
-                display: inline-flex;
+
+            .logo-parent4 {
+                .text-logo-parent4 {
+                    font-size: 28px;
+                }
             }
         
             .leftWrapper {
@@ -633,10 +668,10 @@
                     gap: 14px;
                     display: inline-flex;
                     .titleText {
-                        font-size: 16px;
+                        font-size: 20px;
                     }
                     .descText {
-                        font-size: 14px;
+                        font-size: 18px;
                     }
                 }
             }
@@ -658,10 +693,10 @@
                     gap: 14px;
                     display: inline-flex;
                     .titleText {
-                        font-size: 16px;
+                        font-size: 20px;
                     }
                     .descText {
-                        font-size: 14px;
+                        font-size: 18px;
                     }
                 }
             }
@@ -675,42 +710,48 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-            gap: 50px;
+            gap: 30px;
             display: flex;
 
             .contentWrapper {
                 width: 100%;
                 height: 100%;
-                gap: 40px;
+                gap: 30px;
 
                 .titleText {
-                    font-size: 30px;
+                    font-size: 40px;
                 }
                 .contentText1 { 
                     .infoText {
-                        font-size: 18px;
-                        padding: 0px 15px;
+                        font-size: 12px;
+                        padding: 0px 50px;
                     }
                     .btnWrapper {
                         justify-content: center;
                         align-items: center;
                         flex-direction: unset;
-
                         .btnShop {
-                            width: 150px;
-                            padding: 10px 0;
+                            width: 120px;
+                            padding: 10px;
+                            gap:5px;
+                            img {
+                              width: 20px; height: 20px;
+                            }
+                            span {
+                              font-size: 12px;
+                            }
                         }
                     }
                 }
                 .contentText2 {
                     .infoText {
-                        font-size: 14px;
+                        font-size: 12px;
                     }
                     .storeIconWrapper {
                         gap: 50px;
                         flex-direction: unset;
                         .storeIC {
-                            height: 35px;
+                            height: 30px;
                         }
                     }
                 }
@@ -732,9 +773,6 @@
                     width: 100%;
                     height: 236px;
                     object-fit: fill;
-                }
-                .text-logo-parent {
-                    height: 23px;
                 }
             }
             .textWrapper {

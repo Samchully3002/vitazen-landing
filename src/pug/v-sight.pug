@@ -8,16 +8,13 @@ html(lang='en')
         // Section Top Product
         
         .headerBox
-                .text-center
-                    h1.title V-Sight
-        nav.navbar.navbar-expand-lg.navbar-light#hideNavmobile(style="padding: 0;")
+            .text-center
+                h1.title Cy-Sight
+        nav.navbar.navbar-expand-sm.navbar-light#showInTab(style="padding: 0 !important;")
             .container-fluid
-                .form-group.has-search
-                    span.fa.fa-search.form-control-feedback
-                    input.form-control(type="text" placeholder="Cari Artikel" style="background-color: #F7F7F7;")
                 .collapse.navbar-collapse#navbarNav
                     ul.navbar-nav.mx-auto
-                        .menuNav1#kategoriSelect
+                        .menuNav1
                             li.nav-item
                                 a.kategoriWrapper(href="#") Kategori 1
                             li.nav-item
@@ -32,16 +29,37 @@ html(lang='en')
                             li.nav-item
                                 a.kategoriWrapper(href="#") 
                                     .spanKategori Kategori 5
-                .dropdown.d-flex.justify-content-end
-                    span.align-self-center#hideForMobile(style="padding-right:15px;") Urutkan berdasarkan
-                    a.btn.btn-outline-secondary.btn-sm.dropdown-toggle#filterDropdown(href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false") Terbaru
-                    ul.dropdown-menu(aria-labelledby="filterDropdown")
-                        li
-                            a.dropdown-item(href="#") Date
-                        li
-                            a.dropdown-item(href="#") Rating
-                        li
-                            a.dropdown-item(href="#") Media
+        nav.navbar.navbar-expand-xl.navbar-light#hideNavmobile(style="padding: 0;")
+            .form-group.has-search
+                span.fa.fa-search.form-control-feedback
+                input.form-control(type="text" placeholder="Cari Artikel")
+            .collapse.navbar-collapse#navbarNav
+                ul.navbar-nav.mx-auto
+                    .menuNav1#kategoriSelect
+                        li.nav-item
+                            a.kategoriWrapper(href="#") Kategori 1
+                        li.nav-item
+                            a.kategoriWrapper(href="#") 
+                                .spanKategori Kategori 2
+                        li.nav-item
+                            a.kategoriWrapper(href="#") 
+                                .spanKategori Kategori 3
+                        li.nav-item
+                            a.kategoriWrapper(href="#") 
+                                .spanKategori Kategori 4
+                        li.nav-item
+                            a.kategoriWrapper(href="#") 
+                                .spanKategori Kategori 5
+            .dropdown
+                span(style="padding-right:15px;") Urutkan berdasarkan
+                a.btn.btn-outline-secondary.dropdown-toggle#filterDropdown(href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false") Terbaru
+                ul.dropdown-menu(aria-labelledby="filterDropdown")
+                    li
+                        a.dropdown-item(href="#") Date
+                    li
+                        a.dropdown-item(href="#") Rating
+                    li
+                        a.dropdown-item(href="#") Media
         section.vSightpage
             .row
                 ul.vsight-container
